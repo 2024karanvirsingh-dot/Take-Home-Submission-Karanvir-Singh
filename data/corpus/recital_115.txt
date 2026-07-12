@@ -1,0 +1,17 @@
+1
+Some third countries adopt laws, regulations and other legal acts which purport to directly regulate the processing activities of natural and legal persons under the jurisdiction of the Member States.
+2
+This may include judgments of courts or tribunals or decisions of administrative authorities in third countries requiring a controller or processor to transfer or disclose personal data, and which are not based on an international agreement, such as a mutual legal assistance treaty, in force between the requesting third country and the Union or a Member State.
+3
+The extraterritorial application of those laws, regulations and other legal acts may be in breach of international law and may impede the attainment of the protection of natural persons ensured in the Union by this Regulation.
+4
+Transfers should only be allowed where the conditions of this Regulation for a transfer to third countries are met.
+5
+This may be the case, inter alia, where disclosure is necessary for an important ground of public interest recognised in Union or Member State law to which the controller is subject.
+* This title is an unofficial description.
+←
+Recital 114
+Recital 116
+→
+All recitals
+Report error

@@ -1,0 +1,13 @@
+1
+Modalities should be provided for facilitating the exercise of the data subject’s rights under this Regulation, including mechanisms to request and, if applicable, obtain, free of charge, in particular, access to and rectification or erasure of personal data and the exercise of the right to object.
+2
+The controller should also provide means for requests to be made electronically, especially where personal data are processed by electronic means.
+3
+The controller should be obliged to respond to requests from the data subject without undue delay and at the latest within one month and to give reasons where the controller does not intend to comply with any such requests.
+* This title is an unofficial description.
+←
+Recital 58
+Recital 60
+→
+All recitals
+Report error

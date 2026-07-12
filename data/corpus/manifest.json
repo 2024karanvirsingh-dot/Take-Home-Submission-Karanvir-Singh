@@ -1,0 +1,2178 @@
+[
+  {
+    "file": "article_001.txt",
+    "type": "article",
+    "number": 1,
+    "title": "Subject-matter and objectives",
+    "citation": "Art. 1 GDPR",
+    "source": "https://gdpr-info.eu/art-1-gdpr/"
+  },
+  {
+    "file": "article_002.txt",
+    "type": "article",
+    "number": 2,
+    "title": "Material scope",
+    "citation": "Art. 2 GDPR",
+    "source": "https://gdpr-info.eu/art-2-gdpr/"
+  },
+  {
+    "file": "article_003.txt",
+    "type": "article",
+    "number": 3,
+    "title": "Territorial scope",
+    "citation": "Art. 3 GDPR",
+    "source": "https://gdpr-info.eu/art-3-gdpr/"
+  },
+  {
+    "file": "article_004.txt",
+    "type": "article",
+    "number": 4,
+    "title": "Definitions",
+    "citation": "Art. 4 GDPR",
+    "source": "https://gdpr-info.eu/art-4-gdpr/"
+  },
+  {
+    "file": "article_005.txt",
+    "type": "article",
+    "number": 5,
+    "title": "Principles relating to processing of personal data",
+    "citation": "Art. 5 GDPR",
+    "source": "https://gdpr-info.eu/art-5-gdpr/"
+  },
+  {
+    "file": "article_006.txt",
+    "type": "article",
+    "number": 6,
+    "title": "Lawfulness of processing",
+    "citation": "Art. 6 GDPR",
+    "source": "https://gdpr-info.eu/art-6-gdpr/"
+  },
+  {
+    "file": "article_007.txt",
+    "type": "article",
+    "number": 7,
+    "title": "Conditions for consent",
+    "citation": "Art. 7 GDPR",
+    "source": "https://gdpr-info.eu/art-7-gdpr/"
+  },
+  {
+    "file": "article_008.txt",
+    "type": "article",
+    "number": 8,
+    "title": "Conditions applicable to child's consent in relation to information society services",
+    "citation": "Art. 8 GDPR",
+    "source": "https://gdpr-info.eu/art-8-gdpr/"
+  },
+  {
+    "file": "article_009.txt",
+    "type": "article",
+    "number": 9,
+    "title": "Processing of special categories of personal data",
+    "citation": "Art. 9 GDPR",
+    "source": "https://gdpr-info.eu/art-9-gdpr/"
+  },
+  {
+    "file": "article_010.txt",
+    "type": "article",
+    "number": 10,
+    "title": "Processing of personal data relating to criminal convictions and offences",
+    "citation": "Art. 10 GDPR",
+    "source": "https://gdpr-info.eu/art-10-gdpr/"
+  },
+  {
+    "file": "article_011.txt",
+    "type": "article",
+    "number": 11,
+    "title": "Processing which does not require identification",
+    "citation": "Art. 11 GDPR",
+    "source": "https://gdpr-info.eu/art-11-gdpr/"
+  },
+  {
+    "file": "article_012.txt",
+    "type": "article",
+    "number": 12,
+    "title": "Transparent information, communication and modalities for the exercise of the rights of the data subject",
+    "citation": "Art. 12 GDPR",
+    "source": "https://gdpr-info.eu/art-12-gdpr/"
+  },
+  {
+    "file": "article_013.txt",
+    "type": "article",
+    "number": 13,
+    "title": "Information to be provided where personal data are collected from the data subject",
+    "citation": "Art. 13 GDPR",
+    "source": "https://gdpr-info.eu/art-13-gdpr/"
+  },
+  {
+    "file": "article_014.txt",
+    "type": "article",
+    "number": 14,
+    "title": "Information to be provided where personal data have not been obtained from the data subject",
+    "citation": "Art. 14 GDPR",
+    "source": "https://gdpr-info.eu/art-14-gdpr/"
+  },
+  {
+    "file": "article_015.txt",
+    "type": "article",
+    "number": 15,
+    "title": "Right of access by the data subject",
+    "citation": "Art. 15 GDPR",
+    "source": "https://gdpr-info.eu/art-15-gdpr/"
+  },
+  {
+    "file": "article_016.txt",
+    "type": "article",
+    "number": 16,
+    "title": "Right to rectification",
+    "citation": "Art. 16 GDPR",
+    "source": "https://gdpr-info.eu/art-16-gdpr/"
+  },
+  {
+    "file": "article_017.txt",
+    "type": "article",
+    "number": 17,
+    "title": "Right to erasure (\u2018right to be forgotten\u2019)",
+    "citation": "Art. 17 GDPR",
+    "source": "https://gdpr-info.eu/art-17-gdpr/"
+  },
+  {
+    "file": "article_018.txt",
+    "type": "article",
+    "number": 18,
+    "title": "Right to restriction of processing",
+    "citation": "Art. 18 GDPR",
+    "source": "https://gdpr-info.eu/art-18-gdpr/"
+  },
+  {
+    "file": "article_019.txt",
+    "type": "article",
+    "number": 19,
+    "title": "Notification obligation regarding rectification or erasure of personal data or restriction of processing",
+    "citation": "Art. 19 GDPR",
+    "source": "https://gdpr-info.eu/art-19-gdpr/"
+  },
+  {
+    "file": "article_020.txt",
+    "type": "article",
+    "number": 20,
+    "title": "Right to data portability",
+    "citation": "Art. 20 GDPR",
+    "source": "https://gdpr-info.eu/art-20-gdpr/"
+  },
+  {
+    "file": "article_021.txt",
+    "type": "article",
+    "number": 21,
+    "title": "Right to object",
+    "citation": "Art. 21 GDPR",
+    "source": "https://gdpr-info.eu/art-21-gdpr/"
+  },
+  {
+    "file": "article_022.txt",
+    "type": "article",
+    "number": 22,
+    "title": "Automated individual decision-making, including profiling",
+    "citation": "Art. 22 GDPR",
+    "source": "https://gdpr-info.eu/art-22-gdpr/"
+  },
+  {
+    "file": "article_023.txt",
+    "type": "article",
+    "number": 23,
+    "title": "Restrictions",
+    "citation": "Art. 23 GDPR",
+    "source": "https://gdpr-info.eu/art-23-gdpr/"
+  },
+  {
+    "file": "article_024.txt",
+    "type": "article",
+    "number": 24,
+    "title": "Responsibility of the controller",
+    "citation": "Art. 24 GDPR",
+    "source": "https://gdpr-info.eu/art-24-gdpr/"
+  },
+  {
+    "file": "article_025.txt",
+    "type": "article",
+    "number": 25,
+    "title": "Data protection by design and by default",
+    "citation": "Art. 25 GDPR",
+    "source": "https://gdpr-info.eu/art-25-gdpr/"
+  },
+  {
+    "file": "article_026.txt",
+    "type": "article",
+    "number": 26,
+    "title": "Joint controllers",
+    "citation": "Art. 26 GDPR",
+    "source": "https://gdpr-info.eu/art-26-gdpr/"
+  },
+  {
+    "file": "article_027.txt",
+    "type": "article",
+    "number": 27,
+    "title": "Representatives of controllers or processors not established in the Union",
+    "citation": "Art. 27 GDPR",
+    "source": "https://gdpr-info.eu/art-27-gdpr/"
+  },
+  {
+    "file": "article_028.txt",
+    "type": "article",
+    "number": 28,
+    "title": "Processor",
+    "citation": "Art. 28 GDPR",
+    "source": "https://gdpr-info.eu/art-28-gdpr/"
+  },
+  {
+    "file": "article_029.txt",
+    "type": "article",
+    "number": 29,
+    "title": "Processing under the authority of the controller or processor",
+    "citation": "Art. 29 GDPR",
+    "source": "https://gdpr-info.eu/art-29-gdpr/"
+  },
+  {
+    "file": "article_030.txt",
+    "type": "article",
+    "number": 30,
+    "title": "Records of processing activities",
+    "citation": "Art. 30 GDPR",
+    "source": "https://gdpr-info.eu/art-30-gdpr/"
+  },
+  {
+    "file": "article_031.txt",
+    "type": "article",
+    "number": 31,
+    "title": "Cooperation with the supervisory authority",
+    "citation": "Art. 31 GDPR",
+    "source": "https://gdpr-info.eu/art-31-gdpr/"
+  },
+  {
+    "file": "article_032.txt",
+    "type": "article",
+    "number": 32,
+    "title": "Security of processing",
+    "citation": "Art. 32 GDPR",
+    "source": "https://gdpr-info.eu/art-32-gdpr/"
+  },
+  {
+    "file": "article_033.txt",
+    "type": "article",
+    "number": 33,
+    "title": "Notification of a personal data breach to the supervisory authority",
+    "citation": "Art. 33 GDPR",
+    "source": "https://gdpr-info.eu/art-33-gdpr/"
+  },
+  {
+    "file": "article_034.txt",
+    "type": "article",
+    "number": 34,
+    "title": "Communication of a personal data breach to the data subject",
+    "citation": "Art. 34 GDPR",
+    "source": "https://gdpr-info.eu/art-34-gdpr/"
+  },
+  {
+    "file": "article_035.txt",
+    "type": "article",
+    "number": 35,
+    "title": "Data protection impact assessment",
+    "citation": "Art. 35 GDPR",
+    "source": "https://gdpr-info.eu/art-35-gdpr/"
+  },
+  {
+    "file": "article_036.txt",
+    "type": "article",
+    "number": 36,
+    "title": "Prior consultation",
+    "citation": "Art. 36 GDPR",
+    "source": "https://gdpr-info.eu/art-36-gdpr/"
+  },
+  {
+    "file": "article_037.txt",
+    "type": "article",
+    "number": 37,
+    "title": "Designation of the data protection officer",
+    "citation": "Art. 37 GDPR",
+    "source": "https://gdpr-info.eu/art-37-gdpr/"
+  },
+  {
+    "file": "article_038.txt",
+    "type": "article",
+    "number": 38,
+    "title": "Position of the data protection officer",
+    "citation": "Art. 38 GDPR",
+    "source": "https://gdpr-info.eu/art-38-gdpr/"
+  },
+  {
+    "file": "article_039.txt",
+    "type": "article",
+    "number": 39,
+    "title": "Tasks of the data protection officer",
+    "citation": "Art. 39 GDPR",
+    "source": "https://gdpr-info.eu/art-39-gdpr/"
+  },
+  {
+    "file": "article_040.txt",
+    "type": "article",
+    "number": 40,
+    "title": "Codes of conduct",
+    "citation": "Art. 40 GDPR",
+    "source": "https://gdpr-info.eu/art-40-gdpr/"
+  },
+  {
+    "file": "article_041.txt",
+    "type": "article",
+    "number": 41,
+    "title": "Monitoring of approved codes of conduct",
+    "citation": "Art. 41 GDPR",
+    "source": "https://gdpr-info.eu/art-41-gdpr/"
+  },
+  {
+    "file": "article_042.txt",
+    "type": "article",
+    "number": 42,
+    "title": "Certification",
+    "citation": "Art. 42 GDPR",
+    "source": "https://gdpr-info.eu/art-42-gdpr/"
+  },
+  {
+    "file": "article_043.txt",
+    "type": "article",
+    "number": 43,
+    "title": "Certification bodies",
+    "citation": "Art. 43 GDPR",
+    "source": "https://gdpr-info.eu/art-43-gdpr/"
+  },
+  {
+    "file": "article_044.txt",
+    "type": "article",
+    "number": 44,
+    "title": "General principle for transfers",
+    "citation": "Art. 44 GDPR",
+    "source": "https://gdpr-info.eu/art-44-gdpr/"
+  },
+  {
+    "file": "article_045.txt",
+    "type": "article",
+    "number": 45,
+    "title": "Transfers on the basis of an adequacy decision",
+    "citation": "Art. 45 GDPR",
+    "source": "https://gdpr-info.eu/art-45-gdpr/"
+  },
+  {
+    "file": "article_046.txt",
+    "type": "article",
+    "number": 46,
+    "title": "Transfers subject to appropriate safeguards",
+    "citation": "Art. 46 GDPR",
+    "source": "https://gdpr-info.eu/art-46-gdpr/"
+  },
+  {
+    "file": "article_047.txt",
+    "type": "article",
+    "number": 47,
+    "title": "Binding corporate rules",
+    "citation": "Art. 47 GDPR",
+    "source": "https://gdpr-info.eu/art-47-gdpr/"
+  },
+  {
+    "file": "article_048.txt",
+    "type": "article",
+    "number": 48,
+    "title": "Transfers or disclosures not authorised by Union law",
+    "citation": "Art. 48 GDPR",
+    "source": "https://gdpr-info.eu/art-48-gdpr/"
+  },
+  {
+    "file": "article_049.txt",
+    "type": "article",
+    "number": 49,
+    "title": "Derogations for specific situations",
+    "citation": "Art. 49 GDPR",
+    "source": "https://gdpr-info.eu/art-49-gdpr/"
+  },
+  {
+    "file": "article_050.txt",
+    "type": "article",
+    "number": 50,
+    "title": "International cooperation for the protection of personal data",
+    "citation": "Art. 50 GDPR",
+    "source": "https://gdpr-info.eu/art-50-gdpr/"
+  },
+  {
+    "file": "article_051.txt",
+    "type": "article",
+    "number": 51,
+    "title": "Supervisory authority",
+    "citation": "Art. 51 GDPR",
+    "source": "https://gdpr-info.eu/art-51-gdpr/"
+  },
+  {
+    "file": "article_052.txt",
+    "type": "article",
+    "number": 52,
+    "title": "Independence",
+    "citation": "Art. 52 GDPR",
+    "source": "https://gdpr-info.eu/art-52-gdpr/"
+  },
+  {
+    "file": "article_053.txt",
+    "type": "article",
+    "number": 53,
+    "title": "General conditions for the members of the supervisory authority",
+    "citation": "Art. 53 GDPR",
+    "source": "https://gdpr-info.eu/art-53-gdpr/"
+  },
+  {
+    "file": "article_054.txt",
+    "type": "article",
+    "number": 54,
+    "title": "Rules on the establishment of the supervisory authority",
+    "citation": "Art. 54 GDPR",
+    "source": "https://gdpr-info.eu/art-54-gdpr/"
+  },
+  {
+    "file": "article_055.txt",
+    "type": "article",
+    "number": 55,
+    "title": "Competence",
+    "citation": "Art. 55 GDPR",
+    "source": "https://gdpr-info.eu/art-55-gdpr/"
+  },
+  {
+    "file": "article_056.txt",
+    "type": "article",
+    "number": 56,
+    "title": "Competence of the lead supervisory authority",
+    "citation": "Art. 56 GDPR",
+    "source": "https://gdpr-info.eu/art-56-gdpr/"
+  },
+  {
+    "file": "article_057.txt",
+    "type": "article",
+    "number": 57,
+    "title": "Tasks",
+    "citation": "Art. 57 GDPR",
+    "source": "https://gdpr-info.eu/art-57-gdpr/"
+  },
+  {
+    "file": "article_058.txt",
+    "type": "article",
+    "number": 58,
+    "title": "Powers",
+    "citation": "Art. 58 GDPR",
+    "source": "https://gdpr-info.eu/art-58-gdpr/"
+  },
+  {
+    "file": "article_059.txt",
+    "type": "article",
+    "number": 59,
+    "title": "Activity reports",
+    "citation": "Art. 59 GDPR",
+    "source": "https://gdpr-info.eu/art-59-gdpr/"
+  },
+  {
+    "file": "article_060.txt",
+    "type": "article",
+    "number": 60,
+    "title": "Cooperation between the lead supervisory authority and the other supervisory authorities concerned",
+    "citation": "Art. 60 GDPR",
+    "source": "https://gdpr-info.eu/art-60-gdpr/"
+  },
+  {
+    "file": "article_061.txt",
+    "type": "article",
+    "number": 61,
+    "title": "Mutual assistance",
+    "citation": "Art. 61 GDPR",
+    "source": "https://gdpr-info.eu/art-61-gdpr/"
+  },
+  {
+    "file": "article_062.txt",
+    "type": "article",
+    "number": 62,
+    "title": "Joint operations of supervisory authorities",
+    "citation": "Art. 62 GDPR",
+    "source": "https://gdpr-info.eu/art-62-gdpr/"
+  },
+  {
+    "file": "article_063.txt",
+    "type": "article",
+    "number": 63,
+    "title": "Consistency mechanism",
+    "citation": "Art. 63 GDPR",
+    "source": "https://gdpr-info.eu/art-63-gdpr/"
+  },
+  {
+    "file": "article_064.txt",
+    "type": "article",
+    "number": 64,
+    "title": "Opinion of the Board",
+    "citation": "Art. 64 GDPR",
+    "source": "https://gdpr-info.eu/art-64-gdpr/"
+  },
+  {
+    "file": "article_065.txt",
+    "type": "article",
+    "number": 65,
+    "title": "Dispute resolution by the Board",
+    "citation": "Art. 65 GDPR",
+    "source": "https://gdpr-info.eu/art-65-gdpr/"
+  },
+  {
+    "file": "article_066.txt",
+    "type": "article",
+    "number": 66,
+    "title": "Urgency procedure",
+    "citation": "Art. 66 GDPR",
+    "source": "https://gdpr-info.eu/art-66-gdpr/"
+  },
+  {
+    "file": "article_067.txt",
+    "type": "article",
+    "number": 67,
+    "title": "Exchange of information",
+    "citation": "Art. 67 GDPR",
+    "source": "https://gdpr-info.eu/art-67-gdpr/"
+  },
+  {
+    "file": "article_068.txt",
+    "type": "article",
+    "number": 68,
+    "title": "European Data Protection Board",
+    "citation": "Art. 68 GDPR",
+    "source": "https://gdpr-info.eu/art-68-gdpr/"
+  },
+  {
+    "file": "article_069.txt",
+    "type": "article",
+    "number": 69,
+    "title": "Independence",
+    "citation": "Art. 69 GDPR",
+    "source": "https://gdpr-info.eu/art-69-gdpr/"
+  },
+  {
+    "file": "article_070.txt",
+    "type": "article",
+    "number": 70,
+    "title": "Tasks of the Board",
+    "citation": "Art. 70 GDPR",
+    "source": "https://gdpr-info.eu/art-70-gdpr/"
+  },
+  {
+    "file": "article_071.txt",
+    "type": "article",
+    "number": 71,
+    "title": "Reports",
+    "citation": "Art. 71 GDPR",
+    "source": "https://gdpr-info.eu/art-71-gdpr/"
+  },
+  {
+    "file": "article_072.txt",
+    "type": "article",
+    "number": 72,
+    "title": "Procedure",
+    "citation": "Art. 72 GDPR",
+    "source": "https://gdpr-info.eu/art-72-gdpr/"
+  },
+  {
+    "file": "article_073.txt",
+    "type": "article",
+    "number": 73,
+    "title": "Chair",
+    "citation": "Art. 73 GDPR",
+    "source": "https://gdpr-info.eu/art-73-gdpr/"
+  },
+  {
+    "file": "article_074.txt",
+    "type": "article",
+    "number": 74,
+    "title": "Tasks of the Chair",
+    "citation": "Art. 74 GDPR",
+    "source": "https://gdpr-info.eu/art-74-gdpr/"
+  },
+  {
+    "file": "article_075.txt",
+    "type": "article",
+    "number": 75,
+    "title": "Secretariat",
+    "citation": "Art. 75 GDPR",
+    "source": "https://gdpr-info.eu/art-75-gdpr/"
+  },
+  {
+    "file": "article_076.txt",
+    "type": "article",
+    "number": 76,
+    "title": "Confidentiality",
+    "citation": "Art. 76 GDPR",
+    "source": "https://gdpr-info.eu/art-76-gdpr/"
+  },
+  {
+    "file": "article_077.txt",
+    "type": "article",
+    "number": 77,
+    "title": "Right to lodge a complaint with a supervisory authority",
+    "citation": "Art. 77 GDPR",
+    "source": "https://gdpr-info.eu/art-77-gdpr/"
+  },
+  {
+    "file": "article_078.txt",
+    "type": "article",
+    "number": 78,
+    "title": "Right to an effective judicial remedy against a supervisory authority",
+    "citation": "Art. 78 GDPR",
+    "source": "https://gdpr-info.eu/art-78-gdpr/"
+  },
+  {
+    "file": "article_079.txt",
+    "type": "article",
+    "number": 79,
+    "title": "Right to an effective judicial remedy against a controller or processor",
+    "citation": "Art. 79 GDPR",
+    "source": "https://gdpr-info.eu/art-79-gdpr/"
+  },
+  {
+    "file": "article_080.txt",
+    "type": "article",
+    "number": 80,
+    "title": "Representation of data subjects",
+    "citation": "Art. 80 GDPR",
+    "source": "https://gdpr-info.eu/art-80-gdpr/"
+  },
+  {
+    "file": "article_081.txt",
+    "type": "article",
+    "number": 81,
+    "title": "Suspension of proceedings",
+    "citation": "Art. 81 GDPR",
+    "source": "https://gdpr-info.eu/art-81-gdpr/"
+  },
+  {
+    "file": "article_082.txt",
+    "type": "article",
+    "number": 82,
+    "title": "Right to compensation and liability",
+    "citation": "Art. 82 GDPR",
+    "source": "https://gdpr-info.eu/art-82-gdpr/"
+  },
+  {
+    "file": "article_083.txt",
+    "type": "article",
+    "number": 83,
+    "title": "General conditions for imposing administrative fines",
+    "citation": "Art. 83 GDPR",
+    "source": "https://gdpr-info.eu/art-83-gdpr/"
+  },
+  {
+    "file": "article_084.txt",
+    "type": "article",
+    "number": 84,
+    "title": "Penalties",
+    "citation": "Art. 84 GDPR",
+    "source": "https://gdpr-info.eu/art-84-gdpr/"
+  },
+  {
+    "file": "article_085.txt",
+    "type": "article",
+    "number": 85,
+    "title": "Processing and freedom of expression and information",
+    "citation": "Art. 85 GDPR",
+    "source": "https://gdpr-info.eu/art-85-gdpr/"
+  },
+  {
+    "file": "article_086.txt",
+    "type": "article",
+    "number": 86,
+    "title": "Processing and public access to official documents",
+    "citation": "Art. 86 GDPR",
+    "source": "https://gdpr-info.eu/art-86-gdpr/"
+  },
+  {
+    "file": "article_087.txt",
+    "type": "article",
+    "number": 87,
+    "title": "Processing of the national identification number",
+    "citation": "Art. 87 GDPR",
+    "source": "https://gdpr-info.eu/art-87-gdpr/"
+  },
+  {
+    "file": "article_088.txt",
+    "type": "article",
+    "number": 88,
+    "title": "Processing in the context of employment",
+    "citation": "Art. 88 GDPR",
+    "source": "https://gdpr-info.eu/art-88-gdpr/"
+  },
+  {
+    "file": "article_089.txt",
+    "type": "article",
+    "number": 89,
+    "title": "Safeguards and derogations relating to processing for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes",
+    "citation": "Art. 89 GDPR",
+    "source": "https://gdpr-info.eu/art-89-gdpr/"
+  },
+  {
+    "file": "article_090.txt",
+    "type": "article",
+    "number": 90,
+    "title": "Obligations of secrecy",
+    "citation": "Art. 90 GDPR",
+    "source": "https://gdpr-info.eu/art-90-gdpr/"
+  },
+  {
+    "file": "article_091.txt",
+    "type": "article",
+    "number": 91,
+    "title": "Existing data protection rules of churches and religious associations",
+    "citation": "Art. 91 GDPR",
+    "source": "https://gdpr-info.eu/art-91-gdpr/"
+  },
+  {
+    "file": "article_092.txt",
+    "type": "article",
+    "number": 92,
+    "title": "Exercise of the delegation",
+    "citation": "Art. 92 GDPR",
+    "source": "https://gdpr-info.eu/art-92-gdpr/"
+  },
+  {
+    "file": "article_093.txt",
+    "type": "article",
+    "number": 93,
+    "title": "Committee procedure",
+    "citation": "Art. 93 GDPR",
+    "source": "https://gdpr-info.eu/art-93-gdpr/"
+  },
+  {
+    "file": "article_094.txt",
+    "type": "article",
+    "number": 94,
+    "title": "Repeal of Directive 95/46/EC",
+    "citation": "Art. 94 GDPR",
+    "source": "https://gdpr-info.eu/art-94-gdpr/"
+  },
+  {
+    "file": "article_095.txt",
+    "type": "article",
+    "number": 95,
+    "title": "Relationship with Directive 2002/58/EC",
+    "citation": "Art. 95 GDPR",
+    "source": "https://gdpr-info.eu/art-95-gdpr/"
+  },
+  {
+    "file": "article_096.txt",
+    "type": "article",
+    "number": 96,
+    "title": "Relationship with previously concluded Agreements",
+    "citation": "Art. 96 GDPR",
+    "source": "https://gdpr-info.eu/art-96-gdpr/"
+  },
+  {
+    "file": "article_097.txt",
+    "type": "article",
+    "number": 97,
+    "title": "Commission reports",
+    "citation": "Art. 97 GDPR",
+    "source": "https://gdpr-info.eu/art-97-gdpr/"
+  },
+  {
+    "file": "article_098.txt",
+    "type": "article",
+    "number": 98,
+    "title": "Review of other Union legal acts on data protection",
+    "citation": "Art. 98 GDPR",
+    "source": "https://gdpr-info.eu/art-98-gdpr/"
+  },
+  {
+    "file": "article_099.txt",
+    "type": "article",
+    "number": 99,
+    "title": "Entry into force and application",
+    "citation": "Art. 99 GDPR",
+    "source": "https://gdpr-info.eu/art-99-gdpr/"
+  },
+  {
+    "file": "recital_001.txt",
+    "type": "recital",
+    "number": 1,
+    "title": "Data Protection as a Fundamental Right*",
+    "citation": "Recital 1 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-1/"
+  },
+  {
+    "file": "recital_002.txt",
+    "type": "recital",
+    "number": 2,
+    "title": "Respect of the Fundamental Rights and Freedoms*",
+    "citation": "Recital 2 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-2/"
+  },
+  {
+    "file": "recital_003.txt",
+    "type": "recital",
+    "number": 3,
+    "title": "Directive 95/46/EC Harmonisation*",
+    "citation": "Recital 3 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-3/"
+  },
+  {
+    "file": "recital_004.txt",
+    "type": "recital",
+    "number": 4,
+    "title": "Data Protection in Balance with Other Fundamental Rights*",
+    "citation": "Recital 4 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-4/"
+  },
+  {
+    "file": "recital_005.txt",
+    "type": "recital",
+    "number": 5,
+    "title": "Cooperation Between Member States to Exchange Personal Data*",
+    "citation": "Recital 5 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-5/"
+  },
+  {
+    "file": "recital_006.txt",
+    "type": "recital",
+    "number": 6,
+    "title": "Ensuring a High Level of Data Protection Despite the Increased Exchange of Data*",
+    "citation": "Recital 6 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-6/"
+  },
+  {
+    "file": "recital_007.txt",
+    "type": "recital",
+    "number": 7,
+    "title": "The Framework is Based on Control and Certainty*",
+    "citation": "Recital 7 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-7/"
+  },
+  {
+    "file": "recital_008.txt",
+    "type": "recital",
+    "number": 8,
+    "title": "Adoption into National Law*",
+    "citation": "Recital 8 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-8/"
+  },
+  {
+    "file": "recital_009.txt",
+    "type": "recital",
+    "number": 9,
+    "title": "Different Standards of Protection by the Directive 95/46/EC*",
+    "citation": "Recital 9 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-9/"
+  },
+  {
+    "file": "recital_010.txt",
+    "type": "recital",
+    "number": 10,
+    "title": "Harmonised Level of Data Protection Despite National Scope*",
+    "citation": "Recital 10 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-10/"
+  },
+  {
+    "file": "recital_011.txt",
+    "type": "recital",
+    "number": 11,
+    "title": "Harmonisation of the Powers and Sanctions*",
+    "citation": "Recital 11 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-11/"
+  },
+  {
+    "file": "recital_012.txt",
+    "type": "recital",
+    "number": 12,
+    "title": "Authorization of the European Parliament and the Council*",
+    "citation": "Recital 12 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-12/"
+  },
+  {
+    "file": "recital_013.txt",
+    "type": "recital",
+    "number": 13,
+    "title": "Taking Account of Micro, Small and Medium-Sized Enterprises*",
+    "citation": "Recital 13 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-13/"
+  },
+  {
+    "file": "recital_014.txt",
+    "type": "recital",
+    "number": 14,
+    "title": "Not Applicable to Legal Persons*",
+    "citation": "Recital 14 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-14/"
+  },
+  {
+    "file": "recital_015.txt",
+    "type": "recital",
+    "number": 15,
+    "title": "Technology Neutrality*",
+    "citation": "Recital 15 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-15/"
+  },
+  {
+    "file": "recital_016.txt",
+    "type": "recital",
+    "number": 16,
+    "title": "Not Applicable to Activities Regarding National and Common Security*",
+    "citation": "Recital 16 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-16/"
+  },
+  {
+    "file": "recital_017.txt",
+    "type": "recital",
+    "number": 17,
+    "title": "Adaptation of Regulation (EC) No 45/2001*",
+    "citation": "Recital 17 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-17/"
+  },
+  {
+    "file": "recital_018.txt",
+    "type": "recital",
+    "number": 18,
+    "title": "Not Applicable to Personal or Household Activities*",
+    "citation": "Recital 18 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-18/"
+  },
+  {
+    "file": "recital_019.txt",
+    "type": "recital",
+    "number": 19,
+    "title": "Not Applicable to Criminal Prosecution*",
+    "citation": "Recital 19 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-19/"
+  },
+  {
+    "file": "recital_020.txt",
+    "type": "recital",
+    "number": 20,
+    "title": "Respecting the Independence of the Judiciary*",
+    "citation": "Recital 20 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-20/"
+  },
+  {
+    "file": "recital_021.txt",
+    "type": "recital",
+    "number": 21,
+    "title": "Liability Rules of Intermediary Service Providers Shall Remain Unaffected*",
+    "citation": "Recital 21 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-21/"
+  },
+  {
+    "file": "recital_022.txt",
+    "type": "recital",
+    "number": 22,
+    "title": "Processing by an Establishment*",
+    "citation": "Recital 22 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-22/"
+  },
+  {
+    "file": "recital_023.txt",
+    "type": "recital",
+    "number": 23,
+    "title": "Applicable to Controllers/Processors Not Established in the Union if Data Subjects Within the Union are Targeted*",
+    "citation": "Recital 23 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-23/"
+  },
+  {
+    "file": "recital_024.txt",
+    "type": "recital",
+    "number": 24,
+    "title": "Applicable to Controllers/Processors Not Established in the Union if Data Subjects Within the Union are Profiled*",
+    "citation": "Recital 24 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-24/"
+  },
+  {
+    "file": "recital_025.txt",
+    "type": "recital",
+    "number": 25,
+    "title": "Applicable to Controllers Due to International Law*",
+    "citation": "Recital 25 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-25/"
+  },
+  {
+    "file": "recital_026.txt",
+    "type": "recital",
+    "number": 26,
+    "title": "Not Applicable to Anonymous Data*",
+    "citation": "Recital 26 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-26/"
+  },
+  {
+    "file": "recital_027.txt",
+    "type": "recital",
+    "number": 27,
+    "title": "Not Applicable to Data of Deceased Persons*",
+    "citation": "Recital 27 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-27/"
+  },
+  {
+    "file": "recital_028.txt",
+    "type": "recital",
+    "number": 28,
+    "title": "Introduction of Pseudonymisation*",
+    "citation": "Recital 28 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-28/"
+  },
+  {
+    "file": "recital_029.txt",
+    "type": "recital",
+    "number": 29,
+    "title": "Pseudonymisation at the Same Controller*",
+    "citation": "Recital 29 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-29/"
+  },
+  {
+    "file": "recital_030.txt",
+    "type": "recital",
+    "number": 30,
+    "title": "Online Identifiers for Profiling and Identification*",
+    "citation": "Recital 30 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-30/"
+  },
+  {
+    "file": "recital_031.txt",
+    "type": "recital",
+    "number": 31,
+    "title": "Not Applicable to Public Authorities in Connection with Their Official Tasks*",
+    "citation": "Recital 31 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-31/"
+  },
+  {
+    "file": "recital_032.txt",
+    "type": "recital",
+    "number": 32,
+    "title": "Conditions for Consent*",
+    "citation": "Recital 32 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-32/"
+  },
+  {
+    "file": "recital_033.txt",
+    "type": "recital",
+    "number": 33,
+    "title": "Consent to Certain Areas of Scientific Research*",
+    "citation": "Recital 33 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-33/"
+  },
+  {
+    "file": "recital_034.txt",
+    "type": "recital",
+    "number": 34,
+    "title": "Genetic Data*",
+    "citation": "Recital 34 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-34/"
+  },
+  {
+    "file": "recital_035.txt",
+    "type": "recital",
+    "number": 35,
+    "title": "Health Data*",
+    "citation": "Recital 35 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-35/"
+  },
+  {
+    "file": "recital_036.txt",
+    "type": "recital",
+    "number": 36,
+    "title": "Determination of the Main Establishment*",
+    "citation": "Recital 36 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-36/"
+  },
+  {
+    "file": "recital_037.txt",
+    "type": "recital",
+    "number": 37,
+    "title": "Group of undertakings*",
+    "citation": "Recital 37 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-37/"
+  },
+  {
+    "file": "recital_038.txt",
+    "type": "recital",
+    "number": 38,
+    "title": "Special Protection of Children's Personal Data*",
+    "citation": "Recital 38 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-38/"
+  },
+  {
+    "file": "recital_039.txt",
+    "type": "recital",
+    "number": 39,
+    "title": "Principles of Data Processing*",
+    "citation": "Recital 39 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-39/"
+  },
+  {
+    "file": "recital_040.txt",
+    "type": "recital",
+    "number": 40,
+    "title": "Lawfulness of Data Processing*",
+    "citation": "Recital 40 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-40/"
+  },
+  {
+    "file": "recital_041.txt",
+    "type": "recital",
+    "number": 41,
+    "title": "Legal Basis or Legislative Measures*",
+    "citation": "Recital 41 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-41/"
+  },
+  {
+    "file": "recital_042.txt",
+    "type": "recital",
+    "number": 42,
+    "title": "Burden of Proof and Requirements for Consent*",
+    "citation": "Recital 42 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-42/"
+  },
+  {
+    "file": "recital_043.txt",
+    "type": "recital",
+    "number": 43,
+    "title": "Freely Given Consent*",
+    "citation": "Recital 43 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-43/"
+  },
+  {
+    "file": "recital_044.txt",
+    "type": "recital",
+    "number": 44,
+    "title": "Performance of a Contract*",
+    "citation": "Recital 44 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-44/"
+  },
+  {
+    "file": "recital_045.txt",
+    "type": "recital",
+    "number": 45,
+    "title": "Fulfillment of Legal Obligations*",
+    "citation": "Recital 45 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-45/"
+  },
+  {
+    "file": "recital_046.txt",
+    "type": "recital",
+    "number": 46,
+    "title": "Vital Interests of the Data Subject*",
+    "citation": "Recital 46 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-46/"
+  },
+  {
+    "file": "recital_047.txt",
+    "type": "recital",
+    "number": 47,
+    "title": "Overriding Legitimate Interest*",
+    "citation": "Recital 47 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-47/"
+  },
+  {
+    "file": "recital_048.txt",
+    "type": "recital",
+    "number": 48,
+    "title": "Overriding Legitimate Interest Within Group of Undertakings*",
+    "citation": "Recital 48 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-48/"
+  },
+  {
+    "file": "recital_049.txt",
+    "type": "recital",
+    "number": 49,
+    "title": "Network and Information Security as Overriding Legitimate Interest*",
+    "citation": "Recital 49 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-49/"
+  },
+  {
+    "file": "recital_050.txt",
+    "type": "recital",
+    "number": 50,
+    "title": "Further Processing of Personal Data*",
+    "citation": "Recital 50 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-50/"
+  },
+  {
+    "file": "recital_051.txt",
+    "type": "recital",
+    "number": 51,
+    "title": "Protecting Sensitive Personal Data*",
+    "citation": "Recital 51 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-51/"
+  },
+  {
+    "file": "recital_052.txt",
+    "type": "recital",
+    "number": 52,
+    "title": "Exceptions to the Prohibition on Processing Special Categories of Personal Data*",
+    "citation": "Recital 52 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-52/"
+  },
+  {
+    "file": "recital_053.txt",
+    "type": "recital",
+    "number": 53,
+    "title": "Processing of Sensitive Data in Health and Social Sector*",
+    "citation": "Recital 53 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-53/"
+  },
+  {
+    "file": "recital_054.txt",
+    "type": "recital",
+    "number": 54,
+    "title": "Processing of Sensitive Data in Public Health Sector*",
+    "citation": "Recital 54 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-54/"
+  },
+  {
+    "file": "recital_055.txt",
+    "type": "recital",
+    "number": 55,
+    "title": "Public Interest in Processing by Official Authorities for Objectives of Recognized Religious Communities*",
+    "citation": "Recital 55 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-55/"
+  },
+  {
+    "file": "recital_056.txt",
+    "type": "recital",
+    "number": 56,
+    "title": "Processing Personal Data on People's Political Opinions by Parties*",
+    "citation": "Recital 56 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-56/"
+  },
+  {
+    "file": "recital_057.txt",
+    "type": "recital",
+    "number": 57,
+    "title": "Additional Data for Identification Purposes*",
+    "citation": "Recital 57 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-57/"
+  },
+  {
+    "file": "recital_058.txt",
+    "type": "recital",
+    "number": 58,
+    "title": "The Principle of Transparency*",
+    "citation": "Recital 58 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-58/"
+  },
+  {
+    "file": "recital_059.txt",
+    "type": "recital",
+    "number": 59,
+    "title": "Procedures for the Exercise of the Rights of the Data Subjects*",
+    "citation": "Recital 59 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-59/"
+  },
+  {
+    "file": "recital_060.txt",
+    "type": "recital",
+    "number": 60,
+    "title": "Information Obligation*",
+    "citation": "Recital 60 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-60/"
+  },
+  {
+    "file": "recital_061.txt",
+    "type": "recital",
+    "number": 61,
+    "title": "Time of Information*",
+    "citation": "Recital 61 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-61/"
+  },
+  {
+    "file": "recital_062.txt",
+    "type": "recital",
+    "number": 62,
+    "title": "Exceptions to the Obligation to Provide Information*",
+    "citation": "Recital 62 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-62/"
+  },
+  {
+    "file": "recital_063.txt",
+    "type": "recital",
+    "number": 63,
+    "title": "Right of Access*",
+    "citation": "Recital 63 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-63/"
+  },
+  {
+    "file": "recital_064.txt",
+    "type": "recital",
+    "number": 64,
+    "title": "Identity Verification*",
+    "citation": "Recital 64 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-64/"
+  },
+  {
+    "file": "recital_065.txt",
+    "type": "recital",
+    "number": 65,
+    "title": "Right of Rectification and Erasure*",
+    "citation": "Recital 65 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-65/"
+  },
+  {
+    "file": "recital_066.txt",
+    "type": "recital",
+    "number": 66,
+    "title": "Right to be Forgotten*",
+    "citation": "Recital 66 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-66/"
+  },
+  {
+    "file": "recital_067.txt",
+    "type": "recital",
+    "number": 67,
+    "title": "Restriction of Processing*",
+    "citation": "Recital 67 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-67/"
+  },
+  {
+    "file": "recital_068.txt",
+    "type": "recital",
+    "number": 68,
+    "title": "Right of Data Portability*",
+    "citation": "Recital 68 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-68/"
+  },
+  {
+    "file": "recital_069.txt",
+    "type": "recital",
+    "number": 69,
+    "title": "Right to Object*",
+    "citation": "Recital 69 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-69/"
+  },
+  {
+    "file": "recital_070.txt",
+    "type": "recital",
+    "number": 70,
+    "title": "Right to Object to Direct Marketing*",
+    "citation": "Recital 70 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-70/"
+  },
+  {
+    "file": "recital_071.txt",
+    "type": "recital",
+    "number": 71,
+    "title": "Profiling*",
+    "citation": "Recital 71 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-71/"
+  },
+  {
+    "file": "recital_072.txt",
+    "type": "recital",
+    "number": 72,
+    "title": "Guidance of the European Data Protection Board Regarding Profiling*",
+    "citation": "Recital 72 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-72/"
+  },
+  {
+    "file": "recital_073.txt",
+    "type": "recital",
+    "number": 73,
+    "title": "Restrictions of Rights and Principles*",
+    "citation": "Recital 73 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-73/"
+  },
+  {
+    "file": "recital_074.txt",
+    "type": "recital",
+    "number": 74,
+    "title": "Responsibility and Liability of the Controller*",
+    "citation": "Recital 74 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-74/"
+  },
+  {
+    "file": "recital_075.txt",
+    "type": "recital",
+    "number": 75,
+    "title": "Risks to the Rights and Freedoms of Natural Persons*",
+    "citation": "Recital 75 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-75/"
+  },
+  {
+    "file": "recital_076.txt",
+    "type": "recital",
+    "number": 76,
+    "title": "Risk Assessment*",
+    "citation": "Recital 76 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-76/"
+  },
+  {
+    "file": "recital_077.txt",
+    "type": "recital",
+    "number": 77,
+    "title": "Risk Assessment Guidelines*",
+    "citation": "Recital 77 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-77/"
+  },
+  {
+    "file": "recital_078.txt",
+    "type": "recital",
+    "number": 78,
+    "title": "Appropriate Technical and Organisational Measures*",
+    "citation": "Recital 78 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-78/"
+  },
+  {
+    "file": "recital_079.txt",
+    "type": "recital",
+    "number": 79,
+    "title": "Allocation of the Responsibilities*",
+    "citation": "Recital 79 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-79/"
+  },
+  {
+    "file": "recital_080.txt",
+    "type": "recital",
+    "number": 80,
+    "title": "Designation of a Representative*",
+    "citation": "Recital 80 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-80/"
+  },
+  {
+    "file": "recital_081.txt",
+    "type": "recital",
+    "number": 81,
+    "title": "The Use of Processors*",
+    "citation": "Recital 81 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-81/"
+  },
+  {
+    "file": "recital_082.txt",
+    "type": "recital",
+    "number": 82,
+    "title": "Record of Processing Activities*",
+    "citation": "Recital 82 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-82/"
+  },
+  {
+    "file": "recital_083.txt",
+    "type": "recital",
+    "number": 83,
+    "title": "Security of Processing*",
+    "citation": "Recital 83 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-83/"
+  },
+  {
+    "file": "recital_084.txt",
+    "type": "recital",
+    "number": 84,
+    "title": "Risk Evaluation and Impact Assessment*",
+    "citation": "Recital 84 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-84/"
+  },
+  {
+    "file": "recital_085.txt",
+    "type": "recital",
+    "number": 85,
+    "title": "Notification Obligation of Breaches to the Supervisory Authority*",
+    "citation": "Recital 85 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-85/"
+  },
+  {
+    "file": "recital_086.txt",
+    "type": "recital",
+    "number": 86,
+    "title": "Notification of Data Subjects in Case of Data Breaches*",
+    "citation": "Recital 86 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-86/"
+  },
+  {
+    "file": "recital_087.txt",
+    "type": "recital",
+    "number": 87,
+    "title": "Promptness of Reporting / Notification*",
+    "citation": "Recital 87 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-87/"
+  },
+  {
+    "file": "recital_088.txt",
+    "type": "recital",
+    "number": 88,
+    "title": "Format and Procedures of the Notification*",
+    "citation": "Recital 88 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-88/"
+  },
+  {
+    "file": "recital_089.txt",
+    "type": "recital",
+    "number": 89,
+    "title": "Elimination of the General Reporting Requirement*",
+    "citation": "Recital 89 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-89/"
+  },
+  {
+    "file": "recital_090.txt",
+    "type": "recital",
+    "number": 90,
+    "title": "Data Protection Impact Assessement*",
+    "citation": "Recital 90 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-90/"
+  },
+  {
+    "file": "recital_091.txt",
+    "type": "recital",
+    "number": 91,
+    "title": "Necessity of a Data Protection Impact Assessment*",
+    "citation": "Recital 91 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-91/"
+  },
+  {
+    "file": "recital_092.txt",
+    "type": "recital",
+    "number": 92,
+    "title": "Broader Data Protection Impact Assessment*",
+    "citation": "Recital 92 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-92/"
+  },
+  {
+    "file": "recital_093.txt",
+    "type": "recital",
+    "number": 93,
+    "title": "Data Protection Impact Assessment at Authorities*",
+    "citation": "Recital 93 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-93/"
+  },
+  {
+    "file": "recital_094.txt",
+    "type": "recital",
+    "number": 94,
+    "title": "Consultation of the Supervisory Authority*",
+    "citation": "Recital 94 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-94/"
+  },
+  {
+    "file": "recital_095.txt",
+    "type": "recital",
+    "number": 95,
+    "title": "Support by the Processor*",
+    "citation": "Recital 95 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-95/"
+  },
+  {
+    "file": "recital_096.txt",
+    "type": "recital",
+    "number": 96,
+    "title": "Consultation of the Supervisory Authority in the Course of a Legislative Process*",
+    "citation": "Recital 96 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-96/"
+  },
+  {
+    "file": "recital_097.txt",
+    "type": "recital",
+    "number": 97,
+    "title": "Data Protection Officer*",
+    "citation": "Recital 97 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-97/"
+  },
+  {
+    "file": "recital_098.txt",
+    "type": "recital",
+    "number": 98,
+    "title": "Preparation of Codes of Conduct by Organisations and Associations*",
+    "citation": "Recital 98 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-98/"
+  },
+  {
+    "file": "recital_099.txt",
+    "type": "recital",
+    "number": 99,
+    "title": "Consultation of Stakeholders and Data Subjects in the Development of Codes of Conduct*",
+    "citation": "Recital 99 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-99/"
+  },
+  {
+    "file": "recital_100.txt",
+    "type": "recital",
+    "number": 100,
+    "title": "Certification*",
+    "citation": "Recital 100 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-100/"
+  },
+  {
+    "file": "recital_101.txt",
+    "type": "recital",
+    "number": 101,
+    "title": "General Principles for International Data Transfers*",
+    "citation": "Recital 101 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-101/"
+  },
+  {
+    "file": "recital_102.txt",
+    "type": "recital",
+    "number": 102,
+    "title": "International Agreements for an Appropriate Level of Data Protection*",
+    "citation": "Recital 102 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-102/"
+  },
+  {
+    "file": "recital_103.txt",
+    "type": "recital",
+    "number": 103,
+    "title": "Appropriate Level of Data Protection Based on an Adequacy Decision*",
+    "citation": "Recital 103 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-103/"
+  },
+  {
+    "file": "recital_104.txt",
+    "type": "recital",
+    "number": 104,
+    "title": "Criteria for an Adequacy Decision*",
+    "citation": "Recital 104 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-104/"
+  },
+  {
+    "file": "recital_105.txt",
+    "type": "recital",
+    "number": 105,
+    "title": "Consideration of International Agreements for an Adequacy Decision*",
+    "citation": "Recital 105 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-105/"
+  },
+  {
+    "file": "recital_106.txt",
+    "type": "recital",
+    "number": 106,
+    "title": "Monitoring and Periodic Review of the Level of Data Protection*",
+    "citation": "Recital 106 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-106/"
+  },
+  {
+    "file": "recital_107.txt",
+    "type": "recital",
+    "number": 107,
+    "title": "Amendment, Revocation and Suspension of Adequacy Decisions*",
+    "citation": "Recital 107 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-107/"
+  },
+  {
+    "file": "recital_108.txt",
+    "type": "recital",
+    "number": 108,
+    "title": "Appropriate Safeguards*",
+    "citation": "Recital 108 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-108/"
+  },
+  {
+    "file": "recital_109.txt",
+    "type": "recital",
+    "number": 109,
+    "title": "Standard Data Protection Clauses*",
+    "citation": "Recital 109 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-109/"
+  },
+  {
+    "file": "recital_110.txt",
+    "type": "recital",
+    "number": 110,
+    "title": "Binding Corporate Rules*",
+    "citation": "Recital 110 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-110/"
+  },
+  {
+    "file": "recital_111.txt",
+    "type": "recital",
+    "number": 111,
+    "title": "Exceptions for Certain Cases of International Transfers*",
+    "citation": "Recital 111 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-111/"
+  },
+  {
+    "file": "recital_112.txt",
+    "type": "recital",
+    "number": 112,
+    "title": "Data Transfers due to Important Reasons of Public Interest*",
+    "citation": "Recital 112 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-112/"
+  },
+  {
+    "file": "recital_113.txt",
+    "type": "recital",
+    "number": 113,
+    "title": "Transfers Qualified as Not Repetitive and that Only Concern a Limited Number of Data Subjects*",
+    "citation": "Recital 113 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-113/"
+  },
+  {
+    "file": "recital_114.txt",
+    "type": "recital",
+    "number": 114,
+    "title": "Safeguarding of Enforceability of Rights and Obligations in the Absence of an Adequacy Decision*",
+    "citation": "Recital 114 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-114/"
+  },
+  {
+    "file": "recital_115.txt",
+    "type": "recital",
+    "number": 115,
+    "title": "Rules in Third Countries Contrary to the Regulation*",
+    "citation": "Recital 115 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-115/"
+  },
+  {
+    "file": "recital_116.txt",
+    "type": "recital",
+    "number": 116,
+    "title": "Cooperation Among Supervisory Authorities*",
+    "citation": "Recital 116 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-116/"
+  },
+  {
+    "file": "recital_117.txt",
+    "type": "recital",
+    "number": 117,
+    "title": "Establishment of Supervisory Authorities*",
+    "citation": "Recital 117 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-117/"
+  },
+  {
+    "file": "recital_118.txt",
+    "type": "recital",
+    "number": 118,
+    "title": "Monitoring of the Supervisory Authorities*",
+    "citation": "Recital 118 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-118/"
+  },
+  {
+    "file": "recital_119.txt",
+    "type": "recital",
+    "number": 119,
+    "title": "Organisation of Several Supervisory Authorities of a Member State*",
+    "citation": "Recital 119 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-119/"
+  },
+  {
+    "file": "recital_120.txt",
+    "type": "recital",
+    "number": 120,
+    "title": "Features of Supervisory Authorities*",
+    "citation": "Recital 120 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-120/"
+  },
+  {
+    "file": "recital_121.txt",
+    "type": "recital",
+    "number": 121,
+    "title": "Independence of the Supervisory Authorities*",
+    "citation": "Recital 121 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-121/"
+  },
+  {
+    "file": "recital_122.txt",
+    "type": "recital",
+    "number": 122,
+    "title": "Responsibility of the Supervisory Authorities*",
+    "citation": "Recital 122 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-122/"
+  },
+  {
+    "file": "recital_123.txt",
+    "type": "recital",
+    "number": 123,
+    "title": "Cooperation of the Supervisory Authorities with Each Other and with the Commission*",
+    "citation": "Recital 123 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-123/"
+  },
+  {
+    "file": "recital_124.txt",
+    "type": "recital",
+    "number": 124,
+    "title": "Lead Authority Regarding Processing in Several Member States*",
+    "citation": "Recital 124 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-124/"
+  },
+  {
+    "file": "recital_125.txt",
+    "type": "recital",
+    "number": 125,
+    "title": "Competences of the Lead Authority*",
+    "citation": "Recital 125 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-125/"
+  },
+  {
+    "file": "recital_126.txt",
+    "type": "recital",
+    "number": 126,
+    "title": "Joint Decisions*",
+    "citation": "Recital 126 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-126/"
+  },
+  {
+    "file": "recital_127.txt",
+    "type": "recital",
+    "number": 127,
+    "title": "Information of the Supervisory Authority Regarding Local Processing*",
+    "citation": "Recital 127 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-127/"
+  },
+  {
+    "file": "recital_128.txt",
+    "type": "recital",
+    "number": 128,
+    "title": "Responsibility Regarding Processing in the Public Interest*",
+    "citation": "Recital 128 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-128/"
+  },
+  {
+    "file": "recital_129.txt",
+    "type": "recital",
+    "number": 129,
+    "title": "Tasks and Powers of the Supervisory Authorities*",
+    "citation": "Recital 129 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-129/"
+  },
+  {
+    "file": "recital_130.txt",
+    "type": "recital",
+    "number": 130,
+    "title": "Consideration of the Authority with which the Complaint has been Lodged*",
+    "citation": "Recital 130 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-130/"
+  },
+  {
+    "file": "recital_131.txt",
+    "type": "recital",
+    "number": 131,
+    "title": "Attempt of an Amicable Settlement*",
+    "citation": "Recital 131 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-131/"
+  },
+  {
+    "file": "recital_132.txt",
+    "type": "recital",
+    "number": 132,
+    "title": "Awareness-Raising Activities and Specific Measures*",
+    "citation": "Recital 132 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-132/"
+  },
+  {
+    "file": "recital_133.txt",
+    "type": "recital",
+    "number": 133,
+    "title": "Mutual Assistance and Provisional Measures*",
+    "citation": "Recital 133 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-133/"
+  },
+  {
+    "file": "recital_134.txt",
+    "type": "recital",
+    "number": 134,
+    "title": "Participation in Joint Operations*",
+    "citation": "Recital 134 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-134/"
+  },
+  {
+    "file": "recital_135.txt",
+    "type": "recital",
+    "number": 135,
+    "title": "Consistency Mechanism*",
+    "citation": "Recital 135 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-135/"
+  },
+  {
+    "file": "recital_136.txt",
+    "type": "recital",
+    "number": 136,
+    "title": "Binding Decisions and Opinions of the Board*",
+    "citation": "Recital 136 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-136/"
+  },
+  {
+    "file": "recital_137.txt",
+    "type": "recital",
+    "number": 137,
+    "title": "Provisional Measures*",
+    "citation": "Recital 137 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-137/"
+  },
+  {
+    "file": "recital_138.txt",
+    "type": "recital",
+    "number": 138,
+    "title": "Urgency Procedure*",
+    "citation": "Recital 138 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-138/"
+  },
+  {
+    "file": "recital_139.txt",
+    "type": "recital",
+    "number": 139,
+    "title": "European Data Protection Board*",
+    "citation": "Recital 139 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-139/"
+  },
+  {
+    "file": "recital_140.txt",
+    "type": "recital",
+    "number": 140,
+    "title": "Secretariat and Staff of the Board*",
+    "citation": "Recital 140 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-140/"
+  },
+  {
+    "file": "recital_141.txt",
+    "type": "recital",
+    "number": 141,
+    "title": "Right to Lodge a Complaint*",
+    "citation": "Recital 141 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-141/"
+  },
+  {
+    "file": "recital_142.txt",
+    "type": "recital",
+    "number": 142,
+    "title": "The Right of Data Subjects to Mandate a Not-For-Profit Body, Organisation or Association*",
+    "citation": "Recital 142 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-142/"
+  },
+  {
+    "file": "recital_143.txt",
+    "type": "recital",
+    "number": 143,
+    "title": "Judicial Remedies*",
+    "citation": "Recital 143 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-143/"
+  },
+  {
+    "file": "recital_144.txt",
+    "type": "recital",
+    "number": 144,
+    "title": "Related Proceedings*",
+    "citation": "Recital 144 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-144/"
+  },
+  {
+    "file": "recital_145.txt",
+    "type": "recital",
+    "number": 145,
+    "title": "Choice of Venue*",
+    "citation": "Recital 145 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-145/"
+  },
+  {
+    "file": "recital_146.txt",
+    "type": "recital",
+    "number": 146,
+    "title": "Indemnity*",
+    "citation": "Recital 146 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-146/"
+  },
+  {
+    "file": "recital_147.txt",
+    "type": "recital",
+    "number": 147,
+    "title": "Jurisdiction*",
+    "citation": "Recital 147 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-147/"
+  },
+  {
+    "file": "recital_148.txt",
+    "type": "recital",
+    "number": 148,
+    "title": "Penalties*",
+    "citation": "Recital 148 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-148/"
+  },
+  {
+    "file": "recital_149.txt",
+    "type": "recital",
+    "number": 149,
+    "title": "Penalties for Infringements of National Rules*",
+    "citation": "Recital 149 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-149/"
+  },
+  {
+    "file": "recital_150.txt",
+    "type": "recital",
+    "number": 150,
+    "title": "Administrative Fines*",
+    "citation": "Recital 150 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-150/"
+  },
+  {
+    "file": "recital_151.txt",
+    "type": "recital",
+    "number": 151,
+    "title": "Administrative Fines in Denmark and Estonia*",
+    "citation": "Recital 151 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-151/"
+  },
+  {
+    "file": "recital_152.txt",
+    "type": "recital",
+    "number": 152,
+    "title": "Power of Sanction of the Member States*",
+    "citation": "Recital 152 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-152/"
+  },
+  {
+    "file": "recital_153.txt",
+    "type": "recital",
+    "number": 153,
+    "title": "Processing of Personal Data Solely for Journalistic Purposes or for the Purposes of Academic, Artistic or Literary Expression*",
+    "citation": "Recital 153 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-153/"
+  },
+  {
+    "file": "recital_154.txt",
+    "type": "recital",
+    "number": 154,
+    "title": "Principle of Public Access to Official Documents*",
+    "citation": "Recital 154 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-154/"
+  },
+  {
+    "file": "recital_155.txt",
+    "type": "recital",
+    "number": 155,
+    "title": "Processing in the Employment Context*",
+    "citation": "Recital 155 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-155/"
+  },
+  {
+    "file": "recital_156.txt",
+    "type": "recital",
+    "number": 156,
+    "title": "Processing for Archiving, Scientific or Historical Research or Statistical Purposes*",
+    "citation": "Recital 156 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-156/"
+  },
+  {
+    "file": "recital_157.txt",
+    "type": "recital",
+    "number": 157,
+    "title": "Information from Registries and Scientific Research*",
+    "citation": "Recital 157 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-157/"
+  },
+  {
+    "file": "recital_158.txt",
+    "type": "recital",
+    "number": 158,
+    "title": "Processing for Archiving Purposes*",
+    "citation": "Recital 158 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-158/"
+  },
+  {
+    "file": "recital_159.txt",
+    "type": "recital",
+    "number": 159,
+    "title": "Processing for Scientific Research Purposes*",
+    "citation": "Recital 159 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-159/"
+  },
+  {
+    "file": "recital_160.txt",
+    "type": "recital",
+    "number": 160,
+    "title": "Processing for Historical Research Purposes*",
+    "citation": "Recital 160 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-160/"
+  },
+  {
+    "file": "recital_161.txt",
+    "type": "recital",
+    "number": 161,
+    "title": "Consenting to the Participation in Clinical Trials*",
+    "citation": "Recital 161 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-161/"
+  },
+  {
+    "file": "recital_162.txt",
+    "type": "recital",
+    "number": 162,
+    "title": "Processing for Statistical Purposes*",
+    "citation": "Recital 162 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-162/"
+  },
+  {
+    "file": "recital_163.txt",
+    "type": "recital",
+    "number": 163,
+    "title": "Production of European and National Statistics*",
+    "citation": "Recital 163 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-163/"
+  },
+  {
+    "file": "recital_164.txt",
+    "type": "recital",
+    "number": 164,
+    "title": "Professional or Other Equivalent Secrecy Obligations*",
+    "citation": "Recital 164 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-164/"
+  },
+  {
+    "file": "recital_165.txt",
+    "type": "recital",
+    "number": 165,
+    "title": "No Prejudice of the Status of Churches and Religious Associations*",
+    "citation": "Recital 165 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-165/"
+  },
+  {
+    "file": "recital_166.txt",
+    "type": "recital",
+    "number": 166,
+    "title": "Delegated Acts of the Commission*",
+    "citation": "Recital 166 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-166/"
+  },
+  {
+    "file": "recital_167.txt",
+    "type": "recital",
+    "number": 167,
+    "title": "Implementing Powers of the Commission*",
+    "citation": "Recital 167 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-167/"
+  },
+  {
+    "file": "recital_168.txt",
+    "type": "recital",
+    "number": 168,
+    "title": "Implementing Acts on Standard Contractual Clauses*",
+    "citation": "Recital 168 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-168/"
+  },
+  {
+    "file": "recital_169.txt",
+    "type": "recital",
+    "number": 169,
+    "title": "Immediately Applicable Implementing Acts*",
+    "citation": "Recital 169 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-169/"
+  },
+  {
+    "file": "recital_170.txt",
+    "type": "recital",
+    "number": 170,
+    "title": "Principle of Subsidiarity and Principle of Proportionality*",
+    "citation": "Recital 170 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-170/"
+  },
+  {
+    "file": "recital_171.txt",
+    "type": "recital",
+    "number": 171,
+    "title": "Repeal of Directive 95/46/EC and Transitional Provisions*",
+    "citation": "Recital 171 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-171/"
+  },
+  {
+    "file": "recital_172.txt",
+    "type": "recital",
+    "number": 172,
+    "title": "Consultation of the European Data Protection Supervisor*",
+    "citation": "Recital 172 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-172/"
+  },
+  {
+    "file": "recital_173.txt",
+    "type": "recital",
+    "number": 173,
+    "title": "Relationship to Directive 2002/58/EC*",
+    "citation": "Recital 173 GDPR",
+    "source": "https://gdpr-info.eu/recitals/no-173/"
+  }
+]
