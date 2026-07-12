@@ -16,10 +16,16 @@ correct behavior).
 
 Usage:
     python3 -m eval.run_eval                      # bm25, grounded, default chunking
-    python3 -m eval.run_eval --retriever tfidf    # swap retriever
-    python3 -m eval.run_eval --retriever dense    # needs sentence-transformers
+    python3 -m eval.run_eval --retriever tfidf    # tf-idf vector embedding baseline
+    python3 -m eval.run_eval --retriever hybrid   # optional: best measured retrieval
+    python3 -m eval.run_eval --retriever dense    # optional: dense ablation
+    python3 -m eval.run_eval --retriever hybrid --answerer generative
+                                                  # optional: generative experiment
     python3 -m eval.run_eval --policy permissive  # swap answer policy
     python3 -m eval.run_eval --chunk-words 300    # chunking ablation
+
+Dense/hybrid need requirements-dense.txt; generative needs
+requirements-gen.txt. Both are optional extras with committed outputs.
 """
 import os, json, argparse, platform
 from rag.pipeline import RagPipeline
@@ -93,6 +99,11 @@ def main():
                     help="light suffix stripping on both query and documents")
     ap.add_argument("--policy", default="grounded",
                     choices=["grounded", "permissive"])
+    ap.add_argument("--answerer", default="extractive",
+                    choices=["extractive", "generative"])
+    ap.add_argument("--gen-model", default=None,
+                    help="hub id for the generative answerer "
+                         "(default google/flan-t5-small)")
     ap.add_argument("--tag", default=None)
     args = ap.parse_args()
 
@@ -101,7 +112,8 @@ def main():
 
     pipe = RagPipeline(retriever=args.retriever, chunk_words=args.chunk_words,
                        overlap_words=args.overlap_words, k=args.k,
-                       stem=args.stem, policy=args.policy)
+                       stem=args.stem, policy=args.policy,
+                       answerer=args.answerer, gen_model=args.gen_model)
 
     records = []
     for q in questions:
@@ -131,7 +143,8 @@ def main():
     config.update(answer_builder_version=ANSWER_BUILDER_VERSION,
                   python_version=platform.python_version())
 
-    tag = args.tag or f"{args.retriever}_cw{args.chunk_words}"
+    tag = args.tag or (f"{args.retriever}_cw{args.chunk_words}"
+                       + ("_gen" if args.answerer == "generative" else ""))
     path = os.path.join(OUT, f"run_{tag}.json")
     with open(path, "w") as f:
         json.dump({"config": config, "aggregate": agg, "records": records},
