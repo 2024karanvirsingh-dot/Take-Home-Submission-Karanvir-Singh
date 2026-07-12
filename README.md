@@ -47,6 +47,11 @@ python3 -m rag.pipeline "can a deserter be sentenced to death?"
 
 # reproduce every run in this README (no API key needed for retrieval or scoring)
 ./run_all.sh
+
+# optional: the dense/hybrid ablation (downloads a 90 MB encoder via torch)
+pip install sentence-transformers
+python3 -m eval.run_eval --retriever dense --tag dense_baseline
+python3 -m eval.run_eval --retriever hybrid --tag hybrid_baseline
 ```
 
 Retrieval, indexing and scoring run with no API key. Generation uses the
@@ -66,8 +71,8 @@ paragraph boundaries into windows of about 180 words with 40 words of overlap.
 Chunking never crosses a provision boundary, so every chunk maps to exactly one
 article and every citation is honest. This gives 572 chunks at the default size.
 
-**Index and retrieve** (`rag/index.py`). Two sparse retrievers, both fully
-inspectable:
+**Index and retrieve** (`rag/index.py`). Two sparse retrievers by default, both
+fully inspectable:
 
 * **BM25**, implemented from scratch (about 40 lines) rather than pulled from a
   library, so the term frequency saturation (`k1`) and length normalisation
@@ -75,13 +80,19 @@ inspectable:
   This is the default.
 * **TF-IDF cosine** via scikit-learn, used as the alternative in the ablation.
 
-I chose sparse retrieval on purpose. A dense embedding model would mean a
-several hundred MB download and would turn every retrieval decision into an
-opaque dot product. Sparse keeps the clone small and, more importantly for this
-exercise, keeps every retrieval decision explainable: the eval runner records
-which query terms fired in the winning chunk. The tradeoff is that sparse
-retrieval has no idea that "deserter" and "desertion" are the same word, and the
-failure analysis shows exactly what that costs.
+I chose sparse retrieval as the default on purpose. A dense embedding model
+turns every retrieval decision into an opaque dot product, while sparse keeps
+the clone small and, more importantly for this exercise, keeps every retrieval
+decision explainable: the eval runner records which query terms fired in the
+winning chunk. The tradeoff is that sparse retrieval has no idea that
+"deserter" and "desertion" are the same word, and the failure analysis shows
+exactly what that costs. Because the failure analysis ends up predicting
+exactly which misses a dense model should fix, there is also an optional dense
+retriever (all-MiniLM-L6-v2 embeddings, `--retriever dense`) and a BM25 plus
+dense reciprocal rank fusion (`--retriever hybrid`) to put that prediction to
+the test; they need `pip install sentence-transformers` and are kept out of
+requirements.txt so the default install stays small. Ablation E has the
+results, and they cut both ways.
 
 **Generate** (`rag/generate.py`). The prompt is strict: answer only from the
 retrieved context, cite the article, treat "as a court-martial may direct" as a
@@ -189,7 +200,8 @@ via the equally colloquial word "panel", which in this statute only ever means
 the review body). The vocabulary users add for clarity is exactly the vocabulary
 that misleads the retriever. This is the strongest argument in the whole eval
 for dense or hybrid retrieval: no term weighting scheme can learn that "UCMJ"
-means "this chapter" from term statistics alone.
+means "this chapter" from term statistics alone. That is a falsifiable claim,
+and Ablation E tests it directly.
 
 **Failure 4: a provision whose name is generic is structurally invisible
 (q14).** "Conduct unbecoming an officer versus the general article": Art. 133
@@ -266,8 +278,8 @@ honest shape of most retrieval interventions: a targeted gain, a diffuse cost,
 and the eval set is what tells you whether the trade is worth it. A proper
 stemmer (Porter) would keep most of the q04 gain while avoiding the crude
 "officer to offic" collisions, and that, not more chunk tuning, is the next
-change I would make, followed by hybrid sparse plus dense retrieval for the
-vocabulary gap failures that no term-level fix can reach.
+change I would make. The vocabulary gap failures that no term-level fix can
+reach get their own experiment in Ablation E.
 
 ### Ablation D, the prompt
 
@@ -297,6 +309,76 @@ works by converting retrieval failures into visible refusals instead of
 invisible fabrications. Better retrieval reduces how often the refusal fires.
 The prompt is what makes the residual failures safe.
 
+### Ablation E, dense and hybrid retrieval, testing the failure analysis on its own prediction
+
+The failure analysis above keeps making one falsifiable claim: the q05/q07
+boilerplate misses and the "UCMJ" vocabulary trap cannot be fixed by any term
+level intervention, only by a representation that knows synonymy. So the last
+experiment swaps the retriever for a small pretrained sentence encoder
+(all-MiniLM-L6-v2, cosine over normalised embeddings, `--retriever dense`) and
+for a reciprocal rank fusion of BM25 and dense (`--retriever hybrid`). Both
+need `pip install sentence-transformers` and are deliberately not in
+requirements.txt; everything else in the repo runs without them. Runs in
+`outputs/run_dense_baseline.json` and `outputs/run_hybrid_baseline.json`.
+
+| 17 scored questions | BM25 | dense | hybrid RRF |
+| --- | --- | --- | --- |
+| gold at rank 1 | 9 | 12 | 10 |
+| gold in top 3 | 11 | 13 | 12 |
+| missed | 6 | 4 | 4 |
+
+Every question that moved, and why:
+
+| question | BM25 | dense | hybrid | mechanism |
+| --- | --- | --- | --- | --- |
+| q04 deserter/death | MISS | **1** | MISS | encoder knows deserter and desertion are the same thing, no stemming needed and none of Ablation C's collateral damage |
+| q05 define commanding officer | MISS | **1** | 5 | the boilerplate that zeroed the IDF of "commanding officer" is invisible to the encoder |
+| q07 who is subject to the UCMJ | MISS | **2** | 2 | Art. 2 finally surfaces; the encoder maps "subject to the UCMJ" near "persons subject to this chapter" |
+| q06 who is an accuser | MISS | MISS | **2** | the pure fusion win, see below |
+| q10 capital panel size | 2 | 1 | 1 | "panel" no longer tunnels to the Art. 146 review body |
+| q16 disobeying orders | 2 | 1 | 1 | the "about"/"does" function word bug vanishes, no terms to match |
+| q08 rights under Article 31 | **1** | MISS | MISS | the new failure dense introduced, see below |
+| q12 referral of charges | MISS | MISS | MISS | not a representation problem |
+| q17 AWOL confinement max | MISS | MISS | MISS | the answer is in the MCM, not the corpus, by design |
+
+The prediction held. Dense fixes q05 and q07 outright, and it fixes q04 at
+rank 1 without stemming and without the officer/offices collisions that
+stemming charged for the same repair. Three failure mechanisms (morphology,
+boilerplate IDF erosion, vocabulary gap), one representational fix.
+
+But dense buys those wins by breaking the question sparse was best at. On q08,
+"What rights does Article 31 give a servicemember suspected of an offense?",
+all five dense slots are chunks of Art. 6b, rights of the victim of an
+offense. To the encoder, rights of a suspect and rights of a victim are nearly
+the same sentence, while the one token that actually pins the question down,
+"31", is just another subword. BM25 answered this at rank 1 on exactly that
+token. The symmetry is the finding: dense wins when the user's words are not
+the statute's words, and loses when the user's words were the statute's words
+all along. In a legal corpus, where the exact article number is often the
+entire meaning of the question, that is not a small tail case.
+
+The hybrid is instructive in a different way. Its fusion win is q06: Art. 1
+(which defines "accuser") was in neither retriever's top 5, but it sat high
+enough in both top 50 lists that reciprocal rank fusion lifts it to rank 2.
+That is fusion doing exactly what it is for: rewarding agreement between
+retrievers that fail differently. But the same consensus bias costs q04 and
+q08, where one retriever was simply right (rank 1) and the other blind, so the
+gold gets a single 1/(60+1) vote and loses to mediocre chunks present in both
+lists. RRF with a plain sum has no way to know that one confident list should
+outvote two lukewarm ones. On this question set the honest summary is: dense
+is the best single retriever, hybrid trades its peaks for fewer catastrophes,
+and which you want depends on whether your users ask by concept or by article
+number. A production system would want dense recall with an exact-identifier
+boost, which is what BM25 was providing for free.
+
+And the number that matters most does not move: q12 and q17 miss under every
+retriever tested, because their failures are not representational. q17's
+answer is outside the corpus by construction, and q12's answer (the Art. 32
+preliminary hearing requirement) is phrased in procedural language spread
+across half a dozen referral provisions, so nothing anchors it. Retrieval
+upgrades fix retrieval-shaped failures and nothing else; knowing which
+failures are which is what the eval is for.
+
 ## How the recorded answers were produced
 
 This environment had no `ANTHROPIC_API_KEY`, so the graded answers in
@@ -317,11 +399,15 @@ depend on any key or any model.
   calls are genuinely arguable.
 * 18 questions is enough to surface failure modes, not enough for stable
   metrics. The per type counts are small.
-* Sparse only. The vocabulary gap failures (UCMJ, panel, general article) are
-  exactly the class dense retrieval exists to fix, and hybrid retrieval is the
-  first real upgrade I would make. I chose sparse here so the clone stays small
-  and every retrieval decision stays explainable, which served the evaluation
-  goal better.
+* The dense results come from one small encoder (MiniLM) on one question set.
+  Ablation E's direction is clear but its margins (12 versus 9 at rank 1) are
+  well within what three or four question flips can produce, which on an 18
+  question set is exactly what happened. A bigger encoder or a legal domain
+  one might also handle the Article 31 identifier failure differently.
+* The hybrid is the simplest possible fusion (unweighted RRF). Weighted
+  fusion, or BM25 as an exact-identifier booster on top of dense recall,
+  is the obvious next step and I would expect it to keep q08 without losing
+  the dense wins.
 * The stopword list was tuned by intuition and q16 shows it (rank 1 decided by
   "about" and "does"). Measured stopword selection or IDF floors would fix it.
 * The corpus is the statute only. A production military law assistant would need
@@ -334,7 +420,8 @@ depend on any key or any model.
 data/fetch_corpus.py     fetches the UCMJ from Cornell LII (corpus is committed)
 data/corpus/             198 provisions, one file each, + manifest.json
 rag/chunk.py             ingestion and paragraph aware chunking
-rag/index.py             BM25 (from scratch), TF-IDF cosine, light stemmer
+rag/index.py             BM25 (from scratch), TF-IDF cosine, light stemmer,
+                         optional dense (MiniLM) and hybrid (RRF) retrievers
 rag/generate.py          strict and permissive grounding prompts
 rag/pipeline.py          chunk -> index -> retrieve -> generate
 eval/questions.json      18 questions, 8 types, gold answers and citations
