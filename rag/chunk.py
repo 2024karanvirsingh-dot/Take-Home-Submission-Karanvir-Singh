@@ -1,14 +1,14 @@
 """
 Ingestion and chunking.
 
-Each file in data/corpus is one legal provision (an Article or a Recital).
-Most provisions are short enough to be a single chunk. A few (Art. 4 with the
-definitions, Art. 6 lawfulness, Art. 9, Art. 83 fines) are long, so we split
-them on paragraph boundaries into windows of roughly `chunk_words` words with
-`overlap_words` of overlap so a definition that straddles a split still shows
-up whole in one of the windows.
+Each file in data/corpus is one UCMJ provision (one U.S. Code section, which
+is one UCMJ article). Most are short enough to be a single chunk. The long
+ones (Art. 120 sexual offenses, Art. 2 persons subject to the code, Art. 15
+non-judicial punishment) are split on paragraph boundaries into windows of
+roughly `chunk_words` words with `overlap_words` of overlap so a clause that
+straddles a split still shows up whole in one of the windows.
 
-Chunking respects the provision boundary: we never merge two Articles into one
+Chunking respects the provision boundary: we never merge two articles into one
 chunk. That keeps citations honest, every chunk maps to exactly one provision.
 """
 import os, json, re

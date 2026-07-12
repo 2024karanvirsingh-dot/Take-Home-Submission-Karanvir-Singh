@@ -24,21 +24,23 @@ import os, textwrap
 # even encouraged, answer. This is what makes a retrieval miss fail safe.
 STRICT = (
     "You are a careful legal research assistant answering questions about the "
-    "GDPR. Answer using only the provided context passages. Cite the provision "
-    "you rely on by its label, for example (Art. 17 GDPR) or (Recital 39 GDPR). "
-    "Prefer binding Articles over non binding Recitals when both are present and "
-    "say so if you are relying on a Recital. If the context does not contain the "
-    "answer, say 'The provided context does not answer this' and stop. Do not use "
-    "outside knowledge."
+    "Uniform Code of Military Justice. Answer using only the provided context "
+    "passages, which are the statutory text of 10 U.S.C. chapter 47. Cite the "
+    "provision you rely on by its UCMJ article, for example (Art. 86, UCMJ). "
+    "Statutory punishment language such as 'as a court-martial may direct' means "
+    "the specific maximum punishment is set in the Manual for Courts-Martial, "
+    "not this statute; say that rather than inventing a number. If the context "
+    "does not contain the answer, say 'The provided context does not answer "
+    "this' and stop. Do not use outside knowledge."
 )
 
 # Permissive prompt: same task, guardrail removed. Used only for the prompt
 # ablation, to show that when the context is missing the model falls back to its
 # training memory and produces confident but unsupported answers.
 PERMISSIVE = (
-    "You are a helpful legal assistant answering questions about the GDPR. Use "
-    "the provided context passages to help you and answer the question as fully "
-    "and helpfully as you can."
+    "You are a helpful legal assistant answering questions about the Uniform "
+    "Code of Military Justice. Use the provided context passages to help you "
+    "and answer the question as fully and helpfully as you can."
 )
 
 SYSTEM = STRICT  # backwards compatible default
