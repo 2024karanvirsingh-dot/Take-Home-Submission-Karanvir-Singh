@@ -1,16 +1,25 @@
 """
-Fetch the GDPR corpus (Articles + Recitals) from gdpr-info.eu into data/corpus/.
+Fetch the UCMJ corpus (10 U.S.C. chapter 47, sections 801 to 946a) from the
+Cornell Legal Information Institute into data/corpus/.
 
-We use two document *types* on purpose:
-  - Articles  : the binding, operative text of the Regulation (99 articles)
-  - Recitals  : non-binding, interpretive preamble text (173 recitals)
+The corpus splits into two natural document types:
 
-They cover the same topics in different registers. That overlap is what makes
-the retrieval evaluation interesting: recitals are written in richer natural
-language and often out-retrieve the terser binding article for the same query.
+  punitive    : Subchapter X, the punitive articles (Art. 77 to 134). These
+                define the offenses: desertion, AWOL, insubordination, murder,
+                conduct unbecoming, the general article, and so on.
+  procedural  : everything else. Jurisdiction, apprehension, non-judicial
+                punishment, court-martial composition, trial procedure,
+                sentencing, appellate review.
 
-Output is committed to the repo so a clean clone needs no network to run.
-Re-run this script only if you want to refresh the raw text.
+The two registers overlap heavily in vocabulary (accused, court-martial,
+convening authority appear everywhere) which is exactly what makes retrieval
+over this corpus interesting. There is also a numbering trap built into the
+material: every provision has both a U.S. Code section number and a UCMJ
+article number offset by 800 (Article 86 is section 886, the famous
+"Article 15" is section 815). Questions use the colloquial article numbers.
+
+Output is committed to the repo so a clean clone needs no network. Re-run this
+script only to refresh the raw text.
 """
 import os, re, time, sys, json
 import requests
@@ -19,73 +28,86 @@ from bs4 import BeautifulSoup
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "corpus")
 os.makedirs(OUT, exist_ok=True)
-HEADERS = {"User-Agent": "rag-legal-eval/1.0 (educational take-home; contact via github)"}
+BASE = "https://www.law.cornell.edu"
+HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                         "AppleWebKit/537.36 (ucmj-rag-eval; educational)"}
+
+SUBCHAPTERS = ["I", "II", "III", "IV", "V", "VI", "VII",
+               "VIII", "IX", "X", "XI", "XII"]
 
 
-def clean(text: str) -> str:
-    # collapse the ragged whitespace gdpr-info emits, keep paragraph breaks
+def clean(text):
     lines = [ln.strip() for ln in text.split("\n")]
-    lines = [ln for ln in lines if ln]
-    return "\n".join(lines)
+    return "\n".join(ln for ln in lines if ln)
 
 
-def fetch(url: str):
+def get(url):
     r = requests.get(url, headers=HEADERS, timeout=30)
-    if r.status_code != 200:
-        return None
-    s = BeautifulSoup(r.text, "html.parser")
+    r.raise_for_status()
+    return BeautifulSoup(r.text, "html.parser")
+
+
+def sections_for(sub):
+    s = get(f"{BASE}/uscode/text/10/subtitle-A/part-II/chapter-47/subchapter-{sub}")
+    secs = []
+    for a in s.select("a[href]"):
+        m = re.fullmatch(r"/uscode/text/10/(\d{3}[a-z]?)", a.get("href", ""))
+        if m and m.group(1) not in secs:
+            secs.append(m.group(1))
+    return secs
+
+
+def fetch_section(sec):
+    url = f"{BASE}/uscode/text/10/{sec}"
+    s = get(url)
     h1 = s.find("h1")
-    body = s.select_one("div.entry-content")
+    body = s.select_one("div.section") or s.select_one("#tab_default_1")
     if not (h1 and body):
         return None
-    # drop the "Suitable Recitals" / navigation cruft appended to article pages
-    for sel in body.select("div, ul.gdpr-vertical-menu, .su-note"):
-        cls = " ".join(sel.get("class", []))
-        if "recital" in cls.lower() or "menu" in cls.lower():
-            sel.decompose()
-    return h1.get_text(" ", strip=True), clean(body.get_text("\n", strip=True))
+    heading = h1.get_text(" ", strip=True)
+    # UCMJ article number is always the section number minus 800, with any
+    # letter suffix carried over: section 886 is Article 86, 946a is 146a.
+    # Deriving it arithmetically is more reliable than parsing the heading,
+    # which varies between "Art. 86." and "Article 1." across pages.
+    num = re.match(r"(\d+)([a-z]?)", sec)
+    article = f"{int(num.group(1)) - 800}{num.group(2)}"
+    # strip everything up to and including the article label to get the title
+    title = re.sub(r"^10 U.S. Code § \S+\s*-?\s*(Art(icle)?\.?\s*\d+[a-z]?\.\s*)?",
+                   "", heading).strip()
+    return {"url": url, "article": article, "title": title,
+            "text": clean(body.get_text("\n", strip=True))}
 
 
 def main():
     manifest = []
-
-    # --- Articles 1..99 ---
-    for n in range(1, 100):
-        url = f"https://gdpr-info.eu/art-{n}-gdpr/"
-        res = fetch(url)
-        if not res:
-            print(f"  skip article {n}", file=sys.stderr)
-            continue
-        title, text = res
-        title = re.sub(r"^Art\.?\s*\d+\s*GDPR", "", title).strip()
-        fn = f"article_{n:03d}.txt"
-        with open(os.path.join(OUT, fn), "w") as f:
-            f.write(text)
-        manifest.append({"file": fn, "type": "article", "number": n,
-                         "title": title, "citation": f"Art. {n} GDPR", "source": url})
-        print(f"article {n}: {title[:60]}")
-        time.sleep(0.15)
-
-    # --- Recitals 1..173 ---
-    for n in range(1, 174):
-        url = f"https://gdpr-info.eu/recitals/no-{n}/"
-        res = fetch(url)
-        if not res:
-            print(f"  skip recital {n}", file=sys.stderr)
-            continue
-        title, text = res
-        title = re.sub(r"^Recital\s*\d+\*?", "", title).strip().lstrip("*").strip()
-        fn = f"recital_{n:03d}.txt"
-        with open(os.path.join(OUT, fn), "w") as f:
-            f.write(text)
-        manifest.append({"file": fn, "type": "recital", "number": n,
-                         "title": title, "citation": f"Recital {n} GDPR", "source": url})
-        print(f"recital {n}: {title[:60]}")
-        time.sleep(0.15)
+    for sub in SUBCHAPTERS:
+        secs = sections_for(sub)
+        kind = "punitive" if sub == "X" else "procedural"
+        for sec in secs:
+            try:
+                d = fetch_section(sec)
+            except Exception as e:
+                print(f"  skip {sec}: {e}", file=sys.stderr)
+                continue
+            if not d or not d["text"]:
+                print(f"  skip {sec}: empty", file=sys.stderr)
+                continue
+            fn = f"sec_{sec}.txt"
+            with open(os.path.join(OUT, fn), "w") as f:
+                f.write(d["text"])
+            art = d["article"] or sec
+            manifest.append({
+                "file": fn, "type": kind, "number": art, "section": sec,
+                "title": d["title"],
+                "citation": f"Art. {art}, UCMJ (10 U.S.C. § {sec})",
+                "source": d["url"], "subchapter": sub,
+            })
+            print(f"{sub:4s} sec {sec:5s} Art. {art or '?':5s} {d['title'][:55]}")
+            time.sleep(0.25)
 
     with open(os.path.join(OUT, "manifest.json"), "w") as f:
         json.dump(manifest, f, indent=2)
-    print(f"\nWrote {len(manifest)} documents to {OUT}")
+    print(f"\nWrote {len(manifest)} provisions to {OUT}")
 
 
 if __name__ == "__main__":

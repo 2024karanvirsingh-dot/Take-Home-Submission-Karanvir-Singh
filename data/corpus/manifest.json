@@ -1,2178 +1,1982 @@
 [
   {
-    "file": "article_001.txt",
-    "type": "article",
-    "number": 1,
-    "title": "Subject-matter and objectives",
-    "citation": "Art. 1 GDPR",
-    "source": "https://gdpr-info.eu/art-1-gdpr/"
-  },
-  {
-    "file": "article_002.txt",
-    "type": "article",
-    "number": 2,
-    "title": "Material scope",
-    "citation": "Art. 2 GDPR",
-    "source": "https://gdpr-info.eu/art-2-gdpr/"
-  },
-  {
-    "file": "article_003.txt",
-    "type": "article",
-    "number": 3,
-    "title": "Territorial scope",
-    "citation": "Art. 3 GDPR",
-    "source": "https://gdpr-info.eu/art-3-gdpr/"
-  },
-  {
-    "file": "article_004.txt",
-    "type": "article",
-    "number": 4,
+    "file": "sec_801.txt",
+    "type": "procedural",
+    "number": "1",
+    "section": "801",
     "title": "Definitions",
-    "citation": "Art. 4 GDPR",
-    "source": "https://gdpr-info.eu/art-4-gdpr/"
-  },
-  {
-    "file": "article_005.txt",
-    "type": "article",
-    "number": 5,
-    "title": "Principles relating to processing of personal data",
-    "citation": "Art. 5 GDPR",
-    "source": "https://gdpr-info.eu/art-5-gdpr/"
-  },
-  {
-    "file": "article_006.txt",
-    "type": "article",
-    "number": 6,
-    "title": "Lawfulness of processing",
-    "citation": "Art. 6 GDPR",
-    "source": "https://gdpr-info.eu/art-6-gdpr/"
-  },
-  {
-    "file": "article_007.txt",
-    "type": "article",
-    "number": 7,
-    "title": "Conditions for consent",
-    "citation": "Art. 7 GDPR",
-    "source": "https://gdpr-info.eu/art-7-gdpr/"
-  },
-  {
-    "file": "article_008.txt",
-    "type": "article",
-    "number": 8,
-    "title": "Conditions applicable to child's consent in relation to information society services",
-    "citation": "Art. 8 GDPR",
-    "source": "https://gdpr-info.eu/art-8-gdpr/"
-  },
-  {
-    "file": "article_009.txt",
-    "type": "article",
-    "number": 9,
-    "title": "Processing of special categories of personal data",
-    "citation": "Art. 9 GDPR",
-    "source": "https://gdpr-info.eu/art-9-gdpr/"
-  },
-  {
-    "file": "article_010.txt",
-    "type": "article",
-    "number": 10,
-    "title": "Processing of personal data relating to criminal convictions and offences",
-    "citation": "Art. 10 GDPR",
-    "source": "https://gdpr-info.eu/art-10-gdpr/"
-  },
-  {
-    "file": "article_011.txt",
-    "type": "article",
-    "number": 11,
-    "title": "Processing which does not require identification",
-    "citation": "Art. 11 GDPR",
-    "source": "https://gdpr-info.eu/art-11-gdpr/"
-  },
-  {
-    "file": "article_012.txt",
-    "type": "article",
-    "number": 12,
-    "title": "Transparent information, communication and modalities for the exercise of the rights of the data subject",
-    "citation": "Art. 12 GDPR",
-    "source": "https://gdpr-info.eu/art-12-gdpr/"
-  },
-  {
-    "file": "article_013.txt",
-    "type": "article",
-    "number": 13,
-    "title": "Information to be provided where personal data are collected from the data subject",
-    "citation": "Art. 13 GDPR",
-    "source": "https://gdpr-info.eu/art-13-gdpr/"
-  },
-  {
-    "file": "article_014.txt",
-    "type": "article",
-    "number": 14,
-    "title": "Information to be provided where personal data have not been obtained from the data subject",
-    "citation": "Art. 14 GDPR",
-    "source": "https://gdpr-info.eu/art-14-gdpr/"
-  },
-  {
-    "file": "article_015.txt",
-    "type": "article",
-    "number": 15,
-    "title": "Right of access by the data subject",
-    "citation": "Art. 15 GDPR",
-    "source": "https://gdpr-info.eu/art-15-gdpr/"
-  },
-  {
-    "file": "article_016.txt",
-    "type": "article",
-    "number": 16,
-    "title": "Right to rectification",
-    "citation": "Art. 16 GDPR",
-    "source": "https://gdpr-info.eu/art-16-gdpr/"
-  },
-  {
-    "file": "article_017.txt",
-    "type": "article",
-    "number": 17,
-    "title": "Right to erasure (\u2018right to be forgotten\u2019)",
-    "citation": "Art. 17 GDPR",
-    "source": "https://gdpr-info.eu/art-17-gdpr/"
-  },
-  {
-    "file": "article_018.txt",
-    "type": "article",
-    "number": 18,
-    "title": "Right to restriction of processing",
-    "citation": "Art. 18 GDPR",
-    "source": "https://gdpr-info.eu/art-18-gdpr/"
-  },
-  {
-    "file": "article_019.txt",
-    "type": "article",
-    "number": 19,
-    "title": "Notification obligation regarding rectification or erasure of personal data or restriction of processing",
-    "citation": "Art. 19 GDPR",
-    "source": "https://gdpr-info.eu/art-19-gdpr/"
-  },
-  {
-    "file": "article_020.txt",
-    "type": "article",
-    "number": 20,
-    "title": "Right to data portability",
-    "citation": "Art. 20 GDPR",
-    "source": "https://gdpr-info.eu/art-20-gdpr/"
-  },
-  {
-    "file": "article_021.txt",
-    "type": "article",
-    "number": 21,
-    "title": "Right to object",
-    "citation": "Art. 21 GDPR",
-    "source": "https://gdpr-info.eu/art-21-gdpr/"
-  },
-  {
-    "file": "article_022.txt",
-    "type": "article",
-    "number": 22,
-    "title": "Automated individual decision-making, including profiling",
-    "citation": "Art. 22 GDPR",
-    "source": "https://gdpr-info.eu/art-22-gdpr/"
-  },
-  {
-    "file": "article_023.txt",
-    "type": "article",
-    "number": 23,
-    "title": "Restrictions",
-    "citation": "Art. 23 GDPR",
-    "source": "https://gdpr-info.eu/art-23-gdpr/"
-  },
-  {
-    "file": "article_024.txt",
-    "type": "article",
-    "number": 24,
-    "title": "Responsibility of the controller",
-    "citation": "Art. 24 GDPR",
-    "source": "https://gdpr-info.eu/art-24-gdpr/"
-  },
-  {
-    "file": "article_025.txt",
-    "type": "article",
-    "number": 25,
-    "title": "Data protection by design and by default",
-    "citation": "Art. 25 GDPR",
-    "source": "https://gdpr-info.eu/art-25-gdpr/"
-  },
-  {
-    "file": "article_026.txt",
-    "type": "article",
-    "number": 26,
-    "title": "Joint controllers",
-    "citation": "Art. 26 GDPR",
-    "source": "https://gdpr-info.eu/art-26-gdpr/"
-  },
-  {
-    "file": "article_027.txt",
-    "type": "article",
-    "number": 27,
-    "title": "Representatives of controllers or processors not established in the Union",
-    "citation": "Art. 27 GDPR",
-    "source": "https://gdpr-info.eu/art-27-gdpr/"
-  },
-  {
-    "file": "article_028.txt",
-    "type": "article",
-    "number": 28,
-    "title": "Processor",
-    "citation": "Art. 28 GDPR",
-    "source": "https://gdpr-info.eu/art-28-gdpr/"
-  },
-  {
-    "file": "article_029.txt",
-    "type": "article",
-    "number": 29,
-    "title": "Processing under the authority of the controller or processor",
-    "citation": "Art. 29 GDPR",
-    "source": "https://gdpr-info.eu/art-29-gdpr/"
-  },
-  {
-    "file": "article_030.txt",
-    "type": "article",
-    "number": 30,
-    "title": "Records of processing activities",
-    "citation": "Art. 30 GDPR",
-    "source": "https://gdpr-info.eu/art-30-gdpr/"
-  },
-  {
-    "file": "article_031.txt",
-    "type": "article",
-    "number": 31,
-    "title": "Cooperation with the supervisory authority",
-    "citation": "Art. 31 GDPR",
-    "source": "https://gdpr-info.eu/art-31-gdpr/"
-  },
-  {
-    "file": "article_032.txt",
-    "type": "article",
-    "number": 32,
-    "title": "Security of processing",
-    "citation": "Art. 32 GDPR",
-    "source": "https://gdpr-info.eu/art-32-gdpr/"
-  },
-  {
-    "file": "article_033.txt",
-    "type": "article",
-    "number": 33,
-    "title": "Notification of a personal data breach to the supervisory authority",
-    "citation": "Art. 33 GDPR",
-    "source": "https://gdpr-info.eu/art-33-gdpr/"
-  },
-  {
-    "file": "article_034.txt",
-    "type": "article",
-    "number": 34,
-    "title": "Communication of a personal data breach to the data subject",
-    "citation": "Art. 34 GDPR",
-    "source": "https://gdpr-info.eu/art-34-gdpr/"
-  },
-  {
-    "file": "article_035.txt",
-    "type": "article",
-    "number": 35,
-    "title": "Data protection impact assessment",
-    "citation": "Art. 35 GDPR",
-    "source": "https://gdpr-info.eu/art-35-gdpr/"
-  },
-  {
-    "file": "article_036.txt",
-    "type": "article",
-    "number": 36,
-    "title": "Prior consultation",
-    "citation": "Art. 36 GDPR",
-    "source": "https://gdpr-info.eu/art-36-gdpr/"
-  },
-  {
-    "file": "article_037.txt",
-    "type": "article",
-    "number": 37,
-    "title": "Designation of the data protection officer",
-    "citation": "Art. 37 GDPR",
-    "source": "https://gdpr-info.eu/art-37-gdpr/"
-  },
-  {
-    "file": "article_038.txt",
-    "type": "article",
-    "number": 38,
-    "title": "Position of the data protection officer",
-    "citation": "Art. 38 GDPR",
-    "source": "https://gdpr-info.eu/art-38-gdpr/"
-  },
-  {
-    "file": "article_039.txt",
-    "type": "article",
-    "number": 39,
-    "title": "Tasks of the data protection officer",
-    "citation": "Art. 39 GDPR",
-    "source": "https://gdpr-info.eu/art-39-gdpr/"
-  },
-  {
-    "file": "article_040.txt",
-    "type": "article",
-    "number": 40,
-    "title": "Codes of conduct",
-    "citation": "Art. 40 GDPR",
-    "source": "https://gdpr-info.eu/art-40-gdpr/"
-  },
-  {
-    "file": "article_041.txt",
-    "type": "article",
-    "number": 41,
-    "title": "Monitoring of approved codes of conduct",
-    "citation": "Art. 41 GDPR",
-    "source": "https://gdpr-info.eu/art-41-gdpr/"
-  },
-  {
-    "file": "article_042.txt",
-    "type": "article",
-    "number": 42,
-    "title": "Certification",
-    "citation": "Art. 42 GDPR",
-    "source": "https://gdpr-info.eu/art-42-gdpr/"
-  },
-  {
-    "file": "article_043.txt",
-    "type": "article",
-    "number": 43,
-    "title": "Certification bodies",
-    "citation": "Art. 43 GDPR",
-    "source": "https://gdpr-info.eu/art-43-gdpr/"
-  },
-  {
-    "file": "article_044.txt",
-    "type": "article",
-    "number": 44,
-    "title": "General principle for transfers",
-    "citation": "Art. 44 GDPR",
-    "source": "https://gdpr-info.eu/art-44-gdpr/"
-  },
-  {
-    "file": "article_045.txt",
-    "type": "article",
-    "number": 45,
-    "title": "Transfers on the basis of an adequacy decision",
-    "citation": "Art. 45 GDPR",
-    "source": "https://gdpr-info.eu/art-45-gdpr/"
-  },
-  {
-    "file": "article_046.txt",
-    "type": "article",
-    "number": 46,
-    "title": "Transfers subject to appropriate safeguards",
-    "citation": "Art. 46 GDPR",
-    "source": "https://gdpr-info.eu/art-46-gdpr/"
-  },
-  {
-    "file": "article_047.txt",
-    "type": "article",
-    "number": 47,
-    "title": "Binding corporate rules",
-    "citation": "Art. 47 GDPR",
-    "source": "https://gdpr-info.eu/art-47-gdpr/"
-  },
-  {
-    "file": "article_048.txt",
-    "type": "article",
-    "number": 48,
-    "title": "Transfers or disclosures not authorised by Union law",
-    "citation": "Art. 48 GDPR",
-    "source": "https://gdpr-info.eu/art-48-gdpr/"
-  },
-  {
-    "file": "article_049.txt",
-    "type": "article",
-    "number": 49,
-    "title": "Derogations for specific situations",
-    "citation": "Art. 49 GDPR",
-    "source": "https://gdpr-info.eu/art-49-gdpr/"
-  },
-  {
-    "file": "article_050.txt",
-    "type": "article",
-    "number": 50,
-    "title": "International cooperation for the protection of personal data",
-    "citation": "Art. 50 GDPR",
-    "source": "https://gdpr-info.eu/art-50-gdpr/"
-  },
-  {
-    "file": "article_051.txt",
-    "type": "article",
-    "number": 51,
-    "title": "Supervisory authority",
-    "citation": "Art. 51 GDPR",
-    "source": "https://gdpr-info.eu/art-51-gdpr/"
-  },
-  {
-    "file": "article_052.txt",
-    "type": "article",
-    "number": 52,
-    "title": "Independence",
-    "citation": "Art. 52 GDPR",
-    "source": "https://gdpr-info.eu/art-52-gdpr/"
-  },
-  {
-    "file": "article_053.txt",
-    "type": "article",
-    "number": 53,
-    "title": "General conditions for the members of the supervisory authority",
-    "citation": "Art. 53 GDPR",
-    "source": "https://gdpr-info.eu/art-53-gdpr/"
-  },
-  {
-    "file": "article_054.txt",
-    "type": "article",
-    "number": 54,
-    "title": "Rules on the establishment of the supervisory authority",
-    "citation": "Art. 54 GDPR",
-    "source": "https://gdpr-info.eu/art-54-gdpr/"
-  },
-  {
-    "file": "article_055.txt",
-    "type": "article",
-    "number": 55,
-    "title": "Competence",
-    "citation": "Art. 55 GDPR",
-    "source": "https://gdpr-info.eu/art-55-gdpr/"
-  },
-  {
-    "file": "article_056.txt",
-    "type": "article",
-    "number": 56,
-    "title": "Competence of the lead supervisory authority",
-    "citation": "Art. 56 GDPR",
-    "source": "https://gdpr-info.eu/art-56-gdpr/"
-  },
-  {
-    "file": "article_057.txt",
-    "type": "article",
-    "number": 57,
-    "title": "Tasks",
-    "citation": "Art. 57 GDPR",
-    "source": "https://gdpr-info.eu/art-57-gdpr/"
-  },
-  {
-    "file": "article_058.txt",
-    "type": "article",
-    "number": 58,
-    "title": "Powers",
-    "citation": "Art. 58 GDPR",
-    "source": "https://gdpr-info.eu/art-58-gdpr/"
-  },
-  {
-    "file": "article_059.txt",
-    "type": "article",
-    "number": 59,
-    "title": "Activity reports",
-    "citation": "Art. 59 GDPR",
-    "source": "https://gdpr-info.eu/art-59-gdpr/"
-  },
-  {
-    "file": "article_060.txt",
-    "type": "article",
-    "number": 60,
-    "title": "Cooperation between the lead supervisory authority and the other supervisory authorities concerned",
-    "citation": "Art. 60 GDPR",
-    "source": "https://gdpr-info.eu/art-60-gdpr/"
-  },
-  {
-    "file": "article_061.txt",
-    "type": "article",
-    "number": 61,
-    "title": "Mutual assistance",
-    "citation": "Art. 61 GDPR",
-    "source": "https://gdpr-info.eu/art-61-gdpr/"
-  },
-  {
-    "file": "article_062.txt",
-    "type": "article",
-    "number": 62,
-    "title": "Joint operations of supervisory authorities",
-    "citation": "Art. 62 GDPR",
-    "source": "https://gdpr-info.eu/art-62-gdpr/"
-  },
-  {
-    "file": "article_063.txt",
-    "type": "article",
-    "number": 63,
-    "title": "Consistency mechanism",
-    "citation": "Art. 63 GDPR",
-    "source": "https://gdpr-info.eu/art-63-gdpr/"
-  },
-  {
-    "file": "article_064.txt",
-    "type": "article",
-    "number": 64,
-    "title": "Opinion of the Board",
-    "citation": "Art. 64 GDPR",
-    "source": "https://gdpr-info.eu/art-64-gdpr/"
-  },
-  {
-    "file": "article_065.txt",
-    "type": "article",
-    "number": 65,
-    "title": "Dispute resolution by the Board",
-    "citation": "Art. 65 GDPR",
-    "source": "https://gdpr-info.eu/art-65-gdpr/"
-  },
-  {
-    "file": "article_066.txt",
-    "type": "article",
-    "number": 66,
-    "title": "Urgency procedure",
-    "citation": "Art. 66 GDPR",
-    "source": "https://gdpr-info.eu/art-66-gdpr/"
-  },
-  {
-    "file": "article_067.txt",
-    "type": "article",
-    "number": 67,
-    "title": "Exchange of information",
-    "citation": "Art. 67 GDPR",
-    "source": "https://gdpr-info.eu/art-67-gdpr/"
-  },
-  {
-    "file": "article_068.txt",
-    "type": "article",
-    "number": 68,
-    "title": "European Data Protection Board",
-    "citation": "Art. 68 GDPR",
-    "source": "https://gdpr-info.eu/art-68-gdpr/"
-  },
-  {
-    "file": "article_069.txt",
-    "type": "article",
-    "number": 69,
-    "title": "Independence",
-    "citation": "Art. 69 GDPR",
-    "source": "https://gdpr-info.eu/art-69-gdpr/"
-  },
-  {
-    "file": "article_070.txt",
-    "type": "article",
-    "number": 70,
-    "title": "Tasks of the Board",
-    "citation": "Art. 70 GDPR",
-    "source": "https://gdpr-info.eu/art-70-gdpr/"
-  },
-  {
-    "file": "article_071.txt",
-    "type": "article",
-    "number": 71,
-    "title": "Reports",
-    "citation": "Art. 71 GDPR",
-    "source": "https://gdpr-info.eu/art-71-gdpr/"
-  },
-  {
-    "file": "article_072.txt",
-    "type": "article",
-    "number": 72,
+    "citation": "Art. 1, UCMJ (10 U.S.C. \u00a7 801)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/801",
+    "subchapter": "I"
+  },
+  {
+    "file": "sec_802.txt",
+    "type": "procedural",
+    "number": "2",
+    "section": "802",
+    "title": "Persons subject to this chapter",
+    "citation": "Art. 2, UCMJ (10 U.S.C. \u00a7 802)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/802",
+    "subchapter": "I"
+  },
+  {
+    "file": "sec_803.txt",
+    "type": "procedural",
+    "number": "3",
+    "section": "803",
+    "title": "Jurisdiction to try certain personnel",
+    "citation": "Art. 3, UCMJ (10 U.S.C. \u00a7 803)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/803",
+    "subchapter": "I"
+  },
+  {
+    "file": "sec_804.txt",
+    "type": "procedural",
+    "number": "4",
+    "section": "804",
+    "title": "Dismissed officer\u2019s right to trial by court-martial",
+    "citation": "Art. 4, UCMJ (10 U.S.C. \u00a7 804)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/804",
+    "subchapter": "I"
+  },
+  {
+    "file": "sec_805.txt",
+    "type": "procedural",
+    "number": "5",
+    "section": "805",
+    "title": "Territorial applicability of this chapter",
+    "citation": "Art. 5, UCMJ (10 U.S.C. \u00a7 805)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/805",
+    "subchapter": "I"
+  },
+  {
+    "file": "sec_806.txt",
+    "type": "procedural",
+    "number": "6",
+    "section": "806",
+    "title": "Judge advocates and legal officers",
+    "citation": "Art. 6, UCMJ (10 U.S.C. \u00a7 806)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/806",
+    "subchapter": "I"
+  },
+  {
+    "file": "sec_806a.txt",
+    "type": "procedural",
+    "number": "6a",
+    "section": "806a",
+    "title": "Investigation and disposition of matters pertaining to the fitness of military judges",
+    "citation": "Art. 6a, UCMJ (10 U.S.C. \u00a7 806a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/806a",
+    "subchapter": "I"
+  },
+  {
+    "file": "sec_806b.txt",
+    "type": "procedural",
+    "number": "6b",
+    "section": "806b",
+    "title": "Rights of the victim of an offense under this chapter",
+    "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/806b",
+    "subchapter": "I"
+  },
+  {
+    "file": "sec_807.txt",
+    "type": "procedural",
+    "number": "7",
+    "section": "807",
+    "title": "Apprehension",
+    "citation": "Art. 7, UCMJ (10 U.S.C. \u00a7 807)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/807",
+    "subchapter": "II"
+  },
+  {
+    "file": "sec_808.txt",
+    "type": "procedural",
+    "number": "8",
+    "section": "808",
+    "title": "Apprehension of deserters",
+    "citation": "Art. 8, UCMJ (10 U.S.C. \u00a7 808)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/808",
+    "subchapter": "II"
+  },
+  {
+    "file": "sec_809.txt",
+    "type": "procedural",
+    "number": "9",
+    "section": "809",
+    "title": "Imposition of restraint",
+    "citation": "Art. 9, UCMJ (10 U.S.C. \u00a7 809)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/809",
+    "subchapter": "II"
+  },
+  {
+    "file": "sec_810.txt",
+    "type": "procedural",
+    "number": "10",
+    "section": "810",
+    "title": "Restraint of persons charged",
+    "citation": "Art. 10, UCMJ (10 U.S.C. \u00a7 810)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/810",
+    "subchapter": "II"
+  },
+  {
+    "file": "sec_811.txt",
+    "type": "procedural",
+    "number": "11",
+    "section": "811",
+    "title": "Reports and receiving of prisoners",
+    "citation": "Art. 11, UCMJ (10 U.S.C. \u00a7 811)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/811",
+    "subchapter": "II"
+  },
+  {
+    "file": "sec_812.txt",
+    "type": "procedural",
+    "number": "12",
+    "section": "812",
+    "title": "Prohibition of confinement of members of the armed forces with enemy prisoners and certain others",
+    "citation": "Art. 12, UCMJ (10 U.S.C. \u00a7 812)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/812",
+    "subchapter": "II"
+  },
+  {
+    "file": "sec_813.txt",
+    "type": "procedural",
+    "number": "13",
+    "section": "813",
+    "title": "Punishment prohibited before trial",
+    "citation": "Art. 13, UCMJ (10 U.S.C. \u00a7 813)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/813",
+    "subchapter": "II"
+  },
+  {
+    "file": "sec_814.txt",
+    "type": "procedural",
+    "number": "14",
+    "section": "814",
+    "title": "Delivery of offenders to civil authorities",
+    "citation": "Art. 14, UCMJ (10 U.S.C. \u00a7 814)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/814",
+    "subchapter": "II"
+  },
+  {
+    "file": "sec_815.txt",
+    "type": "procedural",
+    "number": "15",
+    "section": "815",
+    "title": "Commanding officer\u2019s non-judicial punishment",
+    "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/815",
+    "subchapter": "III"
+  },
+  {
+    "file": "sec_816.txt",
+    "type": "procedural",
+    "number": "16",
+    "section": "816",
+    "title": "Courts-martial classified",
+    "citation": "Art. 16, UCMJ (10 U.S.C. \u00a7 816)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/816",
+    "subchapter": "IV"
+  },
+  {
+    "file": "sec_817.txt",
+    "type": "procedural",
+    "number": "17",
+    "section": "817",
+    "title": "Jurisdiction of courts-martial in general",
+    "citation": "Art. 17, UCMJ (10 U.S.C. \u00a7 817)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/817",
+    "subchapter": "IV"
+  },
+  {
+    "file": "sec_818.txt",
+    "type": "procedural",
+    "number": "18",
+    "section": "818",
+    "title": "Jurisdiction of general courts-martial",
+    "citation": "Art. 18, UCMJ (10 U.S.C. \u00a7 818)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/818",
+    "subchapter": "IV"
+  },
+  {
+    "file": "sec_819.txt",
+    "type": "procedural",
+    "number": "19",
+    "section": "819",
+    "title": "Jurisdiction of special courts-martial",
+    "citation": "Art. 19, UCMJ (10 U.S.C. \u00a7 819)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/819",
+    "subchapter": "IV"
+  },
+  {
+    "file": "sec_820.txt",
+    "type": "procedural",
+    "number": "20",
+    "section": "820",
+    "title": "Jurisdiction of summary courts-martial",
+    "citation": "Art. 20, UCMJ (10 U.S.C. \u00a7 820)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/820",
+    "subchapter": "IV"
+  },
+  {
+    "file": "sec_821.txt",
+    "type": "procedural",
+    "number": "21",
+    "section": "821",
+    "title": "Jurisdiction of courts-martial not exclusive",
+    "citation": "Art. 21, UCMJ (10 U.S.C. \u00a7 821)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/821",
+    "subchapter": "IV"
+  },
+  {
+    "file": "sec_822.txt",
+    "type": "procedural",
+    "number": "22",
+    "section": "822",
+    "title": "Who may convene general courts-martial",
+    "citation": "Art. 22, UCMJ (10 U.S.C. \u00a7 822)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/822",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_823.txt",
+    "type": "procedural",
+    "number": "23",
+    "section": "823",
+    "title": "Who may convene special courts-martial",
+    "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/823",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_824.txt",
+    "type": "procedural",
+    "number": "24",
+    "section": "824",
+    "title": "Who may convene summary courts-martial",
+    "citation": "Art. 24, UCMJ (10 U.S.C. \u00a7 824)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/824",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_824a.txt",
+    "type": "procedural",
+    "number": "24a",
+    "section": "824a",
+    "title": "Special trial counsel",
+    "citation": "Art. 24a, UCMJ (10 U.S.C. \u00a7 824a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/824a",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_825.txt",
+    "type": "procedural",
+    "number": "25",
+    "section": "825",
+    "title": "Who may serve on courts-martial",
+    "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/825",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_825a.txt",
+    "type": "procedural",
+    "number": "25a",
+    "section": "825a",
+    "title": "Number of court-martial members in capital cases",
+    "citation": "Art. 25a, UCMJ (10 U.S.C. \u00a7 825a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/825a",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_826.txt",
+    "type": "procedural",
+    "number": "26",
+    "section": "826",
+    "title": "Military judge of a general or special court-martial",
+    "citation": "Art. 26, UCMJ (10 U.S.C. \u00a7 826)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/826",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_826a.txt",
+    "type": "procedural",
+    "number": "26a",
+    "section": "826a",
+    "title": "Military magistrates",
+    "citation": "Art. 26a, UCMJ (10 U.S.C. \u00a7 826a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/826a",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_827.txt",
+    "type": "procedural",
+    "number": "27",
+    "section": "827",
+    "title": "Detail of trial counsel and defense counsel",
+    "citation": "Art. 27, UCMJ (10 U.S.C. \u00a7 827)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/827",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_828.txt",
+    "type": "procedural",
+    "number": "28",
+    "section": "828",
+    "title": "Detail or employment of reporters and interpreters",
+    "citation": "Art. 28, UCMJ (10 U.S.C. \u00a7 828)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/828",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_829.txt",
+    "type": "procedural",
+    "number": "29",
+    "section": "829",
+    "title": "Assembly and impaneling of members; detail of new members and military judges",
+    "citation": "Art. 29, UCMJ (10 U.S.C. \u00a7 829)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/829",
+    "subchapter": "V"
+  },
+  {
+    "file": "sec_830.txt",
+    "type": "procedural",
+    "number": "30",
+    "section": "830",
+    "title": "Charges and specifications",
+    "citation": "Art. 30, UCMJ (10 U.S.C. \u00a7 830)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/830",
+    "subchapter": "VI"
+  },
+  {
+    "file": "sec_830a.txt",
+    "type": "procedural",
+    "number": "30a",
+    "section": "830a",
+    "title": "Proceedings conducted before referral",
+    "citation": "Art. 30a, UCMJ (10 U.S.C. \u00a7 830a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/830a",
+    "subchapter": "VI"
+  },
+  {
+    "file": "sec_831.txt",
+    "type": "procedural",
+    "number": "31",
+    "section": "831",
+    "title": "Compulsory self-incrimination prohibited",
+    "citation": "Art. 31, UCMJ (10 U.S.C. \u00a7 831)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/831",
+    "subchapter": "VI"
+  },
+  {
+    "file": "sec_832.txt",
+    "type": "procedural",
+    "number": "32",
+    "section": "832",
+    "title": "Preliminary hearing required before referral to general court-martial",
+    "citation": "Art. 32, UCMJ (10 U.S.C. \u00a7 832)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/832",
+    "subchapter": "VI"
+  },
+  {
+    "file": "sec_833.txt",
+    "type": "procedural",
+    "number": "33",
+    "section": "833",
+    "title": "Disposition guidance",
+    "citation": "Art. 33, UCMJ (10 U.S.C. \u00a7 833)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/833",
+    "subchapter": "VI"
+  },
+  {
+    "file": "sec_834.txt",
+    "type": "procedural",
+    "number": "34",
+    "section": "834",
+    "title": "Advice to convening authority before referral for trial",
+    "citation": "Art. 34, UCMJ (10 U.S.C. \u00a7 834)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/834",
+    "subchapter": "VI"
+  },
+  {
+    "file": "sec_835.txt",
+    "type": "procedural",
+    "number": "35",
+    "section": "835",
+    "title": "Service of charges; commencement of trial",
+    "citation": "Art. 35, UCMJ (10 U.S.C. \u00a7 835)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/835",
+    "subchapter": "VI"
+  },
+  {
+    "file": "sec_836.txt",
+    "type": "procedural",
+    "number": "36",
+    "section": "836",
+    "title": "President may prescribe rules",
+    "citation": "Art. 36, UCMJ (10 U.S.C. \u00a7 836)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/836",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_837.txt",
+    "type": "procedural",
+    "number": "37",
+    "section": "837",
+    "title": "Command influence",
+    "citation": "Art. 37, UCMJ (10 U.S.C. \u00a7 837)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/837",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_838.txt",
+    "type": "procedural",
+    "number": "38",
+    "section": "838",
+    "title": "Duties of trial counsel and defense counsel",
+    "citation": "Art. 38, UCMJ (10 U.S.C. \u00a7 838)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/838",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_839.txt",
+    "type": "procedural",
+    "number": "39",
+    "section": "839",
+    "title": "Sessions",
+    "citation": "Art. 39, UCMJ (10 U.S.C. \u00a7 839)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/839",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_840.txt",
+    "type": "procedural",
+    "number": "40",
+    "section": "840",
+    "title": "Continuances",
+    "citation": "Art. 40, UCMJ (10 U.S.C. \u00a7 840)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/840",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_841.txt",
+    "type": "procedural",
+    "number": "41",
+    "section": "841",
+    "title": "Challenges",
+    "citation": "Art. 41, UCMJ (10 U.S.C. \u00a7 841)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/841",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_842.txt",
+    "type": "procedural",
+    "number": "42",
+    "section": "842",
+    "title": "Oaths",
+    "citation": "Art. 42, UCMJ (10 U.S.C. \u00a7 842)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/842",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_843.txt",
+    "type": "procedural",
+    "number": "43",
+    "section": "843",
+    "title": "Statute of limitations",
+    "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/843",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_844.txt",
+    "type": "procedural",
+    "number": "44",
+    "section": "844",
+    "title": "Former jeopardy",
+    "citation": "Art. 44, UCMJ (10 U.S.C. \u00a7 844)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/844",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_845.txt",
+    "type": "procedural",
+    "number": "45",
+    "section": "845",
+    "title": "Pleas of the accused",
+    "citation": "Art. 45, UCMJ (10 U.S.C. \u00a7 845)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/845",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_846.txt",
+    "type": "procedural",
+    "number": "46",
+    "section": "846",
+    "title": "Opportunity to obtain witnesses and other evidence in trials by court-martial",
+    "citation": "Art. 46, UCMJ (10 U.S.C. \u00a7 846)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/846",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_847.txt",
+    "type": "procedural",
+    "number": "47",
+    "section": "847",
+    "title": "Refusal of person not subject to chapter to appear, testify, or produce evidence",
+    "citation": "Art. 47, UCMJ (10 U.S.C. \u00a7 847)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/847",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_848.txt",
+    "type": "procedural",
+    "number": "48",
+    "section": "848",
+    "title": "Contempt",
+    "citation": "Art. 48, UCMJ (10 U.S.C. \u00a7 848)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/848",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_849.txt",
+    "type": "procedural",
+    "number": "49",
+    "section": "849",
+    "title": "Depositions",
+    "citation": "Art. 49, UCMJ (10 U.S.C. \u00a7 849)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/849",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_850.txt",
+    "type": "procedural",
+    "number": "50",
+    "section": "850",
+    "title": "Admissibility of sworn testimony from records of courts of inquiry",
+    "citation": "Art. 50, UCMJ (10 U.S.C. \u00a7 850)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/850",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_850a.txt",
+    "type": "procedural",
+    "number": "50a",
+    "section": "850a",
+    "title": "Defense of lack of mental responsibility",
+    "citation": "Art. 50a, UCMJ (10 U.S.C. \u00a7 850a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/850a",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_851.txt",
+    "type": "procedural",
+    "number": "51",
+    "section": "851",
+    "title": "Voting and rulings",
+    "citation": "Art. 51, UCMJ (10 U.S.C. \u00a7 851)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/851",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_852.txt",
+    "type": "procedural",
+    "number": "52",
+    "section": "852",
+    "title": "Votes required for conviction, sentencing, and other matters",
+    "citation": "Art. 52, UCMJ (10 U.S.C. \u00a7 852)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/852",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_853.txt",
+    "type": "procedural",
+    "number": "53",
+    "section": "853",
+    "title": "Findings and sentencing",
+    "citation": "Art. 53, UCMJ (10 U.S.C. \u00a7 853)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/853",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_853a.txt",
+    "type": "procedural",
+    "number": "53a",
+    "section": "853a",
+    "title": "Plea agreements",
+    "citation": "Art. 53a, UCMJ (10 U.S.C. \u00a7 853a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/853a",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_854.txt",
+    "type": "procedural",
+    "number": "54",
+    "section": "854",
+    "title": "Record of trial",
+    "citation": "Art. 54, UCMJ (10 U.S.C. \u00a7 854)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/854",
+    "subchapter": "VII"
+  },
+  {
+    "file": "sec_855.txt",
+    "type": "procedural",
+    "number": "55",
+    "section": "855",
+    "title": "Cruel and unusual punishments prohibited",
+    "citation": "Art. 55, UCMJ (10 U.S.C. \u00a7 855)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/855",
+    "subchapter": "VIII"
+  },
+  {
+    "file": "sec_856.txt",
+    "type": "procedural",
+    "number": "56",
+    "section": "856",
+    "title": "Sentencing",
+    "citation": "Art. 56, UCMJ (10 U.S.C. \u00a7 856)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/856",
+    "subchapter": "VIII"
+  },
+  {
+    "file": "sec_857.txt",
+    "type": "procedural",
+    "number": "57",
+    "section": "857",
+    "title": "Effective date of sentences",
+    "citation": "Art. 57, UCMJ (10 U.S.C. \u00a7 857)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/857",
+    "subchapter": "VIII"
+  },
+  {
+    "file": "sec_858.txt",
+    "type": "procedural",
+    "number": "58",
+    "section": "858",
+    "title": "Execution of confinement",
+    "citation": "Art. 58, UCMJ (10 U.S.C. \u00a7 858)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/858",
+    "subchapter": "VIII"
+  },
+  {
+    "file": "sec_858a.txt",
+    "type": "procedural",
+    "number": "58a",
+    "section": "858a",
+    "title": "Sentences: reduction in enlisted grade",
+    "citation": "Art. 58a, UCMJ (10 U.S.C. \u00a7 858a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/858a",
+    "subchapter": "VIII"
+  },
+  {
+    "file": "sec_858b.txt",
+    "type": "procedural",
+    "number": "58b",
+    "section": "858b",
+    "title": "Sentences: forfeiture of pay and allowances during confinement",
+    "citation": "Art. 58b, UCMJ (10 U.S.C. \u00a7 858b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/858b",
+    "subchapter": "VIII"
+  },
+  {
+    "file": "sec_859.txt",
+    "type": "procedural",
+    "number": "59",
+    "section": "859",
+    "title": "Error of law; lesser included offense",
+    "citation": "Art. 59, UCMJ (10 U.S.C. \u00a7 859)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/859",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_860.txt",
+    "type": "procedural",
+    "number": "60",
+    "section": "860",
+    "title": "Post-trial processing in general and special courts-martial",
+    "citation": "Art. 60, UCMJ (10 U.S.C. \u00a7 860)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/860",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_860a.txt",
+    "type": "procedural",
+    "number": "60a",
+    "section": "860a",
+    "title": "Limited authority to act on sentence in specified post-trial circumstances",
+    "citation": "Art. 60a, UCMJ (10 U.S.C. \u00a7 860a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/860a",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_860b.txt",
+    "type": "procedural",
+    "number": "60b",
+    "section": "860b",
+    "title": "Post-trial actions in summary courts-martial and certain general and special courts-martial",
+    "citation": "Art. 60b, UCMJ (10 U.S.C. \u00a7 860b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/860b",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_860c.txt",
+    "type": "procedural",
+    "number": "60c",
+    "section": "860c",
+    "title": "Entry of judgment",
+    "citation": "Art. 60c, UCMJ (10 U.S.C. \u00a7 860c)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/860c",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_861.txt",
+    "type": "procedural",
+    "number": "61",
+    "section": "861",
+    "title": "Waiver of right to appeal; withdrawal of appeal",
+    "citation": "Art. 61, UCMJ (10 U.S.C. \u00a7 861)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/861",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_862.txt",
+    "type": "procedural",
+    "number": "62",
+    "section": "862",
+    "title": "Appeal by the United States",
+    "citation": "Art. 62, UCMJ (10 U.S.C. \u00a7 862)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/862",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_863.txt",
+    "type": "procedural",
+    "number": "63",
+    "section": "863",
+    "title": "Rehearings",
+    "citation": "Art. 63, UCMJ (10 U.S.C. \u00a7 863)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/863",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_864.txt",
+    "type": "procedural",
+    "number": "64",
+    "section": "864",
+    "title": "Judge advocate review of finding of guilty in summary court-martial",
+    "citation": "Art. 64, UCMJ (10 U.S.C. \u00a7 864)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/864",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_865.txt",
+    "type": "procedural",
+    "number": "65",
+    "section": "865",
+    "title": "Transmittal and review of records",
+    "citation": "Art. 65, UCMJ (10 U.S.C. \u00a7 865)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/865",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_866.txt",
+    "type": "procedural",
+    "number": "66",
+    "section": "866",
+    "title": "Courts of Criminal Appeals",
+    "citation": "Art. 66, UCMJ (10 U.S.C. \u00a7 866)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/866",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_867.txt",
+    "type": "procedural",
+    "number": "67",
+    "section": "867",
+    "title": "Review by the Court of Appeals for the Armed Forces",
+    "citation": "Art. 67, UCMJ (10 U.S.C. \u00a7 867)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/867",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_867a.txt",
+    "type": "procedural",
+    "number": "67a",
+    "section": "867a",
+    "title": "Review by the Supreme Court",
+    "citation": "Art. 67a, UCMJ (10 U.S.C. \u00a7 867a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/867a",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_868.txt",
+    "type": "procedural",
+    "number": "68",
+    "section": "868",
+    "title": "Branch offices",
+    "citation": "Art. 68, UCMJ (10 U.S.C. \u00a7 868)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/868",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_869.txt",
+    "type": "procedural",
+    "number": "69",
+    "section": "869",
+    "title": "Review by Judge Advocate General",
+    "citation": "Art. 69, UCMJ (10 U.S.C. \u00a7 869)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/869",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_870.txt",
+    "type": "procedural",
+    "number": "70",
+    "section": "870",
+    "title": "Appellate counsel",
+    "citation": "Art. 70, UCMJ (10 U.S.C. \u00a7 870)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/870",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_872.txt",
+    "type": "procedural",
+    "number": "72",
+    "section": "872",
+    "title": "Vacation of suspension",
+    "citation": "Art. 72, UCMJ (10 U.S.C. \u00a7 872)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/872",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_873.txt",
+    "type": "procedural",
+    "number": "73",
+    "section": "873",
+    "title": "Petition for a new trial",
+    "citation": "Art. 73, UCMJ (10 U.S.C. \u00a7 873)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/873",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_874.txt",
+    "type": "procedural",
+    "number": "74",
+    "section": "874",
+    "title": "Remission and suspension",
+    "citation": "Art. 74, UCMJ (10 U.S.C. \u00a7 874)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/874",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_875.txt",
+    "type": "procedural",
+    "number": "75",
+    "section": "875",
+    "title": "Restoration",
+    "citation": "Art. 75, UCMJ (10 U.S.C. \u00a7 875)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/875",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_876.txt",
+    "type": "procedural",
+    "number": "76",
+    "section": "876",
+    "title": "Finality of proceedings, findings, and sentences",
+    "citation": "Art. 76, UCMJ (10 U.S.C. \u00a7 876)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/876",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_876a.txt",
+    "type": "procedural",
+    "number": "76a",
+    "section": "876a",
+    "title": "Leave required to be taken pending review of certain court-martial convictions",
+    "citation": "Art. 76a, UCMJ (10 U.S.C. \u00a7 876a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/876a",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_876b.txt",
+    "type": "procedural",
+    "number": "76b",
+    "section": "876b",
+    "title": "Lack of mental capacity or mental responsibility: commitment of accused for examination and treatment",
+    "citation": "Art. 76b, UCMJ (10 U.S.C. \u00a7 876b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/876b",
+    "subchapter": "IX"
+  },
+  {
+    "file": "sec_877.txt",
+    "type": "punitive",
+    "number": "77",
+    "section": "877",
+    "title": "Principals",
+    "citation": "Art. 77, UCMJ (10 U.S.C. \u00a7 877)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/877",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_878.txt",
+    "type": "punitive",
+    "number": "78",
+    "section": "878",
+    "title": "Accessory after the fact",
+    "citation": "Art. 78, UCMJ (10 U.S.C. \u00a7 878)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/878",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_879.txt",
+    "type": "punitive",
+    "number": "79",
+    "section": "879",
+    "title": "Conviction of offense charged, lesser included offenses, and attempts",
+    "citation": "Art. 79, UCMJ (10 U.S.C. \u00a7 879)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/879",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_880.txt",
+    "type": "punitive",
+    "number": "80",
+    "section": "880",
+    "title": "Attempts",
+    "citation": "Art. 80, UCMJ (10 U.S.C. \u00a7 880)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/880",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_881.txt",
+    "type": "punitive",
+    "number": "81",
+    "section": "881",
+    "title": "Conspiracy",
+    "citation": "Art. 81, UCMJ (10 U.S.C. \u00a7 881)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/881",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_882.txt",
+    "type": "punitive",
+    "number": "82",
+    "section": "882",
+    "title": "Soliciting commission of offenses",
+    "citation": "Art. 82, UCMJ (10 U.S.C. \u00a7 882)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/882",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_883.txt",
+    "type": "punitive",
+    "number": "83",
+    "section": "883",
+    "title": "Malingering",
+    "citation": "Art. 83, UCMJ (10 U.S.C. \u00a7 883)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/883",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_884.txt",
+    "type": "punitive",
+    "number": "84",
+    "section": "884",
+    "title": "Breach of medical quarantine",
+    "citation": "Art. 84, UCMJ (10 U.S.C. \u00a7 884)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/884",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_885.txt",
+    "type": "punitive",
+    "number": "85",
+    "section": "885",
+    "title": "Desertion",
+    "citation": "Art. 85, UCMJ (10 U.S.C. \u00a7 885)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/885",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_886.txt",
+    "type": "punitive",
+    "number": "86",
+    "section": "886",
+    "title": "Absence without leave",
+    "citation": "Art. 86, UCMJ (10 U.S.C. \u00a7 886)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/886",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_887.txt",
+    "type": "punitive",
+    "number": "87",
+    "section": "887",
+    "title": "Missing movement; jumping from vessel",
+    "citation": "Art. 87, UCMJ (10 U.S.C. \u00a7 887)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/887",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_887a.txt",
+    "type": "punitive",
+    "number": "87a",
+    "section": "887a",
+    "title": "Resistance, flight, breach of arrest, and escape",
+    "citation": "Art. 87a, UCMJ (10 U.S.C. \u00a7 887a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/887a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_887b.txt",
+    "type": "punitive",
+    "number": "87b",
+    "section": "887b",
+    "title": "Offenses against correctional custody and restriction",
+    "citation": "Art. 87b, UCMJ (10 U.S.C. \u00a7 887b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/887b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_888.txt",
+    "type": "punitive",
+    "number": "88",
+    "section": "888",
+    "title": "Contempt toward officials",
+    "citation": "Art. 88, UCMJ (10 U.S.C. \u00a7 888)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/888",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_889.txt",
+    "type": "punitive",
+    "number": "89",
+    "section": "889",
+    "title": "Disrespect toward superior commissioned officer; assault of superior commissioned officer",
+    "citation": "Art. 89, UCMJ (10 U.S.C. \u00a7 889)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/889",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_890.txt",
+    "type": "punitive",
+    "number": "90",
+    "section": "890",
+    "title": "Willfully disobeying superior commissioned officer",
+    "citation": "Art. 90, UCMJ (10 U.S.C. \u00a7 890)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/890",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_891.txt",
+    "type": "punitive",
+    "number": "91",
+    "section": "891",
+    "title": "Insubordinate conduct toward warrant officer, noncommissioned officer, or petty officer",
+    "citation": "Art. 91, UCMJ (10 U.S.C. \u00a7 891)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/891",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_892.txt",
+    "type": "punitive",
+    "number": "92",
+    "section": "892",
+    "title": "Failure to obey order or regulation",
+    "citation": "Art. 92, UCMJ (10 U.S.C. \u00a7 892)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/892",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_893.txt",
+    "type": "punitive",
+    "number": "93",
+    "section": "893",
+    "title": "Cruelty and maltreatment",
+    "citation": "Art. 93, UCMJ (10 U.S.C. \u00a7 893)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/893",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_893a.txt",
+    "type": "punitive",
+    "number": "93a",
+    "section": "893a",
+    "title": "Prohibited activities with military recruit or trainee by person in position of special trust",
+    "citation": "Art. 93a, UCMJ (10 U.S.C. \u00a7 893a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/893a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_894.txt",
+    "type": "punitive",
+    "number": "94",
+    "section": "894",
+    "title": "Mutiny or sedition",
+    "citation": "Art. 94, UCMJ (10 U.S.C. \u00a7 894)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/894",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_895.txt",
+    "type": "punitive",
+    "number": "95",
+    "section": "895",
+    "title": "Offenses by sentinel or lookout",
+    "citation": "Art. 95, UCMJ (10 U.S.C. \u00a7 895)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/895",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_895a.txt",
+    "type": "punitive",
+    "number": "95a",
+    "section": "895a",
+    "title": "Disrespect toward sentinel or lookout",
+    "citation": "Art. 95a, UCMJ (10 U.S.C. \u00a7 895a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/895a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_896.txt",
+    "type": "punitive",
+    "number": "96",
+    "section": "896",
+    "title": "Release of prisoner without authority; drinking with prisoner",
+    "citation": "Art. 96, UCMJ (10 U.S.C. \u00a7 896)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/896",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_897.txt",
+    "type": "punitive",
+    "number": "97",
+    "section": "897",
+    "title": "Unlawful detention",
+    "citation": "Art. 97, UCMJ (10 U.S.C. \u00a7 897)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/897",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_898.txt",
+    "type": "punitive",
+    "number": "98",
+    "section": "898",
+    "title": "Misconduct as prisoner",
+    "citation": "Art. 98, UCMJ (10 U.S.C. \u00a7 898)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/898",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_899.txt",
+    "type": "punitive",
+    "number": "99",
+    "section": "899",
+    "title": "Misbehavior before the enemy",
+    "citation": "Art. 99, UCMJ (10 U.S.C. \u00a7 899)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/899",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_900.txt",
+    "type": "punitive",
+    "number": "100",
+    "section": "900",
+    "title": "Subordinate compelling surrender",
+    "citation": "Art. 100, UCMJ (10 U.S.C. \u00a7 900)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/900",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_901.txt",
+    "type": "punitive",
+    "number": "101",
+    "section": "901",
+    "title": "Improper use of countersign",
+    "citation": "Art. 101, UCMJ (10 U.S.C. \u00a7 901)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/901",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_902.txt",
+    "type": "punitive",
+    "number": "102",
+    "section": "902",
+    "title": "Forcing a safeguard",
+    "citation": "Art. 102, UCMJ (10 U.S.C. \u00a7 902)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/902",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_903.txt",
+    "type": "punitive",
+    "number": "103",
+    "section": "903",
+    "title": "Spies",
+    "citation": "Art. 103, UCMJ (10 U.S.C. \u00a7 903)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/903",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_903a.txt",
+    "type": "punitive",
+    "number": "103a",
+    "section": "903a",
+    "title": "Espionage",
+    "citation": "Art. 103a, UCMJ (10 U.S.C. \u00a7 903a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/903a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_903b.txt",
+    "type": "punitive",
+    "number": "103b",
+    "section": "903b",
+    "title": "Aiding the enemy",
+    "citation": "Art. 103b, UCMJ (10 U.S.C. \u00a7 903b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/903b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_904.txt",
+    "type": "punitive",
+    "number": "104",
+    "section": "904",
+    "title": "Public records offenses",
+    "citation": "Art. 104, UCMJ (10 U.S.C. \u00a7 904)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/904",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_904a.txt",
+    "type": "punitive",
+    "number": "104a",
+    "section": "904a",
+    "title": "Fraudulent enlistment, appointment, or separation",
+    "citation": "Art. 104a, UCMJ (10 U.S.C. \u00a7 904a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/904a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_904b.txt",
+    "type": "punitive",
+    "number": "104b",
+    "section": "904b",
+    "title": "Unlawful enlistment, appointment, or separation",
+    "citation": "Art. 104b, UCMJ (10 U.S.C. \u00a7 904b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/904b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_905.txt",
+    "type": "punitive",
+    "number": "105",
+    "section": "905",
+    "title": "Forgery",
+    "citation": "Art. 105, UCMJ (10 U.S.C. \u00a7 905)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/905",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_905a.txt",
+    "type": "punitive",
+    "number": "105a",
+    "section": "905a",
+    "title": "False or unauthorized pass offenses",
+    "citation": "Art. 105a, UCMJ (10 U.S.C. \u00a7 905a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/905a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_906.txt",
+    "type": "punitive",
+    "number": "106",
+    "section": "906",
+    "title": "Impersonation of officer, noncommissioned or petty officer, or agent or official",
+    "citation": "Art. 106, UCMJ (10 U.S.C. \u00a7 906)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/906",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_906a.txt",
+    "type": "punitive",
+    "number": "106a",
+    "section": "906a",
+    "title": "Wearing unauthorized insignia, decoration, badge, ribbon, device, or lapel button",
+    "citation": "Art. 106a, UCMJ (10 U.S.C. \u00a7 906a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/906a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_907.txt",
+    "type": "punitive",
+    "number": "107",
+    "section": "907",
+    "title": "False official statements; false swearing",
+    "citation": "Art. 107, UCMJ (10 U.S.C. \u00a7 907)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/907",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_907a.txt",
+    "type": "punitive",
+    "number": "107a",
+    "section": "907a",
+    "title": "Parole violation",
+    "citation": "Art. 107a, UCMJ (10 U.S.C. \u00a7 907a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/907a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_908.txt",
+    "type": "punitive",
+    "number": "108",
+    "section": "908",
+    "title": "Loss, damage, destruction, or wrongful disposition",
+    "citation": "Art. 108, UCMJ (10 U.S.C. \u00a7 908)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/908",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_908a.txt",
+    "type": "punitive",
+    "number": "108a",
+    "section": "908a",
+    "title": "Captured or abandoned property",
+    "citation": "Art. 108a, UCMJ (10 U.S.C. \u00a7 908a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/908a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_909.txt",
+    "type": "punitive",
+    "number": "109",
+    "section": "909",
+    "title": "Waste, spoilage, or destruction",
+    "citation": "Art. 109, UCMJ (10 U.S.C. \u00a7 909)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/909",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_909a.txt",
+    "type": "punitive",
+    "number": "109a",
+    "section": "909a",
+    "title": "Mail matter: wrongful taking, opening, etc.",
+    "citation": "Art. 109a, UCMJ (10 U.S.C. \u00a7 909a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/909a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_910.txt",
+    "type": "punitive",
+    "number": "110",
+    "section": "910",
+    "title": "Improper hazarding of vessel or aircraft",
+    "citation": "Art. 110, UCMJ (10 U.S.C. \u00a7 910)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/910",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_911.txt",
+    "type": "punitive",
+    "number": "111",
+    "section": "911",
+    "title": "Leaving scene of vehicle accident",
+    "citation": "Art. 111, UCMJ (10 U.S.C. \u00a7 911)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/911",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_912.txt",
+    "type": "punitive",
+    "number": "112",
+    "section": "912",
+    "title": "Drunkenness and other incapacitation offenses",
+    "citation": "Art. 112, UCMJ (10 U.S.C. \u00a7 912)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/912",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_912a.txt",
+    "type": "punitive",
+    "number": "112a",
+    "section": "912a",
+    "title": "Wrongful use, possession, etc., of controlled substances",
+    "citation": "Art. 112a, UCMJ (10 U.S.C. \u00a7 912a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/912a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_913.txt",
+    "type": "punitive",
+    "number": "113",
+    "section": "913",
+    "title": "Drunken or reckless operation of a vehicle, aircraft, or vessel",
+    "citation": "Art. 113, UCMJ (10 U.S.C. \u00a7 913)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/913",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_914.txt",
+    "type": "punitive",
+    "number": "114",
+    "section": "914",
+    "title": "Endangerment offenses",
+    "citation": "Art. 114, UCMJ (10 U.S.C. \u00a7 914)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/914",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_915.txt",
+    "type": "punitive",
+    "number": "115",
+    "section": "915",
+    "title": "Communicating threats",
+    "citation": "Art. 115, UCMJ (10 U.S.C. \u00a7 915)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/915",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_916.txt",
+    "type": "punitive",
+    "number": "116",
+    "section": "916",
+    "title": "Riot or breach of peace",
+    "citation": "Art. 116, UCMJ (10 U.S.C. \u00a7 916)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/916",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_917.txt",
+    "type": "punitive",
+    "number": "117",
+    "section": "917",
+    "title": "Provoking speeches or gestures",
+    "citation": "Art. 117, UCMJ (10 U.S.C. \u00a7 917)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/917",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_917a.txt",
+    "type": "punitive",
+    "number": "117a",
+    "section": "917a",
+    "title": "Wrongful broadcast or distribution of intimate visual images",
+    "citation": "Art. 117a, UCMJ (10 U.S.C. \u00a7 917a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/917a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_918.txt",
+    "type": "punitive",
+    "number": "118",
+    "section": "918",
+    "title": "Murder",
+    "citation": "Art. 118, UCMJ (10 U.S.C. \u00a7 918)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/918",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_919.txt",
+    "type": "punitive",
+    "number": "119",
+    "section": "919",
+    "title": "Manslaughter",
+    "citation": "Art. 119, UCMJ (10 U.S.C. \u00a7 919)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/919",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_919a.txt",
+    "type": "punitive",
+    "number": "119a",
+    "section": "919a",
+    "title": "Death or injury of an unborn child",
+    "citation": "Art. 119a, UCMJ (10 U.S.C. \u00a7 919a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/919a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_919b.txt",
+    "type": "punitive",
+    "number": "119b",
+    "section": "919b",
+    "title": "Child endangerment",
+    "citation": "Art. 119b, UCMJ (10 U.S.C. \u00a7 919b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/919b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_920.txt",
+    "type": "punitive",
+    "number": "120",
+    "section": "920",
+    "title": "Rape and sexual assault generally",
+    "citation": "Art. 120, UCMJ (10 U.S.C. \u00a7 920)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/920",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_920a.txt",
+    "type": "punitive",
+    "number": "120a",
+    "section": "920a",
+    "title": "Mails: deposit of obscene matter",
+    "citation": "Art. 120a, UCMJ (10 U.S.C. \u00a7 920a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/920a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_920b.txt",
+    "type": "punitive",
+    "number": "120b",
+    "section": "920b",
+    "title": "Rape and sexual assault of a child",
+    "citation": "Art. 120b, UCMJ (10 U.S.C. \u00a7 920b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/920b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_920c.txt",
+    "type": "punitive",
+    "number": "120c",
+    "section": "920c",
+    "title": "Other sexual misconduct",
+    "citation": "Art. 120c, UCMJ (10 U.S.C. \u00a7 920c)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/920c",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_921.txt",
+    "type": "punitive",
+    "number": "121",
+    "section": "921",
+    "title": "Larceny and wrongful appropriation",
+    "citation": "Art. 121, UCMJ (10 U.S.C. \u00a7 921)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/921",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_921a.txt",
+    "type": "punitive",
+    "number": "121a",
+    "section": "921a",
+    "title": "Fraudulent use of credit cards, debit cards, and other access devices",
+    "citation": "Art. 121a, UCMJ (10 U.S.C. \u00a7 921a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/921a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_921b.txt",
+    "type": "punitive",
+    "number": "121b",
+    "section": "921b",
+    "title": "False pretenses to obtain services",
+    "citation": "Art. 121b, UCMJ (10 U.S.C. \u00a7 921b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/921b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_922.txt",
+    "type": "punitive",
+    "number": "122",
+    "section": "922",
+    "title": "Robbery",
+    "citation": "Art. 122, UCMJ (10 U.S.C. \u00a7 922)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/922",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_922a.txt",
+    "type": "punitive",
+    "number": "122a",
+    "section": "922a",
+    "title": "Receiving stolen property",
+    "citation": "Art. 122a, UCMJ (10 U.S.C. \u00a7 922a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/922a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_923.txt",
+    "type": "punitive",
+    "number": "123",
+    "section": "923",
+    "title": "Offenses concerning Government computers",
+    "citation": "Art. 123, UCMJ (10 U.S.C. \u00a7 923)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/923",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_923a.txt",
+    "type": "punitive",
+    "number": "123a",
+    "section": "923a",
+    "title": "Making, drawing, or uttering check, draft, or order without sufficient funds",
+    "citation": "Art. 123a, UCMJ (10 U.S.C. \u00a7 923a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/923a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_924.txt",
+    "type": "punitive",
+    "number": "124",
+    "section": "924",
+    "title": "Frauds against the United States",
+    "citation": "Art. 124, UCMJ (10 U.S.C. \u00a7 924)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/924",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_924a.txt",
+    "type": "punitive",
+    "number": "124a",
+    "section": "924a",
+    "title": "Bribery",
+    "citation": "Art. 124a, UCMJ (10 U.S.C. \u00a7 924a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/924a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_924b.txt",
+    "type": "punitive",
+    "number": "124b",
+    "section": "924b",
+    "title": "Graft",
+    "citation": "Art. 124b, UCMJ (10 U.S.C. \u00a7 924b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/924b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_925.txt",
+    "type": "punitive",
+    "number": "125",
+    "section": "925",
+    "title": "Kidnapping",
+    "citation": "Art. 125, UCMJ (10 U.S.C. \u00a7 925)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/925",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_926.txt",
+    "type": "punitive",
+    "number": "126",
+    "section": "926",
+    "title": "Arson; burning property with intent to defraud",
+    "citation": "Art. 126, UCMJ (10 U.S.C. \u00a7 926)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/926",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_927.txt",
+    "type": "punitive",
+    "number": "127",
+    "section": "927",
+    "title": "Extortion",
+    "citation": "Art. 127, UCMJ (10 U.S.C. \u00a7 927)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/927",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_928.txt",
+    "type": "punitive",
+    "number": "128",
+    "section": "928",
+    "title": "Assault",
+    "citation": "Art. 128, UCMJ (10 U.S.C. \u00a7 928)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/928",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_928a.txt",
+    "type": "punitive",
+    "number": "128a",
+    "section": "928a",
+    "title": "Maiming",
+    "citation": "Art. 128a, UCMJ (10 U.S.C. \u00a7 928a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/928a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_928b.txt",
+    "type": "punitive",
+    "number": "128b",
+    "section": "928b",
+    "title": "Domestic violence",
+    "citation": "Art. 128b, UCMJ (10 U.S.C. \u00a7 928b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/928b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_929.txt",
+    "type": "punitive",
+    "number": "129",
+    "section": "929",
+    "title": "Burglary; unlawful entry",
+    "citation": "Art. 129, UCMJ (10 U.S.C. \u00a7 929)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/929",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_930.txt",
+    "type": "punitive",
+    "number": "130",
+    "section": "930",
+    "title": "Stalking",
+    "citation": "Art. 130, UCMJ (10 U.S.C. \u00a7 930)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/930",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_931.txt",
+    "type": "punitive",
+    "number": "131",
+    "section": "931",
+    "title": "Perjury",
+    "citation": "Art. 131, UCMJ (10 U.S.C. \u00a7 931)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/931",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_931a.txt",
+    "type": "punitive",
+    "number": "131a",
+    "section": "931a",
+    "title": "Subornation of perjury",
+    "citation": "Art. 131a, UCMJ (10 U.S.C. \u00a7 931a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/931a",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_931b.txt",
+    "type": "punitive",
+    "number": "131b",
+    "section": "931b",
+    "title": "Obstructing justice",
+    "citation": "Art. 131b, UCMJ (10 U.S.C. \u00a7 931b)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/931b",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_931c.txt",
+    "type": "punitive",
+    "number": "131c",
+    "section": "931c",
+    "title": "Misprision of serious offense",
+    "citation": "Art. 131c, UCMJ (10 U.S.C. \u00a7 931c)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/931c",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_931d.txt",
+    "type": "punitive",
+    "number": "131d",
+    "section": "931d",
+    "title": "Wrongful refusal to testify",
+    "citation": "Art. 131d, UCMJ (10 U.S.C. \u00a7 931d)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/931d",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_931e.txt",
+    "type": "punitive",
+    "number": "131e",
+    "section": "931e",
+    "title": "Prevention of authorized seizure of property",
+    "citation": "Art. 131e, UCMJ (10 U.S.C. \u00a7 931e)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/931e",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_931f.txt",
+    "type": "punitive",
+    "number": "131f",
+    "section": "931f",
+    "title": "Noncompliance with procedural rules",
+    "citation": "Art. 131f, UCMJ (10 U.S.C. \u00a7 931f)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/931f",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_931g.txt",
+    "type": "punitive",
+    "number": "131g",
+    "section": "931g",
+    "title": "Wrongful interference with adverse administrative proceeding",
+    "citation": "Art. 131g, UCMJ (10 U.S.C. \u00a7 931g)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/931g",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_932.txt",
+    "type": "punitive",
+    "number": "132",
+    "section": "932",
+    "title": "Retaliation",
+    "citation": "Art. 132, UCMJ (10 U.S.C. \u00a7 932)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/932",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_933.txt",
+    "type": "punitive",
+    "number": "133",
+    "section": "933",
+    "title": "Conduct unbecoming an officer",
+    "citation": "Art. 133, UCMJ (10 U.S.C. \u00a7 933)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/933",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_934.txt",
+    "type": "punitive",
+    "number": "134",
+    "section": "934",
+    "title": "General article",
+    "citation": "Art. 134, UCMJ (10 U.S.C. \u00a7 934)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/934",
+    "subchapter": "X"
+  },
+  {
+    "file": "sec_935.txt",
+    "type": "procedural",
+    "number": "135",
+    "section": "935",
+    "title": "Courts of inquiry",
+    "citation": "Art. 135, UCMJ (10 U.S.C. \u00a7 935)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/935",
+    "subchapter": "XI"
+  },
+  {
+    "file": "sec_936.txt",
+    "type": "procedural",
+    "number": "136",
+    "section": "936",
+    "title": "Authority to administer oaths",
+    "citation": "Art. 136, UCMJ (10 U.S.C. \u00a7 936)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/936",
+    "subchapter": "XI"
+  },
+  {
+    "file": "sec_937.txt",
+    "type": "procedural",
+    "number": "137",
+    "section": "937",
+    "title": "Articles to be explained",
+    "citation": "Art. 137, UCMJ (10 U.S.C. \u00a7 937)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/937",
+    "subchapter": "XI"
+  },
+  {
+    "file": "sec_938.txt",
+    "type": "procedural",
+    "number": "138",
+    "section": "938",
+    "title": "Complaints of wrongs",
+    "citation": "Art. 138, UCMJ (10 U.S.C. \u00a7 938)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/938",
+    "subchapter": "XI"
+  },
+  {
+    "file": "sec_939.txt",
+    "type": "procedural",
+    "number": "139",
+    "section": "939",
+    "title": "Redress of injuries to property",
+    "citation": "Art. 139, UCMJ (10 U.S.C. \u00a7 939)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/939",
+    "subchapter": "XI"
+  },
+  {
+    "file": "sec_940.txt",
+    "type": "procedural",
+    "number": "140",
+    "section": "940",
+    "title": "Delegation by the President",
+    "citation": "Art. 140, UCMJ (10 U.S.C. \u00a7 940)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/940",
+    "subchapter": "XI"
+  },
+  {
+    "file": "sec_940a.txt",
+    "type": "procedural",
+    "number": "140a",
+    "section": "940a",
+    "title": "Case management; data collection and accessibility",
+    "citation": "Art. 140a, UCMJ (10 U.S.C. \u00a7 940a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/940a",
+    "subchapter": "XI"
+  },
+  {
+    "file": "sec_941.txt",
+    "type": "procedural",
+    "number": "141",
+    "section": "941",
+    "title": "Status",
+    "citation": "Art. 141, UCMJ (10 U.S.C. \u00a7 941)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/941",
+    "subchapter": "XII"
+  },
+  {
+    "file": "sec_942.txt",
+    "type": "procedural",
+    "number": "142",
+    "section": "942",
+    "title": "Judges",
+    "citation": "Art. 142, UCMJ (10 U.S.C. \u00a7 942)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/942",
+    "subchapter": "XII"
+  },
+  {
+    "file": "sec_943.txt",
+    "type": "procedural",
+    "number": "143",
+    "section": "943",
+    "title": "Organization and employees",
+    "citation": "Art. 143, UCMJ (10 U.S.C. \u00a7 943)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/943",
+    "subchapter": "XII"
+  },
+  {
+    "file": "sec_944.txt",
+    "type": "procedural",
+    "number": "144",
+    "section": "944",
     "title": "Procedure",
-    "citation": "Art. 72 GDPR",
-    "source": "https://gdpr-info.eu/art-72-gdpr/"
-  },
-  {
-    "file": "article_073.txt",
-    "type": "article",
-    "number": 73,
-    "title": "Chair",
-    "citation": "Art. 73 GDPR",
-    "source": "https://gdpr-info.eu/art-73-gdpr/"
-  },
-  {
-    "file": "article_074.txt",
-    "type": "article",
-    "number": 74,
-    "title": "Tasks of the Chair",
-    "citation": "Art. 74 GDPR",
-    "source": "https://gdpr-info.eu/art-74-gdpr/"
-  },
-  {
-    "file": "article_075.txt",
-    "type": "article",
-    "number": 75,
-    "title": "Secretariat",
-    "citation": "Art. 75 GDPR",
-    "source": "https://gdpr-info.eu/art-75-gdpr/"
-  },
-  {
-    "file": "article_076.txt",
-    "type": "article",
-    "number": 76,
-    "title": "Confidentiality",
-    "citation": "Art. 76 GDPR",
-    "source": "https://gdpr-info.eu/art-76-gdpr/"
-  },
-  {
-    "file": "article_077.txt",
-    "type": "article",
-    "number": 77,
-    "title": "Right to lodge a complaint with a supervisory authority",
-    "citation": "Art. 77 GDPR",
-    "source": "https://gdpr-info.eu/art-77-gdpr/"
-  },
-  {
-    "file": "article_078.txt",
-    "type": "article",
-    "number": 78,
-    "title": "Right to an effective judicial remedy against a supervisory authority",
-    "citation": "Art. 78 GDPR",
-    "source": "https://gdpr-info.eu/art-78-gdpr/"
-  },
-  {
-    "file": "article_079.txt",
-    "type": "article",
-    "number": 79,
-    "title": "Right to an effective judicial remedy against a controller or processor",
-    "citation": "Art. 79 GDPR",
-    "source": "https://gdpr-info.eu/art-79-gdpr/"
-  },
-  {
-    "file": "article_080.txt",
-    "type": "article",
-    "number": 80,
-    "title": "Representation of data subjects",
-    "citation": "Art. 80 GDPR",
-    "source": "https://gdpr-info.eu/art-80-gdpr/"
-  },
-  {
-    "file": "article_081.txt",
-    "type": "article",
-    "number": 81,
-    "title": "Suspension of proceedings",
-    "citation": "Art. 81 GDPR",
-    "source": "https://gdpr-info.eu/art-81-gdpr/"
-  },
-  {
-    "file": "article_082.txt",
-    "type": "article",
-    "number": 82,
-    "title": "Right to compensation and liability",
-    "citation": "Art. 82 GDPR",
-    "source": "https://gdpr-info.eu/art-82-gdpr/"
-  },
-  {
-    "file": "article_083.txt",
-    "type": "article",
-    "number": 83,
-    "title": "General conditions for imposing administrative fines",
-    "citation": "Art. 83 GDPR",
-    "source": "https://gdpr-info.eu/art-83-gdpr/"
-  },
-  {
-    "file": "article_084.txt",
-    "type": "article",
-    "number": 84,
-    "title": "Penalties",
-    "citation": "Art. 84 GDPR",
-    "source": "https://gdpr-info.eu/art-84-gdpr/"
-  },
-  {
-    "file": "article_085.txt",
-    "type": "article",
-    "number": 85,
-    "title": "Processing and freedom of expression and information",
-    "citation": "Art. 85 GDPR",
-    "source": "https://gdpr-info.eu/art-85-gdpr/"
-  },
-  {
-    "file": "article_086.txt",
-    "type": "article",
-    "number": 86,
-    "title": "Processing and public access to official documents",
-    "citation": "Art. 86 GDPR",
-    "source": "https://gdpr-info.eu/art-86-gdpr/"
-  },
-  {
-    "file": "article_087.txt",
-    "type": "article",
-    "number": 87,
-    "title": "Processing of the national identification number",
-    "citation": "Art. 87 GDPR",
-    "source": "https://gdpr-info.eu/art-87-gdpr/"
-  },
-  {
-    "file": "article_088.txt",
-    "type": "article",
-    "number": 88,
-    "title": "Processing in the context of employment",
-    "citation": "Art. 88 GDPR",
-    "source": "https://gdpr-info.eu/art-88-gdpr/"
-  },
-  {
-    "file": "article_089.txt",
-    "type": "article",
-    "number": 89,
-    "title": "Safeguards and derogations relating to processing for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes",
-    "citation": "Art. 89 GDPR",
-    "source": "https://gdpr-info.eu/art-89-gdpr/"
-  },
-  {
-    "file": "article_090.txt",
-    "type": "article",
-    "number": 90,
-    "title": "Obligations of secrecy",
-    "citation": "Art. 90 GDPR",
-    "source": "https://gdpr-info.eu/art-90-gdpr/"
-  },
-  {
-    "file": "article_091.txt",
-    "type": "article",
-    "number": 91,
-    "title": "Existing data protection rules of churches and religious associations",
-    "citation": "Art. 91 GDPR",
-    "source": "https://gdpr-info.eu/art-91-gdpr/"
-  },
-  {
-    "file": "article_092.txt",
-    "type": "article",
-    "number": 92,
-    "title": "Exercise of the delegation",
-    "citation": "Art. 92 GDPR",
-    "source": "https://gdpr-info.eu/art-92-gdpr/"
-  },
-  {
-    "file": "article_093.txt",
-    "type": "article",
-    "number": 93,
-    "title": "Committee procedure",
-    "citation": "Art. 93 GDPR",
-    "source": "https://gdpr-info.eu/art-93-gdpr/"
-  },
-  {
-    "file": "article_094.txt",
-    "type": "article",
-    "number": 94,
-    "title": "Repeal of Directive 95/46/EC",
-    "citation": "Art. 94 GDPR",
-    "source": "https://gdpr-info.eu/art-94-gdpr/"
-  },
-  {
-    "file": "article_095.txt",
-    "type": "article",
-    "number": 95,
-    "title": "Relationship with Directive 2002/58/EC",
-    "citation": "Art. 95 GDPR",
-    "source": "https://gdpr-info.eu/art-95-gdpr/"
-  },
-  {
-    "file": "article_096.txt",
-    "type": "article",
-    "number": 96,
-    "title": "Relationship with previously concluded Agreements",
-    "citation": "Art. 96 GDPR",
-    "source": "https://gdpr-info.eu/art-96-gdpr/"
-  },
-  {
-    "file": "article_097.txt",
-    "type": "article",
-    "number": 97,
-    "title": "Commission reports",
-    "citation": "Art. 97 GDPR",
-    "source": "https://gdpr-info.eu/art-97-gdpr/"
-  },
-  {
-    "file": "article_098.txt",
-    "type": "article",
-    "number": 98,
-    "title": "Review of other Union legal acts on data protection",
-    "citation": "Art. 98 GDPR",
-    "source": "https://gdpr-info.eu/art-98-gdpr/"
-  },
-  {
-    "file": "article_099.txt",
-    "type": "article",
-    "number": 99,
-    "title": "Entry into force and application",
-    "citation": "Art. 99 GDPR",
-    "source": "https://gdpr-info.eu/art-99-gdpr/"
-  },
-  {
-    "file": "recital_001.txt",
-    "type": "recital",
-    "number": 1,
-    "title": "Data Protection as a Fundamental Right*",
-    "citation": "Recital 1 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-1/"
-  },
-  {
-    "file": "recital_002.txt",
-    "type": "recital",
-    "number": 2,
-    "title": "Respect of the Fundamental Rights and Freedoms*",
-    "citation": "Recital 2 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-2/"
-  },
-  {
-    "file": "recital_003.txt",
-    "type": "recital",
-    "number": 3,
-    "title": "Directive 95/46/EC Harmonisation*",
-    "citation": "Recital 3 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-3/"
-  },
-  {
-    "file": "recital_004.txt",
-    "type": "recital",
-    "number": 4,
-    "title": "Data Protection in Balance with Other Fundamental Rights*",
-    "citation": "Recital 4 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-4/"
-  },
-  {
-    "file": "recital_005.txt",
-    "type": "recital",
-    "number": 5,
-    "title": "Cooperation Between Member States to Exchange Personal Data*",
-    "citation": "Recital 5 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-5/"
-  },
-  {
-    "file": "recital_006.txt",
-    "type": "recital",
-    "number": 6,
-    "title": "Ensuring a High Level of Data Protection Despite the Increased Exchange of Data*",
-    "citation": "Recital 6 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-6/"
-  },
-  {
-    "file": "recital_007.txt",
-    "type": "recital",
-    "number": 7,
-    "title": "The Framework is Based on Control and Certainty*",
-    "citation": "Recital 7 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-7/"
-  },
-  {
-    "file": "recital_008.txt",
-    "type": "recital",
-    "number": 8,
-    "title": "Adoption into National Law*",
-    "citation": "Recital 8 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-8/"
-  },
-  {
-    "file": "recital_009.txt",
-    "type": "recital",
-    "number": 9,
-    "title": "Different Standards of Protection by the Directive 95/46/EC*",
-    "citation": "Recital 9 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-9/"
-  },
-  {
-    "file": "recital_010.txt",
-    "type": "recital",
-    "number": 10,
-    "title": "Harmonised Level of Data Protection Despite National Scope*",
-    "citation": "Recital 10 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-10/"
-  },
-  {
-    "file": "recital_011.txt",
-    "type": "recital",
-    "number": 11,
-    "title": "Harmonisation of the Powers and Sanctions*",
-    "citation": "Recital 11 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-11/"
-  },
-  {
-    "file": "recital_012.txt",
-    "type": "recital",
-    "number": 12,
-    "title": "Authorization of the European Parliament and the Council*",
-    "citation": "Recital 12 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-12/"
-  },
-  {
-    "file": "recital_013.txt",
-    "type": "recital",
-    "number": 13,
-    "title": "Taking Account of Micro, Small and Medium-Sized Enterprises*",
-    "citation": "Recital 13 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-13/"
-  },
-  {
-    "file": "recital_014.txt",
-    "type": "recital",
-    "number": 14,
-    "title": "Not Applicable to Legal Persons*",
-    "citation": "Recital 14 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-14/"
-  },
-  {
-    "file": "recital_015.txt",
-    "type": "recital",
-    "number": 15,
-    "title": "Technology Neutrality*",
-    "citation": "Recital 15 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-15/"
-  },
-  {
-    "file": "recital_016.txt",
-    "type": "recital",
-    "number": 16,
-    "title": "Not Applicable to Activities Regarding National and Common Security*",
-    "citation": "Recital 16 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-16/"
-  },
-  {
-    "file": "recital_017.txt",
-    "type": "recital",
-    "number": 17,
-    "title": "Adaptation of Regulation (EC) No 45/2001*",
-    "citation": "Recital 17 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-17/"
-  },
-  {
-    "file": "recital_018.txt",
-    "type": "recital",
-    "number": 18,
-    "title": "Not Applicable to Personal or Household Activities*",
-    "citation": "Recital 18 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-18/"
-  },
-  {
-    "file": "recital_019.txt",
-    "type": "recital",
-    "number": 19,
-    "title": "Not Applicable to Criminal Prosecution*",
-    "citation": "Recital 19 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-19/"
-  },
-  {
-    "file": "recital_020.txt",
-    "type": "recital",
-    "number": 20,
-    "title": "Respecting the Independence of the Judiciary*",
-    "citation": "Recital 20 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-20/"
-  },
-  {
-    "file": "recital_021.txt",
-    "type": "recital",
-    "number": 21,
-    "title": "Liability Rules of Intermediary Service Providers Shall Remain Unaffected*",
-    "citation": "Recital 21 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-21/"
-  },
-  {
-    "file": "recital_022.txt",
-    "type": "recital",
-    "number": 22,
-    "title": "Processing by an Establishment*",
-    "citation": "Recital 22 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-22/"
-  },
-  {
-    "file": "recital_023.txt",
-    "type": "recital",
-    "number": 23,
-    "title": "Applicable to Controllers/Processors Not Established in the Union if Data Subjects Within the Union are Targeted*",
-    "citation": "Recital 23 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-23/"
-  },
-  {
-    "file": "recital_024.txt",
-    "type": "recital",
-    "number": 24,
-    "title": "Applicable to Controllers/Processors Not Established in the Union if Data Subjects Within the Union are Profiled*",
-    "citation": "Recital 24 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-24/"
-  },
-  {
-    "file": "recital_025.txt",
-    "type": "recital",
-    "number": 25,
-    "title": "Applicable to Controllers Due to International Law*",
-    "citation": "Recital 25 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-25/"
-  },
-  {
-    "file": "recital_026.txt",
-    "type": "recital",
-    "number": 26,
-    "title": "Not Applicable to Anonymous Data*",
-    "citation": "Recital 26 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-26/"
-  },
-  {
-    "file": "recital_027.txt",
-    "type": "recital",
-    "number": 27,
-    "title": "Not Applicable to Data of Deceased Persons*",
-    "citation": "Recital 27 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-27/"
-  },
-  {
-    "file": "recital_028.txt",
-    "type": "recital",
-    "number": 28,
-    "title": "Introduction of Pseudonymisation*",
-    "citation": "Recital 28 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-28/"
-  },
-  {
-    "file": "recital_029.txt",
-    "type": "recital",
-    "number": 29,
-    "title": "Pseudonymisation at the Same Controller*",
-    "citation": "Recital 29 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-29/"
-  },
-  {
-    "file": "recital_030.txt",
-    "type": "recital",
-    "number": 30,
-    "title": "Online Identifiers for Profiling and Identification*",
-    "citation": "Recital 30 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-30/"
-  },
-  {
-    "file": "recital_031.txt",
-    "type": "recital",
-    "number": 31,
-    "title": "Not Applicable to Public Authorities in Connection with Their Official Tasks*",
-    "citation": "Recital 31 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-31/"
-  },
-  {
-    "file": "recital_032.txt",
-    "type": "recital",
-    "number": 32,
-    "title": "Conditions for Consent*",
-    "citation": "Recital 32 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-32/"
-  },
-  {
-    "file": "recital_033.txt",
-    "type": "recital",
-    "number": 33,
-    "title": "Consent to Certain Areas of Scientific Research*",
-    "citation": "Recital 33 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-33/"
-  },
-  {
-    "file": "recital_034.txt",
-    "type": "recital",
-    "number": 34,
-    "title": "Genetic Data*",
-    "citation": "Recital 34 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-34/"
-  },
-  {
-    "file": "recital_035.txt",
-    "type": "recital",
-    "number": 35,
-    "title": "Health Data*",
-    "citation": "Recital 35 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-35/"
-  },
-  {
-    "file": "recital_036.txt",
-    "type": "recital",
-    "number": 36,
-    "title": "Determination of the Main Establishment*",
-    "citation": "Recital 36 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-36/"
-  },
-  {
-    "file": "recital_037.txt",
-    "type": "recital",
-    "number": 37,
-    "title": "Group of undertakings*",
-    "citation": "Recital 37 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-37/"
-  },
-  {
-    "file": "recital_038.txt",
-    "type": "recital",
-    "number": 38,
-    "title": "Special Protection of Children's Personal Data*",
-    "citation": "Recital 38 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-38/"
-  },
-  {
-    "file": "recital_039.txt",
-    "type": "recital",
-    "number": 39,
-    "title": "Principles of Data Processing*",
-    "citation": "Recital 39 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-39/"
-  },
-  {
-    "file": "recital_040.txt",
-    "type": "recital",
-    "number": 40,
-    "title": "Lawfulness of Data Processing*",
-    "citation": "Recital 40 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-40/"
-  },
-  {
-    "file": "recital_041.txt",
-    "type": "recital",
-    "number": 41,
-    "title": "Legal Basis or Legislative Measures*",
-    "citation": "Recital 41 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-41/"
-  },
-  {
-    "file": "recital_042.txt",
-    "type": "recital",
-    "number": 42,
-    "title": "Burden of Proof and Requirements for Consent*",
-    "citation": "Recital 42 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-42/"
-  },
-  {
-    "file": "recital_043.txt",
-    "type": "recital",
-    "number": 43,
-    "title": "Freely Given Consent*",
-    "citation": "Recital 43 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-43/"
-  },
-  {
-    "file": "recital_044.txt",
-    "type": "recital",
-    "number": 44,
-    "title": "Performance of a Contract*",
-    "citation": "Recital 44 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-44/"
-  },
-  {
-    "file": "recital_045.txt",
-    "type": "recital",
-    "number": 45,
-    "title": "Fulfillment of Legal Obligations*",
-    "citation": "Recital 45 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-45/"
-  },
-  {
-    "file": "recital_046.txt",
-    "type": "recital",
-    "number": 46,
-    "title": "Vital Interests of the Data Subject*",
-    "citation": "Recital 46 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-46/"
-  },
-  {
-    "file": "recital_047.txt",
-    "type": "recital",
-    "number": 47,
-    "title": "Overriding Legitimate Interest*",
-    "citation": "Recital 47 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-47/"
-  },
-  {
-    "file": "recital_048.txt",
-    "type": "recital",
-    "number": 48,
-    "title": "Overriding Legitimate Interest Within Group of Undertakings*",
-    "citation": "Recital 48 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-48/"
-  },
-  {
-    "file": "recital_049.txt",
-    "type": "recital",
-    "number": 49,
-    "title": "Network and Information Security as Overriding Legitimate Interest*",
-    "citation": "Recital 49 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-49/"
-  },
-  {
-    "file": "recital_050.txt",
-    "type": "recital",
-    "number": 50,
-    "title": "Further Processing of Personal Data*",
-    "citation": "Recital 50 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-50/"
-  },
-  {
-    "file": "recital_051.txt",
-    "type": "recital",
-    "number": 51,
-    "title": "Protecting Sensitive Personal Data*",
-    "citation": "Recital 51 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-51/"
-  },
-  {
-    "file": "recital_052.txt",
-    "type": "recital",
-    "number": 52,
-    "title": "Exceptions to the Prohibition on Processing Special Categories of Personal Data*",
-    "citation": "Recital 52 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-52/"
-  },
-  {
-    "file": "recital_053.txt",
-    "type": "recital",
-    "number": 53,
-    "title": "Processing of Sensitive Data in Health and Social Sector*",
-    "citation": "Recital 53 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-53/"
-  },
-  {
-    "file": "recital_054.txt",
-    "type": "recital",
-    "number": 54,
-    "title": "Processing of Sensitive Data in Public Health Sector*",
-    "citation": "Recital 54 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-54/"
-  },
-  {
-    "file": "recital_055.txt",
-    "type": "recital",
-    "number": 55,
-    "title": "Public Interest in Processing by Official Authorities for Objectives of Recognized Religious Communities*",
-    "citation": "Recital 55 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-55/"
-  },
-  {
-    "file": "recital_056.txt",
-    "type": "recital",
-    "number": 56,
-    "title": "Processing Personal Data on People's Political Opinions by Parties*",
-    "citation": "Recital 56 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-56/"
-  },
-  {
-    "file": "recital_057.txt",
-    "type": "recital",
-    "number": 57,
-    "title": "Additional Data for Identification Purposes*",
-    "citation": "Recital 57 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-57/"
-  },
-  {
-    "file": "recital_058.txt",
-    "type": "recital",
-    "number": 58,
-    "title": "The Principle of Transparency*",
-    "citation": "Recital 58 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-58/"
-  },
-  {
-    "file": "recital_059.txt",
-    "type": "recital",
-    "number": 59,
-    "title": "Procedures for the Exercise of the Rights of the Data Subjects*",
-    "citation": "Recital 59 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-59/"
-  },
-  {
-    "file": "recital_060.txt",
-    "type": "recital",
-    "number": 60,
-    "title": "Information Obligation*",
-    "citation": "Recital 60 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-60/"
-  },
-  {
-    "file": "recital_061.txt",
-    "type": "recital",
-    "number": 61,
-    "title": "Time of Information*",
-    "citation": "Recital 61 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-61/"
-  },
-  {
-    "file": "recital_062.txt",
-    "type": "recital",
-    "number": 62,
-    "title": "Exceptions to the Obligation to Provide Information*",
-    "citation": "Recital 62 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-62/"
-  },
-  {
-    "file": "recital_063.txt",
-    "type": "recital",
-    "number": 63,
-    "title": "Right of Access*",
-    "citation": "Recital 63 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-63/"
-  },
-  {
-    "file": "recital_064.txt",
-    "type": "recital",
-    "number": 64,
-    "title": "Identity Verification*",
-    "citation": "Recital 64 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-64/"
-  },
-  {
-    "file": "recital_065.txt",
-    "type": "recital",
-    "number": 65,
-    "title": "Right of Rectification and Erasure*",
-    "citation": "Recital 65 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-65/"
-  },
-  {
-    "file": "recital_066.txt",
-    "type": "recital",
-    "number": 66,
-    "title": "Right to be Forgotten*",
-    "citation": "Recital 66 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-66/"
-  },
-  {
-    "file": "recital_067.txt",
-    "type": "recital",
-    "number": 67,
-    "title": "Restriction of Processing*",
-    "citation": "Recital 67 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-67/"
-  },
-  {
-    "file": "recital_068.txt",
-    "type": "recital",
-    "number": 68,
-    "title": "Right of Data Portability*",
-    "citation": "Recital 68 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-68/"
-  },
-  {
-    "file": "recital_069.txt",
-    "type": "recital",
-    "number": 69,
-    "title": "Right to Object*",
-    "citation": "Recital 69 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-69/"
-  },
-  {
-    "file": "recital_070.txt",
-    "type": "recital",
-    "number": 70,
-    "title": "Right to Object to Direct Marketing*",
-    "citation": "Recital 70 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-70/"
-  },
-  {
-    "file": "recital_071.txt",
-    "type": "recital",
-    "number": 71,
-    "title": "Profiling*",
-    "citation": "Recital 71 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-71/"
-  },
-  {
-    "file": "recital_072.txt",
-    "type": "recital",
-    "number": 72,
-    "title": "Guidance of the European Data Protection Board Regarding Profiling*",
-    "citation": "Recital 72 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-72/"
-  },
-  {
-    "file": "recital_073.txt",
-    "type": "recital",
-    "number": 73,
-    "title": "Restrictions of Rights and Principles*",
-    "citation": "Recital 73 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-73/"
-  },
-  {
-    "file": "recital_074.txt",
-    "type": "recital",
-    "number": 74,
-    "title": "Responsibility and Liability of the Controller*",
-    "citation": "Recital 74 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-74/"
-  },
-  {
-    "file": "recital_075.txt",
-    "type": "recital",
-    "number": 75,
-    "title": "Risks to the Rights and Freedoms of Natural Persons*",
-    "citation": "Recital 75 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-75/"
-  },
-  {
-    "file": "recital_076.txt",
-    "type": "recital",
-    "number": 76,
-    "title": "Risk Assessment*",
-    "citation": "Recital 76 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-76/"
-  },
-  {
-    "file": "recital_077.txt",
-    "type": "recital",
-    "number": 77,
-    "title": "Risk Assessment Guidelines*",
-    "citation": "Recital 77 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-77/"
-  },
-  {
-    "file": "recital_078.txt",
-    "type": "recital",
-    "number": 78,
-    "title": "Appropriate Technical and Organisational Measures*",
-    "citation": "Recital 78 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-78/"
-  },
-  {
-    "file": "recital_079.txt",
-    "type": "recital",
-    "number": 79,
-    "title": "Allocation of the Responsibilities*",
-    "citation": "Recital 79 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-79/"
-  },
-  {
-    "file": "recital_080.txt",
-    "type": "recital",
-    "number": 80,
-    "title": "Designation of a Representative*",
-    "citation": "Recital 80 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-80/"
-  },
-  {
-    "file": "recital_081.txt",
-    "type": "recital",
-    "number": 81,
-    "title": "The Use of Processors*",
-    "citation": "Recital 81 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-81/"
-  },
-  {
-    "file": "recital_082.txt",
-    "type": "recital",
-    "number": 82,
-    "title": "Record of Processing Activities*",
-    "citation": "Recital 82 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-82/"
-  },
-  {
-    "file": "recital_083.txt",
-    "type": "recital",
-    "number": 83,
-    "title": "Security of Processing*",
-    "citation": "Recital 83 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-83/"
-  },
-  {
-    "file": "recital_084.txt",
-    "type": "recital",
-    "number": 84,
-    "title": "Risk Evaluation and Impact Assessment*",
-    "citation": "Recital 84 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-84/"
-  },
-  {
-    "file": "recital_085.txt",
-    "type": "recital",
-    "number": 85,
-    "title": "Notification Obligation of Breaches to the Supervisory Authority*",
-    "citation": "Recital 85 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-85/"
-  },
-  {
-    "file": "recital_086.txt",
-    "type": "recital",
-    "number": 86,
-    "title": "Notification of Data Subjects in Case of Data Breaches*",
-    "citation": "Recital 86 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-86/"
-  },
-  {
-    "file": "recital_087.txt",
-    "type": "recital",
-    "number": 87,
-    "title": "Promptness of Reporting / Notification*",
-    "citation": "Recital 87 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-87/"
-  },
-  {
-    "file": "recital_088.txt",
-    "type": "recital",
-    "number": 88,
-    "title": "Format and Procedures of the Notification*",
-    "citation": "Recital 88 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-88/"
-  },
-  {
-    "file": "recital_089.txt",
-    "type": "recital",
-    "number": 89,
-    "title": "Elimination of the General Reporting Requirement*",
-    "citation": "Recital 89 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-89/"
-  },
-  {
-    "file": "recital_090.txt",
-    "type": "recital",
-    "number": 90,
-    "title": "Data Protection Impact Assessement*",
-    "citation": "Recital 90 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-90/"
-  },
-  {
-    "file": "recital_091.txt",
-    "type": "recital",
-    "number": 91,
-    "title": "Necessity of a Data Protection Impact Assessment*",
-    "citation": "Recital 91 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-91/"
-  },
-  {
-    "file": "recital_092.txt",
-    "type": "recital",
-    "number": 92,
-    "title": "Broader Data Protection Impact Assessment*",
-    "citation": "Recital 92 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-92/"
-  },
-  {
-    "file": "recital_093.txt",
-    "type": "recital",
-    "number": 93,
-    "title": "Data Protection Impact Assessment at Authorities*",
-    "citation": "Recital 93 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-93/"
-  },
-  {
-    "file": "recital_094.txt",
-    "type": "recital",
-    "number": 94,
-    "title": "Consultation of the Supervisory Authority*",
-    "citation": "Recital 94 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-94/"
-  },
-  {
-    "file": "recital_095.txt",
-    "type": "recital",
-    "number": 95,
-    "title": "Support by the Processor*",
-    "citation": "Recital 95 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-95/"
-  },
-  {
-    "file": "recital_096.txt",
-    "type": "recital",
-    "number": 96,
-    "title": "Consultation of the Supervisory Authority in the Course of a Legislative Process*",
-    "citation": "Recital 96 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-96/"
-  },
-  {
-    "file": "recital_097.txt",
-    "type": "recital",
-    "number": 97,
-    "title": "Data Protection Officer*",
-    "citation": "Recital 97 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-97/"
-  },
-  {
-    "file": "recital_098.txt",
-    "type": "recital",
-    "number": 98,
-    "title": "Preparation of Codes of Conduct by Organisations and Associations*",
-    "citation": "Recital 98 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-98/"
-  },
-  {
-    "file": "recital_099.txt",
-    "type": "recital",
-    "number": 99,
-    "title": "Consultation of Stakeholders and Data Subjects in the Development of Codes of Conduct*",
-    "citation": "Recital 99 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-99/"
-  },
-  {
-    "file": "recital_100.txt",
-    "type": "recital",
-    "number": 100,
-    "title": "Certification*",
-    "citation": "Recital 100 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-100/"
-  },
-  {
-    "file": "recital_101.txt",
-    "type": "recital",
-    "number": 101,
-    "title": "General Principles for International Data Transfers*",
-    "citation": "Recital 101 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-101/"
-  },
-  {
-    "file": "recital_102.txt",
-    "type": "recital",
-    "number": 102,
-    "title": "International Agreements for an Appropriate Level of Data Protection*",
-    "citation": "Recital 102 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-102/"
-  },
-  {
-    "file": "recital_103.txt",
-    "type": "recital",
-    "number": 103,
-    "title": "Appropriate Level of Data Protection Based on an Adequacy Decision*",
-    "citation": "Recital 103 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-103/"
-  },
-  {
-    "file": "recital_104.txt",
-    "type": "recital",
-    "number": 104,
-    "title": "Criteria for an Adequacy Decision*",
-    "citation": "Recital 104 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-104/"
-  },
-  {
-    "file": "recital_105.txt",
-    "type": "recital",
-    "number": 105,
-    "title": "Consideration of International Agreements for an Adequacy Decision*",
-    "citation": "Recital 105 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-105/"
-  },
-  {
-    "file": "recital_106.txt",
-    "type": "recital",
-    "number": 106,
-    "title": "Monitoring and Periodic Review of the Level of Data Protection*",
-    "citation": "Recital 106 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-106/"
-  },
-  {
-    "file": "recital_107.txt",
-    "type": "recital",
-    "number": 107,
-    "title": "Amendment, Revocation and Suspension of Adequacy Decisions*",
-    "citation": "Recital 107 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-107/"
-  },
-  {
-    "file": "recital_108.txt",
-    "type": "recital",
-    "number": 108,
-    "title": "Appropriate Safeguards*",
-    "citation": "Recital 108 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-108/"
-  },
-  {
-    "file": "recital_109.txt",
-    "type": "recital",
-    "number": 109,
-    "title": "Standard Data Protection Clauses*",
-    "citation": "Recital 109 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-109/"
-  },
-  {
-    "file": "recital_110.txt",
-    "type": "recital",
-    "number": 110,
-    "title": "Binding Corporate Rules*",
-    "citation": "Recital 110 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-110/"
-  },
-  {
-    "file": "recital_111.txt",
-    "type": "recital",
-    "number": 111,
-    "title": "Exceptions for Certain Cases of International Transfers*",
-    "citation": "Recital 111 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-111/"
-  },
-  {
-    "file": "recital_112.txt",
-    "type": "recital",
-    "number": 112,
-    "title": "Data Transfers due to Important Reasons of Public Interest*",
-    "citation": "Recital 112 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-112/"
-  },
-  {
-    "file": "recital_113.txt",
-    "type": "recital",
-    "number": 113,
-    "title": "Transfers Qualified as Not Repetitive and that Only Concern a Limited Number of Data Subjects*",
-    "citation": "Recital 113 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-113/"
-  },
-  {
-    "file": "recital_114.txt",
-    "type": "recital",
-    "number": 114,
-    "title": "Safeguarding of Enforceability of Rights and Obligations in the Absence of an Adequacy Decision*",
-    "citation": "Recital 114 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-114/"
-  },
-  {
-    "file": "recital_115.txt",
-    "type": "recital",
-    "number": 115,
-    "title": "Rules in Third Countries Contrary to the Regulation*",
-    "citation": "Recital 115 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-115/"
-  },
-  {
-    "file": "recital_116.txt",
-    "type": "recital",
-    "number": 116,
-    "title": "Cooperation Among Supervisory Authorities*",
-    "citation": "Recital 116 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-116/"
-  },
-  {
-    "file": "recital_117.txt",
-    "type": "recital",
-    "number": 117,
-    "title": "Establishment of Supervisory Authorities*",
-    "citation": "Recital 117 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-117/"
-  },
-  {
-    "file": "recital_118.txt",
-    "type": "recital",
-    "number": 118,
-    "title": "Monitoring of the Supervisory Authorities*",
-    "citation": "Recital 118 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-118/"
-  },
-  {
-    "file": "recital_119.txt",
-    "type": "recital",
-    "number": 119,
-    "title": "Organisation of Several Supervisory Authorities of a Member State*",
-    "citation": "Recital 119 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-119/"
-  },
-  {
-    "file": "recital_120.txt",
-    "type": "recital",
-    "number": 120,
-    "title": "Features of Supervisory Authorities*",
-    "citation": "Recital 120 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-120/"
-  },
-  {
-    "file": "recital_121.txt",
-    "type": "recital",
-    "number": 121,
-    "title": "Independence of the Supervisory Authorities*",
-    "citation": "Recital 121 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-121/"
-  },
-  {
-    "file": "recital_122.txt",
-    "type": "recital",
-    "number": 122,
-    "title": "Responsibility of the Supervisory Authorities*",
-    "citation": "Recital 122 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-122/"
-  },
-  {
-    "file": "recital_123.txt",
-    "type": "recital",
-    "number": 123,
-    "title": "Cooperation of the Supervisory Authorities with Each Other and with the Commission*",
-    "citation": "Recital 123 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-123/"
-  },
-  {
-    "file": "recital_124.txt",
-    "type": "recital",
-    "number": 124,
-    "title": "Lead Authority Regarding Processing in Several Member States*",
-    "citation": "Recital 124 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-124/"
-  },
-  {
-    "file": "recital_125.txt",
-    "type": "recital",
-    "number": 125,
-    "title": "Competences of the Lead Authority*",
-    "citation": "Recital 125 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-125/"
-  },
-  {
-    "file": "recital_126.txt",
-    "type": "recital",
-    "number": 126,
-    "title": "Joint Decisions*",
-    "citation": "Recital 126 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-126/"
-  },
-  {
-    "file": "recital_127.txt",
-    "type": "recital",
-    "number": 127,
-    "title": "Information of the Supervisory Authority Regarding Local Processing*",
-    "citation": "Recital 127 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-127/"
-  },
-  {
-    "file": "recital_128.txt",
-    "type": "recital",
-    "number": 128,
-    "title": "Responsibility Regarding Processing in the Public Interest*",
-    "citation": "Recital 128 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-128/"
-  },
-  {
-    "file": "recital_129.txt",
-    "type": "recital",
-    "number": 129,
-    "title": "Tasks and Powers of the Supervisory Authorities*",
-    "citation": "Recital 129 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-129/"
-  },
-  {
-    "file": "recital_130.txt",
-    "type": "recital",
-    "number": 130,
-    "title": "Consideration of the Authority with which the Complaint has been Lodged*",
-    "citation": "Recital 130 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-130/"
-  },
-  {
-    "file": "recital_131.txt",
-    "type": "recital",
-    "number": 131,
-    "title": "Attempt of an Amicable Settlement*",
-    "citation": "Recital 131 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-131/"
-  },
-  {
-    "file": "recital_132.txt",
-    "type": "recital",
-    "number": 132,
-    "title": "Awareness-Raising Activities and Specific Measures*",
-    "citation": "Recital 132 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-132/"
-  },
-  {
-    "file": "recital_133.txt",
-    "type": "recital",
-    "number": 133,
-    "title": "Mutual Assistance and Provisional Measures*",
-    "citation": "Recital 133 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-133/"
-  },
-  {
-    "file": "recital_134.txt",
-    "type": "recital",
-    "number": 134,
-    "title": "Participation in Joint Operations*",
-    "citation": "Recital 134 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-134/"
-  },
-  {
-    "file": "recital_135.txt",
-    "type": "recital",
-    "number": 135,
-    "title": "Consistency Mechanism*",
-    "citation": "Recital 135 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-135/"
-  },
-  {
-    "file": "recital_136.txt",
-    "type": "recital",
-    "number": 136,
-    "title": "Binding Decisions and Opinions of the Board*",
-    "citation": "Recital 136 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-136/"
-  },
-  {
-    "file": "recital_137.txt",
-    "type": "recital",
-    "number": 137,
-    "title": "Provisional Measures*",
-    "citation": "Recital 137 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-137/"
-  },
-  {
-    "file": "recital_138.txt",
-    "type": "recital",
-    "number": 138,
-    "title": "Urgency Procedure*",
-    "citation": "Recital 138 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-138/"
-  },
-  {
-    "file": "recital_139.txt",
-    "type": "recital",
-    "number": 139,
-    "title": "European Data Protection Board*",
-    "citation": "Recital 139 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-139/"
-  },
-  {
-    "file": "recital_140.txt",
-    "type": "recital",
-    "number": 140,
-    "title": "Secretariat and Staff of the Board*",
-    "citation": "Recital 140 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-140/"
-  },
-  {
-    "file": "recital_141.txt",
-    "type": "recital",
-    "number": 141,
-    "title": "Right to Lodge a Complaint*",
-    "citation": "Recital 141 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-141/"
-  },
-  {
-    "file": "recital_142.txt",
-    "type": "recital",
-    "number": 142,
-    "title": "The Right of Data Subjects to Mandate a Not-For-Profit Body, Organisation or Association*",
-    "citation": "Recital 142 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-142/"
-  },
-  {
-    "file": "recital_143.txt",
-    "type": "recital",
-    "number": 143,
-    "title": "Judicial Remedies*",
-    "citation": "Recital 143 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-143/"
-  },
-  {
-    "file": "recital_144.txt",
-    "type": "recital",
-    "number": 144,
-    "title": "Related Proceedings*",
-    "citation": "Recital 144 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-144/"
-  },
-  {
-    "file": "recital_145.txt",
-    "type": "recital",
-    "number": 145,
-    "title": "Choice of Venue*",
-    "citation": "Recital 145 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-145/"
-  },
-  {
-    "file": "recital_146.txt",
-    "type": "recital",
-    "number": 146,
-    "title": "Indemnity*",
-    "citation": "Recital 146 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-146/"
-  },
-  {
-    "file": "recital_147.txt",
-    "type": "recital",
-    "number": 147,
-    "title": "Jurisdiction*",
-    "citation": "Recital 147 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-147/"
-  },
-  {
-    "file": "recital_148.txt",
-    "type": "recital",
-    "number": 148,
-    "title": "Penalties*",
-    "citation": "Recital 148 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-148/"
-  },
-  {
-    "file": "recital_149.txt",
-    "type": "recital",
-    "number": 149,
-    "title": "Penalties for Infringements of National Rules*",
-    "citation": "Recital 149 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-149/"
-  },
-  {
-    "file": "recital_150.txt",
-    "type": "recital",
-    "number": 150,
-    "title": "Administrative Fines*",
-    "citation": "Recital 150 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-150/"
-  },
-  {
-    "file": "recital_151.txt",
-    "type": "recital",
-    "number": 151,
-    "title": "Administrative Fines in Denmark and Estonia*",
-    "citation": "Recital 151 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-151/"
-  },
-  {
-    "file": "recital_152.txt",
-    "type": "recital",
-    "number": 152,
-    "title": "Power of Sanction of the Member States*",
-    "citation": "Recital 152 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-152/"
-  },
-  {
-    "file": "recital_153.txt",
-    "type": "recital",
-    "number": 153,
-    "title": "Processing of Personal Data Solely for Journalistic Purposes or for the Purposes of Academic, Artistic or Literary Expression*",
-    "citation": "Recital 153 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-153/"
-  },
-  {
-    "file": "recital_154.txt",
-    "type": "recital",
-    "number": 154,
-    "title": "Principle of Public Access to Official Documents*",
-    "citation": "Recital 154 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-154/"
-  },
-  {
-    "file": "recital_155.txt",
-    "type": "recital",
-    "number": 155,
-    "title": "Processing in the Employment Context*",
-    "citation": "Recital 155 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-155/"
-  },
-  {
-    "file": "recital_156.txt",
-    "type": "recital",
-    "number": 156,
-    "title": "Processing for Archiving, Scientific or Historical Research or Statistical Purposes*",
-    "citation": "Recital 156 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-156/"
-  },
-  {
-    "file": "recital_157.txt",
-    "type": "recital",
-    "number": 157,
-    "title": "Information from Registries and Scientific Research*",
-    "citation": "Recital 157 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-157/"
-  },
-  {
-    "file": "recital_158.txt",
-    "type": "recital",
-    "number": 158,
-    "title": "Processing for Archiving Purposes*",
-    "citation": "Recital 158 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-158/"
-  },
-  {
-    "file": "recital_159.txt",
-    "type": "recital",
-    "number": 159,
-    "title": "Processing for Scientific Research Purposes*",
-    "citation": "Recital 159 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-159/"
-  },
-  {
-    "file": "recital_160.txt",
-    "type": "recital",
-    "number": 160,
-    "title": "Processing for Historical Research Purposes*",
-    "citation": "Recital 160 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-160/"
-  },
-  {
-    "file": "recital_161.txt",
-    "type": "recital",
-    "number": 161,
-    "title": "Consenting to the Participation in Clinical Trials*",
-    "citation": "Recital 161 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-161/"
-  },
-  {
-    "file": "recital_162.txt",
-    "type": "recital",
-    "number": 162,
-    "title": "Processing for Statistical Purposes*",
-    "citation": "Recital 162 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-162/"
-  },
-  {
-    "file": "recital_163.txt",
-    "type": "recital",
-    "number": 163,
-    "title": "Production of European and National Statistics*",
-    "citation": "Recital 163 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-163/"
-  },
-  {
-    "file": "recital_164.txt",
-    "type": "recital",
-    "number": 164,
-    "title": "Professional or Other Equivalent Secrecy Obligations*",
-    "citation": "Recital 164 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-164/"
-  },
-  {
-    "file": "recital_165.txt",
-    "type": "recital",
-    "number": 165,
-    "title": "No Prejudice of the Status of Churches and Religious Associations*",
-    "citation": "Recital 165 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-165/"
-  },
-  {
-    "file": "recital_166.txt",
-    "type": "recital",
-    "number": 166,
-    "title": "Delegated Acts of the Commission*",
-    "citation": "Recital 166 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-166/"
-  },
-  {
-    "file": "recital_167.txt",
-    "type": "recital",
-    "number": 167,
-    "title": "Implementing Powers of the Commission*",
-    "citation": "Recital 167 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-167/"
-  },
-  {
-    "file": "recital_168.txt",
-    "type": "recital",
-    "number": 168,
-    "title": "Implementing Acts on Standard Contractual Clauses*",
-    "citation": "Recital 168 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-168/"
-  },
-  {
-    "file": "recital_169.txt",
-    "type": "recital",
-    "number": 169,
-    "title": "Immediately Applicable Implementing Acts*",
-    "citation": "Recital 169 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-169/"
-  },
-  {
-    "file": "recital_170.txt",
-    "type": "recital",
-    "number": 170,
-    "title": "Principle of Subsidiarity and Principle of Proportionality*",
-    "citation": "Recital 170 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-170/"
-  },
-  {
-    "file": "recital_171.txt",
-    "type": "recital",
-    "number": 171,
-    "title": "Repeal of Directive 95/46/EC and Transitional Provisions*",
-    "citation": "Recital 171 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-171/"
-  },
-  {
-    "file": "recital_172.txt",
-    "type": "recital",
-    "number": 172,
-    "title": "Consultation of the European Data Protection Supervisor*",
-    "citation": "Recital 172 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-172/"
-  },
-  {
-    "file": "recital_173.txt",
-    "type": "recital",
-    "number": 173,
-    "title": "Relationship to Directive 2002/58/EC*",
-    "citation": "Recital 173 GDPR",
-    "source": "https://gdpr-info.eu/recitals/no-173/"
+    "citation": "Art. 144, UCMJ (10 U.S.C. \u00a7 944)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/944",
+    "subchapter": "XII"
+  },
+  {
+    "file": "sec_945.txt",
+    "type": "procedural",
+    "number": "145",
+    "section": "945",
+    "title": "Annuities for judges and survivors",
+    "citation": "Art. 145, UCMJ (10 U.S.C. \u00a7 945)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/945",
+    "subchapter": "XII"
+  },
+  {
+    "file": "sec_946.txt",
+    "type": "procedural",
+    "number": "146",
+    "section": "946",
+    "title": "Military Justice Review Panel",
+    "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/946",
+    "subchapter": "XII"
+  },
+  {
+    "file": "sec_946a.txt",
+    "type": "procedural",
+    "number": "146a",
+    "section": "946a",
+    "title": "Annual reports",
+    "citation": "Art. 146a, UCMJ (10 U.S.C. \u00a7 946a)",
+    "source": "https://www.law.cornell.edu/uscode/text/10/946a",
+    "subchapter": "XII"
   }
 ]
