@@ -11,13 +11,14 @@ from .generate import generate, build_prompt
 
 
 class RagPipeline:
-    def __init__(self, retriever="bm25", chunk_words=180, overlap_words=40, k=5):
+    def __init__(self, retriever="bm25", chunk_words=180, overlap_words=40, k=5,
+                 stem=False):
         self.k = k
         self.chunks = build_chunks(chunk_words=chunk_words, overlap_words=overlap_words)
         if retriever == "bm25":
-            self.index = BM25(self.chunks)
+            self.index = BM25(self.chunks, stem=stem)
         elif retriever == "tfidf":
-            self.index = TfidfCosine(self.chunks)
+            self.index = TfidfCosine(self.chunks, stem=stem)
         else:
             raise ValueError(retriever)
         self.retriever = retriever

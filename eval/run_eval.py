@@ -21,23 +21,17 @@ os.makedirs(OUT, exist_ok=True)
 
 
 def gold_numbers(gc):
-    """Pull article/recital numbers out of a gold citation string for hit checking."""
-    arts = set(int(n) for n in re.findall(r"Art\.?\s*(\d+)", gc))
-    recs = set(int(n) for n in re.findall(r"Recital\s*(\d+)", gc))
-    return arts, recs
+    """Pull UCMJ article numbers (86, 146a, ...) out of a gold citation string."""
+    return set(re.findall(r"Art\.?\s*(\d+[a-z]?)", gc))
 
 
 def retrieval_hit(gold_citation, retrieved):
-    arts, recs = gold_numbers(gold_citation)
-    if not arts and not recs:
+    arts = gold_numbers(gold_citation)
+    if not arts:
         return None  # control questions, no single gold provision
     for rank, r in enumerate(retrieved):
-        m = re.search(r"(Art\.|Recital)\s*(\d+)", r["citation"])
-        if not m:
-            continue
-        num = int(m.group(2))
-        if (m.group(1).startswith("Art") and num in arts) or \
-           (m.group(1) == "Recital" and num in recs):
+        m = re.search(r"Art\.?\s*(\d+[a-z]?)", r["citation"])
+        if m and m.group(1) in arts:
             return rank + 1  # 1-indexed rank of first correct provision
     return 0
 
@@ -48,6 +42,8 @@ def main():
     ap.add_argument("--chunk-words", type=int, default=180)
     ap.add_argument("--overlap-words", type=int, default=40)
     ap.add_argument("--k", type=int, default=5)
+    ap.add_argument("--stem", action="store_true",
+                    help="light suffix stripping on both query and documents")
     ap.add_argument("--tag", default=None)
     args = ap.parse_args()
 
@@ -55,7 +51,7 @@ def main():
         questions = json.load(f)
 
     pipe = RagPipeline(retriever=args.retriever, chunk_words=args.chunk_words,
-                       overlap_words=args.overlap_words, k=args.k)
+                       overlap_words=args.overlap_words, k=args.k, stem=args.stem)
 
     records = []
     for q in questions:

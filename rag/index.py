@@ -27,15 +27,33 @@ _STOP = set("the a an and or of to in for on by with as is are be this that "
             "under upon any all each other where when who whom".split())
 
 
-def tokenize(text):
-    return [t for t in _TOKEN.findall(text.lower()) if t not in _STOP and len(t) > 1]
+def _light_stem(t):
+    """Crude suffix stripper, not Porter. The goal is only that morphological
+    variants of the same legal root land on the same token on both the query
+    and document side: deserter / desertion / deserts -> desert,
+    disobeying / disobeys -> disobey, charges -> charge. It will mangle some
+    words, but it mangles them identically in queries and documents, which is
+    all a bag of words matcher needs."""
+    for suf in ("ations", "ation", "ions", "ion", "ings", "ing", "ers", "er",
+                "ies", "es", "s", "ed"):
+        if t.endswith(suf) and len(t) - len(suf) >= 4:
+            return t[: -len(suf)]
+    return t
+
+
+def tokenize(text, stem=False):
+    toks = [t for t in _TOKEN.findall(text.lower()) if t not in _STOP and len(t) > 1]
+    if stem:
+        toks = [_light_stem(t) for t in toks]
+    return toks
 
 
 class BM25:
-    def __init__(self, chunks, k1=1.5, b=0.75):
+    def __init__(self, chunks, k1=1.5, b=0.75, stem=False):
         self.chunks = chunks
         self.k1, self.b = k1, b
-        self.docs = [tokenize(c["text"] + " " + c["title"]) for c in chunks]
+        self.stem = stem
+        self.docs = [tokenize(c["text"] + " " + c["title"], stem=stem) for c in chunks]
         self.N = len(self.docs)
         self.avgdl = sum(len(d) for d in self.docs) / max(self.N, 1)
         self.tf = [Counter(d) for d in self.docs]
@@ -47,7 +65,7 @@ class BM25:
         self.idf = {t: math.log(1 + (self.N - n + 0.5) / (n + 0.5)) for t, n in df.items()}
 
     def score(self, query):
-        q = tokenize(query)
+        q = tokenize(query, stem=self.stem)
         scores = [0.0] * self.N
         for i, tf in enumerate(self.tf):
             dl = len(self.docs[i])
@@ -68,18 +86,19 @@ class BM25:
 
     def matched_terms(self, query, chunk_idx):
         """Which query terms actually fired in this chunk, ranked by contribution."""
-        q = set(tokenize(query))
+        q = set(tokenize(query, stem=self.stem))
         tf = self.tf[chunk_idx]
         hits = [(t, self.idf.get(t, 0.0)) for t in q if t in tf]
         return sorted(hits, key=lambda x: x[1], reverse=True)
 
 
 class TfidfCosine:
-    def __init__(self, chunks):
+    def __init__(self, chunks, stem=False):
         from sklearn.feature_extraction.text import TfidfVectorizer
         self.chunks = chunks
         corpus = [c["text"] + " " + c["title"] for c in chunks]
-        self.vec = TfidfVectorizer(tokenizer=tokenize, lowercase=False, token_pattern=None)
+        tok = (lambda t: tokenize(t, stem=True)) if stem else tokenize
+        self.vec = TfidfVectorizer(tokenizer=tok, lowercase=False, token_pattern=None)
         self.mat = self.vec.fit_transform(corpus)
 
     def search(self, query, k=5):
