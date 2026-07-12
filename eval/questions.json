@@ -1,0 +1,146 @@
+[
+  {
+    "id": "q01",
+    "type": "factual_lookup",
+    "question": "What is the maximum administrative fine for the most serious GDPR infringements?",
+    "gold_citation": "Art. 83(5) GDPR",
+    "gold_answer": "Up to 20,000,000 EUR, or in the case of an undertaking up to 4% of total worldwide annual turnover of the preceding financial year, whichever is higher.",
+    "notes": "The word 'maximum' also appears in unrelated short provisions, so this stresses term-frequency ranking."
+  },
+  {
+    "id": "q02",
+    "type": "deadline",
+    "question": "Within what time must a controller notify the supervisory authority of a personal data breach?",
+    "gold_citation": "Art. 33(1) GDPR",
+    "gold_answer": "Without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach.",
+    "notes": "Numeric deadline; good chunks must contain the 72 hour figure."
+  },
+  {
+    "id": "q03",
+    "type": "factual_lookup",
+    "question": "What is the right to be forgotten?",
+    "gold_citation": "Art. 17 GDPR",
+    "gold_answer": "The right to erasure: the data subject can obtain erasure of personal data without undue delay where one of the listed grounds applies, for example the data are no longer necessary or consent is withdrawn.",
+    "notes": "Recital 65 and 66 also cover this and are strong distractors."
+  },
+  {
+    "id": "q04",
+    "type": "numeric_threshold",
+    "question": "At what age can a child give their own consent for information society services under the GDPR default?",
+    "gold_citation": "Art. 8(1) GDPR",
+    "gold_answer": "16 years old by default; Member States may lower this by law but not below 13.",
+    "notes": "Two numbers in one clause, tests whether the answer keeps both."
+  },
+  {
+    "id": "q05",
+    "type": "definition",
+    "question": "How does the GDPR define personal data?",
+    "gold_citation": "Art. 4(1) GDPR",
+    "gold_answer": "Any information relating to an identified or identifiable natural person, who can be identified directly or indirectly by reference to an identifier such as a name, ID number, location data, or factors specific to their identity.",
+    "notes": "Definitions live in one long article, tests chunking of Art. 4."
+  },
+  {
+    "id": "q06",
+    "type": "definition",
+    "question": "What does processing mean under the GDPR?",
+    "gold_citation": "Art. 4(2) GDPR",
+    "gold_answer": "Any operation performed on personal data, whether or not by automated means, such as collection, recording, storage, use, disclosure, or erasure.",
+    "notes": "Same source article as q05, tests intra-article retrieval precision."
+  },
+  {
+    "id": "q07",
+    "type": "comparative",
+    "question": "What is the difference between a controller and a processor?",
+    "gold_citation": "Art. 4(7) and Art. 4(8) GDPR",
+    "gold_answer": "A controller determines the purposes and means of processing; a processor processes personal data on behalf of the controller.",
+    "notes": "Needs two adjacent definitions, single chunk may only hold one."
+  },
+  {
+    "id": "q08",
+    "type": "deadline",
+    "question": "How long does a controller have to respond to a data subject access request?",
+    "gold_citation": "Art. 12(3) GDPR",
+    "gold_answer": "Without undue delay and in any event within one month of receipt, extendable by two further months where necessary given complexity and number of requests.",
+    "notes": "Deadline lives in Art. 12, but people associate access with Art. 15, tests topical drift."
+  },
+  {
+    "id": "q09",
+    "type": "enumeration",
+    "question": "What are the lawful bases for processing personal data?",
+    "gold_citation": "Art. 6(1) GDPR",
+    "gold_answer": "Consent; performance of a contract; compliance with a legal obligation; protection of vital interests; performance of a task in the public interest or official authority; and legitimate interests.",
+    "notes": "Six item list, tests recall of a full enumeration from possibly one chunk."
+  },
+  {
+    "id": "q10",
+    "type": "conditional",
+    "question": "Under what conditions may special categories of sensitive data be processed?",
+    "gold_citation": "Art. 9(2) GDPR",
+    "gold_answer": "Processing of special category data is prohibited unless an exception applies, such as explicit consent, employment or social security law, vital interests, data made public by the subject, legal claims, substantial public interest, health or research purposes.",
+    "notes": "Long enumerated exceptions, hard to fit in one chunk."
+  },
+  {
+    "id": "q11",
+    "type": "comparative_near_duplicate",
+    "question": "What is the difference between the right to erasure and the right to restriction of processing?",
+    "gold_citation": "Art. 17 vs Art. 18 GDPR",
+    "gold_answer": "Erasure (Art. 17) deletes the data; restriction (Art. 18) keeps the data but limits what can be done with it in specific situations, for example while accuracy is contested.",
+    "notes": "Near duplicate vocabulary, classic retrieval confusion between two adjacent rights."
+  },
+  {
+    "id": "q12",
+    "type": "factual_lookup",
+    "question": "What is the right to data portability?",
+    "gold_citation": "Art. 20 GDPR",
+    "gold_answer": "The data subject can receive their personal data in a structured, commonly used, machine readable format and transmit it to another controller where processing is based on consent or contract and is automated.",
+    "notes": "Distinct right, checks it is not confused with access (Art. 15)."
+  },
+  {
+    "id": "q13",
+    "type": "factual_lookup",
+    "question": "When can a data subject object to processing of their personal data?",
+    "gold_citation": "Art. 21 GDPR",
+    "gold_answer": "At any time on grounds relating to their situation where processing is based on public interest or legitimate interests, and absolutely where data is processed for direct marketing.",
+    "notes": "Another adjacent right, distractor for q11 and q12."
+  },
+  {
+    "id": "q14",
+    "type": "factual_with_number",
+    "question": "Can a data subject get a copy of their personal data, and is there a fee?",
+    "gold_citation": "Art. 15(3) GDPR",
+    "gold_answer": "Yes, the controller provides one copy free of charge; for further copies the controller may charge a reasonable fee based on administrative costs.",
+    "notes": "Article vs recital trap, Recital 63 discusses the same in softer language."
+  },
+  {
+    "id": "q15",
+    "type": "conditional",
+    "question": "When must an organization appoint a Data Protection Officer?",
+    "gold_citation": "Art. 37(1) GDPR",
+    "gold_answer": "When processing is carried out by a public authority, or the core activities require regular and systematic monitoring of data subjects on a large scale, or core activities consist of large scale processing of special category or criminal data.",
+    "notes": "Three trigger conditions, tests full enumeration recall."
+  },
+  {
+    "id": "q16",
+    "type": "conditional",
+    "question": "What are the conditions for consent to be valid under the GDPR?",
+    "gold_citation": "Art. 7 GDPR (with Art. 4(11))",
+    "gold_answer": "Consent must be freely given, specific, informed and unambiguous; the controller must be able to demonstrate it; requests must be clearly distinguishable and in plain language; and it must be as easy to withdraw as to give.",
+    "notes": "Definition (Art. 4(11)) and conditions (Art. 7) are in different provisions."
+  },
+  {
+    "id": "q17",
+    "type": "negative_control",
+    "question": "Does the GDPR require companies to store personal data only on servers physically located inside the EU?",
+    "gold_citation": "none (not stated; Chapter V governs transfers with safeguards)",
+    "gold_answer": "No. The GDPR does not impose EU-only data localization. It regulates transfers to third countries through adequacy decisions and safeguards (Chapter V), but does not require storage inside the EU. A good system should decline to invent a localization rule.",
+    "notes": "Tests hallucination resistance: the premise is a common misconception not in the text."
+  },
+  {
+    "id": "q18",
+    "type": "out_of_corpus",
+    "question": "How does the CCPA define a sale of personal information?",
+    "gold_citation": "none (CCPA is not in this corpus)",
+    "gold_answer": "The CCPA is not part of this corpus, which is GDPR only. The system should say the context does not answer this rather than fabricate a CCPA definition.",
+    "notes": "Pure out of distribution question, must be refused."
+  }
+]
