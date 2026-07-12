@@ -11,7 +11,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "outputs")
 
 RUN_ORDER = ["bm25_baseline", "bm25_cw120", "bm25_cw300", "tfidf_baseline",
-             "bm25_stem", "dense_baseline", "hybrid_baseline"]
+             "bm25_stem", "dense_baseline", "hybrid_baseline",
+             "hybrid_generative"]
+# answer scored configurations, in the order the README compares them.
+# bm25_baseline + grounded extraction is the default reproducible system;
+# hybrid_baseline (hybrid retrieval + grounded extraction) is the best
+# measured configuration, produced with the optional dense extra.
+ANSWER_ORDER = ["bm25_baseline", "dense_baseline", "hybrid_baseline",
+                "hybrid_generative"]
+BEST_MEASURED = "hybrid_baseline"
 
 
 def load_runs():
@@ -61,22 +69,43 @@ def per_question_table(runs):
     return "\n".join(lines)
 
 
-def answer_summary():
-    path = os.path.join(OUT, "answer_scores_bm25_baseline.json")
-    if not os.path.exists(path):
+def load_answer_scores():
+    scores = {}
+    for tag in ANSWER_ORDER:
+        path = os.path.join(OUT, f"answer_scores_{tag}.json")
+        if os.path.exists(path):
+            with open(path) as f:
+                scores[tag] = json.load(f)
+    return scores
+
+
+def answers_table(scores):
+    """One column per answer scored configuration."""
+    if not scores:
         return None, ""
-    with open(path) as f:
-        s = json.load(f)
-    a = s["aggregate"]
-    lines = ["| metric | value |", "| --- | --- |",
-             f"| answered (of {a['n_answerable']} answerable) | {a['answered']} |",
-             f"| refusals on answerable questions | {a['false_refusals']} |",
-             f"| controls refused correctly | {a['control_refusal_correct']}/{a['n_controls']} |",
-             f"| answers citing a gold article | {a['citation_hit']}/{a['answered']} |",
-             f"| mean citation precision | {a['mean_citation_precision']} |",
-             f"| mean content coverage | {a['mean_content_coverage']} |",
-             f"| verbatim support check | {a['support_pass']}/{a['support_total']} |"]
-    return a, "\n".join(lines)
+    tags = [t for t in ANSWER_ORDER if t in scores]
+    header = ["metric"] + [t + (" (best measured)" if t == BEST_MEASURED
+                                else "")
+                           for t in tags]
+    lines = ["| " + " | ".join(header) + " |",
+             "| --- |" + " --- |" * len(tags)]
+
+    def row(name, fmt):
+        cells = [fmt(scores[t]["aggregate"]) for t in tags]
+        lines.append("| " + name + " | " + " | ".join(str(c) for c in cells) + " |")
+
+    row("answered (of 16 answerable)", lambda a: a["answered"])
+    row("refusals on answerable questions", lambda a: a["false_refusals"])
+    row("controls refused correctly",
+        lambda a: f"{a['control_refusal_correct']}/{a['n_controls']}")
+    row("answers citing a gold article",
+        lambda a: f"{a['citation_hit']}/{a['answered']}")
+    row("mean citation precision", lambda a: a["mean_citation_precision"])
+    row("mean content coverage", lambda a: a["mean_content_coverage"])
+    row("support check passed", lambda a: f"{a['support_pass']}/{a['support_total']}")
+    row("answers with every stated number in context",
+        lambda a: f"{a.get('numbers_supported', '?')}/{a.get('numbers_checked', '?')}")
+    return {t: scores[t]["aggregate"] for t in tags}, "\n".join(lines)
 
 
 def policy_summary():
@@ -105,11 +134,24 @@ def policy_summary():
 
 def main():
     runs = load_runs()
-    ans_agg, ans_tbl = answer_summary()
+    ans_agg, ans_tbl = answers_table(load_answer_scores())
     pol_agg, pol_tbl = policy_summary()
     summary = {
+        "default_system": {
+            "run": "bm25_baseline",
+            "retriever": "bm25 with article number routing",
+            "answerer": "extractive (grounded policy)",
+            "note": "the clean clone reproducible baseline",
+        },
+        "best_measured_configuration": {
+            "run": BEST_MEASURED,
+            "retriever": "hybrid (bm25 + MiniLM dense, reciprocal rank "
+                         "fusion, article number routing)",
+            "answerer": "extractive (grounded policy)",
+            "note": "needs the optional dense extra; outputs committed",
+        },
         "retrieval": {t: runs[t]["aggregate"] for t in RUN_ORDER if t in runs},
-        "answers_bm25_baseline_grounded": ans_agg,
+        "answers": ans_agg,
         "answer_policy_ablation": pol_agg,
     }
     with open(os.path.join(OUT, "summary.json"), "w") as f:
@@ -120,7 +162,7 @@ def main():
     print("\n## Per question first gold rank\n")
     print(per_question_table(runs))
     if ans_tbl:
-        print("\n## Answers (bm25 baseline, grounded)\n")
+        print("\n## Answer metrics by configuration\n")
         print(ans_tbl)
     if pol_tbl:
         print("\n## Answer policy ablation\n")
