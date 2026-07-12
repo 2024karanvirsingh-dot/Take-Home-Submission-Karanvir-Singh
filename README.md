@@ -1,28 +1,39 @@
-# RAG over the GDPR, with an honest evaluation
+# RAG over the UCMJ, with an honest evaluation
 
-A small retrieval augmented generation pipeline over the General Data Protection
-Regulation, plus a writeup that scores its own answers and digs into where and
-why retrieval breaks. The pipeline itself is deliberately simple. The point of
-this repo is the evaluation, so most of this README is about the failures.
+A small retrieval augmented generation pipeline over the Uniform Code of
+Military Justice, plus a writeup that scores its own answers and digs into where
+and why retrieval breaks. The pipeline itself is deliberately simple. The point
+of this repo is the evaluation, so most of this README is about the failures.
 
 ## Why this corpus
 
-The corpus is the GDPR, split into its two natural document types:
+The corpus is the UCMJ, the statutory text of 10 U.S.C. chapter 47, all 198
+provisions in force, split into its two natural document types:
 
-* **99 Articles**, the binding operative text of the Regulation.
-* **173 Recitals**, the non binding preamble that explains and interprets the
-  Articles.
+* **93 punitive articles** (Subchapter X, Articles 77 to 134): the offenses.
+  Desertion, AWOL, insubordination, murder, conduct unbecoming, the general
+  article.
+* **105 procedural articles** (everything else): jurisdiction, apprehension,
+  non-judicial punishment, court-martial composition, trial procedure,
+  sentencing, appeals.
 
-I picked this pairing on purpose. Articles and Recitals cover the same topics in
-different registers: Recitals are written in fuller, more natural language while
-Articles are terse and enumerated. That overlap is where a lot of interesting
-retrieval behaviour lives, because a recital often matches a plain English
-question better than the article that actually answers it. A legal user wants the
-binding article. The retriever does not know that by default. Several of the
-failures below come straight out of this tension.
+I picked this corpus for three reasons. First, it is the body of law I know the
+context around, which matters when you are writing gold answers and judging
+correctness by hand. Second, it has structural traps that make retrieval
+evaluation interesting: every provision has two numbers (Article 86 is 10 U.S.C.
+886, the famous "Article 15" is section 815), practitioners use colloquial
+vocabulary the statute never uses ("panel", "AWOL", even "UCMJ" itself), and the
+punitive articles share heavy boilerplate ("Any person subject to this chapter
+who...") that erodes term statistics. Third, it has a hard, well defined
+knowledge boundary: the statute defines offenses but the actual punishment
+tables live in the Manual for Courts-Martial, which is deliberately not in the
+corpus. That boundary gives the evaluation a built in hallucination test with
+real stakes, because the model knows the MCM numbers from training and has to be
+prevented from using them.
 
-Everything is fetched from gdpr-info.eu by `data/fetch_corpus.py` and committed
-under `data/corpus/` so a clean clone needs no network.
+Everything is fetched from the Cornell Legal Information Institute by
+`data/fetch_corpus.py` and committed under `data/corpus/`, so a clean clone
+needs no network.
 
 ## Quick start
 
@@ -32,7 +43,7 @@ cd Take-Home-Submission-Karanvir-Singh
 pip install -r requirements.txt      # scikit-learn + numpy is enough for retrieval
 
 # ask one question
-python -m rag.pipeline "within how long must a data breach be reported?"
+python3 -m rag.pipeline "can a deserter be sentenced to death?"
 
 # reproduce every run in this README (no API key needed for retrieval or scoring)
 ./run_all.sh
@@ -48,53 +59,54 @@ below for how the graded answers in `outputs/` were generated.
 
 Four stages, each in its own module, nothing hidden behind a framework.
 
-**Ingest and chunk** (`rag/chunk.py`). Each provision is one file. Most are short
-enough to be a single chunk. The handful of long ones (Art. 4 definitions, Art. 6
-lawfulness, Art. 9, Art. 83 fines) are split on paragraph boundaries into windows
-of about 180 words with 40 words of overlap. Chunking never crosses a provision
-boundary, so every chunk maps to exactly one Article or Recital and every
-citation is honest. This gives 579 chunks at the default size.
+**Ingest and chunk** (`rag/chunk.py`). Each provision is one file. Most are
+short enough to be a single chunk. The long ones (Art. 2 persons subject to the
+code, Art. 15 non-judicial punishment, Art. 120 sexual offenses) are split on
+paragraph boundaries into windows of about 180 words with 40 words of overlap.
+Chunking never crosses a provision boundary, so every chunk maps to exactly one
+article and every citation is honest. This gives 572 chunks at the default size.
 
 **Index and retrieve** (`rag/index.py`). Two sparse retrievers, both fully
 inspectable:
 
 * **BM25**, implemented from scratch (about 40 lines) rather than pulled from a
-  library, so the term frequency saturation (`k1`) and length normalisation (`b`)
-  are visible and so I can print the exact terms that made a chunk win. This is
-  the default.
+  library, so the term frequency saturation (`k1`) and length normalisation
+  (`b`) are visible and so I can print the exact terms that made a chunk win.
+  This is the default.
 * **TF-IDF cosine** via scikit-learn, used as the alternative in the ablation.
 
-I chose sparse retrieval on purpose. A dense embedding model would mean a several
-hundred MB download and would turn every retrieval decision into an opaque dot
-product. Sparse keeps the clone small and, more importantly for this exercise,
-keeps every retrieval decision explainable: I can tell you which query term
-pulled which chunk. The tradeoff is that sparse retrieval has no idea that
-"erasure" and "deletion" are the same thing, and you will see that cost in the
-failures.
+I chose sparse retrieval on purpose. A dense embedding model would mean a
+several hundred MB download and would turn every retrieval decision into an
+opaque dot product. Sparse keeps the clone small and, more importantly for this
+exercise, keeps every retrieval decision explainable: the eval runner records
+which query terms fired in the winning chunk. The tradeoff is that sparse
+retrieval has no idea that "deserter" and "desertion" are the same word, and the
+failure analysis shows exactly what that costs.
 
 **Generate** (`rag/generate.py`). The prompt is strict: answer only from the
-retrieved context, cite the provision, prefer binding Articles over Recitals and
-say when you are leaning on a Recital, and if the answer is not in the context
-say so instead of guessing. In a legal setting the most damaging error is a
-fluent answer that smooths over a retrieval gap, so "not in the context" is a
-first class allowed answer.
+retrieved context, cite the article, treat "as a court-martial may direct" as a
+signal that the real number lives in the MCM rather than an invitation to supply
+one, and if the answer is not in the context say so instead of guessing. In a
+legal setting the most damaging error is a fluent answer that smooths over a
+retrieval gap, so "not in the context" is a first class allowed answer.
 
 ## The questions and the rubric
 
-18 questions in `eval/questions.json`, spread across eight types so different
-failure modes get exercised: single provision lookups, definitions, exact number
-and deadline questions, enumerations, conditional tests, near duplicate
-comparisons, and two controls (one where the premise is a myth not in the text,
-one that asks about a different law entirely).
+18 questions in `eval/questions.json` across eight types: numeric and
+limitations questions where an exact figure is the answer, definitions,
+enumerations, conditionals, comparative pairs (including the near duplicate
+desertion/AWOL pair), and two controls (a statute versus MCM boundary question
+and a pure out of corpus question about the Rules for Courts-Martial).
 
-Full rubric in `eval/rubric.md`. In short, each answer gets three scores, kept
-separate on purpose because retrieval and generation fail for different reasons:
+Full rubric in `eval/rubric.md`. Each answer gets three scores, kept separate
+because retrieval and generation fail for different reasons:
 
-* **Retrieval (0 to 2)**: was the correct provision in the top k, and near the top.
-* **Correctness (0 to 2)**: is the answer right and complete, with the right
-  citation. For number questions the number has to be exact.
-* **Faithfulness (pass or fail)**: is every claim actually supported by a
-  retrieved passage. This is a gate, not a gradient.
+* **Retrieval (0 to 2)**: was the correct provision in the top k, and near the
+  top.
+* **Correctness (0 to 2)**: right and complete, with the right article cited.
+  For number questions the number must be exact.
+* **Faithfulness (pass or fail)**: is every claim supported by a retrieved
+  passage. A gate, not a gradient.
 
 ## Results at a glance
 
@@ -102,208 +114,234 @@ Baseline: BM25, chunk size 180, top k = 5, strict prompt.
 
 | Metric | Score |
 | --- | --- |
-| Retrieval (gold provision in top k) | 19/32 across the 16 scored questions, avg 0.59 |
-| Correctness | 25/36, avg 0.69 |
+| Retrieval (16 scored questions) | 20/32, avg 0.63 |
+| Correctness (all 18) | 26/36, avg 0.72 |
 | Faithfulness | 18/18 pass |
-| Clean wins (retrieval 2 and correctness 2) | 8 (q02, q03, q04, q12, q13, q14, q15, q16) |
-| Retrieval misses (gold not in top k) | 5 (q05, q06, q07, q08, q09) |
+| Clean wins (retrieval 2, correctness 2) | 9 (q01, q03, q08, q09, q10, q11, q13, q15, q16) |
+| Retrieval misses (gold not in top k) | 5 (q04, q05, q06, q07, q12) |
 
-Faithfulness is 18/18 only because the strict prompt turns every retrieval miss
-into a refusal rather than a fabrication. That number is doing a lot of work and
-the prompt ablation below shows how fast it collapses when the guardrail is
-removed. Full per question answers, scores and notes are in
-`outputs/graded_answers.json`.
+Faithfulness is 18/18 only because the strict prompt converts every retrieval
+miss into a visible refusal. The prompt ablation below shows how fast that
+collapses when the guardrail is removed. Full per question answers, scores and
+notes are in `outputs/graded_answers.json`.
 
 ## Three cases where it worked, and why
 
-**q02, breach notification deadline.** "Within what time must a controller notify
-the supervisory authority of a personal data breach?" Top result is Art. 33 part
-1, which contains the exact clause "not later than 72 hours after having become
-aware of it." This works because the query terms "notify", "breach" and
-"supervisory authority" are all mid to high IDF (they do not appear in most
-provisions) and they all co-occur in one short chunk, so BM25 concentrates the
-score there. The answer states 72 hours and the reasons for delay rule, cited to
-Art. 33(1). Retrieval 2, correctness 2.
+**q01, punishment for premeditated murder.** Art. 118 takes the top two ranks
+and the rank 2 chunk contains the operative clause: death or imprisonment for
+life. This works because "premeditated" is a rare term concentrated in exactly
+one article. When the query shares a distinctive content word with one short
+provision, BM25 is close to unbeatable. It also matters that Art. 118 is one of
+the few punitive articles whose punishment is fixed in the statute itself, so
+the answer is actually in the corpus to be found.
 
-**q13, right to object.** "When can a data subject object to processing?" Art. 21
-parts 1 to 3 take the top three ranks. "Object" is a strong, relatively rare
-signal in this corpus and it is concentrated in Art. 21, so the retriever locks
-onto the right provision and even orders the sub parts sensibly. The answer keeps
-both halves that matter: the situational objection under 21(1) and the absolute
-direct marketing objection under 21(2). Retrieval 2, correctness 2.
+**q03, desertion versus AWOL.** The near duplicate comparative pair, and the
+retriever gets both sides: Art. 85 at ranks 1 and 2, Art. 86 at rank 3. Both
+articles have distinctive title vocabulary ("desertion", "absence without
+leave") that the query repeats, so both survive into the top k and the generated
+answer can draw the real dividing line, intent to remain away permanently. I am
+showing this win deliberately because the structurally identical question q14
+fails, and the contrast between them is the most instructive pair in the eval.
 
-**q15, when to appoint a DPO.** "When must an organization appoint a Data
-Protection Officer?" The rank 1 chunk is Art. 37 part 1, which holds all three
-trigger conditions in one place. This is the ideal case for chunking: the whole
-answer is one self contained enumerated list that fits inside a single chunk, so
-there is no partial retrieval problem. The three conditions come back complete.
-Retrieval 2, correctness 2.
+**q11, the Article 15 question.** "What punishments can a commanding officer
+impose under Article 15 without a court-martial?" All five retrieved chunks are
+parts of Art. 15, and the enumeration in the answer (admonition, reprimand,
+correctional custody, forfeiture, reduction, extra duties, restriction, the
+demand for court-martial instead) is fully grounded. The interesting part is why
+the colloquial name worked: section 815's own text and its neighbours contain
+the token "15" in cross references, so the nickname is actually present in the
+index. Compare q07, where the far more common nickname "UCMJ" is nearly absent
+from the corpus and actively misleads. Whether a colloquialism retrieves is a
+fact about the corpus, not about the colloquialism.
 
-The pattern in the wins: the answer is short, self contained, and keyed on a
-distinctive term that lives in one provision. Sparse retrieval is very good at
-exactly this.
+## Where it failed, and why
 
-## Three (plus) cases where it failed, and why
+Five misses, four distinct mechanisms, all visible in the matched term logs the
+eval runner records.
 
-This is the part that matters. The failures cluster into three mechanisms.
+**Failure 1: morphology. "Deserter" never matches "desertion" (q04).** The
+query "Can a deserter be sentenced to death?" scores zero against Art. 85,
+because the statute says "desertion" and "deserts" while the query says
+"deserter", and a bag of words matcher with no stemming treats those as three
+unrelated tokens. The retriever instead chases "sentenced to death" into the
+capital procedure articles (Art. 25, 25a), which are about how a capital
+court-martial is composed, not about desertion. The strict prompt then correctly
+refuses. The fix and its cost are quantified in Ablation C below.
 
-**Failure 1: common term definitions die on low IDF (q05, q06, q07).**
-"How does the GDPR define personal data?" The gold provision, Art. 4(1), is never
-retrieved. Top results are about professional secrecy of authority staff (Art.
-54), security of processing (Art. 32) and Board opinions (Art. 64). The reason is
-mechanical and, once you see it, obvious: "personal data" is the single most
-frequent phrase in the entire corpus, so its inverse document frequency is close
-to zero. The word that should point straight at the definition carries almost no
-retrieval signal, because it points at everything. The query "define personal
-data" has no distinctive term to grab onto. The same thing sinks "processing"
-(q06) and "controller versus processor" (q07): these are the most ubiquitous
-terms in the Regulation, so the provisions that define them are invisible to a
-bag of words scorer. Dense embeddings or a field weighted index that boosts the
-Article 4 "Definitions" title would fix this; plain BM25 cannot.
+**Failure 2: boilerplate kills the query's key terms (q05, q07).** "Who is
+subject to the UCMJ?" should retrieve Art. 2, which enumerates exactly that. It
+never surfaces. The phrase "subject to this chapter" appears in 97 of the 198
+provisions, because every punitive article opens with "Any person subject to
+this chapter who...". The words that carry the question's meaning are the least
+informative words in the entire corpus. Same mechanism for "commanding officer"
+(q05): defined once in Art. 1, used in dozens of provisions, so the definition
+is invisible behind the usage. These two failures are unchanged at every chunk
+size and under both retrievers, which is the fingerprint of a term statistics
+problem: no amount of re-chunking fixes a query whose terms have no IDF.
 
-**Failure 2: recitals out-rank the binding articles (q08, q09, and partially q01,
-q03).** "How long does a controller have to respond to an access request?" The
-binding deadline is Art. 12(3). It is not retrieved. Instead the top hit is
-Recital 59, which says the controller should respond "at the latest within one
-month" in flowing prose. The recital wins because it phrases the idea the way the
-question does, while Art. 12 buries the deadline among procedural clauses. Same
-story for the lawful bases (q09): Recital 39 paraphrases lawfulness in rich
-language and out-ranks the terse six item list in Art. 6(1), which never surfaces.
-This is the article versus recital tension I built the corpus to expose. It is a
-real world problem: the system keeps handing back interpretive, non binding text
-when the user needs the operative rule. In q08 the recital at least carries the
-right number (one month), so the answer is partly rescued, but it drops the two
-month extension that only Art. 12(3) contains, and it is sourced to non binding
-text.
+**Failure 3: the corpus does not speak the user's language (q06, q10, and the
+"UCMJ" trap).** The statute never calls itself the UCMJ; it says "this chapter".
+The token "UCMJ" appears in exactly two provisions, one of which is Art. 146,
+the Military Justice Review Panel. So for any question phrased "under the
+UCMJ", that phrase is a corpus-rare, high IDF term pointing at the wrong
+article, and Art. 146 keeps surfacing at rank 1 (q06, q07, and rank 1 for q10
+via the equally colloquial word "panel", which in this statute only ever means
+the review body). The vocabulary users add for clarity is exactly the vocabulary
+that misleads the retriever. This is the strongest argument in the whole eval
+for dense or hybrid retrieval: no term weighting scheme can learn that "UCMJ"
+means "this chapter" from term statistics alone.
 
-**Failure 3: right article, wrong paragraph (q01, q10).** This is the subtlest
-one and the one I would most want a reviewer to see. "What is the maximum fine?"
-BM25 does retrieve Art. 83, so a naive "is the gold article in the top k?" check
-scores it a hit. But it retrieves parts 1 to 3 of Art. 83, the chunks about how a
-fine is calculated, and not part 4/5, where the actual ceiling of 20 million euro
-or 4% of worldwide turnover lives. The answer bearing paragraph is absent. A
-faithful model therefore cannot state the number even though the number is sitting
-in the corpus, and it correctly says so. A model answering from memory would
-confidently emit "20 million or 4%" with an Art. 83 citation it never actually
-read. The lesson: document level retrieval metrics lie here. What matters is
-whether the specific answer bearing chunk was retrieved, not whether some chunk of
-the right provision was. Q10 (special category conditions) fails the same way: it
-retrieves the tail of Art. 9 rather than the enumerated 9(2) exceptions.
+**Failure 4: a provision whose name is generic is structurally invisible
+(q14).** "Conduct unbecoming an officer versus the general article": Art. 133
+retrieves at rank 1 on its distinctive title, and Art. 134 never appears,
+because its name is made of the two most generic words in the corpus, "general"
+and "article". One side of the comparison is grounded, the other missing,
+correctness capped at 1. Together with q03 (the same question shape succeeding
+when both provisions have distinctive names), this isolates the variable
+cleanly: comparative questions live or die on the weaker-named side's
+vocabulary.
 
-**Bonus, the near duplicate trap (q11).** "Difference between erasure and
-restriction of processing?" The query explicitly names both rights. BM25 commits
-hard to Art. 18 (restriction) and its neighbours and never surfaces Art. 17
-(erasure), so only one side of a two sided question is grounded. Comparative
-questions are structurally hard for a top k retriever that has no notion that the
-query is asking for a contrast.
+**Honourable mention, the function word bug (q16).** The right answer was
+generated from rank 2, but rank 1 was Art. 103, Spies, matched entirely on the
+words "about" and "does". My deliberately small stopword list does not remove
+them, and "disobeying" matched nothing because the statute says "disobeys"
+(morphology again). The top slot of a retrieval was decided by two function
+words. Stopword lists tuned by intuition rather than measurement fail in
+exactly this way, and I am keeping the bug in the writeup because the matched
+term log that exposed it is the reason the eval runner records matched terms at
+all.
 
-## Changing one thing: two ablations
+## Changing one thing: three ablations
 
-### Ablation A, chunk size (retrieval strategy)
+### Ablation A, chunk size
 
-I reran the whole eval at chunk sizes 120, 180 (baseline) and 300 words. Run
-files are in `outputs/run_bm25_cw*.json`.
+Full runs in `outputs/run_bm25_cw*.json`.
 
 | chunk size | gold in top 1 | gold in top 3 | missed | chunks |
 | --- | --- | --- | --- | --- |
-| 120 | 10/16 | 11/16 | 5 | 1053 |
-| 180 (baseline) | 9/16 | 11/16 | 5 | 579 |
-| 300 | 8/16 | 11/16 | 3 | 362 |
+| 120 | 8/17 | 11/17 | 6 | 1041 |
+| 180 (baseline) | 9/17 | 11/17 | 6 | 572 |
+| 300 | 8/17 | 11/17 | 5 | 343 |
 
-There is a clean precision versus recall tradeoff. Bigger chunks **recover buried
-provisions**: q08 (access deadline) goes from a miss to rank 5, and q09 (lawful
-bases) from a miss to rank 4, because a 300 word window is large enough to pull
-the operative article text in alongside whatever matched. Total misses drop from
-5 to 3. But bigger chunks **hurt precision at the top**: q11 slips from rank 1 to
-rank 2 and q16 from rank 1 to rank 2, because a larger chunk mixes the answer with
-neighbouring text and dilutes the exact match. Smaller chunks (120) do the
-opposite, nudging top 1 up to 10 but recovering nothing that was missed.
+Chunk size moves little here, and the reason is worth stating: most UCMJ
+provisions are shorter than one chunk at any tested size, so re-chunking only
+redistributes the handful of long articles. The one real effect: at 300 words
+the Art. 1 definitions article holds together well enough that q06 (accuser)
+creeps back in at rank 5. The important negative result is that the q04/q05/q07
+misses do not move at any size, confirming their causes are morphology and term
+statistics, not chunk boundaries. Within a single long article, though, chunking
+decides which paragraph you get: in q02 all five slots are Art. 43 chunks but
+the five year rule itself sits at rank 5, behind the tolling paragraphs. The
+right document is not the same thing as the right paragraph.
 
-Before and after, concretely, q08 "how long to respond to an access request":
+### Ablation B, retriever (TF-IDF cosine instead of BM25)
 
-* chunk 180: Art. 12(3) not in top 5, answer leans on Recital 59, no extension.
-* chunk 300: Art. 12 now reachable in the top k, the one month plus two month
-  extension can be answered from the binding article.
+`outputs/run_tfidf_baseline.json`: 9/17 top 1, 9/17 top 3, 7 missed, slightly
+worse than BM25 overall (it additionally drops q13, demotes q10 to rank 4). The
+two retrievers agree on every hard failure, which is expected: both are bag of
+words scorers and share the same blind spots. Swapping between two sparse
+retrievers is a lateral move; the misses need a different representation, not a
+different formula over the same terms.
 
-The most useful result from this ablation is a negative one. The three definition
-failures (q05, q06, q07) do not move at any chunk size, and do not move under the
-TF-IDF retriever either. That invariance is the proof that their cause is term
-frequency, not chunk boundaries. Changing chunk size cannot fix a problem whose
-root is that the query term has no IDF signal. The fix for those is a different
-lever: field weighting on the provision title, a dense retriever, or query
-expansion. I would not have known that for sure without running the sweep and
-watching those three refuse to budge.
+### Ablation C, tokenisation (light stemming), the found-and-fixed one
 
-(The TF-IDF cosine run, `outputs/run_tfidf_baseline.json`, lands very close to
-BM25: 9/16 top 1, 12/16 top 3. It recovers q08 to rank 3 but demotes q11 to rank
-3. Same family of behaviour, which is expected since both are bag of words.)
+The q04 failure has an obvious cause (deserter/desertion) and an obvious cheap
+fix: a light suffix stripper on both query and document tokens
+(`rag/index.py`, `_light_stem`), toggled with `--stem`. Run in
+`outputs/run_bm25_stem.json`. The results are the most instructive in the
+project precisely because they are mixed:
 
-### Ablation B, the prompt
+| question | baseline | with stemming | why |
+| --- | --- | --- | --- |
+| q04 deserter/death | MISS | **rank 1** | deserter and desertion both stem to desert, exactly as intended |
+| q13 insulting the President | 1 | 2 | "officer" stems to "offic" and now collides with "offices" |
+| q10 capital panel size | 2 | 4 | new collisions promote Art. 66 and Art. 146 chunks |
+| q16 disobeying orders | 2 | MISS | stemmed generic terms boost competing procedural articles past Art. 92 |
+| everything else | unchanged | unchanged | |
 
-Here the one thing changed is the system prompt, retrieval held fixed, on the
-three questions that had a retrieval miss. Full text in
+Aggregate: top 1 stays 9/17, top 3 drops from 11 to 10. So the fix works
+perfectly on the failure it was designed for and pays for it with collision
+damage elsewhere, netting out to roughly zero on this question set. That is the
+honest shape of most retrieval interventions: a targeted gain, a diffuse cost,
+and the eval set is what tells you whether the trade is worth it. A proper
+stemmer (Porter) would keep most of the q04 gain while avoiding the crude
+"officer to offic" collisions, and that, not more chunk tuning, is the next
+change I would make, followed by hybrid sparse plus dense retrieval for the
+vocabulary gap failures that no term-level fix can reach.
+
+### Ablation D, the prompt
+
+One thing changed: the system prompt (strict versus permissive in
+`rag/generate.py`), retrieval held fixed. Full text in
 `outputs/prompt_ablation.json`.
 
 | question | strict prompt | permissive prompt |
 | --- | --- | --- |
-| q05 define personal data | "not in the context" (faithful) | full Art. 4(1) definition from memory (unsupported) |
-| q09 lawful bases | "not in the context" (faithful) | all six bases enumerated from memory (unsupported) |
-| q18 CCPA definition | "corpus is GDPR only" (faithful) | a confident CCPA definition, for a law not in the corpus |
+| q05 define commanding officer | "not in the context" (faithful) | full Art. 1 definition from memory, cited to an article never retrieved |
+| q07 who is subject to the UCMJ | "not in the context" (faithful) | confident Art. 2 enumeration from memory |
+| q17 max confinement, AWOL over 30 days | names the statute/MCM boundary | "one year", the real MCM figure, which exists nowhere in the corpus |
+| q18 RCM 707 speedy trial | "not in this corpus" | a detailed 120 day rule for a document the system has never seen |
 
-Every permissive answer is fluent and, for q05 and q09, factually correct in the
-real world. All three fail faithfulness, because not one token of them came from
-the retrieved context. The model reconstructed them from training and stapled on
-a citation it never read. q18 is the dangerous one: the corpus contains no CCPA at
-all, yet the permissive prompt produces an authoritative CCPA definition with no
-signal to the user that it is ungrounded.
+q17 deserves special attention because retrieval made it actively dangerous: the
+query's "30 days" matched the day-limit tables in Art. 15, so the context is
+full of real, plausible looking numbers (14 days, 60 days) that belong to a
+different legal instrument entirely, non-judicial punishment limits rather than
+court-martial confinement maxima. The permissive answer skipped those decoys and
+supplied the true MCM number from training instead, which is arguably worse: a
+correct-in-reality number the system never read, indistinguishable to the user
+from a grounded answer. Every permissive answer in the table fails faithfulness.
 
-This is the single most important thing I learned building it. The strict prompt
-is not a nicety. It is the only reason the baseline scores 18/18 on faithfulness,
-and it works by converting retrieval failures into visible refusals instead of
-invisible fabrications. Better retrieval reduces how often the refusal fires;
-the prompt is what makes the residual failures safe.
+This is the single most important thing the project demonstrates. The strict
+prompt is not a nicety; it is the only reason faithfulness is 18/18, and it
+works by converting retrieval failures into visible refusals instead of
+invisible fabrications. Better retrieval reduces how often the refusal fires.
+The prompt is what makes the residual failures safe.
 
 ## How the recorded answers were produced
 
 This environment had no `ANTHROPIC_API_KEY`, so the graded answers in
-`outputs/graded_answers.json` were generated with Claude acting as the generation
-backend over the exact passages the pipeline retrieved (the same contexts
-`rag/generate.py` builds, dumped per question). Retrieval, ranking, matched term
-attribution and scoring are all produced by the committed code and are fully
-reproducible with `./run_all.sh`. Setting `ANTHROPIC_API_KEY` makes
-`eval/run_eval.py` generate the answers automatically through the API instead. I
-kept generation and retrieval cleanly separated precisely so that the part a
+`outputs/graded_answers.json` were generated with Claude acting as the
+generation backend over the exact passages the pipeline retrieved (the same
+contexts `rag/generate.py` builds, dumped per question). Retrieval, ranking,
+matched term attribution and the run files are all produced by the committed
+code and are fully reproducible with `./run_all.sh`. Setting `ANTHROPIC_API_KEY`
+makes `eval/run_eval.py` generate answers automatically through the API instead.
+I kept generation and retrieval cleanly separated precisely so that the part a
 reviewer most needs to trust, the retrieval behaviour and its scoring, does not
 depend on any key or any model.
 
 ## Honest limitations
 
 * Scoring is mine, applied by hand from the rubric. An LLM judge or a second
-  annotator would make it less subjective, and a few of the correctness 1 versus 2
+  annotator would make it less subjective, and a few correctness 1 versus 2
   calls are genuinely arguable.
-* 18 questions is enough to surface failure modes, not enough for stable metrics.
-  The per type counts are small.
-* Sparse only. The definition failures would very likely be fixed by a dense
-  retriever, and adding one (with a hybrid score) is the first thing I would do
-  next. I chose not to here so the clone stays small and every retrieval decision
-  stays explainable, which served the evaluation goal better.
-* No reranker and no query expansion, both of which would help the near duplicate
-  and article versus recital cases.
+* 18 questions is enough to surface failure modes, not enough for stable
+  metrics. The per type counts are small.
+* Sparse only. The vocabulary gap failures (UCMJ, panel, general article) are
+  exactly the class dense retrieval exists to fix, and hybrid retrieval is the
+  first real upgrade I would make. I chose sparse here so the clone stays small
+  and every retrieval decision stays explainable, which served the evaluation
+  goal better.
+* The stopword list was tuned by intuition and q16 shows it (rank 1 decided by
+  "about" and "does"). Measured stopword selection or IDF floors would fix it.
+* The corpus is the statute only. A production military law assistant would need
+  the MCM (punishment tables, Rules for Courts-Martial), and the q17/q18
+  controls exist to prove the system knows where its corpus ends.
 
 ## Layout
 
 ```
-data/fetch_corpus.py     fetches GDPR articles + recitals (corpus is committed)
-data/corpus/             272 provisions, one file each, + manifest.json
+data/fetch_corpus.py     fetches the UCMJ from Cornell LII (corpus is committed)
+data/corpus/             198 provisions, one file each, + manifest.json
 rag/chunk.py             ingestion and paragraph aware chunking
-rag/index.py             BM25 (from scratch) and TF-IDF cosine
+rag/index.py             BM25 (from scratch), TF-IDF cosine, light stemmer
 rag/generate.py          strict and permissive grounding prompts
 rag/pipeline.py          chunk -> index -> retrieve -> generate
 eval/questions.json      18 questions, 8 types, gold answers and citations
 eval/rubric.md           the scoring rubric
 eval/run_eval.py         runs the pipeline, records retrieval rank + matched terms
 outputs/graded_answers.json   per question answers with hand scores and notes
-outputs/prompt_ablation.json  strict vs permissive prompt on the retrieval misses
-outputs/run_*.json       raw runs for the chunk size and retriever ablations
+outputs/prompt_ablation.json  strict vs permissive prompt on the retrieval gaps
+outputs/run_*.json       raw runs for the chunk, retriever and stemming ablations
 run_all.sh               reproduce every run
 ```
