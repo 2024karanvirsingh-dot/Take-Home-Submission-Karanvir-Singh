@@ -24,11 +24,19 @@ import re, math
 from collections import Counter, defaultdict
 
 _TOKEN = re.compile(r"[a-z0-9]+")
-# light stopword list. kept small on purpose: legal text is terse and dropping
-# too much ("right", "data", "subject") would erase the signal we retrieve on.
+# Stopword list. Two rules govern what goes in it. Function words that carry
+# no legal meaning are stopped, including the question words and auxiliaries
+# that queries add ("what does the UCMJ say about X" contributed "about" and
+# "does" as ranking terms, and in one recorded failure those two words decided
+# the top retrieval slot; tests/test_retrieval.py pins the fix). Words that
+# are common in ordinary English but legally loaded here (subject, right,
+# order, charge, court, person, against, before) are deliberately NOT stopped.
 _STOP = set("the a an and or of to in for on by with as is are be this that "
             "shall may such which its it his her their our your at from into "
-            "under upon any all each other where when who whom".split())
+            "under upon any all each other where when who whom "
+            "about does do did done what how why was were been being has have "
+            "had if not no than then there they them he she we you i also can "
+            "could would should but so most more say says".split())
 
 
 def _light_stem(t):
