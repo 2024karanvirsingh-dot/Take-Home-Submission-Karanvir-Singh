@@ -1,0 +1,140 @@
+{
+  "retrieval": {
+    "bm25_baseline": {
+      "n_retrieval_scored": 16,
+      "hit_at_1": 9,
+      "hit_at_3": 11,
+      "hit_at_5": 11,
+      "missed": 5,
+      "mrr": 0.625,
+      "all_gold_retrieved": 10,
+      "multi_gold_questions": 2,
+      "multi_gold_fully_covered": 1,
+      "answerable_refused": 3,
+      "controls_refused": 2,
+      "n_controls": 2
+    },
+    "bm25_cw120": {
+      "n_retrieval_scored": 16,
+      "hit_at_1": 9,
+      "hit_at_3": 11,
+      "hit_at_5": 11,
+      "missed": 5,
+      "mrr": 0.6146,
+      "all_gold_retrieved": 10,
+      "multi_gold_questions": 2,
+      "multi_gold_fully_covered": 1,
+      "answerable_refused": 3,
+      "controls_refused": 2,
+      "n_controls": 2
+    },
+    "bm25_cw300": {
+      "n_retrieval_scored": 16,
+      "hit_at_1": 10,
+      "hit_at_3": 11,
+      "hit_at_5": 11,
+      "missed": 5,
+      "mrr": 0.6562,
+      "all_gold_retrieved": 10,
+      "multi_gold_questions": 2,
+      "multi_gold_fully_covered": 1,
+      "answerable_refused": 2,
+      "controls_refused": 2,
+      "n_controls": 2
+    },
+    "tfidf_baseline": {
+      "n_retrieval_scored": 16,
+      "hit_at_1": 9,
+      "hit_at_3": 9,
+      "hit_at_5": 10,
+      "missed": 6,
+      "mrr": 0.5781,
+      "all_gold_retrieved": 9,
+      "multi_gold_questions": 2,
+      "multi_gold_fully_covered": 1,
+      "answerable_refused": 3,
+      "controls_refused": 2,
+      "n_controls": 2
+    },
+    "bm25_stem": {
+      "n_retrieval_scored": 16,
+      "hit_at_1": 9,
+      "hit_at_3": 10,
+      "hit_at_5": 12,
+      "missed": 4,
+      "mrr": 0.625,
+      "all_gold_retrieved": 11,
+      "multi_gold_questions": 2,
+      "multi_gold_fully_covered": 1,
+      "answerable_refused": 2,
+      "controls_refused": 2,
+      "n_controls": 2
+    },
+    "dense_baseline": {
+      "n_retrieval_scored": 16,
+      "hit_at_1": 12,
+      "hit_at_3": 13,
+      "hit_at_5": 14,
+      "missed": 2,
+      "mrr": 0.7937,
+      "all_gold_retrieved": 13,
+      "multi_gold_questions": 2,
+      "multi_gold_fully_covered": 1,
+      "answerable_refused": 1,
+      "controls_refused": 2,
+      "n_controls": 2
+    },
+    "hybrid_baseline": {
+      "n_retrieval_scored": 16,
+      "hit_at_1": 10,
+      "hit_at_3": 12,
+      "hit_at_5": 14,
+      "missed": 2,
+      "mrr": 0.7125,
+      "all_gold_retrieved": 14,
+      "multi_gold_questions": 2,
+      "multi_gold_fully_covered": 2,
+      "answerable_refused": 1,
+      "controls_refused": 2,
+      "n_controls": 2
+    }
+  },
+  "answers_bm25_baseline_grounded": {
+    "n_answerable": 16,
+    "n_controls": 2,
+    "answered": 13,
+    "false_refusals": 3,
+    "control_refusal_correct": 2,
+    "citation_hit": 11,
+    "mean_citation_precision": 0.577,
+    "mean_content_coverage": 0.692,
+    "support_pass": 18,
+    "support_total": 18
+  },
+  "answer_policy_ablation": {
+    "grounded": {
+      "n_answerable": 16,
+      "n_controls": 2,
+      "answered": 13,
+      "false_refusals": 3,
+      "control_refusal_correct": 2,
+      "citation_hit": 11,
+      "mean_citation_precision": 0.577,
+      "mean_content_coverage": 0.692,
+      "support_pass": 18,
+      "support_total": 18
+    },
+    "permissive": {
+      "n_answerable": 16,
+      "n_controls": 2,
+      "answered": 16,
+      "false_refusals": 0,
+      "control_refusal_correct": 0,
+      "citation_hit": 11,
+      "mean_citation_precision": 0.469,
+      "mean_content_coverage": 0.562,
+      "support_pass": 18,
+      "support_total": 18
+    }
+  }
+}

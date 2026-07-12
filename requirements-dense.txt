@@ -1,0 +1,5 @@
+# optional: the dense and hybrid retrievers (--retriever dense / hybrid).
+# pulls in torch, which is why it is not part of the default install.
+# tested with sentence-transformers 5.1.2
+-r requirements.txt
+sentence-transformers>=5.1

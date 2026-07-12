@@ -1,0 +1,1861 @@
+{
+  "config": {
+    "retriever": "bm25",
+    "chunk_words": 180,
+    "overlap_words": 40,
+    "k": 5,
+    "answer_builder_version": "local-v1",
+    "python_version": "3.9.6",
+    "note": "retrieval identical in both arms; only the answer policy differs"
+  },
+  "aggregate": {
+    "grounded": {
+      "n_answerable": 16,
+      "n_controls": 2,
+      "answered": 13,
+      "false_refusals": 3,
+      "control_refusal_correct": 2,
+      "citation_hit": 11,
+      "mean_citation_precision": 0.577,
+      "mean_content_coverage": 0.692,
+      "support_pass": 18,
+      "support_total": 18
+    },
+    "permissive": {
+      "n_answerable": 16,
+      "n_controls": 2,
+      "answered": 16,
+      "false_refusals": 0,
+      "control_refusal_correct": 0,
+      "citation_hit": 11,
+      "mean_citation_precision": 0.469,
+      "mean_content_coverage": 0.562,
+      "support_pass": 18,
+      "support_total": 18
+    }
+  },
+  "per_question_scores": {
+    "grounded": [
+      {
+        "id": "q01",
+        "type": "numeric",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q02",
+        "type": "limitations",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 1.0,
+        "content_coverage": 0.0,
+        "support_ok": true
+      },
+      {
+        "id": "q03",
+        "type": "comparative_near_duplicate",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.667,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q04",
+        "type": "factual_lookup",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": false,
+        "citation_precision": 0.0,
+        "content_coverage": 0.5,
+        "support_ok": true
+      },
+      {
+        "id": "q05",
+        "type": "definition",
+        "answerable": true,
+        "refused": true,
+        "boundary": false,
+        "refusal_correct": false,
+        "citation_hit": null,
+        "citation_precision": null,
+        "content_coverage": null,
+        "support_ok": true
+      },
+      {
+        "id": "q06",
+        "type": "definition",
+        "answerable": true,
+        "refused": true,
+        "boundary": false,
+        "refusal_correct": false,
+        "citation_hit": null,
+        "citation_precision": null,
+        "content_coverage": null,
+        "support_ok": true
+      },
+      {
+        "id": "q07",
+        "type": "enumeration",
+        "answerable": true,
+        "refused": true,
+        "boundary": false,
+        "refusal_correct": false,
+        "citation_hit": null,
+        "citation_precision": null,
+        "content_coverage": null,
+        "support_ok": true
+      },
+      {
+        "id": "q08",
+        "type": "factual_lookup",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 0.5,
+        "support_ok": true
+      },
+      {
+        "id": "q09",
+        "type": "enumeration",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 1.0,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q10",
+        "type": "numeric",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q11",
+        "type": "conditional",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 1.0,
+        "content_coverage": 0.5,
+        "support_ok": true
+      },
+      {
+        "id": "q12",
+        "type": "conditional",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": false,
+        "citation_precision": 0.0,
+        "content_coverage": 0.0,
+        "support_ok": true
+      },
+      {
+        "id": "q13",
+        "type": "factual_lookup",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q14",
+        "type": "comparative",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.333,
+        "content_coverage": 0.5,
+        "support_ok": true
+      },
+      {
+        "id": "q15",
+        "type": "factual_lookup",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 1.0,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q16",
+        "type": "conditional",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q17",
+        "type": "statute_boundary",
+        "answerable": false,
+        "refused": true,
+        "boundary": true,
+        "refusal_correct": true,
+        "citation_hit": null,
+        "citation_precision": null,
+        "content_coverage": null,
+        "support_ok": true
+      },
+      {
+        "id": "q18",
+        "type": "out_of_corpus",
+        "answerable": false,
+        "refused": true,
+        "boundary": true,
+        "refusal_correct": true,
+        "citation_hit": null,
+        "citation_precision": null,
+        "content_coverage": null,
+        "support_ok": true
+      }
+    ],
+    "permissive": [
+      {
+        "id": "q01",
+        "type": "numeric",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q02",
+        "type": "limitations",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 1.0,
+        "content_coverage": 0.0,
+        "support_ok": true
+      },
+      {
+        "id": "q03",
+        "type": "comparative_near_duplicate",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.667,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q04",
+        "type": "factual_lookup",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": false,
+        "citation_precision": 0.0,
+        "content_coverage": 0.5,
+        "support_ok": true
+      },
+      {
+        "id": "q05",
+        "type": "definition",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": false,
+        "citation_precision": 0.0,
+        "content_coverage": 0.0,
+        "support_ok": true
+      },
+      {
+        "id": "q06",
+        "type": "definition",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": false,
+        "citation_precision": 0.0,
+        "content_coverage": 0.0,
+        "support_ok": true
+      },
+      {
+        "id": "q07",
+        "type": "enumeration",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": false,
+        "citation_precision": 0.0,
+        "content_coverage": 0.0,
+        "support_ok": true
+      },
+      {
+        "id": "q08",
+        "type": "factual_lookup",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 0.5,
+        "support_ok": true
+      },
+      {
+        "id": "q09",
+        "type": "enumeration",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 1.0,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q10",
+        "type": "numeric",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q11",
+        "type": "conditional",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 1.0,
+        "content_coverage": 0.5,
+        "support_ok": true
+      },
+      {
+        "id": "q12",
+        "type": "conditional",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": false,
+        "citation_precision": 0.0,
+        "content_coverage": 0.0,
+        "support_ok": true
+      },
+      {
+        "id": "q13",
+        "type": "factual_lookup",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q14",
+        "type": "comparative",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.333,
+        "content_coverage": 0.5,
+        "support_ok": true
+      },
+      {
+        "id": "q15",
+        "type": "factual_lookup",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 1.0,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q16",
+        "type": "conditional",
+        "answerable": true,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": true,
+        "citation_hit": true,
+        "citation_precision": 0.5,
+        "content_coverage": 1.0,
+        "support_ok": true
+      },
+      {
+        "id": "q17",
+        "type": "statute_boundary",
+        "answerable": false,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": false,
+        "citation_hit": null,
+        "citation_precision": null,
+        "content_coverage": null,
+        "support_ok": true
+      },
+      {
+        "id": "q18",
+        "type": "out_of_corpus",
+        "answerable": false,
+        "refused": false,
+        "boundary": false,
+        "refusal_correct": false,
+        "citation_hit": null,
+        "citation_precision": null,
+        "content_coverage": null,
+        "support_ok": true
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "q01",
+      "type": "numeric",
+      "question": "What punishment does the UCMJ authorize for premeditated murder?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "Any person subject to this chapter who, without justification or excuse, unlawfully kills a human being, when such person\u2014 (1) has a premeditated design to kill; (2) intends to kill or inflict great bodily harm; (3) is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, sexual abuse of a child, robbery, or aggravated arson; is guilty of murder, and shall suffer such punishment as a court-martial may direct, except that if found guilty under clause (1) or (4), such person shall suffer death or imprisonment for life as a court-martial may direct, unless such person is otherwise sentenced in accordance with a plea agreement entered into between the parties under section 853a of this title (article 53a). (Art. 118, UCMJ)\n\n(d) Rule of Construction.\u2014 Nothing in this section (article) shall be construed\u2014 (1) to authorize a cause of action for damages; (2) to create, to enlarge, or to imply any duty or obligation to any victim of an offense under this chapter (Art. 6b, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "118",
+          "6b"
+        ],
+        "sentences": [
+          {
+            "text": "Any person subject to this chapter who, without justification or excuse, unlawfully kills a human being, when such person\u2014 (1) has a premeditated design to kill;",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 5.7424
+          },
+          {
+            "text": "(3) is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, sexual abuse of a child, robbery, or aggravated arson; is guilty of murder, and shall suffer such punishment as a court-martial may direct, except that if found guilty under clause (1) or (4), such person shall suffer death or imprisonment for life as a court-martial may direct, unless such person is otherwise sentenced in accordance with a plea agreement entered into between the parties under section 853a of this title (article 53a).",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 4.9348
+          },
+          {
+            "text": "(d) Rule of Construction.\u2014 Nothing in this section (article) shall be construed\u2014 (1) to authorize a cause of action for damages;",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::3",
+            "score": 3.1979
+          },
+          {
+            "text": "(2) intends to kill or inflict great bodily harm;",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 2.3979
+          },
+          {
+            "text": "(2) to create, to enlarge, or to imply any duty or obligation to any victim of an offense under this chapter",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::3",
+            "score": 0.075
+          }
+        ]
+      },
+      "permissive": {
+        "text": "Any person subject to this chapter who, without justification or excuse, unlawfully kills a human being, when such person\u2014 (1) has a premeditated design to kill; (2) intends to kill or inflict great bodily harm; (3) is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, sexual abuse of a child, robbery, or aggravated arson; is guilty of murder, and shall suffer such punishment as a court-martial may direct, except that if found guilty under clause (1) or (4), such person shall suffer death or imprisonment for life as a court-martial may direct, unless such person is otherwise sentenced in accordance with a plea agreement entered into between the parties under section 853a of this title (article 53a). (Art. 118, UCMJ)\n\n(d) Rule of Construction.\u2014 Nothing in this section (article) shall be construed\u2014 (1) to authorize a cause of action for damages; (2) to create, to enlarge, or to imply any duty or obligation to any victim of an offense under this chapter (Art. 6b, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "118",
+          "6b"
+        ],
+        "sentences": [
+          {
+            "text": "Any person subject to this chapter who, without justification or excuse, unlawfully kills a human being, when such person\u2014 (1) has a premeditated design to kill;",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 5.7424
+          },
+          {
+            "text": "(3) is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, sexual abuse of a child, robbery, or aggravated arson; is guilty of murder, and shall suffer such punishment as a court-martial may direct, except that if found guilty under clause (1) or (4), such person shall suffer death or imprisonment for life as a court-martial may direct, unless such person is otherwise sentenced in accordance with a plea agreement entered into between the parties under section 853a of this title (article 53a).",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 4.9348
+          },
+          {
+            "text": "(d) Rule of Construction.\u2014 Nothing in this section (article) shall be construed\u2014 (1) to authorize a cause of action for damages;",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::3",
+            "score": 3.1979
+          },
+          {
+            "text": "(2) intends to kill or inflict great bodily harm;",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 2.3979
+          },
+          {
+            "text": "(2) to create, to enlarge, or to imply any duty or obligation to any victim of an offense under this chapter",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::3",
+            "score": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "q02",
+      "type": "limitations",
+      "question": "What is the statute of limitations for most offenses under the UCMJ?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "(e) Extension for Offenses in Time of War Detrimental to Prosecution of War.\u2014 For an offense the trial of which in time of war is certified to the President by the Secretary concerned to be detrimental to the prosecution of the war or inimical to the national security , the period of limitation prescribed in this article is extended to six months after the termination of hostilities as proclaimed by the President or by a joint resolution of Congress . (C) In subparagraph (A), the term \" child abuse offense \" includes an act that involves abuse of a person who has not attained the age of 18 years and would constitute an offense under chapter 110 or 117 of title 18 or under section 1591 of that title. (3) A person charged with an offense is not liable to be punished under section 815 of this title (article 15) if the offense was committed more than two years before the imposition of punishment. (c) (Art. 43, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "43"
+        ],
+        "sentences": [
+          {
+            "text": "(3) A person charged with an offense is not liable to be punished under section 815 of this title (article 15) if the offense was committed more than two years before the imposition of punishment. (c)",
+            "article": "43",
+            "chunk_id": "sec_843.txt::2",
+            "score": 6.2909
+          },
+          {
+            "text": "(C) In subparagraph (A), the term \" child abuse offense \" includes an act that involves abuse of a person who has not attained the age of 18 years and would constitute an offense under chapter 110 or 117 of title 18 or under section 1591 of that title.",
+            "article": "43",
+            "chunk_id": "sec_843.txt::2",
+            "score": 6.0909
+          },
+          {
+            "text": "(e) Extension for Offenses in Time of War Detrimental to Prosecution of War.\u2014 For an offense the trial of which in time of war is certified to the President by the Secretary concerned to be detrimental to the prosecution of the war or inimical to the national security , the period of limitation prescribed in this article is extended to six months after the termination of hostilities as proclaimed by the President or by a joint resolution of Congress .",
+            "article": "43",
+            "chunk_id": "sec_843.txt::4",
+            "score": 5.7909
+          }
+        ]
+      },
+      "permissive": {
+        "text": "(e) Extension for Offenses in Time of War Detrimental to Prosecution of War.\u2014 For an offense the trial of which in time of war is certified to the President by the Secretary concerned to be detrimental to the prosecution of the war or inimical to the national security , the period of limitation prescribed in this article is extended to six months after the termination of hostilities as proclaimed by the President or by a joint resolution of Congress . (C) In subparagraph (A), the term \" child abuse offense \" includes an act that involves abuse of a person who has not attained the age of 18 years and would constitute an offense under chapter 110 or 117 of title 18 or under section 1591 of that title. (3) A person charged with an offense is not liable to be punished under section 815 of this title (article 15) if the offense was committed more than two years before the imposition of punishment. (c) (Art. 43, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "43"
+        ],
+        "sentences": [
+          {
+            "text": "(3) A person charged with an offense is not liable to be punished under section 815 of this title (article 15) if the offense was committed more than two years before the imposition of punishment. (c)",
+            "article": "43",
+            "chunk_id": "sec_843.txt::2",
+            "score": 6.2909
+          },
+          {
+            "text": "(C) In subparagraph (A), the term \" child abuse offense \" includes an act that involves abuse of a person who has not attained the age of 18 years and would constitute an offense under chapter 110 or 117 of title 18 or under section 1591 of that title.",
+            "article": "43",
+            "chunk_id": "sec_843.txt::2",
+            "score": 6.0909
+          },
+          {
+            "text": "(e) Extension for Offenses in Time of War Detrimental to Prosecution of War.\u2014 For an offense the trial of which in time of war is certified to the President by the Secretary concerned to be detrimental to the prosecution of the war or inimical to the national security , the period of limitation prescribed in this article is extended to six months after the termination of hostilities as proclaimed by the President or by a joint resolution of Congress .",
+            "article": "43",
+            "chunk_id": "sec_843.txt::4",
+            "score": 5.7909
+          }
+        ]
+      }
+    },
+    {
+      "id": "q03",
+      "type": "comparative_near_duplicate",
+      "question": "What is the difference between desertion and absence without leave under the UCMJ?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion. (Art. 85, UCMJ)\n\n(2) goes from that place; or (3) absents himself or remains absent from his unit, organization, or place of duty at which he is required to be at the time prescribed; shall be punished as a court-martial may direct. (Art. 86, UCMJ)\n\n(c) Tolling for Absence Without Leave or Flight From Justice.\u2014 Periods in which the accused is absent without authority or fleeing from justice shall be excluded in computing the period of limitation prescribed in this section (article). (a) No Limitation for Certain Offenses.\u2014 A person charged with absence without leave or missing movement in time of war, with murder, rape or sexual assault, or rape or sexual assault of a child, maiming of a child, kidnapping of a child, or with any other offense punishable by death, may be tried and punished at any time without limitation. (Art. 43, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "85",
+          "86",
+          "43"
+        ],
+        "sentences": [
+          {
+            "text": "(2) goes from that place; or (3) absents himself or remains absent from his unit, organization, or place of duty at which he is required to be at the time prescribed; shall be punished as a court-martial may direct.",
+            "article": "86",
+            "chunk_id": "sec_886.txt::0",
+            "score": 4.995
+          },
+          {
+            "text": "(c) Tolling for Absence Without Leave or Flight From Justice.\u2014 Periods in which the accused is absent without authority or fleeing from justice shall be excluded in computing the period of limitation prescribed in this section (article).",
+            "article": "43",
+            "chunk_id": "sec_843.txt::3",
+            "score": 4.995
+          },
+          {
+            "text": "(a) No Limitation for Certain Offenses.\u2014 A person charged with absence without leave or missing movement in time of war, with murder, rape or sexual assault, or rape or sexual assault of a child, maiming of a child, kidnapping of a child, or with any other offense punishable by death, may be tried and punished at any time without limitation.",
+            "article": "43",
+            "chunk_id": "sec_843.txt::0",
+            "score": 4.995
+          },
+          {
+            "text": "Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion.",
+            "article": "85",
+            "chunk_id": "sec_885.txt::1",
+            "score": 4.7614
+          }
+        ]
+      },
+      "permissive": {
+        "text": "Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion. (Art. 85, UCMJ)\n\n(2) goes from that place; or (3) absents himself or remains absent from his unit, organization, or place of duty at which he is required to be at the time prescribed; shall be punished as a court-martial may direct. (Art. 86, UCMJ)\n\n(c) Tolling for Absence Without Leave or Flight From Justice.\u2014 Periods in which the accused is absent without authority or fleeing from justice shall be excluded in computing the period of limitation prescribed in this section (article). (a) No Limitation for Certain Offenses.\u2014 A person charged with absence without leave or missing movement in time of war, with murder, rape or sexual assault, or rape or sexual assault of a child, maiming of a child, kidnapping of a child, or with any other offense punishable by death, may be tried and punished at any time without limitation. (Art. 43, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "85",
+          "86",
+          "43"
+        ],
+        "sentences": [
+          {
+            "text": "(2) goes from that place; or (3) absents himself or remains absent from his unit, organization, or place of duty at which he is required to be at the time prescribed; shall be punished as a court-martial may direct.",
+            "article": "86",
+            "chunk_id": "sec_886.txt::0",
+            "score": 4.995
+          },
+          {
+            "text": "(c) Tolling for Absence Without Leave or Flight From Justice.\u2014 Periods in which the accused is absent without authority or fleeing from justice shall be excluded in computing the period of limitation prescribed in this section (article).",
+            "article": "43",
+            "chunk_id": "sec_843.txt::3",
+            "score": 4.995
+          },
+          {
+            "text": "(a) No Limitation for Certain Offenses.\u2014 A person charged with absence without leave or missing movement in time of war, with murder, rape or sexual assault, or rape or sexual assault of a child, maiming of a child, kidnapping of a child, or with any other offense punishable by death, may be tried and punished at any time without limitation.",
+            "article": "43",
+            "chunk_id": "sec_843.txt::0",
+            "score": 4.995
+          },
+          {
+            "text": "Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion.",
+            "article": "85",
+            "chunk_id": "sec_885.txt::1",
+            "score": 4.7614
+          }
+        ]
+      }
+    },
+    {
+      "id": "q04",
+      "type": "factual_lookup",
+      "question": "Can a deserter be sentenced to death under the UCMJ?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12. (b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12. (Art. 25a, UCMJ)\n\nAny civil officer having authority to apprehend offenders under the laws of the United States or of a State, Commonwealth, possession, or the District of Columbia may summarily apprehend a deserter from the armed forces and deliver him into the custody of those forces. (Art. 8, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "25a",
+          "8"
+        ],
+        "sentences": [
+          {
+            "text": "Any civil officer having authority to apprehend offenders under the laws of the United States or of a State, Commonwealth, possession, or the District of Columbia may summarily apprehend a deserter from the armed forces and deliver him into the custody of those forces.",
+            "article": "8",
+            "chunk_id": "sec_808.txt::0",
+            "score": 2.8904
+          },
+          {
+            "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 2.7789
+          },
+          {
+            "text": "(b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 2.7789
+          }
+        ]
+      },
+      "permissive": {
+        "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12. (b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12. (Art. 25a, UCMJ)\n\nAny civil officer having authority to apprehend offenders under the laws of the United States or of a State, Commonwealth, possession, or the District of Columbia may summarily apprehend a deserter from the armed forces and deliver him into the custody of those forces. (Art. 8, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "25a",
+          "8"
+        ],
+        "sentences": [
+          {
+            "text": "Any civil officer having authority to apprehend offenders under the laws of the United States or of a State, Commonwealth, possession, or the District of Columbia may summarily apprehend a deserter from the armed forces and deliver him into the custody of those forces.",
+            "article": "8",
+            "chunk_id": "sec_808.txt::0",
+            "score": 2.8904
+          },
+          {
+            "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 2.7789
+          },
+          {
+            "text": "(b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 2.7789
+          }
+        ]
+      }
+    },
+    {
+      "id": "q05",
+      "type": "definition",
+      "question": "How does the UCMJ define a commanding officer?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "The retrieved provisions do not answer this question. Rather than construct an answer from weakly matching passages, the system declines.",
+        "refused": true,
+        "boundary": false,
+        "cited_articles": [],
+        "sentences": []
+      },
+      "permissive": {
+        "text": "(2) A commanding officer shall not be considered an accuser solely due to the role of the commanding officer in convening a special court-martial to which charges and specifications were referred by a special trial counsel in accordance with this chapter. (Art. 23, UCMJ)\n\n(b) (1) If any such commanding officer is an accuser, the court shall be convened by superior competent authority, and may in any case be convened by such authority if considered desirable by him. (Art. 22, UCMJ)\n\nThe assessment of damages made by the board is subject to the approval of the commanding officer , and in the amount approved by him shall be charged against the pay of the offenders. (Art. 139, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "23",
+          "22",
+          "139"
+        ],
+        "sentences": [
+          {
+            "text": "(2) A commanding officer shall not be considered an accuser solely due to the role of the commanding officer in convening a special court-martial to which charges and specifications were referred by a special trial counsel in accordance with this chapter.",
+            "article": "23",
+            "chunk_id": "sec_823.txt::1",
+            "score": 2.4239
+          },
+          {
+            "text": "(b) (1) If any such commanding officer is an accuser, the court shall be convened by superior competent authority, and may in any case be convened by such authority if considered desirable by him.",
+            "article": "22",
+            "chunk_id": "sec_822.txt::1",
+            "score": 2.1239
+          },
+          {
+            "text": "The assessment of damages made by the board is subject to the approval of the commanding officer , and in the amount approved by him shall be charged against the pay of the offenders.",
+            "article": "139",
+            "chunk_id": "sec_939.txt::0",
+            "score": 2.1239
+          }
+        ]
+      }
+    },
+    {
+      "id": "q06",
+      "type": "definition",
+      "question": "Who counts as an accuser under the UCMJ?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "The retrieved provisions do not answer this question. Rather than construct an answer from weakly matching passages, the system declines.",
+        "refused": true,
+        "boundary": false,
+        "cited_articles": [],
+        "sentences": []
+      },
+      "permissive": {
+        "text": "Notwithstanding paragraph (1), a member of the Panel may be appointed to a single additional term if\u2014 (A) the appointment of the member is to fill a vacancy described in subsection (b)(4); or (B) the member was initially appointed\u2014 (i) to a term of four years or less in accordance with subsection (b)(4); or (ii) to fill a vacancy that occurs before the expiration of the term of the predecessor of such member and for which the remainder of the term of such predecessor is four years or less. (Art. 146, UCMJ)\n\n(b) (1) If any such officer is an accuser , the court shall be convened by superior competent authority, and may in any case be convened by such authority if considered advisable by him. (2) A commanding officer shall not be considered an accuser solely due to the role of the commanding officer in convening a special court-martial to which charges and specifications were referred by a special trial counsel in accordance with this chapter. (Art. 23, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "146",
+          "23"
+        ],
+        "sentences": [
+          {
+            "text": "(2) A commanding officer shall not be considered an accuser solely due to the role of the commanding officer in convening a special court-martial to which charges and specifications were referred by a special trial counsel in accordance with this chapter.",
+            "article": "23",
+            "chunk_id": "sec_823.txt::1",
+            "score": 2.3755
+          },
+          {
+            "text": "(b) (1) If any such officer is an accuser , the court shall be convened by superior competent authority, and may in any case be convened by such authority if considered advisable by him.",
+            "article": "23",
+            "chunk_id": "sec_823.txt::1",
+            "score": 2.0755
+          },
+          {
+            "text": "Notwithstanding paragraph (1), a member of the Panel may be appointed to a single additional term if\u2014 (A) the appointment of the member is to fill a vacancy described in subsection (b)(4); or (B) the member was initially appointed\u2014 (i) to a term of four years or less in accordance with subsection (b)(4); or (ii) to fill a vacancy that occurs before the expiration of the term of the predecessor of such member and for which the remainder of the term of such predecessor is four years or less.",
+            "article": "146",
+            "chunk_id": "sec_946.txt::4",
+            "score": 2.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "q07",
+      "type": "enumeration",
+      "question": "Who is subject to the UCMJ?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "The retrieved provisions do not answer this question. Rather than construct an answer from weakly matching passages, the system declines.",
+        "refused": true,
+        "boundary": false,
+        "cited_articles": [],
+        "sentences": []
+      },
+      "permissive": {
+        "text": "Notwithstanding paragraph (1), a member of the Panel may be appointed to a single additional term if\u2014 (A) the appointment of the member is to fill a vacancy described in subsection (b)(4); or (B) the member was initially appointed\u2014 (i) to a term of four years or less in accordance with subsection (b)(4); or (ii) to fill a vacancy that occurs before the expiration of the term of the predecessor of such member and for which the remainder of the term of such predecessor is four years or less. (Art. 146, UCMJ)\n\n(c) (1) Any person subject to this chapter whose conduct is subject to inquiry shall be designated as a party. (Art. 135, UCMJ)\n\nAny person subject to this chapter who is guilty of cruelty toward, or oppression or maltreatment of, any person subject to his orders shall be punished as a court-martial may direct. (Art. 93, UCMJ)\n\nAny person subject to this chapter who uses provoking or reproachful words or gestures towards any other person subject to this chapter shall be punished as a court-martial may direct. (Art. 117, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "146",
+          "135",
+          "93",
+          "117"
+        ],
+        "sentences": [
+          {
+            "text": "Notwithstanding paragraph (1), a member of the Panel may be appointed to a single additional term if\u2014 (A) the appointment of the member is to fill a vacancy described in subsection (b)(4); or (B) the member was initially appointed\u2014 (i) to a term of four years or less in accordance with subsection (b)(4); or (ii) to fill a vacancy that occurs before the expiration of the term of the predecessor of such member and for which the remainder of the term of such predecessor is four years or less.",
+            "article": "146",
+            "chunk_id": "sec_946.txt::4",
+            "score": 2.0
+          },
+          {
+            "text": "(c) (1) Any person subject to this chapter whose conduct is subject to inquiry shall be designated as a party.",
+            "article": "135",
+            "chunk_id": "sec_935.txt::0",
+            "score": 1.8986
+          },
+          {
+            "text": "Any person subject to this chapter who is guilty of cruelty toward, or oppression or maltreatment of, any person subject to his orders shall be punished as a court-martial may direct.",
+            "article": "93",
+            "chunk_id": "sec_893.txt::0",
+            "score": 1.8986
+          },
+          {
+            "text": "Any person subject to this chapter who uses provoking or reproachful words or gestures towards any other person subject to this chapter shall be punished as a court-martial may direct.",
+            "article": "117",
+            "chunk_id": "sec_917.txt::0",
+            "score": 1.8986
+          }
+        ]
+      }
+    },
+    {
+      "id": "q08",
+      "type": "factual_lookup",
+      "question": "What rights does Article 31 give a servicemember suspected of an offense?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "(b) No person subject to this chapter may interrogate, or request any statement from, an accused or a person suspected of an offense without first informing him of the nature of the accusation and advising him that he does not have to make any statement regarding the offense of which he is accused or suspected and that any statement made by him may be used as evidence against him in a trial by court-martial. (Art. 31, UCMJ)\n\n(B) A preliminary hearing under section 832 of this title (article 32) relating to the offense. (2) to create, to enlarge, or to imply any duty or obligation to any victim of an offense under this chapter or other person for the breach of which the United States or any of its officers or employees could be held liable in damages; or (3) to impair the exercise of discretion under sections 830 and 834 of this title (articles 30 and 34). (Art. 6b, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "31",
+          "6b"
+        ],
+        "sentences": [
+          {
+            "text": "(b) No person subject to this chapter may interrogate, or request any statement from, an accused or a person suspected of an offense without first informing him of the nature of the accusation and advising him that he does not have to make any statement regarding the offense of which he is accused or suspected and that any statement made by him may be used as evidence against him in a trial by court-martial.",
+            "article": "31",
+            "chunk_id": "sec_831.txt::0",
+            "score": 7.3841
+          },
+          {
+            "text": "(B) A preliminary hearing under section 832 of this title (article 32) relating to the offense.",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::0",
+            "score": 6.1853
+          },
+          {
+            "text": "(2) to create, to enlarge, or to imply any duty or obligation to any victim of an offense under this chapter or other person for the breach of which the United States or any of its officers or employees could be held liable in damages; or (3) to impair the exercise of discretion under sections 830 and 834 of this title (articles 30 and 34).",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::4",
+            "score": 6.1853
+          }
+        ]
+      },
+      "permissive": {
+        "text": "(b) No person subject to this chapter may interrogate, or request any statement from, an accused or a person suspected of an offense without first informing him of the nature of the accusation and advising him that he does not have to make any statement regarding the offense of which he is accused or suspected and that any statement made by him may be used as evidence against him in a trial by court-martial. (Art. 31, UCMJ)\n\n(B) A preliminary hearing under section 832 of this title (article 32) relating to the offense. (2) to create, to enlarge, or to imply any duty or obligation to any victim of an offense under this chapter or other person for the breach of which the United States or any of its officers or employees could be held liable in damages; or (3) to impair the exercise of discretion under sections 830 and 834 of this title (articles 30 and 34). (Art. 6b, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "31",
+          "6b"
+        ],
+        "sentences": [
+          {
+            "text": "(b) No person subject to this chapter may interrogate, or request any statement from, an accused or a person suspected of an offense without first informing him of the nature of the accusation and advising him that he does not have to make any statement regarding the offense of which he is accused or suspected and that any statement made by him may be used as evidence against him in a trial by court-martial.",
+            "article": "31",
+            "chunk_id": "sec_831.txt::0",
+            "score": 7.3841
+          },
+          {
+            "text": "(B) A preliminary hearing under section 832 of this title (article 32) relating to the offense.",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::0",
+            "score": 6.1853
+          },
+          {
+            "text": "(2) to create, to enlarge, or to imply any duty or obligation to any victim of an offense under this chapter or other person for the breach of which the United States or any of its officers or employees could be held liable in damages; or (3) to impair the exercise of discretion under sections 830 and 834 of this title (articles 30 and 34).",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::4",
+            "score": 6.1853
+          }
+        ]
+      }
+    },
+    {
+      "id": "q09",
+      "type": "enumeration",
+      "question": "What are the three types of courts-martial?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "(a) In General.\u2014 The three kinds of courts-martial in each of the armed forces are the following: (1) General courts-martial, as described in subsection (b). (2) Special courts -martial, as described in subsection (c). (3) Summary courts-martial, as described in subsection (d). (b) General Courts-martial.\u2014 General courts-martial are of the following three types: (1) A general court-martial consisting of a military judge and eight members, subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29). (2) In a capital case, a general court-martial consisting of a military judge and the number of members determined under section 825a of this title (article 25a), subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29). (3) A general court-martial consisting of a military judge alone, if, before the court is assembled, the accused, knowing the identity of the military judge and after consultation with defense counsel, requests, orally on the record or in writing, a court composed of a military judge alone and the military judge approves the request. (Art. 16, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "16"
+        ],
+        "sentences": [
+          {
+            "text": "(b) General Courts-martial.\u2014 General courts-martial are of the following three types: (1) A general court-martial consisting of a military judge and eight members, subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 8.0574
+          },
+          {
+            "text": "(a) In General.\u2014 The three kinds of courts-martial in each of the armed forces are the following: (1) General courts-martial, as described in subsection (b).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 5.4183
+          },
+          {
+            "text": "(2) In a capital case, a general court-martial consisting of a military judge and the number of members determined under section 825a of this title (article 25a), subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.8677
+          },
+          {
+            "text": "(3) A general court-martial consisting of a military judge alone, if, before the court is assembled, the accused, knowing the identity of the military judge and after consultation with defense counsel, requests, orally on the record or in writing, a court composed of a military judge alone and the military judge approves the request.",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.8677
+          },
+          {
+            "text": "(2) Special courts -martial, as described in subsection (c).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.8677
+          },
+          {
+            "text": "(3) Summary courts-martial, as described in subsection (d).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.8677
+          }
+        ]
+      },
+      "permissive": {
+        "text": "(a) In General.\u2014 The three kinds of courts-martial in each of the armed forces are the following: (1) General courts-martial, as described in subsection (b). (2) Special courts -martial, as described in subsection (c). (3) Summary courts-martial, as described in subsection (d). (b) General Courts-martial.\u2014 General courts-martial are of the following three types: (1) A general court-martial consisting of a military judge and eight members, subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29). (2) In a capital case, a general court-martial consisting of a military judge and the number of members determined under section 825a of this title (article 25a), subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29). (3) A general court-martial consisting of a military judge alone, if, before the court is assembled, the accused, knowing the identity of the military judge and after consultation with defense counsel, requests, orally on the record or in writing, a court composed of a military judge alone and the military judge approves the request. (Art. 16, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "16"
+        ],
+        "sentences": [
+          {
+            "text": "(b) General Courts-martial.\u2014 General courts-martial are of the following three types: (1) A general court-martial consisting of a military judge and eight members, subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 8.0574
+          },
+          {
+            "text": "(a) In General.\u2014 The three kinds of courts-martial in each of the armed forces are the following: (1) General courts-martial, as described in subsection (b).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 5.4183
+          },
+          {
+            "text": "(2) In a capital case, a general court-martial consisting of a military judge and the number of members determined under section 825a of this title (article 25a), subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.8677
+          },
+          {
+            "text": "(3) A general court-martial consisting of a military judge alone, if, before the court is assembled, the accused, knowing the identity of the military judge and after consultation with defense counsel, requests, orally on the record or in writing, a court composed of a military judge alone and the military judge approves the request.",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.8677
+          },
+          {
+            "text": "(2) Special courts -martial, as described in subsection (c).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.8677
+          },
+          {
+            "text": "(3) Summary courts-martial, as described in subsection (d).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.8677
+          }
+        ]
+      }
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "question": "How many members sit on a court-martial panel in a capital case?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12. (b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12. (Art. 25a, UCMJ)\n\n(d) Detail of New Members.\u2014 (1) If, after members are impaneled, the membership of the court-martial is reduced to\u2014 (A) fewer than 12 members with respect to a general court-martial in a capital case; (B) fewer than six members with respect to a general court-martial in a noncapital case; or (C) fewer than four members with respect to a special court-martial; the trial may not proceed unless the convening authority details new members and, from among the members so detailed, the military judge impanels new members sufficient in number to provide the membership specified in paragraph (2). (2) The membership referred to in paragraph (1) is as follows: (A) 12 members with respect to a general court-martial in a capital case. (B) At least six but not more than eight members with respect to a general court-martial in a noncapital case. (C) (Art. 29, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "25a",
+          "29"
+        ],
+        "sentences": [
+          {
+            "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 9.4911
+          },
+          {
+            "text": "(b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 9.4911
+          },
+          {
+            "text": "(d) Detail of New Members.\u2014 (1) If, after members are impaneled, the membership of the court-martial is reduced to\u2014 (A) fewer than 12 members with respect to a general court-martial in a capital case;",
+            "article": "29",
+            "chunk_id": "sec_829.txt::1",
+            "score": 8.9911
+          },
+          {
+            "text": "(B) fewer than six members with respect to a general court-martial in a noncapital case; or (C) fewer than four members with respect to a special court-martial; the trial may not proceed unless the convening authority details new members and, from among the members so detailed, the military judge impanels new members sufficient in number to provide the membership specified in paragraph (2).",
+            "article": "29",
+            "chunk_id": "sec_829.txt::1",
+            "score": 7.8489
+          },
+          {
+            "text": "(2) The membership referred to in paragraph (1) is as follows: (A) 12 members with respect to a general court-martial in a capital case.",
+            "article": "29",
+            "chunk_id": "sec_829.txt::1",
+            "score": 8.9911
+          },
+          {
+            "text": "(B) At least six but not more than eight members with respect to a general court-martial in a noncapital case. (C)",
+            "article": "29",
+            "chunk_id": "sec_829.txt::1",
+            "score": 7.3489
+          }
+        ]
+      },
+      "permissive": {
+        "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12. (b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12. (Art. 25a, UCMJ)\n\n(d) Detail of New Members.\u2014 (1) If, after members are impaneled, the membership of the court-martial is reduced to\u2014 (A) fewer than 12 members with respect to a general court-martial in a capital case; (B) fewer than six members with respect to a general court-martial in a noncapital case; or (C) fewer than four members with respect to a special court-martial; the trial may not proceed unless the convening authority details new members and, from among the members so detailed, the military judge impanels new members sufficient in number to provide the membership specified in paragraph (2). (2) The membership referred to in paragraph (1) is as follows: (A) 12 members with respect to a general court-martial in a capital case. (B) At least six but not more than eight members with respect to a general court-martial in a noncapital case. (C) (Art. 29, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "25a",
+          "29"
+        ],
+        "sentences": [
+          {
+            "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 9.4911
+          },
+          {
+            "text": "(b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 9.4911
+          },
+          {
+            "text": "(d) Detail of New Members.\u2014 (1) If, after members are impaneled, the membership of the court-martial is reduced to\u2014 (A) fewer than 12 members with respect to a general court-martial in a capital case;",
+            "article": "29",
+            "chunk_id": "sec_829.txt::1",
+            "score": 8.9911
+          },
+          {
+            "text": "(B) fewer than six members with respect to a general court-martial in a noncapital case; or (C) fewer than four members with respect to a special court-martial; the trial may not proceed unless the convening authority details new members and, from among the members so detailed, the military judge impanels new members sufficient in number to provide the membership specified in paragraph (2).",
+            "article": "29",
+            "chunk_id": "sec_829.txt::1",
+            "score": 7.8489
+          },
+          {
+            "text": "(2) The membership referred to in paragraph (1) is as follows: (A) 12 members with respect to a general court-martial in a capital case.",
+            "article": "29",
+            "chunk_id": "sec_829.txt::1",
+            "score": 8.9911
+          },
+          {
+            "text": "(B) At least six but not more than eight members with respect to a general court-martial in a noncapital case. (C)",
+            "article": "29",
+            "chunk_id": "sec_829.txt::1",
+            "score": 7.3489
+          }
+        ]
+      }
+    },
+    {
+      "id": "q11",
+      "type": "conditional",
+      "question": "What punishments can a commanding officer impose under Article 15 without a court-martial?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "However, except in the case of a member attached to or embarked in a vessel, punishment may not be imposed upon any member of the armed forces under this article if the member has, before the imposition of such punishment, demanded trial by court-martial in lieu of such punishment. (b) Subject to subsection (a), any commanding officer may, in addition to or in lieu of admonition or reprimand, impose one or more of the following disciplinary punishments for minor offenses without the intervention of a court-martial\u2014 (1) (B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days; (ii) forfeiture of not more than one-half of one month's pay per month for two months; (iii) restriction to certain specified limits, with or without suspension from duty, for not more than 60 consecutive days; (iv) detention of not more than one-half of one month's pay per month for three months; (2) upon other personnel of his command\u2014 (A) (Art. 15, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "15"
+        ],
+        "sentences": [
+          {
+            "text": "(b) Subject to subsection (a), any commanding officer may, in addition to or in lieu of admonition or reprimand, impose one or more of the following disciplinary punishments for minor offenses without the intervention of a court-martial\u2014 (1)",
+            "article": "15",
+            "chunk_id": "sec_815.txt::1",
+            "score": 16.096
+          },
+          {
+            "text": "However, except in the case of a member attached to or embarked in a vessel, punishment may not be imposed upon any member of the armed forces under this article if the member has, before the imposition of such punishment, demanded trial by court-martial in lieu of such punishment.",
+            "article": "15",
+            "chunk_id": "sec_815.txt::1",
+            "score": 11.9864
+          },
+          {
+            "text": "(B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 11.8125
+          },
+          {
+            "text": "(ii) forfeiture of not more than one-half of one month's pay per month for two months;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 9.3864
+          },
+          {
+            "text": "(iii) restriction to certain specified limits, with or without suspension from duty, for not more than 60 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 11.4013
+          },
+          {
+            "text": "(iv) detention of not more than one-half of one month's pay per month for three months;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 9.3864
+          },
+          {
+            "text": "(2) upon other personnel of his command\u2014 (A)",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 7.3864
+          }
+        ]
+      },
+      "permissive": {
+        "text": "However, except in the case of a member attached to or embarked in a vessel, punishment may not be imposed upon any member of the armed forces under this article if the member has, before the imposition of such punishment, demanded trial by court-martial in lieu of such punishment. (b) Subject to subsection (a), any commanding officer may, in addition to or in lieu of admonition or reprimand, impose one or more of the following disciplinary punishments for minor offenses without the intervention of a court-martial\u2014 (1) (B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days; (ii) forfeiture of not more than one-half of one month's pay per month for two months; (iii) restriction to certain specified limits, with or without suspension from duty, for not more than 60 consecutive days; (iv) detention of not more than one-half of one month's pay per month for three months; (2) upon other personnel of his command\u2014 (A) (Art. 15, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "15"
+        ],
+        "sentences": [
+          {
+            "text": "(b) Subject to subsection (a), any commanding officer may, in addition to or in lieu of admonition or reprimand, impose one or more of the following disciplinary punishments for minor offenses without the intervention of a court-martial\u2014 (1)",
+            "article": "15",
+            "chunk_id": "sec_815.txt::1",
+            "score": 16.096
+          },
+          {
+            "text": "However, except in the case of a member attached to or embarked in a vessel, punishment may not be imposed upon any member of the armed forces under this article if the member has, before the imposition of such punishment, demanded trial by court-martial in lieu of such punishment.",
+            "article": "15",
+            "chunk_id": "sec_815.txt::1",
+            "score": 11.9864
+          },
+          {
+            "text": "(B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 11.8125
+          },
+          {
+            "text": "(ii) forfeiture of not more than one-half of one month's pay per month for two months;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 9.3864
+          },
+          {
+            "text": "(iii) restriction to certain specified limits, with or without suspension from duty, for not more than 60 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 11.4013
+          },
+          {
+            "text": "(iv) detention of not more than one-half of one month's pay per month for three months;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 9.3864
+          },
+          {
+            "text": "(2) upon other personnel of his command\u2014 (A)",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 7.3864
+          }
+        ]
+      }
+    },
+    {
+      "id": "q12",
+      "type": "conditional",
+      "question": "What has to happen before charges can be referred to a general court-martial?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "(a) In General.\u2014 Trial counsel detailed for a court-martial under section 827 of this title (article 27) shall cause to be served upon the accused a copy of the charges and specifications referred for trial. (Art. 35, UCMJ)\n\n(a) In General.\u2014 (1) The President shall prescribe regulations for matters relating to proceedings conducted before referral of charges and specifications to court-martial for trial, including the following: (A) Pre-referral investigative subpoenas. (B) Pre-referral warrants or orders for electronic communications. (C) Pre-referral matters referred by an appellate court. (D) Pre-referral matters under subsection (c) or (e) of section 806b of this title (article 6b). (E) Pre-referral matters relating to the following: (i) Pre-trial confinement of an accused. (ii) The mental capacity or mental responsibility of an accused. (iii) A request for an individual military counsel. (2) In addition to the matters specified in paragraph (1), the regulations prescribed under that paragraph shall\u2014 (A) set forth the matters that a military judge may rule upon in such proceedings; (B) include procedures for the review of such rulings; (C) include appropriate limitations to ensure that proceedings under this section extend only to matters that would be subject to consideration by a military judge in a general or special court-martial; and (D) (3) If any matter in a proceeding under this section becomes a subject at issue with respect to charges that have been referred to a general or special court-martial, the matter shall be transferred to the military judge detailed to the court-martial. (Art. 30a, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "35",
+          "30a"
+        ],
+        "sentences": [
+          {
+            "text": "(3) If any matter in a proceeding under this section becomes a subject at issue with respect to charges that have been referred to a general or special court-martial, the matter shall be transferred to the military judge detailed to the court-martial.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::1",
+            "score": 9.4833
+          },
+          {
+            "text": "(a) In General.\u2014 Trial counsel detailed for a court-martial under section 827 of this title (article 27) shall cause to be served upon the accused a copy of the charges and specifications referred for trial.",
+            "article": "35",
+            "chunk_id": "sec_835.txt::0",
+            "score": 7.627
+          },
+          {
+            "text": "(a) In General.\u2014 (1) The President shall prescribe regulations for matters relating to proceedings conducted before referral of charges and specifications to court-martial for trial, including the following: (A) Pre-referral investigative subpoenas.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 7.1807
+          },
+          {
+            "text": "(B) Pre-referral warrants or orders for electronic communications.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 0.4641
+          },
+          {
+            "text": "(C) Pre-referral matters referred by an appellate court.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 5.2334
+          },
+          {
+            "text": "(D) Pre-referral matters under subsection (c) or (e) of section 806b of this title (article 6b).",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 0.4641
+          },
+          {
+            "text": "(E) Pre-referral matters relating to the following: (i) Pre-trial confinement of an accused.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 0.4641
+          },
+          {
+            "text": "(ii) The mental capacity or mental responsibility of an accused.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 0.4641
+          },
+          {
+            "text": "(iii) A request for an individual military counsel.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 0.4641
+          },
+          {
+            "text": "(2) In addition to the matters specified in paragraph (1), the regulations prescribed under that paragraph shall\u2014 (A) set forth the matters that a military judge may rule upon in such proceedings;",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 0.5891
+          },
+          {
+            "text": "(B) include procedures for the review of such rulings;",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 0.4641
+          },
+          {
+            "text": "(C) include appropriate limitations to ensure that proceedings under this section extend only to matters that would be subject to consideration by a military judge in a general or special court-martial; and (D)",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 5.2944
+          }
+        ]
+      },
+      "permissive": {
+        "text": "(a) In General.\u2014 Trial counsel detailed for a court-martial under section 827 of this title (article 27) shall cause to be served upon the accused a copy of the charges and specifications referred for trial. (Art. 35, UCMJ)\n\n(a) In General.\u2014 (1) The President shall prescribe regulations for matters relating to proceedings conducted before referral of charges and specifications to court-martial for trial, including the following: (A) Pre-referral investigative subpoenas. (B) Pre-referral warrants or orders for electronic communications. (C) Pre-referral matters referred by an appellate court. (D) Pre-referral matters under subsection (c) or (e) of section 806b of this title (article 6b). (E) Pre-referral matters relating to the following: (i) Pre-trial confinement of an accused. (ii) The mental capacity or mental responsibility of an accused. (iii) A request for an individual military counsel. (2) In addition to the matters specified in paragraph (1), the regulations prescribed under that paragraph shall\u2014 (A) set forth the matters that a military judge may rule upon in such proceedings; (B) include procedures for the review of such rulings; (C) include appropriate limitations to ensure that proceedings under this section extend only to matters that would be subject to consideration by a military judge in a general or special court-martial; and (D) (3) If any matter in a proceeding under this section becomes a subject at issue with respect to charges that have been referred to a general or special court-martial, the matter shall be transferred to the military judge detailed to the court-martial. (Art. 30a, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "35",
+          "30a"
+        ],
+        "sentences": [
+          {
+            "text": "(3) If any matter in a proceeding under this section becomes a subject at issue with respect to charges that have been referred to a general or special court-martial, the matter shall be transferred to the military judge detailed to the court-martial.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::1",
+            "score": 9.4833
+          },
+          {
+            "text": "(a) In General.\u2014 Trial counsel detailed for a court-martial under section 827 of this title (article 27) shall cause to be served upon the accused a copy of the charges and specifications referred for trial.",
+            "article": "35",
+            "chunk_id": "sec_835.txt::0",
+            "score": 7.627
+          },
+          {
+            "text": "(a) In General.\u2014 (1) The President shall prescribe regulations for matters relating to proceedings conducted before referral of charges and specifications to court-martial for trial, including the following: (A) Pre-referral investigative subpoenas.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 7.1807
+          },
+          {
+            "text": "(B) Pre-referral warrants or orders for electronic communications.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 1.8563
+          },
+          {
+            "text": "(C) Pre-referral matters referred by an appellate court.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 5.2334
+          },
+          {
+            "text": "(D) Pre-referral matters under subsection (c) or (e) of section 806b of this title (article 6b).",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 1.8563
+          },
+          {
+            "text": "(E) Pre-referral matters relating to the following: (i) Pre-trial confinement of an accused.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 1.8563
+          },
+          {
+            "text": "(ii) The mental capacity or mental responsibility of an accused.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 1.8563
+          },
+          {
+            "text": "(iii) A request for an individual military counsel.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 1.8563
+          },
+          {
+            "text": "(2) In addition to the matters specified in paragraph (1), the regulations prescribed under that paragraph shall\u2014 (A) set forth the matters that a military judge may rule upon in such proceedings;",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 2.3563
+          },
+          {
+            "text": "(B) include procedures for the review of such rulings;",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 1.8563
+          },
+          {
+            "text": "(C) include appropriate limitations to ensure that proceedings under this section extend only to matters that would be subject to consideration by a military judge in a general or special court-martial; and (D)",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::0",
+            "score": 5.2944
+          }
+        ]
+      }
+    },
+    {
+      "id": "q13",
+      "type": "factual_lookup",
+      "question": "Can a military officer be punished for insulting the President?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "Any commissioned officer who uses contemptuous words against the President, the Vice President , Congress , the Secretary of Defense , the Secretary of a military department, the Secretary of Homeland Security , or the Governor or legislature of any State, Commonwealth, or possession in which he is on duty or present shall be punished as a court-martial may direct. (Art. 88, UCMJ)\n\n(b) Abuse of Position as Military Recruiter.\u2014 Any person subject to this chapter\u2014 (1) who is a military recruiter and engages in prohibited sexual activity with an applicant for military service ; or (2) who is a military recruiter and engages in prohibited sexual activity with a specially protected junior member of the armed forces who is enlisted under a delayed entry program; shall be punished as a court-martial may direct. (Art. 93a, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "88",
+          "93a"
+        ],
+        "sentences": [
+          {
+            "text": "Any commissioned officer who uses contemptuous words against the President, the Vice President , Congress , the Secretary of Defense , the Secretary of a military department, the Secretary of Homeland Security , or the Governor or legislature of any State, Commonwealth, or possession in which he is on duty or present shall be punished as a court-martial may direct.",
+            "article": "88",
+            "chunk_id": "sec_888.txt::0",
+            "score": 6.4068
+          },
+          {
+            "text": "(b) Abuse of Position as Military Recruiter.\u2014 Any person subject to this chapter\u2014 (1) who is a military recruiter and engages in prohibited sexual activity with an applicant for military service ; or (2) who is a military recruiter and engages in prohibited sexual activity with a specially protected junior member of the armed forces who is enlisted under a delayed entry program; shall be punished as a court-martial may direct.",
+            "article": "93a",
+            "chunk_id": "sec_893a.txt::0",
+            "score": 3.8868
+          }
+        ]
+      },
+      "permissive": {
+        "text": "Any commissioned officer who uses contemptuous words against the President, the Vice President , Congress , the Secretary of Defense , the Secretary of a military department, the Secretary of Homeland Security , or the Governor or legislature of any State, Commonwealth, or possession in which he is on duty or present shall be punished as a court-martial may direct. (Art. 88, UCMJ)\n\n(2) who is in a training leadership position with respect to a specially protected junior member of the armed forces ; and (3) who engages in prohibited sexual activity with such specially protected junior member of the armed forces ; shall be punished as a court-martial may direct. (b) Abuse of Position as Military Recruiter.\u2014 Any person subject to this chapter\u2014 (1) who is a military recruiter and engages in prohibited sexual activity with an applicant for military service ; or (2) who is a military recruiter and engages in prohibited sexual activity with a specially protected junior member of the armed forces who is enlisted under a delayed entry program; shall be punished as a court-martial may direct. (Art. 93a, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "88",
+          "93a"
+        ],
+        "sentences": [
+          {
+            "text": "Any commissioned officer who uses contemptuous words against the President, the Vice President , Congress , the Secretary of Defense , the Secretary of a military department, the Secretary of Homeland Security , or the Governor or legislature of any State, Commonwealth, or possession in which he is on duty or present shall be punished as a court-martial may direct.",
+            "article": "88",
+            "chunk_id": "sec_888.txt::0",
+            "score": 6.4068
+          },
+          {
+            "text": "(2) who is in a training leadership position with respect to a specially protected junior member of the armed forces ; and (3) who engages in prohibited sexual activity with such specially protected junior member of the armed forces ; shall be punished as a court-martial may direct.",
+            "article": "93a",
+            "chunk_id": "sec_893a.txt::0",
+            "score": 3.8868
+          },
+          {
+            "text": "(b) Abuse of Position as Military Recruiter.\u2014 Any person subject to this chapter\u2014 (1) who is a military recruiter and engages in prohibited sexual activity with an applicant for military service ; or (2) who is a military recruiter and engages in prohibited sexual activity with a specially protected junior member of the armed forces who is enlisted under a delayed entry program; shall be punished as a court-martial may direct.",
+            "article": "93a",
+            "chunk_id": "sec_893a.txt::0",
+            "score": 3.8868
+          }
+        ]
+      }
+    },
+    {
+      "id": "q14",
+      "type": "comparative",
+      "question": "What is the difference between conduct unbecoming an officer and the general article?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "Any commissioned officer, cadet , or midshipman who is convicted of conduct unbecoming an officer shall be punished as a court-martial may direct. (Art. 133, UCMJ)\n\nA senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B) the daily equivalent of the annuity of the judge under section 945 of this title (article 145), the applicable provisions of title 5, or any other retirement system for employees of the Federal Government under which the senior judge receives an annuity. (Art. 142, UCMJ)\n\nIf the President fails to convene a general court-martial within six months from the presentation of an application for trial under this article, the Secretary concerned shall substitute for the dismissal ordered by the President a form of discharge authorized for administrative issue. (Art. 4, UCMJ)\n\n(2) A senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B) (Art. 142, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "133",
+          "142",
+          "4"
+        ],
+        "sentences": [
+          {
+            "text": "Any commissioned officer, cadet , or midshipman who is convicted of conduct unbecoming an officer shall be punished as a court-martial may direct.",
+            "article": "133",
+            "chunk_id": "sec_933.txt::0",
+            "score": 7.1908
+          },
+          {
+            "text": "If the President fails to convene a general court-martial within six months from the presentation of an application for trial under this article, the Secretary concerned shall substitute for the dismissal ordered by the President a form of discharge authorized for administrative issue.",
+            "article": "4",
+            "chunk_id": "sec_804.txt::2",
+            "score": 6.9457
+          },
+          {
+            "text": "A senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B) the daily equivalent of the annuity of the judge under section 945 of this title (article 145), the applicable provisions of title 5, or any other retirement system for employees of the Federal Government under which the senior judge receives an annuity.",
+            "article": "142",
+            "chunk_id": "sec_942.txt::6",
+            "score": 6.4814
+          },
+          {
+            "text": "(2) A senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B)",
+            "article": "142",
+            "chunk_id": "sec_942.txt::5",
+            "score": 4.6897
+          }
+        ]
+      },
+      "permissive": {
+        "text": "Any commissioned officer, cadet , or midshipman who is convicted of conduct unbecoming an officer shall be punished as a court-martial may direct. (Art. 133, UCMJ)\n\nA senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B) the daily equivalent of the annuity of the judge under section 945 of this title (article 145), the applicable provisions of title 5, or any other retirement system for employees of the Federal Government under which the senior judge receives an annuity. (Art. 142, UCMJ)\n\nIf the President fails to convene a general court-martial within six months from the presentation of an application for trial under this article, the Secretary concerned shall substitute for the dismissal ordered by the President a form of discharge authorized for administrative issue. (Art. 4, UCMJ)\n\n(2) A senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B) (Art. 142, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "133",
+          "142",
+          "4"
+        ],
+        "sentences": [
+          {
+            "text": "Any commissioned officer, cadet , or midshipman who is convicted of conduct unbecoming an officer shall be punished as a court-martial may direct.",
+            "article": "133",
+            "chunk_id": "sec_933.txt::0",
+            "score": 7.1908
+          },
+          {
+            "text": "If the President fails to convene a general court-martial within six months from the presentation of an application for trial under this article, the Secretary concerned shall substitute for the dismissal ordered by the President a form of discharge authorized for administrative issue.",
+            "article": "4",
+            "chunk_id": "sec_804.txt::2",
+            "score": 6.9457
+          },
+          {
+            "text": "A senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B) the daily equivalent of the annuity of the judge under section 945 of this title (article 145), the applicable provisions of title 5, or any other retirement system for employees of the Federal Government under which the senior judge receives an annuity.",
+            "article": "142",
+            "chunk_id": "sec_942.txt::6",
+            "score": 6.4814
+          },
+          {
+            "text": "(2) A senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B)",
+            "article": "142",
+            "chunk_id": "sec_942.txt::5",
+            "score": 4.6897
+          }
+        ]
+      }
+    },
+    {
+      "id": "q15",
+      "type": "factual_lookup",
+      "question": "Does the UCMJ prohibit cruel and unusual punishment?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "Punishment by flogging, or by branding, marking, or tattooing on the body, or any other cruel or unusual punishment, may not be adjudged by any court-martial or inflicted upon any person subject to this chapter. The use of irons, single or double, except for the purpose of safe custody, is prohibited. (Art. 55, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "55"
+        ],
+        "sentences": [
+          {
+            "text": "Punishment by flogging, or by branding, marking, or tattooing on the body, or any other cruel or unusual punishment, may not be adjudged by any court-martial or inflicted upon any person subject to this chapter.",
+            "article": "55",
+            "chunk_id": "sec_855.txt::0",
+            "score": 8.7666
+          },
+          {
+            "text": "The use of irons, single or double, except for the purpose of safe custody, is prohibited.",
+            "article": "55",
+            "chunk_id": "sec_855.txt::0",
+            "score": 8.4666
+          }
+        ]
+      },
+      "permissive": {
+        "text": "Punishment by flogging, or by branding, marking, or tattooing on the body, or any other cruel or unusual punishment, may not be adjudged by any court-martial or inflicted upon any person subject to this chapter. The use of irons, single or double, except for the purpose of safe custody, is prohibited. (Art. 55, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "55"
+        ],
+        "sentences": [
+          {
+            "text": "Punishment by flogging, or by branding, marking, or tattooing on the body, or any other cruel or unusual punishment, may not be adjudged by any court-martial or inflicted upon any person subject to this chapter.",
+            "article": "55",
+            "chunk_id": "sec_855.txt::0",
+            "score": 8.7666
+          },
+          {
+            "text": "The use of irons, single or double, except for the purpose of safe custody, is prohibited.",
+            "article": "55",
+            "chunk_id": "sec_855.txt::0",
+            "score": 8.4666
+          }
+        ]
+      }
+    },
+    {
+      "id": "q16",
+      "type": "conditional",
+      "question": "What does the UCMJ say about disobeying an order or regulation?",
+      "answerable_from_corpus": true,
+      "grounded": {
+        "text": "Any person subject to this chapter who\u2014 (1) violates or fails to obey any lawful general order or regulation; (2) having knowledge of any other lawful order issued by a member of the armed forces, which it is his duty to obey, fails to obey the order; or (3) is derelict in the performance of his duties; shall be punished as a court-martial may direct. (Art. 92, UCMJ)\n\n(c) If, after appeal by the Government under section 856(d) of this title (article 56(d)), the sentence adjudged is set aside and a rehearing on sentence is ordered by the Court of Criminal Appeals or Court of Appeals for the Armed Forces, the court-martial may impose any sentence that is in accordance with the order or ruling setting aside the adjudged sentence, subject to such limitations as the President may prescribe by regulation. (Art. 63, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "92",
+          "63"
+        ],
+        "sentences": [
+          {
+            "text": "(2) having knowledge of any other lawful order issued by a member of the armed forces, which it is his duty to obey, fails to obey the order; or (3) is derelict in the performance of his duties; shall be punished as a court-martial may direct.",
+            "article": "92",
+            "chunk_id": "sec_892.txt::0",
+            "score": 3.3938
+          },
+          {
+            "text": "Any person subject to this chapter who\u2014 (1) violates or fails to obey any lawful general order or regulation;",
+            "article": "92",
+            "chunk_id": "sec_892.txt::0",
+            "score": 3.1938
+          },
+          {
+            "text": "(c) If, after appeal by the Government under section 856(d) of this title (article 56(d)), the sentence adjudged is set aside and a rehearing on sentence is ordered by the Court of Criminal Appeals or Court of Appeals for the Armed Forces, the court-martial may impose any sentence that is in accordance with the order or ruling setting aside the adjudged sentence, subject to such limitations as the President may prescribe by regulation.",
+            "article": "63",
+            "chunk_id": "sec_863.txt::2",
+            "score": 2.8938
+          }
+        ]
+      },
+      "permissive": {
+        "text": "Any person subject to this chapter who\u2014 (1) violates or fails to obey any lawful general order or regulation; (2) having knowledge of any other lawful order issued by a member of the armed forces, which it is his duty to obey, fails to obey the order; or (3) is derelict in the performance of his duties; shall be punished as a court-martial may direct. (Art. 92, UCMJ)\n\nAny person subject to this chapter who willfully disobeys a lawful command of that person's superior commissioned officer shall be punished\u2014 (1) if the offense is committed in time of war, by death or such other punishment as a court-martial may direct; and (2) if the offense is committed at any other time, by such punishment, other than death, as a court-martial may direct. (Art. 90, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "92",
+          "90"
+        ],
+        "sentences": [
+          {
+            "text": "Any person subject to this chapter who willfully disobeys a lawful command of that person's superior commissioned officer shall be punished\u2014 (1) if the offense is committed in time of war, by death or such other punishment as a court-martial may direct; and (2) if the offense is committed at any other time, by such punishment, other than death, as a court-martial may direct.",
+            "article": "90",
+            "chunk_id": "sec_890.txt::0",
+            "score": 3.4391
+          },
+          {
+            "text": "(2) having knowledge of any other lawful order issued by a member of the armed forces, which it is his duty to obey, fails to obey the order; or (3) is derelict in the performance of his duties; shall be punished as a court-martial may direct.",
+            "article": "92",
+            "chunk_id": "sec_892.txt::0",
+            "score": 3.3938
+          },
+          {
+            "text": "Any person subject to this chapter who\u2014 (1) violates or fails to obey any lawful general order or regulation;",
+            "article": "92",
+            "chunk_id": "sec_892.txt::0",
+            "score": 3.1938
+          }
+        ]
+      }
+    },
+    {
+      "id": "q17",
+      "type": "statute_boundary",
+      "question": "What is the maximum confinement for being AWOL for more than 30 days?",
+      "answerable_from_corpus": false,
+      "grounded": {
+        "text": "The statute does not contain this figure. The UCMJ typically provides punishment 'as a court-martial may direct'; the specific maximum punishments are set in the Manual for Courts-Martial punishment tables, which are not part of this corpus.",
+        "refused": true,
+        "boundary": true,
+        "cited_articles": [],
+        "sentences": []
+      },
+      "permissive": {
+        "text": "(b) Subject to subsection (a), any commanding officer may, in addition to or in lieu of admonition or reprimand, impose one or more of the following disciplinary punishments for minor offenses without the intervention of a court-martial\u2014 (1) upon officers of his command\u2014 (A) restriction to certain specified limits, with or without suspension from duty, for not more than 30 consecutive days; (B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days; (ii) forfeiture of not more than one-half of one month's pay per month for two months; (iii) restriction to certain specified limits, with or without suspension from duty, for not more than 60 consecutive days; (iv) detention of not more than one-half of one month's pay per month for three months; (2) upon other personnel of his command\u2014 (A) (Art. 15, UCMJ)\n\n(b) Punishment.\u2014 The punishment for contempt under subsection (a) may not exceed confinement for 30 days, a fine of $1,000, or both. (Art. 48, UCMJ)\n\n(2) upon other personnel of his command\u2014 (A) if imposed upon a person attached to or embarked in a vessel, confinement for not more than three consecutive days; (B) correctional custody for not more than seven consecutive days; (C) forfeiture of not more than seven days' pay; (D) reduction to the next inferior pay grade, if the grade from which demoted is within the promotion authority of the officer imposing the reduction or any officer subordinate to the one who imposes the reduction; (E) extra duties, including fatigue or other duties, for not more than 14 consecutive days; (F) restriction to certain specified limits, with or without suspension from duty, for not more than 14 consecutive days; (G) detention of not more than 14 days' pay; (H) if imposed by an officer of the grade of major or lieutenant commander, or above\u2014 (i) (Art. 15, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "15",
+          "48"
+        ],
+        "sentences": [
+          {
+            "text": "(b) Punishment.\u2014 The punishment for contempt under subsection (a) may not exceed confinement for 30 days, a fine of $1,000, or both.",
+            "article": "48",
+            "chunk_id": "sec_848.txt::1",
+            "score": 8.4343
+          },
+          {
+            "text": "(2) upon other personnel of his command\u2014 (A) if imposed upon a person attached to or embarked in a vessel, confinement for not more than three consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::3",
+            "score": 5.657
+          },
+          {
+            "text": "(b) Subject to subsection (a), any commanding officer may, in addition to or in lieu of admonition or reprimand, impose one or more of the following disciplinary punishments for minor offenses without the intervention of a court-martial\u2014 (1) upon officers of his command\u2014 (A) restriction to certain specified limits, with or without suspension from duty, for not more than 30 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 5.3953
+          },
+          {
+            "text": "(B) correctional custody for not more than seven consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::3",
+            "score": 3.118
+          },
+          {
+            "text": "(C) forfeiture of not more than seven days' pay;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::3",
+            "score": 3.118
+          },
+          {
+            "text": "(D) reduction to the next inferior pay grade, if the grade from which demoted is within the promotion authority of the officer imposing the reduction or any officer subordinate to the one who imposes the reduction;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::3",
+            "score": 2.0
+          },
+          {
+            "text": "(E) extra duties, including fatigue or other duties, for not more than 14 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::3",
+            "score": 3.118
+          },
+          {
+            "text": "(F) restriction to certain specified limits, with or without suspension from duty, for not more than 14 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::3",
+            "score": 3.118
+          },
+          {
+            "text": "(G) detention of not more than 14 days' pay;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::3",
+            "score": 3.118
+          },
+          {
+            "text": "(H) if imposed by an officer of the grade of major or lieutenant commander, or above\u2014 (i)",
+            "article": "15",
+            "chunk_id": "sec_815.txt::3",
+            "score": 0
+          },
+          {
+            "text": "(B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 5.3953
+          },
+          {
+            "text": "(ii) forfeiture of not more than one-half of one month's pay per month for two months;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 2.0
+          },
+          {
+            "text": "(iii) restriction to certain specified limits, with or without suspension from duty, for not more than 60 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 3.118
+          },
+          {
+            "text": "(iv) detention of not more than one-half of one month's pay per month for three months;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 2.0
+          },
+          {
+            "text": "(2) upon other personnel of his command\u2014 (A)",
+            "article": "15",
+            "chunk_id": "sec_815.txt::2",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "q18",
+      "type": "out_of_corpus",
+      "question": "What does Rule for Courts-Martial 707 require for a speedy trial?",
+      "answerable_from_corpus": false,
+      "grounded": {
+        "text": "This question asks about material from the Manual for Courts-Martial (which includes the Rules for Courts-Martial), not the UCMJ statute. This corpus contains only the statutory text of 10 U.S.C. chapter 47, so it cannot answer this.",
+        "refused": true,
+        "boundary": true,
+        "cited_articles": [],
+        "sentences": []
+      },
+      "permissive": {
+        "text": "(e) Enforcement by Court of Criminal Appeals.\u2014 (1) If the victim of an offense under this chapter believes that a preliminary hearing ruling under section 832 of this title (article 32) or a court-martial ruling violates the rights of the victim afforded by a section (article) or rule specified in paragraph (4), the victim may petition the Court of Criminal Appeals for a writ of mandamus to require the preliminary hearing officer or the court-martial to comply with the section (article) or rule. (Art. 6b, UCMJ)\n\n(B) descriptions of the circumstances surrounding cases in which general or special court-martial convictions were (i) reversed because of command influence or denial of the right to speedy review or (ii) otherwise remitted because of loss of records of trial or other administrative deficiencies; (C) an analysis of each case in which a provision of this chapter was held unconstitutional; and (D) an analysis of each case in which a Court of Criminal Appeals made a final determination that a finding of a court-martial was clearly against the weight of the evidence, including an explanation of the standard of appellate review applied in such case. (4) (A) (Art. 146a, UCMJ)\n\n(2) Before a court-martial with a military judge and members is assembled for trial, an enlisted member who is an accused may personally request, orally on the record or in writing, that\u2014 (A) the membership of the court-martial be comprised entirely of officers; or (B) enlisted members comprise at least one-third of the membership of the court-martial, regardless of whether enlisted members have been detailed to the court-martial. (3) (Art. 25, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "6b",
+          "146a",
+          "25"
+        ],
+        "sentences": [
+          {
+            "text": "(e) Enforcement by Court of Criminal Appeals.\u2014 (1) If the victim of an offense under this chapter believes that a preliminary hearing ruling under section 832 of this title (article 32) or a court-martial ruling violates the rights of the victim afforded by a section (article) or rule specified in paragraph (4), the victim may petition the Court of Criminal Appeals for a writ of mandamus to require the preliminary hearing officer or the court-martial to comply with the section (article) or rule.",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::4",
+            "score": 8.3754
+          },
+          {
+            "text": "(B) descriptions of the circumstances surrounding cases in which general or special court-martial convictions were (i) reversed because of command influence or denial of the right to speedy review or (ii) otherwise remitted because of loss of records of trial or other administrative deficiencies;",
+            "article": "146a",
+            "chunk_id": "sec_946a.txt::1",
+            "score": 7.2991
+          },
+          {
+            "text": "(2) Before a court-martial with a military judge and members is assembled for trial, an enlisted member who is an accused may personally request, orally on the record or in writing, that\u2014 (A) the membership of the court-martial be comprised entirely of officers; or (B) enlisted members comprise at least one-third of the membership of the court-martial, regardless of whether enlisted members have been detailed to the court-martial. (3)",
+            "article": "25",
+            "chunk_id": "sec_825.txt::0",
+            "score": 6.0802
+          },
+          {
+            "text": "(C) an analysis of each case in which a provision of this chapter was held unconstitutional; and (D) an analysis of each case in which a Court of Criminal Appeals made a final determination that a finding of a court-martial was clearly against the weight of the evidence, including an explanation of the standard of appellate review applied in such case. (4) (A)",
+            "article": "146a",
+            "chunk_id": "sec_946a.txt::1",
+            "score": 2.3224
+          }
+        ]
+      }
+    }
+  ]
+}

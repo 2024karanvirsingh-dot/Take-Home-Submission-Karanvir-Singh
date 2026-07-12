@@ -5,54 +5,125 @@
     "overlap_words": 40,
     "k": 5,
     "stem": false,
-    "tag": "bm25_cw120"
+    "policy": "grounded",
+    "tag": "bm25_cw120",
+    "answer_builder_version": "local-v1",
+    "python_version": "3.9.6"
+  },
+  "aggregate": {
+    "n_retrieval_scored": 16,
+    "hit_at_1": 9,
+    "hit_at_3": 11,
+    "hit_at_5": 11,
+    "missed": 5,
+    "mrr": 0.6146,
+    "all_gold_retrieved": 10,
+    "multi_gold_questions": 2,
+    "multi_gold_fully_covered": 1,
+    "answerable_refused": 3,
+    "controls_refused": 2,
+    "n_controls": 2
   },
   "records": [
     {
       "id": "q01",
       "type": "numeric",
       "question": "What punishment does the UCMJ authorize for premeditated murder?",
-      "gold_citation": "Art. 118, UCMJ",
-      "gold_answer": "A person found guilty of premeditated murder (or felony murder) shall suffer death or imprisonment for life as a court-martial may direct. This is one of the few offenses where the statute itself fixes the punishment.",
+      "gold_articles": [
+        "118"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 118, UCMJ (10 U.S.C. \u00a7 918) (part 1)",
+          "article": "118",
           "type": "punitive",
           "title": "Murder",
-          "score": 12.5564,
+          "score": 12.5239,
           "id": "sec_918.txt::0"
         },
         {
           "citation": "Art. 118, UCMJ (10 U.S.C. \u00a7 918) (part 2)",
+          "article": "118",
           "type": "punitive",
           "title": "Murder",
-          "score": 9.3306,
+          "score": 9.231,
           "id": "sec_918.txt::1"
         },
         {
           "citation": "Art. 118, UCMJ (10 U.S.C. \u00a7 918) (part 3)",
+          "article": "118",
           "type": "punitive",
           "title": "Murder",
-          "score": 9.0882,
+          "score": 8.9834,
           "id": "sec_918.txt::2"
         },
         {
           "citation": "Art. 9, UCMJ (10 U.S.C. \u00a7 809) (part 1)",
+          "article": "9",
           "type": "procedural",
           "title": "Imposition of restraint",
-          "score": 8.0911,
+          "score": 8.0074,
           "id": "sec_809.txt::0"
         },
         {
-          "citation": "Art. 81, UCMJ (10 U.S.C. \u00a7 881) (part 2)",
-          "type": "punitive",
-          "title": "Conspiracy",
-          "score": 6.994,
-          "id": "sec_881.txt::1"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9)",
+          "article": "146",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.658,
+          "id": "sec_946.txt::8"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 118, UCMJ (10 U.S.C. \u00a7 918) (part 1):\nAny person subject to this chapter who, without justification or excuse, unlawfully kills a human being, when such person\u2014 (1) has a premeditated design to kill; (2) intends to kill or inflict great bodily harm; (3) is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, ...",
-      "gold_rank": 1,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "118": 1
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "Any person subject to this chapter who, without justification or excuse, unlawfully kills a human being, when such person\u2014 (1) has a premeditated design to kill; (2) intends to kill or inflict great bodily harm; (3) is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, sexual abuse of a child, robbery, or aggravated arson; is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, sexual abuse of a child, robbery, or aggravated arson; is guilty of murder, and shall suffer such punishment as a court-martial may direct, except that if found guilty under clause (1) or (4), such person shall suffer death or imprisonment for life as a court-martial may direct, unless such person is otherwise sentenced in accordance with a plea agreement entered into between the parties under section 853a of this title (article 53a). (Art. 118, UCMJ)\n\nA commanding officer may authorize warrant officers, petty officers, or noncommissioned officers to order enlisted members of his command or subject to his authority into arrest or confinement. (c) (Art. 9, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "118",
+          "9"
+        ],
+        "sentences": [
+          {
+            "text": "Any person subject to this chapter who, without justification or excuse, unlawfully kills a human being, when such person\u2014 (1) has a premeditated design to kill;",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 4.6567
+          },
+          {
+            "text": "is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, sexual abuse of a child, robbery, or aggravated arson; is guilty of murder, and shall suffer such punishment as a court-martial may direct, except that if found guilty under clause (1) or (4), such person shall suffer death or imprisonment for life as a court-martial may direct, unless such person is otherwise sentenced in accordance with a plea agreement entered into between the parties under section 853a of this title (article 53a).",
+            "article": "118",
+            "chunk_id": "sec_918.txt::1",
+            "score": 3.9122
+          },
+          {
+            "text": "A commanding officer may authorize warrant officers, petty officers, or noncommissioned officers to order enlisted members of his command or subject to his authority into arrest or confinement. (c)",
+            "article": "9",
+            "chunk_id": "sec_809.txt::0",
+            "score": 2.4849
+          },
+          {
+            "text": "(2) intends to kill or inflict great bodily harm;",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 1.8718
+          },
+          {
+            "text": "(3) is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, sexual abuse of a child, robbery, or aggravated arson;",
+            "article": "118",
+            "chunk_id": "sec_918.txt::0",
+            "score": 1.8718
+          }
+        ]
+      },
       "top_matched_terms": [
         "premeditated",
         "murder"
@@ -62,47 +133,94 @@
       "id": "q02",
       "type": "limitations",
       "question": "What is the statute of limitations for most offenses under the UCMJ?",
-      "gold_citation": "Art. 43, UCMJ",
-      "gold_answer": "Five years from the date of the offense for most offenses. Murder, rape, rape of a child, sexual assault, sexual assault of a child, and absence without leave or missing movement in time of war may be tried and punished at any time without limitation.",
+      "gold_articles": [
+        "43"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 9)",
+          "article": "43",
           "type": "procedural",
           "title": "Statute of limitations",
-          "score": 13.8589,
+          "score": 13.6911,
           "id": "sec_843.txt::8"
         },
         {
           "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 10)",
+          "article": "43",
           "type": "procedural",
           "title": "Statute of limitations",
-          "score": 12.3506,
+          "score": 12.2472,
           "id": "sec_843.txt::9"
         },
         {
           "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 13)",
+          "article": "43",
           "type": "procedural",
           "title": "Statute of limitations",
-          "score": 10.7143,
+          "score": 10.7725,
           "id": "sec_843.txt::12"
         },
         {
           "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 4)",
+          "article": "43",
           "type": "procedural",
           "title": "Statute of limitations",
-          "score": 10.7018,
+          "score": 10.6683,
           "id": "sec_843.txt::3"
         },
         {
           "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 8)",
+          "article": "43",
           "type": "procedural",
           "title": "Statute of limitations",
-          "score": 10.4767,
+          "score": 10.4818,
           "id": "sec_843.txt::7"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 9):\nExtension for Offenses in Time of War Detrimental to Prosecution of War.\u2014 For an offense the trial of which in time of war is certified to the President by the Secretary concerned to be detrimental to the prosecution of the war or inimical to the national security , the period of limitation prescribed in this article is extended to six months after the termination of hostilities as proclaimed by the President or by a joint resolution of Congress . (f) Extension for Other Offenses in Time of ...",
-      "gold_rank": 1,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "43": 1
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "Extension for Offenses in Time of War Detrimental to Prosecution of War.\u2014 For an offense the trial of which in time of war is certified to the President by the Secretary concerned to be detrimental to the prosecution of the war or inimical to the national security , the period of limitation prescribed in this article is extended to six months after the termination of hostilities as proclaimed by the President or by a joint resolution of Congress . \" means an act that involves abuse of a person who has not attained the age of 16 years and constitutes any of the following offenses: (i) Any offense in violation of section 920 , 920a , 920b , 920c , or 930 of this title (article 120, 120a, 120b, 120c, or 130), unless the offense is covered by subsection (a). (ii) Aggravated assault, assault consummated by a battery, or assault with intent to commit specified offenses in violation of section 928 of this title (article 128). (C) In subparagraph (A), the term \" child abuse offense (Art. 43, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "43"
+        ],
+        "sentences": [
+          {
+            "text": "Extension for Offenses in Time of War Detrimental to Prosecution of War.\u2014 For an offense the trial of which in time of war is certified to the President by the Secretary concerned to be detrimental to the prosecution of the war or inimical to the national security , the period of limitation prescribed in this article is extended to six months after the termination of hostilities as proclaimed by the President or by a joint resolution of Congress .",
+            "article": "43",
+            "chunk_id": "sec_843.txt::8",
+            "score": 5.8765
+          },
+          {
+            "text": "\" means an act that involves abuse of a person who has not attained the age of 16 years and constitutes any of the following offenses: (i) Any offense in violation of section 920 , 920a , 920b , 920c , or 930 of this title (article 120, 120a, 120b, 120c, or 130), unless the offense is covered by subsection (a).",
+            "article": "43",
+            "chunk_id": "sec_843.txt::3",
+            "score": 5.8765
+          },
+          {
+            "text": "(ii) Aggravated assault, assault consummated by a battery, or assault with intent to commit specified offenses in violation of section 928 of this title (article 128).",
+            "article": "43",
+            "chunk_id": "sec_843.txt::3",
+            "score": 5.8765
+          },
+          {
+            "text": "(C) In subparagraph (A), the term \" child abuse offense",
+            "article": "43",
+            "chunk_id": "sec_843.txt::3",
+            "score": 3.8765
+          }
+        ]
+      },
       "top_matched_terms": [
         "statute",
         "limitations",
@@ -113,47 +231,98 @@
       "id": "q03",
       "type": "comparative_near_duplicate",
       "question": "What is the difference between desertion and absence without leave under the UCMJ?",
-      "gold_citation": "Art. 85 vs Art. 86, UCMJ",
-      "gold_answer": "Desertion (Art. 85) requires absence without authority plus intent to remain away permanently, or quitting a unit to avoid hazardous duty or shirk important service. AWOL (Art. 86) is simply failing to be at the appointed place of duty or absenting oneself without authority, no intent to stay away permanently required.",
+      "gold_articles": [
+        "85",
+        "86"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 2)",
+          "article": "85",
           "type": "punitive",
           "title": "Desertion",
-          "score": 17.7443,
+          "score": 17.9674,
           "id": "sec_885.txt::1"
         },
         {
           "citation": "Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 3)",
+          "article": "85",
           "type": "punitive",
           "title": "Desertion",
-          "score": 16.8705,
+          "score": 16.9829,
           "id": "sec_885.txt::2"
         },
         {
           "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 7)",
+          "article": "43",
           "type": "procedural",
           "title": "Statute of limitations",
-          "score": 15.9463,
+          "score": 15.9056,
           "id": "sec_843.txt::6"
         },
         {
           "citation": "Art. 86, UCMJ (10 U.S.C. \u00a7 886)",
+          "article": "86",
           "type": "punitive",
           "title": "Absence without leave",
-          "score": 15.2787,
+          "score": 15.1845,
           "id": "sec_886.txt::0"
         },
         {
           "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 6)",
+          "article": "43",
           "type": "procedural",
           "title": "Statute of limitations",
-          "score": 14.6587,
+          "score": 15.0767,
           "id": "sec_843.txt::5"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 2):\nwithout being regularly separated from one of the armed forces enlists or accepts an appointment in the same or another one of the armed forces without fully disclosing the fact that he has not been regularly separated, or enters any foreign armed service except when authorized by the United States; is guilty of desertion. (b) Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave ...",
-      "gold_rank": 1,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "85": 1,
+          "86": 4
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "(b) Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion. (c) (Art. 85, UCMJ)\n\nTolling for Absence Without Leave or Flight From Justice.\u2014 Periods in which the accused is absent without authority or fleeing from justice shall be excluded in computing the period of limitation prescribed in this section (article). (Art. 43, UCMJ)\n\nAny member of the armed forces who, without authority\u2014 (1) fails to go to his appointed place of duty at the time prescribed; (2) goes from that place; or (3) absents himself or remains absent from his unit, organization, or place of duty at which he is required to be at the time prescribed; shall be punished as a court-martial may direct. (Art. 86, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "85",
+          "43",
+          "86"
+        ],
+        "sentences": [
+          {
+            "text": "(b) Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion. (c)",
+            "article": "85",
+            "chunk_id": "sec_885.txt::1",
+            "score": 4.5465
+          },
+          {
+            "text": "Tolling for Absence Without Leave or Flight From Justice.\u2014 Periods in which the accused is absent without authority or fleeing from justice shall be excluded in computing the period of limitation prescribed in this section (article).",
+            "article": "43",
+            "chunk_id": "sec_843.txt::6",
+            "score": 4.5465
+          },
+          {
+            "text": "(2) goes from that place; or (3) absents himself or remains absent from his unit, organization, or place of duty at which he is required to be at the time prescribed; shall be punished as a court-martial may direct.",
+            "article": "86",
+            "chunk_id": "sec_886.txt::0",
+            "score": 4.5465
+          },
+          {
+            "text": "Any member of the armed forces who, without authority\u2014 (1) fails to go to his appointed place of duty at the time prescribed;",
+            "article": "86",
+            "chunk_id": "sec_886.txt::0",
+            "score": 4.0465
+          }
+        ]
+      },
       "top_matched_terms": [
         "desertion",
         "leave",
@@ -164,49 +333,90 @@
       "id": "q04",
       "type": "factual_lookup",
       "question": "Can a deserter be sentenced to death under the UCMJ?",
-      "gold_citation": "Art. 85, UCMJ",
-      "gold_answer": "Yes, but only if the desertion or attempted desertion occurs in time of war. At any other time the maximum is such punishment other than death as a court-martial may direct.",
+      "gold_articles": [
+        "85"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
-          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 7)",
-          "type": "procedural",
-          "title": "Who may serve on courts-martial",
-          "score": 13.9405,
-          "id": "sec_825.txt::6"
-        },
-        {
-          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 6)",
-          "type": "procedural",
-          "title": "Who may serve on courts-martial",
-          "score": 10.3436,
-          "id": "sec_825.txt::5"
-        },
-        {
           "citation": "Art. 25a, UCMJ (10 U.S.C. \u00a7 825a) (part 1)",
+          "article": "25a",
           "type": "procedural",
           "title": "Number of court-martial members in capital cases",
-          "score": 10.3084,
+          "score": 10.3918,
           "id": "sec_825a.txt::0"
         },
         {
-          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 8)",
+          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 6)",
+          "article": "25",
           "type": "procedural",
           "title": "Who may serve on courts-martial",
-          "score": 8.1489,
-          "id": "sec_825.txt::7"
+          "score": 10.3257,
+          "id": "sec_825.txt::5"
         },
         {
           "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 5)",
+          "article": "25",
           "type": "procedural",
           "title": "Who may serve on courts-martial",
-          "score": 8.0932,
+          "score": 8.0611,
           "id": "sec_825.txt::4"
+        },
+        {
+          "citation": "Art. 8, UCMJ (10 U.S.C. \u00a7 808)",
+          "article": "8",
+          "type": "procedural",
+          "title": "Apprehension of deserters",
+          "score": 7.4611,
+          "id": "sec_808.txt::0"
+        },
+        {
+          "citation": "Art. 56, UCMJ (10 U.S.C. \u00a7 856) (part 12)",
+          "article": "56",
+          "type": "procedural",
+          "title": "Sentencing",
+          "score": 7.4356,
+          "id": "sec_856.txt::11"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 7):\nIn a capital case, if the accused is convicted of a non-capital offense, the accused shall be sentenced for such non-capital offense in accordance with section 853(b) of this title (article 53(b)), regardless of whether the accused is convicted of an offense for which the court-martial may sentence the accused to death. (e) (1) When it can be avoided, no member of an armed force may be tried by a court-martial any member of which is junior to the member being tried in rank or grade. (2)",
-      "gold_rank": 0,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "85": 0
+        },
+        "first_gold_rank": 0,
+        "all_gold_retrieved": false
+      },
+      "answer": {
+        "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12. (b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12. (Art. 25a, UCMJ)\n\n(2) In a capital case, if the accused is convicted of an offense for which the court-martial may sentence the accused to death, the accused shall be sentenced in accordance with section 853(c) of this title (article 53(c)). (Art. 25, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "25a",
+          "25"
+        ],
+        "sentences": [
+          {
+            "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 2.8088
+          },
+          {
+            "text": "(b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 2.8088
+          },
+          {
+            "text": "(2) In a capital case, if the accused is convicted of an offense for which the court-martial may sentence the accused to death, the accused shall be sentenced in accordance with section 853(c) of this title (article 53(c)).",
+            "article": "25",
+            "chunk_id": "sec_825.txt::5",
+            "score": 2.8088
+          }
+        ]
+      },
       "top_matched_terms": [
-        "can",
         "sentenced",
         "death"
       ]
@@ -215,47 +425,67 @@
       "id": "q05",
       "type": "definition",
       "question": "How does the UCMJ define a commanding officer?",
-      "gold_citation": "Art. 1, UCMJ",
-      "gold_answer": "Art. 1 (Definitions) provides that 'commanding officer' includes only commissioned officers. The definitions article also defines officer in charge, superior commissioned officer, accuser, military judge and other recurring terms.",
+      "gold_articles": [
+        "1"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 22, UCMJ (10 U.S.C. \u00a7 822) (part 2)",
+          "article": "22",
           "type": "procedural",
           "title": "Who may convene general courts-martial",
-          "score": 8.6114,
+          "score": 8.5972,
           "id": "sec_822.txt::1"
         },
         {
           "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823) (part 2)",
+          "article": "23",
           "type": "procedural",
           "title": "Who may convene special courts-martial",
-          "score": 8.5503,
+          "score": 8.4917,
           "id": "sec_823.txt::1"
         },
         {
           "citation": "Art. 22, UCMJ (10 U.S.C. \u00a7 822) (part 1)",
+          "article": "22",
           "type": "procedural",
           "title": "Who may convene general courts-martial",
-          "score": 8.2218,
+          "score": 8.1579,
           "id": "sec_822.txt::0"
         },
         {
           "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823) (part 1)",
+          "article": "23",
           "type": "procedural",
           "title": "Who may convene special courts-martial",
-          "score": 8.1348,
+          "score": 8.0684,
           "id": "sec_823.txt::0"
         },
         {
           "citation": "Art. 24, UCMJ (10 U.S.C. \u00a7 824) (part 1)",
+          "article": "24",
           "type": "procedural",
           "title": "Who may convene summary courts-martial",
-          "score": 8.1213,
+          "score": 8.0651,
           "id": "sec_824.txt::0"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 22, UCMJ (10 U.S.C. \u00a7 822) (part 2):\nof a naval station or larger shore activity of the Navy beyond the United States; (7) the commanding officer of an air command, an air force, an air division, or a separate wing of the Air Force or Marine Corps, or the commanding officer of a corresponding unit of the Space Force; (8) any other commanding officer designated by the Secretary concerned; or (9) any other commanding officer in any of the armed forces when empowered by the President. (b) (1) If any such commanding officer is an ...",
-      "gold_rank": 0,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "1": 0
+        },
+        "first_gold_rank": 0,
+        "all_gold_retrieved": false
+      },
+      "answer": {
+        "text": "The retrieved provisions do not answer this question. Rather than construct an answer from weakly matching passages, the system declines.",
+        "refused": true,
+        "boundary": false,
+        "cited_articles": [],
+        "sentences": []
+      },
       "top_matched_terms": [
         "commanding",
         "officer"
@@ -265,47 +495,67 @@
       "id": "q06",
       "type": "definition",
       "question": "Who counts as an accuser under the UCMJ?",
-      "gold_citation": "Art. 1, UCMJ",
-      "gold_answer": "An accuser is a person who signs and swears to charges, any person who directs that charges nominally be signed and sworn to by another, and any other person who has an interest other than an official interest in the prosecution of the accused (Art. 1).",
+      "gold_articles": [
+        "1"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9)",
+          "article": "146",
           "type": "procedural",
           "title": "Military Justice Review Panel",
-          "score": 6.6688,
+          "score": 6.658,
           "id": "sec_946.txt::8"
         },
         {
           "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823) (part 3)",
+          "article": "23",
           "type": "procedural",
           "title": "Who may convene special courts-martial",
-          "score": 6.4053,
+          "score": 6.4163,
           "id": "sec_823.txt::2"
         },
         {
           "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 10)",
+          "article": "146",
           "type": "procedural",
           "title": "Military Justice Review Panel",
-          "score": 6.3283,
+          "score": 6.2098,
           "id": "sec_946.txt::9"
         },
         {
           "citation": "Art. 22, UCMJ (10 U.S.C. \u00a7 822) (part 3)",
+          "article": "22",
           "type": "procedural",
           "title": "Who may convene general courts-martial",
-          "score": 6.0983,
+          "score": 6.1257,
           "id": "sec_822.txt::2"
         },
         {
           "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823) (part 4)",
+          "article": "23",
           "type": "procedural",
           "title": "Who may convene special courts-martial",
-          "score": 6.0119,
+          "score": 6.0346,
           "id": "sec_823.txt::3"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9):\nNotwithstanding paragraph (1), a member of the Panel may be appointed to a single additional term if\u2014 (A) the appointment of the member is to fill a vacancy described in subsection (b)(4); or (B) the member was initially appointed\u2014 (i) to a term of four years or less in accordance with subsection (b)(4); or (ii) to fill a vacancy that occurs before the expiration of the term of the predecessor of such member and for which the remainder of the term of such predecessor is four years or less. ...",
-      "gold_rank": 0,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "1": 0
+        },
+        "first_gold_rank": 0,
+        "all_gold_retrieved": false
+      },
+      "answer": {
+        "text": "The retrieved provisions do not answer this question. Rather than construct an answer from weakly matching passages, the system declines.",
+        "refused": true,
+        "boundary": false,
+        "cited_articles": [],
+        "sentences": []
+      },
       "top_matched_terms": [
         "ucmj"
       ]
@@ -314,47 +564,67 @@
       "id": "q07",
       "type": "enumeration",
       "question": "Who is subject to the UCMJ?",
-      "gold_citation": "Art. 2, UCMJ",
-      "gold_answer": "Art. 2 lists the categories: active duty members of the armed forces, cadets and midshipmen, certain reserve and National Guard members, retired members entitled to pay, prisoners of war in custody of the armed forces, persons serving with or accompanying an armed force in the field in time of declared war or contingency operation, and several other enumerated categories.",
+      "gold_articles": [
+        "2"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9)",
+          "article": "146",
           "type": "procedural",
           "title": "Military Justice Review Panel",
-          "score": 6.6688,
+          "score": 6.658,
           "id": "sec_946.txt::8"
         },
         {
           "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 10)",
+          "article": "146",
           "type": "procedural",
           "title": "Military Justice Review Panel",
-          "score": 6.3283,
+          "score": 6.2098,
           "id": "sec_946.txt::9"
         },
         {
           "citation": "Art. 135, UCMJ (10 U.S.C. \u00a7 935) (part 2)",
+          "article": "135",
           "type": "procedural",
           "title": "Courts of inquiry",
-          "score": 2.6166,
+          "score": 2.6286,
           "id": "sec_935.txt::1"
         },
         {
           "citation": "Art. 3, UCMJ (10 U.S.C. \u00a7 803) (part 2)",
+          "article": "3",
           "type": "procedural",
           "title": "Jurisdiction to try certain personnel",
-          "score": 2.5858,
+          "score": 2.5841,
           "id": "sec_803.txt::1"
         },
         {
           "citation": "Art. 3, UCMJ (10 U.S.C. \u00a7 803) (part 1)",
+          "article": "3",
           "type": "procedural",
           "title": "Jurisdiction to try certain personnel",
-          "score": 2.5215,
+          "score": 2.5197,
           "id": "sec_803.txt::0"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9):\nNotwithstanding paragraph (1), a member of the Panel may be appointed to a single additional term if\u2014 (A) the appointment of the member is to fill a vacancy described in subsection (b)(4); or (B) the member was initially appointed\u2014 (i) to a term of four years or less in accordance with subsection (b)(4); or (ii) to fill a vacancy that occurs before the expiration of the term of the predecessor of such member and for which the remainder of the term of such predecessor is four years or less. ...",
-      "gold_rank": 0,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "2": 0
+        },
+        "first_gold_rank": 0,
+        "all_gold_retrieved": false
+      },
+      "answer": {
+        "text": "The retrieved provisions do not answer this question. Rather than construct an answer from weakly matching passages, the system declines.",
+        "refused": true,
+        "boundary": false,
+        "cited_articles": [],
+        "sentences": []
+      },
       "top_matched_terms": [
         "ucmj"
       ]
@@ -363,50 +633,91 @@
       "id": "q08",
       "type": "factual_lookup",
       "question": "What rights does Article 31 give a servicemember suspected of an offense?",
-      "gold_citation": "Art. 31, UCMJ",
-      "gold_answer": "No person may be compelled to incriminate himself. Before interrogation a suspect must be informed of the nature of the accusation, advised that he does not have to make any statement, and warned that any statement may be used as evidence against him at court-martial. Statements obtained in violation, or by coercion or unlawful inducement, may not be received in evidence.",
+      "gold_articles": [
+        "31"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 31, UCMJ (10 U.S.C. \u00a7 831) (part 1)",
+          "article": "31",
           "type": "procedural",
           "title": "Compulsory self-incrimination prohibited",
-          "score": 13.8386,
+          "score": 11.4013,
           "id": "sec_831.txt::0"
         },
         {
           "citation": "Art. 31, UCMJ (10 U.S.C. \u00a7 831) (part 2)",
+          "article": "31",
           "type": "procedural",
           "title": "Compulsory self-incrimination prohibited",
-          "score": 13.2498,
+          "score": 11.0369,
           "id": "sec_831.txt::1"
         },
         {
           "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 1)",
+          "article": "6b",
           "type": "procedural",
           "title": "Rights of the victim of an offense under this chapter",
-          "score": 10.0606,
+          "score": 10.018,
           "id": "sec_806b.txt::0"
         },
         {
           "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 12)",
+          "article": "6b",
           "type": "procedural",
           "title": "Rights of the victim of an offense under this chapter",
-          "score": 9.1186,
+          "score": 9.0493,
           "id": "sec_806b.txt::11"
         },
         {
           "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 11)",
+          "article": "6b",
           "type": "procedural",
           "title": "Rights of the victim of an offense under this chapter",
-          "score": 8.9975,
+          "score": 8.9659,
           "id": "sec_806b.txt::10"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 31, UCMJ (10 U.S.C. \u00a7 831) (part 1):\n(a) No person subject to this chapter may compel any person to incriminate himself or to answer any question the answer to which may tend to incriminate him. (b) No person subject to this chapter may interrogate, or request any statement from, an accused or a person suspected of an offense without first informing him of the nature of the accusation and advising him that he does not have to make any statement regarding the offense of which he is accused or suspected and that any statement ...",
-      "gold_rank": 1,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "31": 1
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "(b) No person subject to this chapter may interrogate, or request any statement from, an accused or a person suspected of an offense without first informing him of the nature of the accusation and advising him that he does not have to make any statement regarding the offense of which he is accused or suspected and that any statement made by him may be used as evidence against him in a trial by court-martial. (c) (Art. 31, UCMJ)\n\n(B) A preliminary hearing under section 832 of this title (article 32) relating to the offense. (article 32) or a court-martial ruling violates the rights of the victim afforded by a section (article) or rule specified in paragraph (4), the victim may petition the Court of Criminal Appeals for a writ of mandamus to require the preliminary hearing officer or the court-martial to comply with the section (article) or rule. (Art. 6b, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "31",
+          "6b"
+        ],
+        "sentences": [
+          {
+            "text": "(b) No person subject to this chapter may interrogate, or request any statement from, an accused or a person suspected of an offense without first informing him of the nature of the accusation and advising him that he does not have to make any statement regarding the offense of which he is accused or suspected and that any statement made by him may be used as evidence against him in a trial by court-martial. (c)",
+            "article": "31",
+            "chunk_id": "sec_831.txt::0",
+            "score": 5.98
+          },
+          {
+            "text": "(B) A preliminary hearing under section 832 of this title (article 32) relating to the offense.",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::0",
+            "score": 5.8589
+          },
+          {
+            "text": "(article 32) or a court-martial ruling violates the rights of the victim afforded by a section (article) or rule specified in paragraph (4), the victim may petition the Court of Criminal Appeals for a writ of mandamus to require the preliminary hearing officer or the court-martial to comply with the section (article) or rule.",
+            "article": "6b",
+            "chunk_id": "sec_806b.txt::11",
+            "score": 5.8589
+          }
+        ]
+      },
       "top_matched_terms": [
         "suspected",
-        "does",
         "offense"
       ]
     },
@@ -414,47 +725,106 @@
       "id": "q09",
       "type": "enumeration",
       "question": "What are the three types of courts-martial?",
-      "gold_citation": "Art. 16, UCMJ",
-      "gold_answer": "General courts-martial, special courts-martial, and summary courts-martial (Art. 16). A general court-martial consists of a military judge and eight members (or a military judge alone), a special court-martial has a military judge and four members (or judge alone), and a summary court-martial consists of one commissioned officer.",
+      "gold_articles": [
+        "16"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 16, UCMJ (10 U.S.C. \u00a7 816) (part 1)",
+          "article": "16",
           "type": "procedural",
           "title": "Courts-martial classified",
-          "score": 14.8467,
+          "score": 14.6331,
           "id": "sec_816.txt::0"
         },
         {
           "citation": "Art. 16, UCMJ (10 U.S.C. \u00a7 816) (part 3)",
+          "article": "16",
           "type": "procedural",
           "title": "Courts-martial classified",
-          "score": 9.0763,
+          "score": 9.0731,
           "id": "sec_816.txt::2"
         },
         {
           "citation": "Art. 16, UCMJ (10 U.S.C. \u00a7 816) (part 2)",
+          "article": "16",
           "type": "procedural",
           "title": "Courts-martial classified",
-          "score": 8.7717,
+          "score": 8.6657,
           "id": "sec_816.txt::1"
         },
         {
           "citation": "Art. 66, UCMJ (10 U.S.C. \u00a7 866) (part 1)",
+          "article": "66",
           "type": "procedural",
           "title": "Courts of Criminal Appeals",
-          "score": 7.6304,
+          "score": 7.674,
           "id": "sec_866.txt::0"
         },
         {
           "citation": "Art. 19, UCMJ (10 U.S.C. \u00a7 819) (part 1)",
+          "article": "19",
           "type": "procedural",
           "title": "Jurisdiction of special courts-martial",
-          "score": 7.4429,
+          "score": 7.6334,
           "id": "sec_819.txt::0"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 16, UCMJ (10 U.S.C. \u00a7 816) (part 1):\n(a) In General.\u2014 The three kinds of courts-martial in each of the armed forces are the following: (1) General courts-martial, as described in subsection (b). (2) Special courts -martial, as described in subsection (c). (3) Summary courts-martial, as described in subsection (d). (b) General Courts-martial.\u2014 General courts-martial are of the following three types: (1) A general court-martial consisting of a military judge and eight members, subject to sections 825(e)(3) and 829 of this title ...",
-      "gold_rank": 1,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "16": 1
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "(a) In General.\u2014 The three kinds of courts-martial in each of the armed forces are the following: (1) General courts-martial, as described in subsection (b). (2) Special courts -martial, as described in subsection (c). (3) Summary courts-martial, as described in subsection (d). (b) General Courts-martial.\u2014 General courts-martial are of the following three types: (1) A general court-martial consisting of a military judge and eight members, subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29). (2) In a capital case, a general court-martial consisting of a military judge and the number of members determined under section 825a of this title (article 25a), subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29). (3) (c) Special Courts-martial.\u2014 Special courts -martial are of the following two types: (1) A special court-martial consisting of a military judge and four members, subject to sections (Art. 16, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "16"
+        ],
+        "sentences": [
+          {
+            "text": "(b) General Courts-martial.\u2014 General courts-martial are of the following three types: (1) A general court-martial consisting of a military judge and eight members, subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 6.9508
+          },
+          {
+            "text": "(c) Special Courts-martial.\u2014 Special courts -martial are of the following two types: (1) A special court-martial consisting of a military judge and four members, subject to sections",
+            "article": "16",
+            "chunk_id": "sec_816.txt::1",
+            "score": 5.3413
+          },
+          {
+            "text": "(a) In General.\u2014 The three kinds of courts-martial in each of the armed forces are the following: (1) General courts-martial, as described in subsection (b).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 5.1049
+          },
+          {
+            "text": "(2) In a capital case, a general court-martial consisting of a military judge and the number of members determined under section 825a of this title (article 25a), subject to sections 825(e)(3) and 829 of this title (articles 25(e)(3) and 29). (3)",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.4955
+          },
+          {
+            "text": "(2) Special courts -martial, as described in subsection (c).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.4955
+          },
+          {
+            "text": "(3) Summary courts-martial, as described in subsection (d).",
+            "article": "16",
+            "chunk_id": "sec_816.txt::0",
+            "score": 1.4955
+          }
+        ]
+      },
       "top_matched_terms": [
         "types",
         "three",
@@ -466,47 +836,89 @@
       "id": "q10",
       "type": "numeric",
       "question": "How many members sit on a court-martial panel in a capital case?",
-      "gold_citation": "Art. 25a, UCMJ",
-      "gold_answer": "Twelve. In a case in which the accused may be sentenced to death, the number of members shall be 12 (Art. 25a).",
+      "gold_articles": [
+        "25a"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 17)",
+          "article": "146",
           "type": "procedural",
           "title": "Military Justice Review Panel",
-          "score": 16.2293,
+          "score": 16.0385,
           "id": "sec_946.txt::16"
         },
         {
           "citation": "Art. 25a, UCMJ (10 U.S.C. \u00a7 825a) (part 1)",
+          "article": "25a",
           "type": "procedural",
           "title": "Number of court-martial members in capital cases",
-          "score": 14.7506,
+          "score": 14.8438,
           "id": "sec_825a.txt::0"
         },
         {
           "citation": "Art. 66, UCMJ (10 U.S.C. \u00a7 866) (part 1)",
+          "article": "66",
           "type": "procedural",
           "title": "Courts of Criminal Appeals",
-          "score": 13.3695,
+          "score": 13.4411,
           "id": "sec_866.txt::0"
         },
         {
           "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 6)",
+          "article": "25",
           "type": "procedural",
           "title": "Who may serve on courts-martial",
-          "score": 13.018,
+          "score": 12.9949,
           "id": "sec_825.txt::5"
         },
         {
           "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 16)",
+          "article": "146",
           "type": "procedural",
           "title": "Military Justice Review Panel",
-          "score": 12.8738,
+          "score": 12.8345,
           "id": "sec_946.txt::15"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 17):\nHearings.\u2014 The Panel may hold such hearings, sit and act at such times and places, take such testimony, and receive such evidence as the Panel considers appropriate to carry out its duties under this section. (h) Information From Federal Agencies.\u2014 Upon request of the chair of the Panel, a department or agency of the Federal Government shall provide information that the Panel considers necessary to carry out its duties under this section. (i) Administrative Matters.\u2014 (1) Members to serve ...",
-      "gold_rank": 2,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "25a": 2
+        },
+        "first_gold_rank": 2,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12. (b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12. (Art. 25a, UCMJ)\n\n(2) In a capital case, if the accused is convicted of an offense for which the court-martial may sentence the accused to death, the accused shall be sentenced in accordance with section 853(c) of this title (article 53(c)). (Art. 25, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "25a",
+          "25"
+        ],
+        "sentences": [
+          {
+            "text": "(a) In General.\u2014 In a case in which the accused may be sentenced to death, the number of members shall be 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 10.4143
+          },
+          {
+            "text": "(b) Case No Longer Capital.\u2014 Subject to section 829 of this title (article 29)\u2014 (1) if a case is referred for trial as a capital case and, before the members are impaneled, the accused may no longer be sentenced to death, the number of members shall be eight; and (2) if a case is referred for trial as a capital case and, after the members are impaneled, the accused may no longer be sentenced to death, the number of members shall remain 12.",
+            "article": "25a",
+            "chunk_id": "sec_825a.txt::0",
+            "score": 10.4143
+          },
+          {
+            "text": "(2) In a capital case, if the accused is convicted of an offense for which the court-martial may sentence the accused to death, the accused shall be sentenced in accordance with section 853(c) of this title (article 53(c)).",
+            "article": "25",
+            "chunk_id": "sec_825.txt::5",
+            "score": 8.8561
+          }
+        ]
+      },
       "top_matched_terms": [
         "sit",
         "panel",
@@ -517,47 +929,88 @@
       "id": "q11",
       "type": "conditional",
       "question": "What punishments can a commanding officer impose under Article 15 without a court-martial?",
-      "gold_citation": "Art. 15, UCMJ",
-      "gold_answer": "Non-judicial punishments under Art. 15 include admonition or reprimand, and depending on the grade of the officer and of the offender, correctional custody (limited consecutive days), forfeiture of pay, reduction in grade, extra duties, restriction to limits, and withholding of privileges, subject to the limits enumerated in the article. The member may demand trial by court-martial instead, except aboard a vessel.",
+      "gold_articles": [
+        "15"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
-          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 8)",
-          "type": "procedural",
-          "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 20.0063,
-          "id": "sec_815.txt::7"
-        },
-        {
           "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 9)",
+          "article": "15",
           "type": "procedural",
           "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 19.9707,
+          "score": 20.4757,
           "id": "sec_815.txt::8"
         },
         {
-          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 18)",
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 8)",
+          "article": "15",
           "type": "procedural",
           "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 15.4087,
+          "score": 20.0522,
+          "id": "sec_815.txt::7"
+        },
+        {
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 18)",
+          "article": "15",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 15.4863,
           "id": "sec_815.txt::17"
         },
         {
           "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 7)",
+          "article": "15",
           "type": "procedural",
           "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 14.0051,
+          "score": 14.0194,
           "id": "sec_815.txt::6"
         },
         {
           "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 3)",
+          "article": "15",
           "type": "procedural",
           "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 13.3928,
+          "score": 13.4733,
           "id": "sec_815.txt::2"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 8):\nand warrant officers exercising command authorized to exercise those powers, the applicability of this article to an accused who demands trial by court-martial, and the kinds of courts-martial to which the case may be referred upon such a demand. However, except in the case of a member attached to or embarked in a vessel, punishment may not be imposed upon any member of the armed forces under this article if the member has, before the imposition of such punishment, demanded trial by court- ...",
-      "gold_rank": 1,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "15": 1
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "(b) Subject to subsection (a), any commanding officer may, in addition to or in lieu of admonition or reprimand, impose one or more of the following disciplinary punishments for minor offenses without the intervention of a court-martial\u2014 (1) upon officers of his command\u2014 (A) restriction to certain specified limits, with or without suspension from duty, for not more than 30 consecutive days; (B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days; (ii) However, except in the case of a member attached to or embarked in a vessel, punishment may not be imposed upon any member of the armed forces under this article if the member has, before the imposition of such punishment, demanded trial by court-martial in lieu of such punishment. (Art. 15, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "15"
+        ],
+        "sentences": [
+          {
+            "text": "(b) Subject to subsection (a), any commanding officer may, in addition to or in lieu of admonition or reprimand, impose one or more of the following disciplinary punishments for minor offenses without the intervention of a court-martial\u2014 (1) upon officers of his command\u2014 (A) restriction to certain specified limits, with or without suspension from duty, for not more than 30 consecutive days;",
+            "article": "15",
+            "chunk_id": "sec_815.txt::8",
+            "score": 14.9151
+          },
+          {
+            "text": "(B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days; (ii)",
+            "article": "15",
+            "chunk_id": "sec_815.txt::8",
+            "score": 10.4804
+          },
+          {
+            "text": "However, except in the case of a member attached to or embarked in a vessel, punishment may not be imposed upon any member of the armed forces under this article if the member has, before the imposition of such punishment, demanded trial by court-martial in lieu of such punishment.",
+            "article": "15",
+            "chunk_id": "sec_815.txt::7",
+            "score": 10.1504
+          }
+        ]
+      },
       "top_matched_terms": [
         "impose",
         "punishments",
@@ -571,99 +1024,181 @@
       "id": "q12",
       "type": "conditional",
       "question": "What has to happen before charges can be referred to a general court-martial?",
-      "gold_citation": "Art. 32, UCMJ",
-      "gold_answer": "A preliminary hearing must be held (unless waived), conducted by an impartial hearing officer, to determine whether there is probable cause to believe an offense was committed and the accused committed it, and to recommend disposition (Art. 32).",
+      "gold_articles": [
+        "32"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
-          "citation": "Art. 30, UCMJ (10 U.S.C. \u00a7 830) (part 2)",
-          "type": "procedural",
-          "title": "Charges and specifications",
-          "score": 11.7673,
-          "id": "sec_830.txt::1"
-        },
-        {
           "citation": "Art. 34, UCMJ (10 U.S.C. \u00a7 834) (part 6)",
+          "article": "34",
           "type": "procedural",
           "title": "Advice to convening authority before referral for trial",
-          "score": 11.0315,
+          "score": 10.9498,
           "id": "sec_834.txt::5"
         },
         {
-          "citation": "Art. 30, UCMJ (10 U.S.C. \u00a7 830) (part 1)",
-          "type": "procedural",
-          "title": "Charges and specifications",
-          "score": 10.5957,
-          "id": "sec_830.txt::0"
-        },
-        {
           "citation": "Art. 35, UCMJ (10 U.S.C. \u00a7 835) (part 1)",
+          "article": "35",
           "type": "procedural",
           "title": "Service of charges; commencement of trial",
-          "score": 10.4879,
+          "score": 10.4032,
           "id": "sec_835.txt::0"
         },
         {
           "citation": "Art. 30a, UCMJ (10 U.S.C. \u00a7 830a) (part 3)",
+          "article": "30a",
           "type": "procedural",
           "title": "Proceedings conducted before referral",
-          "score": 10.3216,
+          "score": 10.3937,
           "id": "sec_830a.txt::2"
+        },
+        {
+          "citation": "Art. 30a, UCMJ (10 U.S.C. \u00a7 830a) (part 4)",
+          "article": "30a",
+          "type": "procedural",
+          "title": "Proceedings conducted before referral",
+          "score": 9.6048,
+          "id": "sec_830a.txt::3"
+        },
+        {
+          "citation": "Art. 65, UCMJ (10 U.S.C. \u00a7 865) (part 13)",
+          "article": "65",
+          "type": "procedural",
+          "title": "Transmittal and review of records",
+          "score": 9.5803,
+          "id": "sec_865.txt::12"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 30, UCMJ (10 U.S.C. \u00a7 830) (part 2):\nthe matters set forth in the charges and specifications are true, to the best of the knowledge and belief of the signer. (c) Duty of Proper Authority.\u2014 When charges and specifications are preferred under subsection (a), the proper authority shall, as soon as practicable\u2014 (1) inform the person accused of the charges and specifications; and (2) determine what disposition should be made of the charges and specifications in the interest of justice and discipline. (Aug. 10, 1956, ch. 1041, 70A ...",
-      "gold_rank": 0,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "32": 0
+        },
+        "first_gold_rank": 0,
+        "all_gold_retrieved": false
+      },
+      "answer": {
+        "text": "Correction of Charges and Specifications Before Referral.\u2014 Before referral for trial by general court-martial or special court-martial, changes may be made to charges and specifications\u2014 (1) to correct errors in form; and (2) when applicable, to conform to the substance of the evidence contained in a report under section 832(c) of this title (article 32(c)). (Art. 34, UCMJ)\n\n(a) In General.\u2014 Trial counsel detailed for a court-martial under section 827 of this title (article 27) shall cause to be served upon the accused a copy of the charges and specifications referred for trial. (Art. 35, UCMJ)\n\n(3) If any matter in a proceeding under this section becomes a subject at issue with respect to charges that have been referred to a general or special court-martial, the matter shall be transferred to the military judge detailed to the court-martial. (Art. 30a, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "34",
+          "35",
+          "30a"
+        ],
+        "sentences": [
+          {
+            "text": "(3) If any matter in a proceeding under this section becomes a subject at issue with respect to charges that have been referred to a general or special court-martial, the matter shall be transferred to the military judge detailed to the court-martial.",
+            "article": "30a",
+            "chunk_id": "sec_830a.txt::2",
+            "score": 9.1579
+          },
+          {
+            "text": "Correction of Charges and Specifications Before Referral.\u2014 Before referral for trial by general court-martial or special court-martial, changes may be made to charges and specifications\u2014 (1) to correct errors in form; and (2) when applicable, to conform to the substance of the evidence contained in a report under section 832(c) of this title (article 32(c)).",
+            "article": "34",
+            "chunk_id": "sec_834.txt::5",
+            "score": 7.0997
+          },
+          {
+            "text": "(a) In General.\u2014 Trial counsel detailed for a court-martial under section 827 of this title (article 27) shall cause to be served upon the accused a copy of the charges and specifications referred for trial.",
+            "article": "35",
+            "chunk_id": "sec_835.txt::0",
+            "score": 6.3853
+          }
+        ]
+      },
       "top_matched_terms": [
-        "what",
-        "charges"
+        "charges",
+        "before",
+        "general",
+        "martial",
+        "court"
       ]
     },
     {
       "id": "q13",
       "type": "factual_lookup",
       "question": "Can a military officer be punished for insulting the President?",
-      "gold_citation": "Art. 88, UCMJ",
-      "gold_answer": "Yes. Any commissioned officer who uses contemptuous words against the President, Vice President, Congress, the Secretary of Defense, a military department Secretary, the Secretary of Homeland Security, or the Governor or legislature of a State where the officer is on duty or present, shall be punished as a court-martial may direct (Art. 88).",
+      "gold_articles": [
+        "88"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
+          "citation": "Art. 26, UCMJ (10 U.S.C. \u00a7 826) (part 6)",
+          "article": "26",
+          "type": "procedural",
+          "title": "Military judge of a general or special court-martial",
+          "score": 7.1505,
+          "id": "sec_826.txt::5"
+        },
+        {
           "citation": "Art. 93a, UCMJ (10 U.S.C. \u00a7 893a) (part 1)",
+          "article": "93a",
           "type": "punitive",
           "title": "Prohibited activities with military recruit or trainee by person in position of special trust",
-          "score": 7.2031,
+          "score": 7.1132,
           "id": "sec_893a.txt::0"
         },
         {
           "citation": "Art. 88, UCMJ (10 U.S.C. \u00a7 888)",
+          "article": "88",
           "type": "punitive",
           "title": "Contempt toward officials",
-          "score": 7.1287,
+          "score": 7.0312,
           "id": "sec_888.txt::0"
         },
         {
-          "citation": "Art. 26, UCMJ (10 U.S.C. \u00a7 826) (part 6)",
-          "type": "procedural",
-          "title": "Military judge of a general or special court-martial",
-          "score": 7.0778,
-          "id": "sec_826.txt::5"
-        },
-        {
-          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 7)",
-          "type": "procedural",
-          "title": "Who may serve on courts-martial",
-          "score": 6.8262,
-          "id": "sec_825.txt::6"
-        },
-        {
           "citation": "Art. 4, UCMJ (10 U.S.C. \u00a7 804) (part 8)",
+          "article": "4",
           "type": "procedural",
           "title": "Dismissed officer\u2019s right to trial by court-martial",
-          "score": 6.3235,
+          "score": 6.4743,
           "id": "sec_804.txt::7"
+        },
+        {
+          "citation": "Art. 4, UCMJ (10 U.S.C. \u00a7 804) (part 9)",
+          "article": "4",
+          "type": "procedural",
+          "title": "Dismissed officer\u2019s right to trial by court-martial",
+          "score": 6.3769,
+          "id": "sec_804.txt::8"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 93a, UCMJ (10 U.S.C. \u00a7 893a) (part 1):\n(a) Abuse of Training Leadership Position.\u2014 Any person subject to this chapter\u2014 (1) who is an officer, a noncommissioned officer, or a petty officer; (2) who is in a training leadership position with respect to a specially protected junior member of the armed forces ; and (3) who engages in prohibited sexual activity with such specially protected junior member of the armed forces ; shall be punished as a court-martial may direct. (b) Abuse of Position as Military Recruiter.\u2014 Any person ...",
-      "gold_rank": 2,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "88": 3
+        },
+        "first_gold_rank": 3,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "(2) who is in a training leadership position with respect to a specially protected junior member of the armed forces ; and (3) who engages in prohibited sexual activity with such specially protected junior member of the armed forces ; shall be punished as a court-martial may direct. (Art. 93a, UCMJ)\n\nAny commissioned officer who uses contemptuous words against the President, the Vice President , Congress , the Secretary of Defense , the Secretary of a military department, the Secretary of Homeland Security , or the Governor or legislature of any State, Commonwealth, or possession in which he is on duty or present shall be punished as a court-martial may direct. (Art. 88, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "93a",
+          "88"
+        ],
+        "sentences": [
+          {
+            "text": "Any commissioned officer who uses contemptuous words against the President, the Vice President , Congress , the Secretary of Defense , the Secretary of a military department, the Secretary of Homeland Security , or the Governor or legislature of any State, Commonwealth, or possession in which he is on duty or present shall be punished as a court-martial may direct.",
+            "article": "88",
+            "chunk_id": "sec_888.txt::0",
+            "score": 5.9987
+          },
+          {
+            "text": "(2) who is in a training leadership position with respect to a specially protected junior member of the armed forces ; and (3) who engages in prohibited sexual activity with such specially protected junior member of the armed forces ; shall be punished as a court-martial may direct.",
+            "article": "93a",
+            "chunk_id": "sec_893a.txt::0",
+            "score": 4.0264
+          }
+        ]
+      },
       "top_matched_terms": [
-        "punished",
+        "president",
         "officer",
         "military"
       ]
@@ -672,47 +1207,85 @@
       "id": "q14",
       "type": "comparative",
       "question": "What is the difference between conduct unbecoming an officer and the general article?",
-      "gold_citation": "Art. 133 vs Art. 134, UCMJ",
-      "gold_answer": "Art. 133 applies only to commissioned officers, cadets and midshipmen and punishes conduct unbecoming an officer. Art. 134, the general article, applies to all persons subject to the code and reaches disorders and neglects prejudicial to good order and discipline, service discrediting conduct, and non-capital federal crimes not specifically listed elsewhere.",
+      "gold_articles": [
+        "133",
+        "134"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 133, UCMJ (10 U.S.C. \u00a7 933)",
+          "article": "133",
           "type": "punitive",
           "title": "Conduct unbecoming an officer",
-          "score": 17.8708,
+          "score": 17.7147,
           "id": "sec_933.txt::0"
         },
         {
           "citation": "Art. 142, UCMJ (10 U.S.C. \u00a7 942) (part 13)",
+          "article": "142",
           "type": "procedural",
           "title": "Judges",
-          "score": 12.3861,
+          "score": 12.296,
           "id": "sec_942.txt::12"
         },
         {
           "citation": "Art. 142, UCMJ (10 U.S.C. \u00a7 942) (part 11)",
+          "article": "142",
           "type": "procedural",
           "title": "Judges",
-          "score": 9.7507,
+          "score": 9.9399,
           "id": "sec_942.txt::10"
         },
         {
           "citation": "Art. 142, UCMJ (10 U.S.C. \u00a7 942) (part 12)",
+          "article": "142",
           "type": "procedural",
           "title": "Judges",
-          "score": 9.2131,
+          "score": 9.3581,
           "id": "sec_942.txt::11"
         },
         {
           "citation": "Art. 130, UCMJ (10 U.S.C. \u00a7 930) (part 6)",
+          "article": "130",
           "type": "punitive",
           "title": "Stalking",
-          "score": 8.8664,
+          "score": 8.8946,
           "id": "sec_930.txt::5"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 133, UCMJ (10 U.S.C. \u00a7 933):\nAny commissioned officer, cadet , or midshipman who is convicted of conduct unbecoming an officer shall be punished as a court-martial may direct. (Aug. 10, 1956, ch. 1041, 70A Stat. 76 ; Pub. L. 117\u201381, div. A, title V, \u00a7 542(a) , Dec. 27, 2021 , 135 Stat. 1709 .)",
-      "gold_rank": 1,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "133": 1,
+          "134": 0
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": false
+      },
+      "answer": {
+        "text": "Any commissioned officer, cadet , or midshipman who is convicted of conduct unbecoming an officer shall be punished as a court-martial may direct. (Art. 133, UCMJ)\n\nA senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B) the daily equivalent of the annuity of the judge under section 945 of this title (article 145), the applicable provisions of title 5, or any other retirement system for employees of the Federal Government under which the senior judge receives an annuity. (3) (Art. 142, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "133",
+          "142"
+        ],
+        "sentences": [
+          {
+            "text": "Any commissioned officer, cadet , or midshipman who is convicted of conduct unbecoming an officer shall be punished as a court-martial may direct.",
+            "article": "133",
+            "chunk_id": "sec_933.txt::0",
+            "score": 7.793
+          },
+          {
+            "text": "A senior judge shall be paid for each day on which he performs judicial duties with the court an amount equal to the difference between\u2014 (A) the daily equivalent of the annual rate of pay provided for a judge of the court; and (B) the daily equivalent of the annuity of the judge under section 945 of this title (article 145), the applicable provisions of title 5, or any other retirement system for employees of the Federal Government under which the senior judge receives an annuity. (3)",
+            "article": "142",
+            "chunk_id": "sec_942.txt::12",
+            "score": 6.26
+          }
+        ]
+      },
       "top_matched_terms": [
         "unbecoming",
         "conduct",
@@ -723,50 +1296,85 @@
       "id": "q15",
       "type": "factual_lookup",
       "question": "Does the UCMJ prohibit cruel and unusual punishment?",
-      "gold_citation": "Art. 55, UCMJ",
-      "gold_answer": "Yes. Punishment by flogging, branding, marking or tattooing the body, or any other cruel or unusual punishment, may not be adjudged or inflicted, and the use of irons except for safe custody is prohibited (Art. 55).",
+      "gold_articles": [
+        "55"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
           "citation": "Art. 55, UCMJ (10 U.S.C. \u00a7 855)",
+          "article": "55",
           "type": "procedural",
           "title": "Cruel and unusual punishments prohibited",
-          "score": 25.2521,
+          "score": 25.1557,
           "id": "sec_855.txt::0"
         },
         {
-          "citation": "Art. 81, UCMJ (10 U.S.C. \u00a7 881) (part 2)",
-          "type": "punitive",
-          "title": "Conspiracy",
-          "score": 6.994,
-          "id": "sec_881.txt::1"
-        },
-        {
           "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9)",
+          "article": "146",
           "type": "procedural",
           "title": "Military Justice Review Panel",
-          "score": 6.6688,
+          "score": 6.658,
           "id": "sec_946.txt::8"
         },
         {
-          "citation": "Art. 81, UCMJ (10 U.S.C. \u00a7 881) (part 1)",
-          "type": "punitive",
-          "title": "Conspiracy",
-          "score": 6.4851,
-          "id": "sec_881.txt::0"
-        },
-        {
           "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 10)",
+          "article": "146",
           "type": "procedural",
           "title": "Military Justice Review Panel",
-          "score": 6.3283,
+          "score": 6.2098,
           "id": "sec_946.txt::9"
+        },
+        {
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 27)",
+          "article": "15",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 4.6469,
+          "id": "sec_815.txt::26"
+        },
+        {
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 28)",
+          "article": "15",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 4.5088,
+          "id": "sec_815.txt::27"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 55, UCMJ (10 U.S.C. \u00a7 855):\nPunishment by flogging, or by branding, marking, or tattooing on the body, or any other cruel or unusual punishment, may not be adjudged by any court-martial or inflicted upon any person subject to this chapter. The use of irons, single or double, except for the purpose of safe custody, is prohibited. (Aug. 10, 1956, ch. 1041, 70A Stat. 56 .)",
-      "gold_rank": 1,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "55": 1
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "Punishment by flogging, or by branding, marking, or tattooing on the body, or any other cruel or unusual punishment, may not be adjudged by any court-martial or inflicted upon any person subject to this chapter. The use of irons, single or double, except for the purpose of safe custody, is prohibited. (Art. 55, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "55"
+        ],
+        "sentences": [
+          {
+            "text": "Punishment by flogging, or by branding, marking, or tattooing on the body, or any other cruel or unusual punishment, may not be adjudged by any court-martial or inflicted upon any person subject to this chapter.",
+            "article": "55",
+            "chunk_id": "sec_855.txt::0",
+            "score": 8.0499
+          },
+          {
+            "text": "The use of irons, single or double, except for the purpose of safe custody, is prohibited.",
+            "article": "55",
+            "chunk_id": "sec_855.txt::0",
+            "score": 7.7499
+          }
+        ]
+      },
       "top_matched_terms": [
-        "cruel",
         "unusual",
+        "cruel",
         "punishment"
       ]
     },
@@ -774,149 +1382,215 @@
       "id": "q16",
       "type": "conditional",
       "question": "What does the UCMJ say about disobeying an order or regulation?",
-      "gold_citation": "Art. 92, UCMJ",
-      "gold_answer": "Art. 92 punishes anyone who violates or fails to obey a lawful general order or regulation, fails to obey any other lawful order he has a duty to obey and knows of, or is derelict in the performance of duties, as a court-martial may direct.",
+      "gold_articles": [
+        "92"
+      ],
+      "answerable_from_corpus": true,
       "retrieved": [
         {
-          "citation": "Art. 103, UCMJ (10 U.S.C. \u00a7 903) (part 1)",
-          "type": "punitive",
-          "title": "Spies",
-          "score": 10.2159,
-          "id": "sec_903.txt::0"
-        },
-        {
-          "citation": "Art. 103, UCMJ (10 U.S.C. \u00a7 903) (part 2)",
-          "type": "punitive",
-          "title": "Spies",
-          "score": 10.2159,
-          "id": "sec_903.txt::1"
-        },
-        {
           "citation": "Art. 92, UCMJ (10 U.S.C. \u00a7 892)",
+          "article": "92",
           "type": "punitive",
           "title": "Failure to obey order or regulation",
-          "score": 9.3952,
+          "score": 9.3158,
           "id": "sec_892.txt::0"
         },
         {
-          "citation": "Art. 63, UCMJ (10 U.S.C. \u00a7 863) (part 4)",
-          "type": "procedural",
-          "title": "Rehearings",
-          "score": 8.241,
-          "id": "sec_863.txt::3"
+          "citation": "Art. 90, UCMJ (10 U.S.C. \u00a7 890)",
+          "article": "90",
+          "type": "punitive",
+          "title": "Willfully disobeying superior commissioned officer",
+          "score": 6.8902,
+          "id": "sec_890.txt::0"
         },
         {
-          "citation": "Art. 114, UCMJ (10 U.S.C. \u00a7 914) (part 2)",
-          "type": "punitive",
-          "title": "Endangerment offenses",
-          "score": 7.102,
-          "id": "sec_914.txt::1"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9)",
+          "article": "146",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.658,
+          "id": "sec_946.txt::8"
+        },
+        {
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 10)",
+          "article": "146",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.2098,
+          "id": "sec_946.txt::9"
+        },
+        {
+          "citation": "Art. 63, UCMJ (10 U.S.C. \u00a7 863) (part 4)",
+          "article": "63",
+          "type": "procedural",
+          "title": "Rehearings",
+          "score": 6.1935,
+          "id": "sec_863.txt::3"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 103, UCMJ (10 U.S.C. \u00a7 903) (part 1):\nAny person who in time of war is found lurking as a spy or acting as a spy in or about any place, vessel, or aircraft, within the control or jurisdiction of any of the armed forces, or in or about any shipyard, any manufacturing or industrial plant, or any other place or institution engaged in work in aid of the prosecution of the war by the United States, or elsewhere, shall be tried by a general court-martial or by a military commission and on conviction shall be punished by death or such ...",
-      "gold_rank": 3,
+      "retrieval": {
+        "scored": true,
+        "gold_ranks": {
+          "92": 1
+        },
+        "first_gold_rank": 1,
+        "all_gold_retrieved": true
+      },
+      "answer": {
+        "text": "Any person subject to this chapter who\u2014 (1) violates or fails to obey any lawful general order or regulation; (2) having knowledge of any other lawful order issued by a member of the armed forces, which it is his duty to obey, fails to obey the order; or (3) is derelict in the performance of his duties; shall be punished as a court-martial may direct. (Art. 92, UCMJ)\n\n(c) If, after appeal by the Government under section 856(d) of this title (article 56(d)), the sentence adjudged is set aside and a rehearing on sentence is ordered by the Court of Criminal Appeals or Court of Appeals for the Armed Forces, the court-martial may impose any sentence that is in accordance with the order or ruling setting aside the adjudged sentence, subject to such limitations as the President may prescribe by regulation. (Art. 63, UCMJ)",
+        "refused": false,
+        "boundary": false,
+        "cited_articles": [
+          "92",
+          "63"
+        ],
+        "sentences": [
+          {
+            "text": "(2) having knowledge of any other lawful order issued by a member of the armed forces, which it is his duty to obey, fails to obey the order; or (3) is derelict in the performance of his duties; shall be punished as a court-martial may direct.",
+            "article": "92",
+            "chunk_id": "sec_892.txt::0",
+            "score": 3.5809
+          },
+          {
+            "text": "Any person subject to this chapter who\u2014 (1) violates or fails to obey any lawful general order or regulation;",
+            "article": "92",
+            "chunk_id": "sec_892.txt::0",
+            "score": 3.3809
+          },
+          {
+            "text": "(c) If, after appeal by the Government under section 856(d) of this title (article 56(d)), the sentence adjudged is set aside and a rehearing on sentence is ordered by the Court of Criminal Appeals or Court of Appeals for the Armed Forces, the court-martial may impose any sentence that is in accordance with the order or ruling setting aside the adjudged sentence, subject to such limitations as the President may prescribe by regulation.",
+            "article": "63",
+            "chunk_id": "sec_863.txt::3",
+            "score": 3.0809
+          }
+        ]
+      },
       "top_matched_terms": [
-        "about",
-        "does"
+        "regulation",
+        "order"
       ]
     },
     {
       "id": "q17",
       "type": "statute_boundary",
       "question": "What is the maximum confinement for being AWOL for more than 30 days?",
-      "gold_citation": "none in this corpus (Art. 86 sets the offense; the confinement table is in the Manual for Courts-Martial)",
-      "gold_answer": "The statute does not say. Art. 86 defines the offense and provides punishment 'as a court-martial may direct'; the specific maximum confinement periods by duration of absence are set in the Manual for Courts-Martial punishment tables, which are not part of the statutory text. A good system must say the number is not in this corpus rather than invent one.",
+      "gold_articles": [],
+      "answerable_from_corpus": false,
       "retrieved": [
         {
           "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 10)",
+          "article": "15",
           "type": "procedural",
           "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 18.5652,
+          "score": 10.5638,
           "id": "sec_815.txt::9"
         },
         {
           "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 12)",
+          "article": "15",
           "type": "procedural",
           "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 17.8883,
+          "score": 9.8518,
           "id": "sec_815.txt::11"
         },
         {
+          "citation": "Art. 48, UCMJ (10 U.S.C. \u00a7 848) (part 2)",
+          "article": "48",
+          "type": "procedural",
+          "title": "Contempt",
+          "score": 9.8032,
+          "id": "sec_848.txt::1"
+        },
+        {
+          "citation": "Art. 48, UCMJ (10 U.S.C. \u00a7 848) (part 3)",
+          "article": "48",
+          "type": "procedural",
+          "title": "Contempt",
+          "score": 9.8032,
+          "id": "sec_848.txt::2"
+        },
+        {
           "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 9)",
+          "article": "15",
           "type": "procedural",
           "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 16.4084,
+          "score": 9.6937,
           "id": "sec_815.txt::8"
-        },
-        {
-          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 11)",
-          "type": "procedural",
-          "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 16.3735,
-          "id": "sec_815.txt::10"
-        },
-        {
-          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 13)",
-          "type": "procedural",
-          "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 15.8804,
-          "id": "sec_815.txt::12"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 10):\nrestriction to certain specified limits, with or without suspension from duty, for not more than 30 consecutive days; (B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days; (ii) forfeiture of not more than one-half of one month\u2019s pay per month for two months; (iii) restriction to certain specified limits, with or without suspension from duty, for not more than ...",
-      "gold_rank": 0,
+      "retrieval": {
+        "scored": false
+      },
+      "answer": {
+        "text": "The statute does not contain this figure. The UCMJ typically provides punishment 'as a court-martial may direct'; the specific maximum punishments are set in the Manual for Courts-Martial punishment tables, which are not part of this corpus.",
+        "refused": true,
+        "boundary": true,
+        "cited_articles": [],
+        "sentences": []
+      },
       "top_matched_terms": [
         "30",
-        "days",
-        "more",
-        "than"
+        "days"
       ]
     },
     {
       "id": "q18",
       "type": "out_of_corpus",
       "question": "What does Rule for Courts-Martial 707 require for a speedy trial?",
-      "gold_citation": "none (the Rules for Courts-Martial are in the MCM, not in this corpus)",
-      "gold_answer": "The Rules for Courts-Martial are part of the Manual for Courts-Martial, not the UCMJ statute, and are not in this corpus. The system should say the context cannot answer this rather than fabricate the 120 day rule.",
+      "gold_articles": [],
+      "answerable_from_corpus": false,
       "retrieved": [
         {
           "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 12)",
+          "article": "6b",
           "type": "procedural",
           "title": "Rights of the victim of an offense under this chapter",
-          "score": 11.5908,
+          "score": 11.4776,
           "id": "sec_806b.txt::11"
         },
         {
           "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 11)",
+          "article": "6b",
           "type": "procedural",
           "title": "Rights of the victim of an offense under this chapter",
-          "score": 11.2391,
+          "score": 11.1875,
           "id": "sec_806b.txt::10"
         },
         {
-          "citation": "Art. 58, UCMJ (10 U.S.C. \u00a7 858) (part 6)",
+          "citation": "Art. 146a, UCMJ (10 U.S.C. \u00a7 946a) (part 4)",
+          "article": "146a",
           "type": "procedural",
-          "title": "Execution of confinement",
-          "score": 9.1937,
-          "id": "sec_858.txt::5"
+          "title": "Annual reports",
+          "score": 8.0253,
+          "id": "sec_946a.txt::3"
         },
         {
-          "citation": "Art. 39, UCMJ (10 U.S.C. \u00a7 839) (part 3)",
+          "citation": "Art. 146a, UCMJ (10 U.S.C. \u00a7 946a) (part 3)",
+          "article": "146a",
           "type": "procedural",
-          "title": "Sessions",
-          "score": 8.9547,
-          "id": "sec_839.txt::2"
+          "title": "Annual reports",
+          "score": 7.7969,
+          "id": "sec_946a.txt::2"
         },
         {
-          "citation": "Art. 58, UCMJ (10 U.S.C. \u00a7 858) (part 4)",
+          "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 16)",
+          "article": "6b",
           "type": "procedural",
-          "title": "Execution of confinement",
-          "score": 8.5482,
-          "id": "sec_858.txt::3"
+          "title": "Rights of the victim of an offense under this chapter",
+          "score": 7.5264,
+          "id": "sec_806b.txt::15"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 12):\n(article 32) or a court-martial ruling violates the rights of the victim afforded by a section (article) or rule specified in paragraph (4), the victim may petition the Court of Criminal Appeals for a writ of mandamus to require the preliminary hearing officer or the court-martial to comply with the section (article) or rule. (2) If the victim of an offense under this chapter is subject to an order to submit to a deposition, notwithstanding the availability of the victim to testify at the ...",
-      "gold_rank": null,
+      "retrieval": {
+        "scored": false
+      },
+      "answer": {
+        "text": "This question asks about material from the Manual for Courts-Martial (which includes the Rules for Courts-Martial), not the UCMJ statute. This corpus contains only the statutory text of 10 U.S.C. chapter 47, so it cannot answer this.",
+        "refused": true,
+        "boundary": true,
+        "cited_articles": [],
+        "sentences": []
+      },
       "top_matched_terms": [
         "require",
         "rule",
