@@ -1,5 +1,7 @@
 # RAG over the UCMJ with grounded answer synthesis and honest evaluation
 
+[![ci](https://github.com/2024karanvirsingh-dot/Take-Home-Submission-Karanvir-Singh/actions/workflows/ci.yml/badge.svg)](https://github.com/2024karanvirsingh-dot/Take-Home-Submission-Karanvir-Singh/actions/workflows/ci.yml)
+
 A retrieval augmented question answering pipeline over the Uniform Code of
 Military Justice, with a fully local, deterministic, citation constrained
 answer layer and an evaluation that scores its own outputs and digs into
