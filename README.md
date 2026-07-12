@@ -535,9 +535,10 @@ articles instead, and the grounded answer quotes Art. 25a (capital panel
 size) with a citation the scorer flags as wrong: support was satisfied by
 "sentenced" and "death", which establish topic but not entailment. Stemming
 fixes the retrieval (rank 1 in `bm25_stem`) and dense fixes it without
-stemming's side effects; hybrid fusion then loses it again (Example 3 and
-the ablations), so the failure is reported for both tiers rather than
-hidden.
+stemming's side effects; hybrid fusion then loses it again (the complete
+q04 before/after pair is in `outputs/before_after.md`, and the fusion
+trade is in the ablations), so the failure is reported for both tiers
+rather than hidden.
 
 **Failure 2: boilerplate kills the query's key terms (q05, q07).** "Who is
 subject to the UCMJ?" should retrieve Art. 2, which enumerates exactly
