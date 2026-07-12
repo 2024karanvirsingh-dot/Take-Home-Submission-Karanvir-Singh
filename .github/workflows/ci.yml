@@ -1,0 +1,71 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  # the default install from a clean environment: dataset validation, the
+  # full unit suite (dense and generative tests skip themselves without
+  # torch), the bm25 baseline evaluation and a schema check on its outputs.
+  core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: install default dependencies
+        run: pip install -r requirements.txt -r requirements-dev.txt
+      - name: validate dataset
+        run: python3 -m eval.validate_dataset
+      - name: unit tests
+        run: python3 -m pytest tests/ -q
+      - name: baseline evaluation runs from clean checkout
+        run: |
+          python3 -m eval.run_eval --tag ci_bm25
+          python3 -m eval.score_answers outputs/run_ci_bm25.json
+      - name: output schema check
+        run: |
+          python3 - <<'EOF'
+          import json
+          run = json.load(open("outputs/run_ci_bm25.json"))
+          assert {"config", "aggregate", "records"} <= set(run)
+          assert len(run["records"]) == 18
+          agg = run["aggregate"]
+          assert agg["n_retrieval_scored"] == 16 and agg["n_controls"] == 2
+          for rec in run["records"]:
+              assert {"id", "question", "retrieved", "retrieval", "answer"} <= set(rec)
+          scores = json.load(open("outputs/answer_scores_ci_bm25.json"))
+          assert {"aggregate", "per_question"} <= set(scores)
+          assert len(scores["per_question"]) == 18
+          print("schema ok: 18 records, 16 retrieval scored, 2 controls")
+          EOF
+
+  # the optional extras (dense/hybrid retrieval and the generative
+  # answerer) pull in torch and download two models, so this job runs on
+  # demand rather than per push.
+  full:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: cache hub models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-models-minilm-flant5small
+      - name: install optional extras
+        run: pip install -r requirements-dense.txt -r requirements-gen.txt -r requirements-dev.txt
+      - name: full unit tests (dense + generative included)
+        run: python3 -m pytest tests/ -q
+      - name: hybrid evaluation
+        run: |
+          python3 -m eval.run_eval --retriever hybrid --tag ci_hybrid
+          python3 -m eval.score_answers outputs/run_ci_hybrid.json
