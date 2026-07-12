@@ -1,0 +1,69 @@
+"""
+Generation.
+
+The prompt is deliberately strict: answer only from the retrieved context, cite
+the provision by its label, and if the context does not contain the answer say
+so instead of guessing. Most RAG hallucinations in a legal setting come from the
+model smoothing over a gap in retrieval, so the prompt makes "not in the context"
+a first class allowed answer.
+
+Two backends:
+  anthropic  : used when ANTHROPIC_API_KEY is set. Model is overridable with
+               RAG_MODEL (default claude-3-5-sonnet, a broadly available model
+               so a reviewer's key works without edits).
+  extractive : zero dependency fallback so the pipeline runs on a clean clone
+               with no key. It returns the single best chunk verbatim. This is
+               not a real generated answer, it just proves retrieval end to end.
+
+The recorded evaluation run in outputs/ was generated over the exact contexts
+this file produces. See the README for how that run was done.
+"""
+import os, textwrap
+
+SYSTEM = (
+    "You are a careful legal research assistant answering questions about the "
+    "GDPR. Answer using only the provided context passages. Cite the provision "
+    "you rely on by its label, for example (Art. 17 GDPR) or (Recital 39 GDPR). "
+    "Prefer binding Articles over non binding Recitals when both are present and "
+    "say so if you are relying on a Recital. If the context does not contain the "
+    "answer, say 'The provided context does not answer this' and stop. Do not use "
+    "outside knowledge."
+)
+
+
+def build_prompt(question, retrieved):
+    blocks = []
+    for c, score in retrieved:
+        blocks.append(f"[{c['citation']} | {c['type']} | {c['title']}]\n{c['text']}")
+    context = "\n\n".join(blocks)
+    user = f"Context passages:\n\n{context}\n\nQuestion: {question}\n\nAnswer:"
+    return SYSTEM, user
+
+
+def generate(question, retrieved):
+    system, user = build_prompt(question, retrieved)
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        try:
+            return _anthropic(system, user)
+        except Exception as e:
+            return f"[anthropic call failed: {e}]\n\n" + _extractive(retrieved)
+    return _extractive(retrieved)
+
+
+def _anthropic(system, user):
+    import anthropic
+    model = os.environ.get("RAG_MODEL", "claude-3-5-sonnet-20241022")
+    client = anthropic.Anthropic()
+    msg = client.messages.create(
+        model=model, max_tokens=600, system=system,
+        messages=[{"role": "user", "content": user}],
+    )
+    return msg.content[0].text.strip()
+
+
+def _extractive(retrieved):
+    if not retrieved:
+        return "The provided context does not answer this."
+    top, _ = retrieved[0]
+    body = textwrap.shorten(top["text"].replace("\n", " "), width=500, placeholder=" ...")
+    return f"(extractive fallback, no LLM key set) Best passage {top['citation']}:\n{body}"
