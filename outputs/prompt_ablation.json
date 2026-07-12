@@ -1,0 +1,32 @@
+{
+  "_about": "The one thing changed here is the system prompt (rag/generate.py STRICT vs PERMISSIVE), retrieval is held fixed at the BM25 baseline. These three questions all had a retrieval miss (the answer bearing provision was not in the top k). Under the strict prompt the miss becomes a safe refusal. Under the permissive prompt the model fills the gap from training memory, producing answers that are unsupported by the retrieved context (faithfulness fail) even when the stated fact happens to be correct. In q18 the permissive answer is also substantively about a law that is not in the corpus at all, which is the dangerous case.",
+  "records": [
+    {
+      "id": "q05",
+      "question": "How does the GDPR define personal data?",
+      "strict_answer": "The provided context does not contain the definition of personal data. The retrieved passages concern professional secrecy, security of processing and Board opinions, none of which define the term.",
+      "strict_faithfulness": "pass",
+      "permissive_answer": "Personal data means any information relating to an identified or identifiable natural person. An identifiable person is one who can be identified, directly or indirectly, by reference to an identifier such as a name, an identification number, location data, an online identifier, or to one or more factors specific to their physical, physiological, genetic, mental, economic, cultural or social identity (Art. 4(1)).",
+      "permissive_faithfulness": "fail",
+      "note": "The permissive answer is the correct real world definition of Art. 4(1), but not one token of it was in the retrieved context. It came entirely from the model's training. In a legal product that is a fabricated citation: the system cites Art. 4(1) that it never actually read."
+    },
+    {
+      "id": "q09",
+      "question": "What are the lawful bases for processing personal data?",
+      "strict_answer": "The provided context does not list the lawful bases. The retrieved passages discuss lawfulness and transparency in general terms but Art. 6(1) was not retrieved.",
+      "strict_faithfulness": "pass",
+      "permissive_answer": "There are six lawful bases: (a) consent, (b) performance of a contract, (c) compliance with a legal obligation, (d) protection of vital interests, (e) a task in the public interest or official authority, and (f) legitimate interests (Art. 6(1)).",
+      "permissive_faithfulness": "fail",
+      "note": "Again correct in reality and again unsupported. The retrieved recitals never enumerate the six bases, so the enumeration is reconstructed from training, not retrieval."
+    },
+    {
+      "id": "q18",
+      "question": "How does the CCPA define a sale of personal information?",
+      "strict_answer": "The provided context is GDPR material only and does not contain the CCPA, so this cannot be answered from the context.",
+      "strict_faithfulness": "pass",
+      "permissive_answer": "Under the CCPA, a sale means selling, renting, releasing, disclosing, disseminating, making available or transferring a consumer's personal information to another business or third party for monetary or other valuable consideration.",
+      "permissive_faithfulness": "fail",
+      "note": "The most dangerous case. The corpus contains no CCPA at all, yet the permissive prompt confidently produces a CCPA definition from memory. A user would have no signal that the answer is ungrounded. This is exactly what the strict prompt is there to prevent."
+    }
+  ]
+}
