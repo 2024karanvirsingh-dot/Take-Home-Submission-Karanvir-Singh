@@ -1,0 +1,839 @@
+{
+  "config": {
+    "retriever": "tfidf",
+    "chunk_words": 180,
+    "overlap_words": 40,
+    "k": 5,
+    "tag": "tfidf_baseline"
+  },
+  "records": [
+    {
+      "id": "q01",
+      "type": "factual_lookup",
+      "question": "What is the maximum administrative fine for the most serious GDPR infringements?",
+      "gold_citation": "Art. 83(5) GDPR",
+      "gold_answer": "Up to 20,000,000 EUR, or in the case of an undertaking up to 4% of total worldwide annual turnover of the preceding financial year, whichever is higher.",
+      "retrieved": [
+        {
+          "citation": "Recital 150 GDPR (part 3)",
+          "type": "recital",
+          "title": "Administrative Fines*",
+          "score": 0.2328,
+          "id": "recital_150.txt::2"
+        },
+        {
+          "citation": "Art. 83 GDPR (part 1)",
+          "type": "article",
+          "title": "General conditions for imposing administrative fines",
+          "score": 0.2246,
+          "id": "article_083.txt::0"
+        },
+        {
+          "citation": "Art. 84 GDPR",
+          "type": "article",
+          "title": "Penalties",
+          "score": 0.2098,
+          "id": "article_084.txt::0"
+        },
+        {
+          "citation": "Recital 152 GDPR",
+          "type": "recital",
+          "title": "Power of Sanction of the Member States*",
+          "score": 0.2021,
+          "id": "recital_152.txt::0"
+        },
+        {
+          "citation": "Recital 151 GDPR",
+          "type": "recital",
+          "title": "Administrative Fines in Denmark and Estonia*",
+          "score": 0.1925,
+          "id": "recital_151.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Recital 150 GDPR (part 3):\nWhere administrative fines are imposed on persons that are not an undertaking, the supervisory authority should take account of the general level of income in the Member State as well as the economic situation of the person in considering the appropriate amount of the fine. 5 The consistency mechanism may also be used to promote a consistent application of administrative fines. 6 It should be for the Member States to determine whether and to which extent public authorities should be subject ...",
+      "gold_rank": 2
+    },
+    {
+      "id": "q02",
+      "type": "deadline",
+      "question": "Within what time must a controller notify the supervisory authority of a personal data breach?",
+      "gold_citation": "Art. 33(1) GDPR",
+      "gold_answer": "Without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach.",
+      "retrieved": [
+        {
+          "citation": "Art. 33 GDPR (part 1)",
+          "type": "article",
+          "title": "Notification of a personal data breach to the supervisory authority",
+          "score": 0.3583,
+          "id": "article_033.txt::0"
+        },
+        {
+          "citation": "Art. 34 GDPR (part 1)",
+          "type": "article",
+          "title": "Communication of a personal data breach to the data subject",
+          "score": 0.2701,
+          "id": "article_034.txt::0"
+        },
+        {
+          "citation": "Art. 33 GDPR (part 2)",
+          "type": "article",
+          "title": "Notification of a personal data breach to the supervisory authority",
+          "score": 0.2669,
+          "id": "article_033.txt::1"
+        },
+        {
+          "citation": "Recital 85 GDPR (part 1)",
+          "type": "recital",
+          "title": "Notification Obligation of Breaches to the Supervisory Authority*",
+          "score": 0.2594,
+          "id": "recital_085.txt::0"
+        },
+        {
+          "citation": "Recital 85 GDPR (part 2)",
+          "type": "recital",
+          "title": "Notification Obligation of Breaches to the Supervisory Authority*",
+          "score": 0.2406,
+          "id": "recital_085.txt::1"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 33 GDPR (part 1):\n1 In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55 , unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons. 2 Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q03",
+      "type": "factual_lookup",
+      "question": "What is the right to be forgotten?",
+      "gold_citation": "Art. 17 GDPR",
+      "gold_answer": "The right to erasure: the data subject can obtain erasure of personal data without undue delay where one of the listed grounds applies, for example the data are no longer necessary or consent is withdrawn.",
+      "retrieved": [
+        {
+          "citation": "Art. 17 GDPR (part 4)",
+          "type": "article",
+          "title": "Right to erasure (\u2018right to be forgotten\u2019)",
+          "score": 0.311,
+          "id": "article_017.txt::3"
+        },
+        {
+          "citation": "Recital 66 GDPR",
+          "type": "recital",
+          "title": "Right to be Forgotten*",
+          "score": 0.2999,
+          "id": "recital_066.txt::0"
+        },
+        {
+          "citation": "Recital 65 GDPR (part 1)",
+          "type": "recital",
+          "title": "Right of Rectification and Erasure*",
+          "score": 0.2059,
+          "id": "recital_065.txt::0"
+        },
+        {
+          "citation": "Art. 20 GDPR (part 2)",
+          "type": "article",
+          "title": "Right to data portability",
+          "score": 0.2002,
+          "id": "article_020.txt::1"
+        },
+        {
+          "citation": "Art. 17 GDPR (part 3)",
+          "type": "article",
+          "title": "Right to erasure (\u2018right to be forgotten\u2019)",
+          "score": 0.1849,
+          "id": "article_017.txt::2"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 17 GDPR (part 4):\nfor compliance with a legal obligation which requires processing by Union or Member State law to which the controller is subject or for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller; for reasons of public interest in the area of public health in accordance with points (h) and (i) of Article 9 (2) as well as Article 9 (3); for archiving purposes in the public interest, scientific or historical research purposes ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q04",
+      "type": "numeric_threshold",
+      "question": "At what age can a child give their own consent for information society services under the GDPR default?",
+      "gold_citation": "Art. 8(1) GDPR",
+      "gold_answer": "16 years old by default; Member States may lower this by law but not below 13.",
+      "retrieved": [
+        {
+          "citation": "Art. 8 GDPR (part 1)",
+          "type": "article",
+          "title": "Conditions applicable to child's consent in relation to information society services",
+          "score": 0.4307,
+          "id": "article_008.txt::0"
+        },
+        {
+          "citation": "Art. 8 GDPR (part 2)",
+          "type": "article",
+          "title": "Conditions applicable to child's consent in relation to information society services",
+          "score": 0.3171,
+          "id": "article_008.txt::1"
+        },
+        {
+          "citation": "Art. 7 GDPR (part 2)",
+          "type": "article",
+          "title": "Conditions for consent",
+          "score": 0.2161,
+          "id": "article_007.txt::1"
+        },
+        {
+          "citation": "Art. 25 GDPR (part 2)",
+          "type": "article",
+          "title": "Data protection by design and by default",
+          "score": 0.1933,
+          "id": "article_025.txt::1"
+        },
+        {
+          "citation": "Art. 7 GDPR (part 1)",
+          "type": "article",
+          "title": "Conditions for consent",
+          "score": 0.1715,
+          "id": "article_007.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 8 GDPR (part 1):\n1 Where point (a) of Article 6( 1) applies, in relation to the offer of information society services directly to a child, the processing of the personal data of a child shall be lawful where the child is at least 16 years old. 2 Where the child is below the age of 16 years, such processing shall be lawful only if and to the extent that consent is given or authorised by the holder of parental responsibility over the child. 3 Member States may provide by law for a lower age for those purposes ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q05",
+      "type": "definition",
+      "question": "How does the GDPR define personal data?",
+      "gold_citation": "Art. 4(1) GDPR",
+      "gold_answer": "Any information relating to an identified or identifiable natural person, who can be identified directly or indirectly by reference to an identifier such as a name, ID number, location data, or factors specific to their identity.",
+      "retrieved": [
+        {
+          "citation": "Recital 39 GDPR (part 2)",
+          "type": "recital",
+          "title": "Principles of Data Processing*",
+          "score": 0.2089,
+          "id": "recital_039.txt::1"
+        },
+        {
+          "citation": "Recital 39 GDPR (part 1)",
+          "type": "recital",
+          "title": "Principles of Data Processing*",
+          "score": 0.185,
+          "id": "recital_039.txt::0"
+        },
+        {
+          "citation": "Art. 29 GDPR",
+          "type": "article",
+          "title": "Processing under the authority of the controller or processor",
+          "score": 0.1719,
+          "id": "article_029.txt::0"
+        },
+        {
+          "citation": "Art. 6 GDPR (part 8)",
+          "type": "article",
+          "title": "Lawfulness of processing",
+          "score": 0.1631,
+          "id": "article_006.txt::7"
+        },
+        {
+          "citation": "Art. 34 GDPR (part 3)",
+          "type": "article",
+          "title": "Communication of a personal data breach to the data subject",
+          "score": 0.1621,
+          "id": "article_034.txt::2"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Recital 39 GDPR (part 2):\nThat principle concerns, in particular, information to the data subjects on the identity of the controller and the purposes of the processing and further information to ensure fair and transparent processing in respect of the natural persons concerned and their right to obtain confirmation and communication of personal data concerning them which are being processed. 5 Natural persons should be made aware of risks, rules, safeguards and rights in relation to the processing of personal data ...",
+      "gold_rank": 0
+    },
+    {
+      "id": "q06",
+      "type": "definition",
+      "question": "What does processing mean under the GDPR?",
+      "gold_citation": "Art. 4(2) GDPR",
+      "gold_answer": "Any operation performed on personal data, whether or not by automated means, such as collection, recording, storage, use, disclosure, or erasure.",
+      "retrieved": [
+        {
+          "citation": "Recital 118 GDPR",
+          "type": "recital",
+          "title": "Monitoring of the Supervisory Authorities*",
+          "score": 0.2008,
+          "id": "recital_118.txt::0"
+        },
+        {
+          "citation": "Art. 31 GDPR",
+          "type": "article",
+          "title": "Cooperation with the supervisory authority",
+          "score": 0.1346,
+          "id": "article_031.txt::0"
+        },
+        {
+          "citation": "Art. 6 GDPR (part 8)",
+          "type": "article",
+          "title": "Lawfulness of processing",
+          "score": 0.1327,
+          "id": "article_006.txt::7"
+        },
+        {
+          "citation": "Art. 32 GDPR (part 3)",
+          "type": "article",
+          "title": "Security of processing",
+          "score": 0.1286,
+          "id": "article_032.txt::2"
+        },
+        {
+          "citation": "Art. 55 GDPR",
+          "type": "article",
+          "title": "Competence",
+          "score": 0.1257,
+          "id": "article_055.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Recital 118 GDPR:\nThe independence of supervisory authorities should not mean that the supervisory authorities cannot be subject to control or monitoring mechanisms regarding their financial expenditure or to judicial review. * This title is an unofficial description. \u2190 Recital 117 Recital 119 \u2192 All recitals Report error",
+      "gold_rank": 0
+    },
+    {
+      "id": "q07",
+      "type": "comparative",
+      "question": "What is the difference between a controller and a processor?",
+      "gold_citation": "Art. 4(7) and Art. 4(8) GDPR",
+      "gold_answer": "A controller determines the purposes and means of processing; a processor processes personal data on behalf of the controller.",
+      "retrieved": [
+        {
+          "citation": "Art. 28 GDPR (part 7)",
+          "type": "article",
+          "title": "Processor",
+          "score": 0.1905,
+          "id": "article_028.txt::6"
+        },
+        {
+          "citation": "Art. 28 GDPR (part 6)",
+          "type": "article",
+          "title": "Processor",
+          "score": 0.186,
+          "id": "article_028.txt::5"
+        },
+        {
+          "citation": "Art. 58 GDPR (part 1)",
+          "type": "article",
+          "title": "Powers",
+          "score": 0.165,
+          "id": "article_058.txt::0"
+        },
+        {
+          "citation": "Art. 28 GDPR (part 1)",
+          "type": "article",
+          "title": "Processor",
+          "score": 0.1578,
+          "id": "article_028.txt::0"
+        },
+        {
+          "citation": "Art. 29 GDPR",
+          "type": "article",
+          "title": "Processing under the authority of the controller or processor",
+          "score": 0.143,
+          "id": "article_029.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 28 GDPR (part 7):\nWhere a processor engages another processor for carrying out specific processing activities on behalf of the controller, the same data protection obligations as set out in the contract or other legal act between the controller and the processor as referred to in paragraph 3 shall be imposed on that other processor by way of a contract or other legal act under Union or Member State law, in particular providing sufficient guarantees to implement appropriate technical and organisational ...",
+      "gold_rank": 0
+    },
+    {
+      "id": "q08",
+      "type": "deadline",
+      "question": "How long does a controller have to respond to a data subject access request?",
+      "gold_citation": "Art. 12(3) GDPR",
+      "gold_answer": "Without undue delay and in any event within one month of receipt, extendable by two further months where necessary given complexity and number of requests.",
+      "retrieved": [
+        {
+          "citation": "Recital 59 GDPR",
+          "type": "recital",
+          "title": "Procedures for the Exercise of the Rights of the Data Subjects*",
+          "score": 0.2063,
+          "id": "recital_059.txt::0"
+        },
+        {
+          "citation": "Recital 68 GDPR (part 3)",
+          "type": "recital",
+          "title": "Right of Data Portability*",
+          "score": 0.1961,
+          "id": "recital_068.txt::2"
+        },
+        {
+          "citation": "Art. 12 GDPR (part 2)",
+          "type": "article",
+          "title": "Transparent information, communication and modalities for the exercise of the rights of the data subject",
+          "score": 0.1869,
+          "id": "article_012.txt::1"
+        },
+        {
+          "citation": "Art. 12 GDPR (part 3)",
+          "type": "article",
+          "title": "Transparent information, communication and modalities for the exercise of the rights of the data subject",
+          "score": 0.1804,
+          "id": "article_012.txt::2"
+        },
+        {
+          "citation": "Art. 15 GDPR (part 1)",
+          "type": "article",
+          "title": "Right of access by the data subject",
+          "score": 0.1741,
+          "id": "article_015.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Recital 59 GDPR:\n1 Modalities should be provided for facilitating the exercise of the data subject\u2019s rights under this Regulation, including mechanisms to request and, if applicable, obtain, free of charge, in particular, access to and rectification or erasure of personal data and the exercise of the right to object. 2 The controller should also provide means for requests to be made electronically, especially where personal data are processed by electronic means. 3 The controller should be obliged to respond ...",
+      "gold_rank": 3
+    },
+    {
+      "id": "q09",
+      "type": "enumeration",
+      "question": "What are the lawful bases for processing personal data?",
+      "gold_citation": "Art. 6(1) GDPR",
+      "gold_answer": "Consent; performance of a contract; compliance with a legal obligation; protection of vital interests; performance of a task in the public interest or official authority; and legitimate interests.",
+      "retrieved": [
+        {
+          "citation": "Recital 39 GDPR (part 1)",
+          "type": "recital",
+          "title": "Principles of Data Processing*",
+          "score": 0.2888,
+          "id": "recital_039.txt::0"
+        },
+        {
+          "citation": "Recital 50 GDPR (part 1)",
+          "type": "recital",
+          "title": "Further Processing of Personal Data*",
+          "score": 0.254,
+          "id": "recital_050.txt::0"
+        },
+        {
+          "citation": "Recital 39 GDPR (part 2)",
+          "type": "recital",
+          "title": "Principles of Data Processing*",
+          "score": 0.2365,
+          "id": "recital_039.txt::1"
+        },
+        {
+          "citation": "Recital 39 GDPR (part 3)",
+          "type": "recital",
+          "title": "Principles of Data Processing*",
+          "score": 0.2194,
+          "id": "recital_039.txt::2"
+        },
+        {
+          "citation": "Recital 45 GDPR (part 2)",
+          "type": "recital",
+          "title": "Fulfillment of Legal Obligations*",
+          "score": 0.2157,
+          "id": "recital_045.txt::1"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Recital 39 GDPR (part 1):\n1 Any processing of personal data should be lawful and fair. 2 It should be transparent to natural persons that personal data concerning them are collected, used, consulted or otherwise processed and to what extent the personal data are or will be processed. 3 The principle of transparency requires that any information and communication relating to the processing of those personal data be easily accessible and easy to understand, and that clear and plain language be used. 4 That principle ...",
+      "gold_rank": 0
+    },
+    {
+      "id": "q10",
+      "type": "conditional",
+      "question": "Under what conditions may special categories of sensitive data be processed?",
+      "gold_citation": "Art. 9(2) GDPR",
+      "gold_answer": "Processing of special category data is prohibited unless an exception applies, such as explicit consent, employment or social security law, vital interests, data made public by the subject, legal claims, substantial public interest, health or research purposes.",
+      "retrieved": [
+        {
+          "citation": "Art. 9 GDPR (part 9)",
+          "type": "article",
+          "title": "Processing of special categories of personal data",
+          "score": 0.3689,
+          "id": "article_009.txt::8"
+        },
+        {
+          "citation": "Art. 9 GDPR (part 8)",
+          "type": "article",
+          "title": "Processing of special categories of personal data",
+          "score": 0.2922,
+          "id": "article_009.txt::7"
+        },
+        {
+          "citation": "Recital 53 GDPR (part 3)",
+          "type": "recital",
+          "title": "Processing of Sensitive Data in Health and Social Sector*",
+          "score": 0.2484,
+          "id": "recital_053.txt::2"
+        },
+        {
+          "citation": "Recital 51 GDPR (part 2)",
+          "type": "recital",
+          "title": "Protecting Sensitive Personal Data*",
+          "score": 0.2467,
+          "id": "recital_051.txt::1"
+        },
+        {
+          "citation": "Recital 51 GDPR (part 1)",
+          "type": "recital",
+          "title": "Protecting Sensitive Personal Data*",
+          "score": 0.2327,
+          "id": "recital_051.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 9 GDPR (part 9):\nMember States may maintain or introduce further conditions, including limitations, with regard to the processing of genetic data, biometric data or data concerning health. Suitable Recitals ( 46 ) Vital Interests of the Data Subject ( 51 ) Protecting Sensitive Personal Data ( 52 ) Exceptions to the Prohibition on Processing Special Categories of Personal Data ( 53 ) Processing of Sensitive Data in Health and Social Sector ( 54 ) Processing of Sensitive Data in Public Health Sector ( 55 ) ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q11",
+      "type": "comparative_near_duplicate",
+      "question": "What is the difference between the right to erasure and the right to restriction of processing?",
+      "gold_citation": "Art. 17 vs Art. 18 GDPR",
+      "gold_answer": "Erasure (Art. 17) deletes the data; restriction (Art. 18) keeps the data but limits what can be done with it in specific situations, for example while accuracy is contested.",
+      "retrieved": [
+        {
+          "citation": "Art. 20 GDPR (part 2)",
+          "type": "article",
+          "title": "Right to data portability",
+          "score": 0.2527,
+          "id": "article_020.txt::1"
+        },
+        {
+          "citation": "Recital 68 GDPR (part 3)",
+          "type": "recital",
+          "title": "Right of Data Portability*",
+          "score": 0.2521,
+          "id": "recital_068.txt::2"
+        },
+        {
+          "citation": "Art. 18 GDPR (part 1)",
+          "type": "article",
+          "title": "Right to restriction of processing",
+          "score": 0.2512,
+          "id": "article_018.txt::0"
+        },
+        {
+          "citation": "Art. 17 GDPR (part 4)",
+          "type": "article",
+          "title": "Right to erasure (\u2018right to be forgotten\u2019)",
+          "score": 0.2405,
+          "id": "article_017.txt::3"
+        },
+        {
+          "citation": "Art. 13 GDPR (part 3)",
+          "type": "article",
+          "title": "Information to be provided where personal data are collected from the data subject",
+          "score": 0.228,
+          "id": "article_013.txt::2"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 20 GDPR (part 2):\nIn exercising his or her right to data portability pursuant to paragraph 1, the data subject shall have the right to have the personal data transmitted directly from one controller to another, where technically feasible. 1 The exercise of the right referred to in paragraph 1 of this Article shall be without prejudice to Article 17 . 2 That right shall not apply to processing necessary for the performance of a task carried out in the public interest or in the exercise of official authority ...",
+      "gold_rank": 3
+    },
+    {
+      "id": "q12",
+      "type": "factual_lookup",
+      "question": "What is the right to data portability?",
+      "gold_citation": "Art. 20 GDPR",
+      "gold_answer": "The data subject can receive their personal data in a structured, commonly used, machine readable format and transmit it to another controller where processing is based on consent or contract and is automated.",
+      "retrieved": [
+        {
+          "citation": "Art. 20 GDPR (part 2)",
+          "type": "article",
+          "title": "Right to data portability",
+          "score": 0.4632,
+          "id": "article_020.txt::1"
+        },
+        {
+          "citation": "Art. 20 GDPR (part 1)",
+          "type": "article",
+          "title": "Right to data portability",
+          "score": 0.3326,
+          "id": "article_020.txt::0"
+        },
+        {
+          "citation": "Recital 68 GDPR (part 3)",
+          "type": "recital",
+          "title": "Right of Data Portability*",
+          "score": 0.2928,
+          "id": "recital_068.txt::2"
+        },
+        {
+          "citation": "Recital 68 GDPR (part 1)",
+          "type": "recital",
+          "title": "Right of Data Portability*",
+          "score": 0.2651,
+          "id": "recital_068.txt::0"
+        },
+        {
+          "citation": "Recital 68 GDPR (part 2)",
+          "type": "recital",
+          "title": "Right of Data Portability*",
+          "score": 0.2357,
+          "id": "recital_068.txt::1"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 20 GDPR (part 2):\nIn exercising his or her right to data portability pursuant to paragraph 1, the data subject shall have the right to have the personal data transmitted directly from one controller to another, where technically feasible. 1 The exercise of the right referred to in paragraph 1 of this Article shall be without prejudice to Article 17 . 2 That right shall not apply to processing necessary for the performance of a task carried out in the public interest or in the exercise of official authority ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q13",
+      "type": "factual_lookup",
+      "question": "When can a data subject object to processing of their personal data?",
+      "gold_citation": "Art. 21 GDPR",
+      "gold_answer": "At any time on grounds relating to their situation where processing is based on public interest or legitimate interests, and absolutely where data is processed for direct marketing.",
+      "retrieved": [
+        {
+          "citation": "Art. 21 GDPR (part 3)",
+          "type": "article",
+          "title": "Right to object",
+          "score": 0.4255,
+          "id": "article_021.txt::2"
+        },
+        {
+          "citation": "Art. 21 GDPR (part 1)",
+          "type": "article",
+          "title": "Right to object",
+          "score": 0.3582,
+          "id": "article_021.txt::0"
+        },
+        {
+          "citation": "Art. 21 GDPR (part 2)",
+          "type": "article",
+          "title": "Right to object",
+          "score": 0.3338,
+          "id": "article_021.txt::1"
+        },
+        {
+          "citation": "Art. 15 GDPR (part 1)",
+          "type": "article",
+          "title": "Right of access by the data subject",
+          "score": 0.3166,
+          "id": "article_015.txt::0"
+        },
+        {
+          "citation": "Recital 69 GDPR",
+          "type": "recital",
+          "title": "Right to Object*",
+          "score": 0.306,
+          "id": "recital_069.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 21 GDPR (part 3):\nIn the context of the use of information society services, and notwithstanding Directive 2002/58/EC , the data subject may exercise his or her right to object by automated means using technical specifications. Where personal data are processed for scientific or historical research purposes or statistical purposes pursuant to Article 89( 1), the data subject, on grounds relating to his or her particular situation, shall have the right to object to processing of personal data concerning him or ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q14",
+      "type": "factual_with_number",
+      "question": "Can a data subject get a copy of their personal data, and is there a fee?",
+      "gold_citation": "Art. 15(3) GDPR",
+      "gold_answer": "Yes, the controller provides one copy free of charge; for further copies the controller may charge a reasonable fee based on administrative costs.",
+      "retrieved": [
+        {
+          "citation": "Art. 15 GDPR (part 2)",
+          "type": "article",
+          "title": "Right of access by the data subject",
+          "score": 0.2847,
+          "id": "article_015.txt::1"
+        },
+        {
+          "citation": "Art. 15 GDPR (part 3)",
+          "type": "article",
+          "title": "Right of access by the data subject",
+          "score": 0.2472,
+          "id": "article_015.txt::2"
+        },
+        {
+          "citation": "Art. 17 GDPR (part 2)",
+          "type": "article",
+          "title": "Right to erasure (\u2018right to be forgotten\u2019)",
+          "score": 0.2444,
+          "id": "article_017.txt::1"
+        },
+        {
+          "citation": "Art. 13 GDPR (part 2)",
+          "type": "article",
+          "title": "Information to be provided where personal data are collected from the data subject",
+          "score": 0.2048,
+          "id": "article_013.txt::1"
+        },
+        {
+          "citation": "Art. 14 GDPR (part 1)",
+          "type": "article",
+          "title": "Information to be provided where personal data have not been obtained from the data subject",
+          "score": 0.2034,
+          "id": "article_014.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 15 GDPR (part 2):\nthe right to lodge a complaint with a supervisory authority; where the personal data are not collected from the data subject, any available information as to their source; the existence of automated decision-making, including profiling, referred to in Article 22 (1) and (4) and, at least in those cases, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject. Where personal data are transferred to a ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q15",
+      "type": "conditional",
+      "question": "When must an organization appoint a Data Protection Officer?",
+      "gold_citation": "Art. 37(1) GDPR",
+      "gold_answer": "When processing is carried out by a public authority, or the core activities require regular and systematic monitoring of data subjects on a large scale, or core activities consist of large scale processing of special category or criminal data.",
+      "retrieved": [
+        {
+          "citation": "Art. 37 GDPR (part 2)",
+          "type": "article",
+          "title": "Designation of the data protection officer",
+          "score": 0.4432,
+          "id": "article_037.txt::1"
+        },
+        {
+          "citation": "Art. 38 GDPR (part 2)",
+          "type": "article",
+          "title": "Position of the data protection officer",
+          "score": 0.3693,
+          "id": "article_038.txt::1"
+        },
+        {
+          "citation": "Art. 37 GDPR (part 1)",
+          "type": "article",
+          "title": "Designation of the data protection officer",
+          "score": 0.3661,
+          "id": "article_037.txt::0"
+        },
+        {
+          "citation": "Art. 37 GDPR (part 3)",
+          "type": "article",
+          "title": "Designation of the data protection officer",
+          "score": 0.3434,
+          "id": "article_037.txt::2"
+        },
+        {
+          "citation": "Art. 38 GDPR (part 1)",
+          "type": "article",
+          "title": "Position of the data protection officer",
+          "score": 0.326,
+          "id": "article_038.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 37 GDPR (part 2):\nA group of undertakings may appoint a single data protection officer provided that a data protection officer is easily accessible from each establishment. Where the controller or the processor is a public authority or body, a single data protection officer may be designated for several such authorities or bodies, taking account of their organisational structure and size. 1 In cases other than those referred to in paragraph 1, the controller or processor or associations and other bodies ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q16",
+      "type": "conditional",
+      "question": "What are the conditions for consent to be valid under the GDPR?",
+      "gold_citation": "Art. 7 GDPR (with Art. 4(11))",
+      "gold_answer": "Consent must be freely given, specific, informed and unambiguous; the controller must be able to demonstrate it; requests must be clearly distinguishable and in plain language; and it must be as easy to withdraw as to give.",
+      "retrieved": [
+        {
+          "citation": "Art. 7 GDPR (part 2)",
+          "type": "article",
+          "title": "Conditions for consent",
+          "score": 0.3463,
+          "id": "article_007.txt::1"
+        },
+        {
+          "citation": "Recital 43 GDPR",
+          "type": "recital",
+          "title": "Freely Given Consent*",
+          "score": 0.2777,
+          "id": "recital_043.txt::0"
+        },
+        {
+          "citation": "Art. 7 GDPR (part 1)",
+          "type": "article",
+          "title": "Conditions for consent",
+          "score": 0.2557,
+          "id": "article_007.txt::0"
+        },
+        {
+          "citation": "Art. 8 GDPR (part 2)",
+          "type": "article",
+          "title": "Conditions applicable to child's consent in relation to information society services",
+          "score": 0.1839,
+          "id": "article_008.txt::1"
+        },
+        {
+          "citation": "Recital 42 GDPR (part 1)",
+          "type": "recital",
+          "title": "Burden of Proof and Requirements for Consent*",
+          "score": 0.1774,
+          "id": "recital_042.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 7 GDPR (part 2):\n3 Prior to giving consent, the data subject shall be informed thereof. 4 It shall be as easy to withdraw as to give consent. When assessing whether consent is freely given, utmost account shall be taken of whether, inter alia , the performance of a contract, including the provision of a service, is conditional on consent to the processing of personal data that is not necessary for the performance of that contract. Suitable Recitals ( 32 ) Conditions for Consent ( 33 ) Consent to Certain ...",
+      "gold_rank": 1
+    },
+    {
+      "id": "q17",
+      "type": "negative_control",
+      "question": "Does the GDPR require companies to store personal data only on servers physically located inside the EU?",
+      "gold_citation": "none (not stated; Chapter V governs transfers with safeguards)",
+      "gold_answer": "No. The GDPR does not impose EU-only data localization. It regulates transfers to third countries through adequacy decisions and safeguards (Chapter V), but does not require storage inside the EU. A good system should decline to invent a localization rule.",
+      "retrieved": [
+        {
+          "citation": "Recital 81 GDPR (part 4)",
+          "type": "recital",
+          "title": "The Use of Processors*",
+          "score": 0.1321,
+          "id": "recital_081.txt::3"
+        },
+        {
+          "citation": "Art. 93 GDPR",
+          "type": "article",
+          "title": "Committee procedure",
+          "score": 0.12,
+          "id": "article_093.txt::0"
+        },
+        {
+          "citation": "Art. 11 GDPR",
+          "type": "article",
+          "title": "Processing which does not require identification",
+          "score": 0.113,
+          "id": "article_011.txt::0"
+        },
+        {
+          "citation": "Art. 10 GDPR",
+          "type": "article",
+          "title": "Processing of personal data relating to criminal convictions and offences",
+          "score": 0.1043,
+          "id": "article_010.txt::0"
+        },
+        {
+          "citation": "Art. 34 GDPR (part 3)",
+          "type": "article",
+          "title": "Communication of a personal data breach to the data subject",
+          "score": 0.1037,
+          "id": "article_034.txt::2"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Recital 81 GDPR (part 4):\nAfter the completion of the processing on behalf of the controller, the processor should, at the choice of the controller, return or delete the personal data, unless there is a requirement to store the personal data under Union or Member State law to which the processor is subject. * This title is an unofficial description. \u2190 Recital 80 Recital 82 \u2192 All recitals Report error",
+      "gold_rank": null
+    },
+    {
+      "id": "q18",
+      "type": "out_of_corpus",
+      "question": "How does the CCPA define a sale of personal information?",
+      "gold_citation": "none (CCPA is not in this corpus)",
+      "gold_answer": "The CCPA is not part of this corpus, which is GDPR only. The system should say the context does not answer this rather than fabricate a CCPA definition.",
+      "retrieved": [
+        {
+          "citation": "Recital 39 GDPR (part 2)",
+          "type": "recital",
+          "title": "Principles of Data Processing*",
+          "score": 0.211,
+          "id": "recital_039.txt::1"
+        },
+        {
+          "citation": "Recital 39 GDPR (part 1)",
+          "type": "recital",
+          "title": "Principles of Data Processing*",
+          "score": 0.2065,
+          "id": "recital_039.txt::0"
+        },
+        {
+          "citation": "Art. 13 GDPR (part 5)",
+          "type": "article",
+          "title": "Information to be provided where personal data are collected from the data subject",
+          "score": 0.1999,
+          "id": "article_013.txt::4"
+        },
+        {
+          "citation": "Art. 13 GDPR (part 4)",
+          "type": "article",
+          "title": "Information to be provided where personal data are collected from the data subject",
+          "score": 0.169,
+          "id": "article_013.txt::3"
+        },
+        {
+          "citation": "Recital 61 GDPR",
+          "type": "recital",
+          "title": "Time of Information*",
+          "score": 0.1515,
+          "id": "recital_061.txt::0"
+        }
+      ],
+      "answer": "(extractive fallback, no LLM key set) Best passage Recital 39 GDPR (part 2):\nThat principle concerns, in particular, information to the data subjects on the identity of the controller and the purposes of the processing and further information to ensure fair and transparent processing in respect of the natural persons concerned and their right to obtain confirmation and communication of personal data concerning them which are being processed. 5 Natural persons should be made aware of risks, rules, safeguards and rights in relation to the processing of personal data ...",
+      "gold_rank": null
+    }
+  ]
+}
