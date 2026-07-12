@@ -1,0 +1,3 @@
+# test dependencies. tested with pytest 8.4.2
+-r requirements.txt
+pytest>=8
