@@ -1,146 +1,146 @@
 [
   {
     "id": "q01",
-    "type": "factual_lookup",
-    "question": "What is the maximum administrative fine for the most serious GDPR infringements?",
-    "gold_citation": "Art. 83(5) GDPR",
-    "gold_answer": "Up to 20,000,000 EUR, or in the case of an undertaking up to 4% of total worldwide annual turnover of the preceding financial year, whichever is higher.",
-    "notes": "The word 'maximum' also appears in unrelated short provisions, so this stresses term-frequency ranking."
+    "type": "numeric",
+    "question": "What punishment does the UCMJ authorize for premeditated murder?",
+    "gold_citation": "Art. 118, UCMJ",
+    "gold_answer": "A person found guilty of premeditated murder (or felony murder) shall suffer death or imprisonment for life as a court-martial may direct. This is one of the few offenses where the statute itself fixes the punishment.",
+    "notes": "Punishment stated in the statute itself, unlike most punitive articles. Tests exact number/penalty recall."
   },
   {
     "id": "q02",
-    "type": "deadline",
-    "question": "Within what time must a controller notify the supervisory authority of a personal data breach?",
-    "gold_citation": "Art. 33(1) GDPR",
-    "gold_answer": "Without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach.",
-    "notes": "Numeric deadline; good chunks must contain the 72 hour figure."
+    "type": "limitations",
+    "question": "What is the statute of limitations for most offenses under the UCMJ?",
+    "gold_citation": "Art. 43, UCMJ",
+    "gold_answer": "Five years from the date of the offense for most offenses. Murder, rape, rape of a child, sexual assault, sexual assault of a child, and absence without leave or missing movement in time of war may be tried and punished at any time without limitation.",
+    "notes": "Numeric answer plus the unlimited category. Good chunks must contain the five year figure."
   },
   {
     "id": "q03",
-    "type": "factual_lookup",
-    "question": "What is the right to be forgotten?",
-    "gold_citation": "Art. 17 GDPR",
-    "gold_answer": "The right to erasure: the data subject can obtain erasure of personal data without undue delay where one of the listed grounds applies, for example the data are no longer necessary or consent is withdrawn.",
-    "notes": "Recital 65 and 66 also cover this and are strong distractors."
+    "type": "comparative_near_duplicate",
+    "question": "What is the difference between desertion and absence without leave under the UCMJ?",
+    "gold_citation": "Art. 85 vs Art. 86, UCMJ",
+    "gold_answer": "Desertion (Art. 85) requires absence without authority plus intent to remain away permanently, or quitting a unit to avoid hazardous duty or shirk important service. AWOL (Art. 86) is simply failing to be at the appointed place of duty or absenting oneself without authority, no intent to stay away permanently required.",
+    "notes": "The classic near duplicate pair, heavy vocabulary overlap. Both articles must be retrieved for a full contrast."
   },
   {
     "id": "q04",
-    "type": "numeric_threshold",
-    "question": "At what age can a child give their own consent for information society services under the GDPR default?",
-    "gold_citation": "Art. 8(1) GDPR",
-    "gold_answer": "16 years old by default; Member States may lower this by law but not below 13.",
-    "notes": "Two numbers in one clause, tests whether the answer keeps both."
+    "type": "factual_lookup",
+    "question": "Can a deserter be sentenced to death under the UCMJ?",
+    "gold_citation": "Art. 85, UCMJ",
+    "gold_answer": "Yes, but only if the desertion or attempted desertion occurs in time of war. At any other time the maximum is such punishment other than death as a court-martial may direct.",
+    "notes": "The wartime versus peacetime split is the point. An answer that omits the time of war condition is wrong."
   },
   {
     "id": "q05",
     "type": "definition",
-    "question": "How does the GDPR define personal data?",
-    "gold_citation": "Art. 4(1) GDPR",
-    "gold_answer": "Any information relating to an identified or identifiable natural person, who can be identified directly or indirectly by reference to an identifier such as a name, ID number, location data, or factors specific to their identity.",
-    "notes": "Definitions live in one long article, tests chunking of Art. 4."
+    "question": "How does the UCMJ define a commanding officer?",
+    "gold_citation": "Art. 1, UCMJ",
+    "gold_answer": "Art. 1 (Definitions) provides that 'commanding officer' includes only commissioned officers. The definitions article also defines officer in charge, superior commissioned officer, accuser, military judge and other recurring terms.",
+    "notes": "Low IDF stress test: 'commanding officer' appears all over the corpus, the definition lives in one short provision."
   },
   {
     "id": "q06",
     "type": "definition",
-    "question": "What does processing mean under the GDPR?",
-    "gold_citation": "Art. 4(2) GDPR",
-    "gold_answer": "Any operation performed on personal data, whether or not by automated means, such as collection, recording, storage, use, disclosure, or erasure.",
-    "notes": "Same source article as q05, tests intra-article retrieval precision."
+    "question": "Who counts as an accuser under the UCMJ?",
+    "gold_citation": "Art. 1, UCMJ",
+    "gold_answer": "An accuser is a person who signs and swears to charges, any person who directs that charges nominally be signed and sworn to by another, and any other person who has an interest other than an official interest in the prosecution of the accused (Art. 1).",
+    "notes": "Same failure surface as q05: ubiquitous term, definition buried in Art. 1."
   },
   {
     "id": "q07",
-    "type": "comparative",
-    "question": "What is the difference between a controller and a processor?",
-    "gold_citation": "Art. 4(7) and Art. 4(8) GDPR",
-    "gold_answer": "A controller determines the purposes and means of processing; a processor processes personal data on behalf of the controller.",
-    "notes": "Needs two adjacent definitions, single chunk may only hold one."
+    "type": "enumeration",
+    "question": "Who is subject to the UCMJ?",
+    "gold_citation": "Art. 2, UCMJ",
+    "gold_answer": "Art. 2 lists the categories: active duty members of the armed forces, cadets and midshipmen, certain reserve and National Guard members, retired members entitled to pay, prisoners of war in custody of the armed forces, persons serving with or accompanying an armed force in the field in time of declared war or contingency operation, and several other enumerated categories.",
+    "notes": "Long enumeration in a long article, tests chunking and list recall."
   },
   {
     "id": "q08",
-    "type": "deadline",
-    "question": "How long does a controller have to respond to a data subject access request?",
-    "gold_citation": "Art. 12(3) GDPR",
-    "gold_answer": "Without undue delay and in any event within one month of receipt, extendable by two further months where necessary given complexity and number of requests.",
-    "notes": "Deadline lives in Art. 12, but people associate access with Art. 15, tests topical drift."
+    "type": "factual_lookup",
+    "question": "What rights does Article 31 give a servicemember suspected of an offense?",
+    "gold_citation": "Art. 31, UCMJ",
+    "gold_answer": "No person may be compelled to incriminate himself. Before interrogation a suspect must be informed of the nature of the accusation, advised that he does not have to make any statement, and warned that any statement may be used as evidence against him at court-martial. Statements obtained in violation, or by coercion or unlawful inducement, may not be received in evidence.",
+    "notes": "The military Miranda predecessor. Multiple clauses in one short article, should be a clean win."
   },
   {
     "id": "q09",
     "type": "enumeration",
-    "question": "What are the lawful bases for processing personal data?",
-    "gold_citation": "Art. 6(1) GDPR",
-    "gold_answer": "Consent; performance of a contract; compliance with a legal obligation; protection of vital interests; performance of a task in the public interest or official authority; and legitimate interests.",
-    "notes": "Six item list, tests recall of a full enumeration from possibly one chunk."
+    "question": "What are the three types of courts-martial?",
+    "gold_citation": "Art. 16, UCMJ",
+    "gold_answer": "General courts-martial, special courts-martial, and summary courts-martial (Art. 16). A general court-martial consists of a military judge and eight members (or a military judge alone), a special court-martial has a military judge and four members (or judge alone), and a summary court-martial consists of one commissioned officer.",
+    "notes": "Short enumeration plus composition numbers, all in one article."
   },
   {
     "id": "q10",
-    "type": "conditional",
-    "question": "Under what conditions may special categories of sensitive data be processed?",
-    "gold_citation": "Art. 9(2) GDPR",
-    "gold_answer": "Processing of special category data is prohibited unless an exception applies, such as explicit consent, employment or social security law, vital interests, data made public by the subject, legal claims, substantial public interest, health or research purposes.",
-    "notes": "Long enumerated exceptions, hard to fit in one chunk."
+    "type": "numeric",
+    "question": "How many members sit on a court-martial panel in a capital case?",
+    "gold_citation": "Art. 25a, UCMJ",
+    "gold_answer": "Twelve. In a case in which the accused may be sentenced to death, the number of members shall be 12 (Art. 25a).",
+    "notes": "Exact number, lives in a less famous article. Distractors include Art. 16 (eight members) and Art. 25 (who may serve)."
   },
   {
     "id": "q11",
-    "type": "comparative_near_duplicate",
-    "question": "What is the difference between the right to erasure and the right to restriction of processing?",
-    "gold_citation": "Art. 17 vs Art. 18 GDPR",
-    "gold_answer": "Erasure (Art. 17) deletes the data; restriction (Art. 18) keeps the data but limits what can be done with it in specific situations, for example while accuracy is contested.",
-    "notes": "Near duplicate vocabulary, classic retrieval confusion between two adjacent rights."
+    "type": "conditional",
+    "question": "What punishments can a commanding officer impose under Article 15 without a court-martial?",
+    "gold_citation": "Art. 15, UCMJ",
+    "gold_answer": "Non-judicial punishments under Art. 15 include admonition or reprimand, and depending on the grade of the officer and of the offender, correctional custody (limited consecutive days), forfeiture of pay, reduction in grade, extra duties, restriction to limits, and withholding of privileges, subject to the limits enumerated in the article. The member may demand trial by court-martial instead, except aboard a vessel.",
+    "notes": "The famous colloquial name (an Article 15) versus statutory numbering (10 U.S.C. 815). Long enumerated article, chunking test."
   },
   {
     "id": "q12",
-    "type": "factual_lookup",
-    "question": "What is the right to data portability?",
-    "gold_citation": "Art. 20 GDPR",
-    "gold_answer": "The data subject can receive their personal data in a structured, commonly used, machine readable format and transmit it to another controller where processing is based on consent or contract and is automated.",
-    "notes": "Distinct right, checks it is not confused with access (Art. 15)."
+    "type": "conditional",
+    "question": "What has to happen before charges can be referred to a general court-martial?",
+    "gold_citation": "Art. 32, UCMJ",
+    "gold_answer": "A preliminary hearing must be held (unless waived), conducted by an impartial hearing officer, to determine whether there is probable cause to believe an offense was committed and the accused committed it, and to recommend disposition (Art. 32).",
+    "notes": "Procedural requirement, distinctive phrase 'preliminary hearing'."
   },
   {
     "id": "q13",
     "type": "factual_lookup",
-    "question": "When can a data subject object to processing of their personal data?",
-    "gold_citation": "Art. 21 GDPR",
-    "gold_answer": "At any time on grounds relating to their situation where processing is based on public interest or legitimate interests, and absolutely where data is processed for direct marketing.",
-    "notes": "Another adjacent right, distractor for q11 and q12."
+    "question": "Can a military officer be punished for insulting the President?",
+    "gold_citation": "Art. 88, UCMJ",
+    "gold_answer": "Yes. Any commissioned officer who uses contemptuous words against the President, Vice President, Congress, the Secretary of Defense, a military department Secretary, the Secretary of Homeland Security, or the Governor or legislature of a State where the officer is on duty or present, shall be punished as a court-martial may direct (Art. 88).",
+    "notes": "Distinctive vocabulary (contemptuous words), should retrieve cleanly despite the colloquial phrasing of the question."
   },
   {
     "id": "q14",
-    "type": "factual_with_number",
-    "question": "Can a data subject get a copy of their personal data, and is there a fee?",
-    "gold_citation": "Art. 15(3) GDPR",
-    "gold_answer": "Yes, the controller provides one copy free of charge; for further copies the controller may charge a reasonable fee based on administrative costs.",
-    "notes": "Article vs recital trap, Recital 63 discusses the same in softer language."
+    "type": "comparative",
+    "question": "What is the difference between conduct unbecoming an officer and the general article?",
+    "gold_citation": "Art. 133 vs Art. 134, UCMJ",
+    "gold_answer": "Art. 133 applies only to commissioned officers, cadets and midshipmen and punishes conduct unbecoming an officer. Art. 134, the general article, applies to all persons subject to the code and reaches disorders and neglects prejudicial to good order and discipline, service discrediting conduct, and non-capital federal crimes not specifically listed elsewhere.",
+    "notes": "Comparative across two adjacent catch-all provisions."
   },
   {
     "id": "q15",
-    "type": "conditional",
-    "question": "When must an organization appoint a Data Protection Officer?",
-    "gold_citation": "Art. 37(1) GDPR",
-    "gold_answer": "When processing is carried out by a public authority, or the core activities require regular and systematic monitoring of data subjects on a large scale, or core activities consist of large scale processing of special category or criminal data.",
-    "notes": "Three trigger conditions, tests full enumeration recall."
+    "type": "factual_lookup",
+    "question": "Does the UCMJ prohibit cruel and unusual punishment?",
+    "gold_citation": "Art. 55, UCMJ",
+    "gold_answer": "Yes. Punishment by flogging, branding, marking or tattooing the body, or any other cruel or unusual punishment, may not be adjudged or inflicted, and the use of irons except for safe custody is prohibited (Art. 55).",
+    "notes": "Short article with vivid distinctive terms, expected clean win."
   },
   {
     "id": "q16",
     "type": "conditional",
-    "question": "What are the conditions for consent to be valid under the GDPR?",
-    "gold_citation": "Art. 7 GDPR (with Art. 4(11))",
-    "gold_answer": "Consent must be freely given, specific, informed and unambiguous; the controller must be able to demonstrate it; requests must be clearly distinguishable and in plain language; and it must be as easy to withdraw as to give.",
-    "notes": "Definition (Art. 4(11)) and conditions (Art. 7) are in different provisions."
+    "question": "What does the UCMJ say about disobeying an order or regulation?",
+    "gold_citation": "Art. 92, UCMJ",
+    "gold_answer": "Art. 92 punishes anyone who violates or fails to obey a lawful general order or regulation, fails to obey any other lawful order he has a duty to obey and knows of, or is derelict in the performance of duties, as a court-martial may direct.",
+    "notes": "Three prongs including dereliction, answer should keep all three."
   },
   {
     "id": "q17",
-    "type": "negative_control",
-    "question": "Does the GDPR require companies to store personal data only on servers physically located inside the EU?",
-    "gold_citation": "none (not stated; Chapter V governs transfers with safeguards)",
-    "gold_answer": "No. The GDPR does not impose EU-only data localization. It regulates transfers to third countries through adequacy decisions and safeguards (Chapter V), but does not require storage inside the EU. A good system should decline to invent a localization rule.",
-    "notes": "Tests hallucination resistance: the premise is a common misconception not in the text."
+    "type": "statute_boundary",
+    "question": "What is the maximum confinement for being AWOL for more than 30 days?",
+    "gold_citation": "none in this corpus (Art. 86 sets the offense; the confinement table is in the Manual for Courts-Martial)",
+    "gold_answer": "The statute does not say. Art. 86 defines the offense and provides punishment 'as a court-martial may direct'; the specific maximum confinement periods by duration of absence are set in the Manual for Courts-Martial punishment tables, which are not part of the statutory text. A good system must say the number is not in this corpus rather than invent one.",
+    "notes": "Statute versus MCM boundary control. The commonly cited one year figure exists only in the MCM, so any confident number is a hallucination here."
   },
   {
     "id": "q18",
     "type": "out_of_corpus",
-    "question": "How does the CCPA define a sale of personal information?",
-    "gold_citation": "none (CCPA is not in this corpus)",
-    "gold_answer": "The CCPA is not part of this corpus, which is GDPR only. The system should say the context does not answer this rather than fabricate a CCPA definition.",
-    "notes": "Pure out of distribution question, must be refused."
+    "question": "What does Rule for Courts-Martial 707 require for a speedy trial?",
+    "gold_citation": "none (the Rules for Courts-Martial are in the MCM, not in this corpus)",
+    "gold_answer": "The Rules for Courts-Martial are part of the Manual for Courts-Martial, not the UCMJ statute, and are not in this corpus. The system should say the context cannot answer this rather than fabricate the 120 day rule.",
+    "notes": "Pure out of corpus control, must be refused."
   }
 ]

@@ -12,27 +12,29 @@ Did the correct provision show up in the top k passages?
 - **2**  The gold provision is retrieved and sits in the top 2 results.
 - **1**  The gold provision is somewhere in the top k but ranked low, or a
          closely related provision is retrieved instead (right topic, wrong
-         section), or only part of a multi part answer is covered.
+         article), or only part of a multi part answer is covered.
 - **0**  The gold provision is not in the top k at all, or the top results are
          off topic.
 
-For the two control questions (q17 negative, q18 out of corpus) retrieval scores
-differently: full marks means the top passages are genuinely the closest thing
-the corpus has, so a well behaved generator can still recognise the gap.
+For the two control questions (q17 statute boundary, q18 out of corpus)
+retrieval scores differently: full marks means the top passages are genuinely
+the closest thing the corpus has, so a well behaved generator can still
+recognise the gap.
 
 ## 2. Answer correctness (0 to 2)
 
 Judged against the gold answer, using only what a reader could verify from the
 retrieved context.
 
-- **2**  Correct and complete: states the rule and its key numbers or conditions,
-         and cites the right provision.
-- **1**  Partially correct: right direction but drops a condition, a number, or
+- **2**  Correct and complete: states the rule and its key elements or
+         conditions, and cites the right UCMJ article.
+- **1**  Partially correct: right direction but drops an element, a number, or
          the citation, or hedges when the context actually supported an answer.
-- **0**  Wrong, hallucinated, or cites a provision that does not support the claim.
+- **0**  Wrong, hallucinated, or cites an article that does not support the claim.
 
-For q17 and q18 the scoring is inverted: **2** means the system correctly refused
-or flagged the gap, **0** means it fabricated a rule.
+For q17 and q18 the scoring is inverted: **2** means the system correctly
+recognised the boundary (the number lives in the Manual for Courts-Martial, or
+the source is not in this corpus at all), **0** means it fabricated a rule.
 
 ## 3. Faithfulness (pass or fail)
 
@@ -45,13 +47,18 @@ most in the writeup.
 ## What "good" means per question type
 
 - **factual_lookup / definition**: the specific rule or definition, with the
-  correct Article cited. Paraphrase is fine, invented scope is not.
-- **deadline / numeric_threshold / factual_with_number**: the number has to be
-  exact (72 hours, one month, 16 years, 20 million euro or 4%). A right rule with
-  a wrong number scores 0 on correctness, numbers are the point.
-- **enumeration / conditional**: measured on recall of the list. Missing one of
-  six lawful bases is a 1, not a 2.
+  correct article cited. Paraphrase is fine, invented scope is not.
+- **numeric / limitations**: the number has to be exact (five year statute of
+  limitations, eight members on a general court-martial, death or life for
+  premeditated murder). A right rule with a wrong number scores 0 on
+  correctness, numbers are the point.
+- **enumeration / conditional**: measured on recall of the list. Answering "who
+  is subject to the UCMJ" with three of the categories is a 1, not a 2.
 - **comparative / comparative_near_duplicate**: both sides must be retrieved and
-  contrasted. Retrieving only one of the two provisions caps correctness at 1.
-- **negative_control / out_of_corpus**: the only good answer is a refusal or an
-  explicit "not in the context". Any confident fabricated rule is a 0.
+  contrasted (desertion versus AWOL, Art. 133 versus Art. 134). Retrieving only
+  one of the two provisions caps correctness at 1.
+- **statute_boundary / out_of_corpus**: the only good answer names the boundary.
+  The UCMJ statute frequently says punishment is "as a court-martial may
+  direct"; the actual maximum confinement tables live in the Manual for
+  Courts-Martial, which is not in this corpus. A confident number invented for
+  q17, or a fabricated Rule for Courts-Martial for q18, is a 0.
