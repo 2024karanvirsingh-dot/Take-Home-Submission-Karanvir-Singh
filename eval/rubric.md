@@ -39,11 +39,30 @@ scoring happens entirely on the answer side.
   phrase contains the exact figure ("shall be 12", "five years"), so a
   right rule with a missing number scores it as absent: numbers are the
   point.
-- **support**: every sentence in every answer must be a verbatim extract of
-  a retrieved chunk, re verified independently by `eval/score_answers.py`
-  against the rebuilt chunk set. This is a gate, not a gradient. The
-  extractive builder passes it by construction; the check exists so that
-  any future change to the builder cannot silently start paraphrasing.
+- **support**: for extractive runs, every sentence in every answer must be
+  a verbatim extract of a retrieved chunk, re verified independently by
+  `eval/score_answers.py` against the rebuilt chunk set. This is a gate,
+  not a gradient. The extractive builder passes it by construction; the
+  check exists so that any future change to the builder cannot silently
+  start paraphrasing. For generative runs the verbatim gate is impossible
+  by design, so support is a clearly labelled fuzzy alignment heuristic:
+  each generated sentence (citations stripped) must have at least 70
+  percent of its content tokens present in the retrieved chunks and every
+  number it states present in the retrieved text. This catches novel
+  wording and fabricated figures; it cannot catch a fluent recombination
+  of retrieved words into a claim the statute does not make. It is a
+  support proxy, not entailment, and the README treats it as such.
+- **numbers supported**: every bare number stated in an answer (citation
+  parentheses stripped) must occur in the retrieved chunk text. Trivially
+  true for extraction; load bearing for generation, where a model can emit
+  a figure its context never contained.
+- **refusal accounting for the generative answerer**: the extractive layer
+  refuses with a typed boundary explanation, so control refusals are
+  correct only when the boundary flag is set. The generative layer refuses
+  through the model's refusal marker, which carries no boundary taxonomy;
+  any refusal on a control is counted correct there, and whether the
+  explanation names the boundary is assessed qualitatively in the README.
+  The two accountings are never mixed in one table without a label.
 
 ## 3. What "good" means per question type (interpretation)
 
