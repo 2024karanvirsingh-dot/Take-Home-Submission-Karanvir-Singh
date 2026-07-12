@@ -1,0 +1,131 @@
+{
+  "_about": "Answers generated over the BM25 baseline retrieved contexts (chunk_words=180, k=5) using the strict grounding prompt in rag/generate.py. No ANTHROPIC_API_KEY was set in this environment, so the recorded answers were produced with Claude acting as the generation backend over the exact retrieved passages the pipeline returned. Running eval/run_eval.py with a key reproduces the same setup automatically. Scores are hand applied from eval/rubric.md: retrieval 0-2, correctness 0-2, faithfulness pass/fail. For controls q17 and q18 correctness is inverted (2 = correctly refused).",
+  "records": [
+    {
+      "id": "q01", "type": "factual_lookup",
+      "question": "What is the maximum administrative fine for the most serious GDPR infringements?",
+      "answer": "The context describes how a supervisory authority sets a fine (nature, gravity and duration of the infringement, intentional or negligent character, mitigation, prior infringements, and so on) and says penalties must be effective, proportionate and dissuasive (Art. 83, Recital 152). The specific ceiling of 20,000,000 EUR or 4% of total worldwide annual turnover sits in Art. 83(5), which was not among the retrieved passages, so the exact maximum is not in the provided context.",
+      "retrieval": 1, "correctness": 1, "faithfulness": "pass",
+      "note": "Right article family, wrong paragraph. BM25 pulled Art. 83 parts 1 to 3 (the criteria) and three fine related recitals, but not part 4/5 where the number lives. A faithful model therefore cannot state the figure even though it is in the corpus. A model answering from memory would emit 20M/4% unsupported. This is the most important single example in the set."
+    },
+    {
+      "id": "q02", "type": "deadline",
+      "question": "Within what time must a controller notify the supervisory authority of a personal data breach?",
+      "answer": "Without undue delay and, where feasible, not later than 72 hours after becoming aware of it. If notification is later than 72 hours it must be accompanied by reasons for the delay (Art. 33(1)).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Clean win. The answer bearing chunk (Art. 33 part 1) is rank 1 and contains the exact figure."
+    },
+    {
+      "id": "q03", "type": "factual_lookup",
+      "question": "What is the right to be forgotten?",
+      "answer": "It is the right to erasure: the data subject can obtain erasure of personal data without undue delay where a listed ground applies, for example the data are no longer necessary, consent is withdrawn, the data subject objects, or the data were unlawfully processed (Art. 17(1)). Where the controller has made the data public it must take reasonable steps to inform other controllers to erase links to or copies of the data (Art. 17(2), Recital 66).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win, but note the top result is Recital 66, a non binding recital, ranked above the binding Art. 17. The strict prompt still cited the Article because it was present at lower rank."
+    },
+    {
+      "id": "q04", "type": "numeric_threshold",
+      "question": "At what age can a child give their own consent for information society services under the GDPR default?",
+      "answer": "16 years old by default. Below 16 the processing is lawful only with consent from the holder of parental responsibility. Member States may set a lower age by law but not below 13 (Art. 8(1)).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win. Both numbers (16 and 13) are in the rank 1 chunk and both are kept."
+    },
+    {
+      "id": "q05", "type": "definition",
+      "question": "How does the GDPR define personal data?",
+      "answer": "The provided context does not contain the definition of personal data. The retrieved passages concern professional secrecy of supervisory authority staff (Art. 54), security of processing (Art. 32), Board opinions (Art. 64) and a transparency recital (Recital 39), none of which define the term.",
+      "retrieval": 0, "correctness": 0, "faithfulness": "pass",
+      "note": "Retrieval miss. Art. 4(1) is never retrieved because the phrase 'personal data' is the single most frequent term in the whole corpus, so its IDF is near zero and the definitional chunk has no distinguishing signal. The strict prompt converts the miss into a safe refusal instead of a hallucination."
+    },
+    {
+      "id": "q06", "type": "definition",
+      "question": "What does processing mean under the GDPR?",
+      "answer": "The provided context does not define processing. The retrieved passages are about supervisory authority independence and competence (Recitals 118 and 170, Art. 55) and security of processing (Art. 32), not the Art. 4(2) definition.",
+      "retrieval": 0, "correctness": 0, "faithfulness": "pass",
+      "note": "Same failure mode as q05. 'Processing' is ubiquitous, so Art. 4(2) has no term frequency edge and never surfaces."
+    },
+    {
+      "id": "q07", "type": "comparative",
+      "question": "What is the difference between a controller and a processor?",
+      "answer": "The context shows that a processor acts on behalf of and on the documented instructions of the controller and can engage sub processors only under the same obligations (Art. 28), but it does not contain the Art. 4(7) and 4(8) definitions themselves, so a precise definitional contrast cannot be drawn from the retrieved passages.",
+      "retrieval": 0, "correctness": 1, "faithfulness": "pass",
+      "note": "Partial. The relationship is inferable from Art. 28, but the clean definitions are missing for the same low IDF reason (both terms appear in almost every provision). Two of the top results are Art. 83 fine chunks, dragged in by the shared word 'processor'."
+    },
+    {
+      "id": "q08", "type": "deadline",
+      "question": "How long does a controller have to respond to a data subject access request?",
+      "answer": "The controller should respond without undue delay and at the latest within one month (Recital 59). Note this figure comes from a recital in the retrieved context; the binding one month deadline and its extension by two further months are set in Art. 12(3), which was not retrieved, so the extension is not reflected here.",
+      "retrieval": 0, "correctness": 1, "faithfulness": "pass",
+      "note": "The binding Art. 12(3) is missed, but the one month number is recoverable from Recital 59, so the answer is partly right from non binding text and drops the two month extension. Good illustration that recitals can rescue a number the article miss lost."
+    },
+    {
+      "id": "q09", "type": "enumeration",
+      "question": "What are the lawful bases for processing personal data?",
+      "answer": "The provided context does not list the lawful bases. The retrieved passages discuss the lawfulness and transparency principles in general terms (Recital 39), further processing for compatible purposes (Recital 50) and the legal basis for public interest tasks (Recital 45), but Art. 6(1), which enumerates the six bases, was not retrieved.",
+      "retrieval": 0, "correctness": 0, "faithfulness": "pass",
+      "note": "Article versus recital plus enumeration miss. Recital 39 paraphrases lawfulness in richer prose than the terse Art. 6(1) list, so the recitals dominate the top k and the operative article is pushed out."
+    },
+    {
+      "id": "q10", "type": "conditional",
+      "question": "Under what conditions may special categories of sensitive data be processed?",
+      "answer": "Processing of special category data is generally prohibited and allowed only under the exceptions in Art. 9(2). The retrieved chunks reference some of those purposes (for example point (h), health purposes, and processing by a professional bound by secrecy) and add that Member States may keep further conditions on genetic, biometric and health data (Art. 9), but the full list of Art. 9(2) exceptions is not all present in the retrieved passages.",
+      "retrieval": 1, "correctness": 1, "faithfulness": "pass",
+      "note": "Right article, wrong paragraphs again. BM25 returned the tail of Art. 9 (parts 8 and 9) rather than the enumerated 9(2) list, so the answer can gesture at the exceptions but cannot enumerate them."
+    },
+    {
+      "id": "q11", "type": "comparative_near_duplicate",
+      "question": "What is the difference between the right to erasure and the right to restriction of processing?",
+      "answer": "The context sets out the right to restriction: the data subject can require the controller to restrict processing in specific situations such as contested accuracy, unlawful processing where erasure is opposed, the controller no longer needing the data but the subject needing it for legal claims, or a pending objection (Art. 18). The right to erasure under Art. 17 was not retrieved in the top results, so only the restriction side of the contrast is grounded in the context.",
+      "retrieval": 1, "correctness": 1, "faithfulness": "pass",
+      "note": "The classic near duplicate outcome. The query names both rights but BM25 commits to Art. 18 and its neighbours (Art. 19, 13, 14, 15) and never surfaces Art. 17, so a two sided comparison is impossible. Correctness capped at 1 by the rubric."
+    },
+    {
+      "id": "q12", "type": "factual_lookup",
+      "question": "What is the right to data portability?",
+      "answer": "It lets the data subject receive the personal data they provided to a controller in a structured, commonly used and machine readable format and transmit it to another controller without hindrance, where processing is based on consent or on a contract and is carried out by automated means. Where technically feasible the data can be transmitted directly from one controller to another (Art. 20).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win. Both parts of Art. 20 are retrieved at ranks 1 and 2 and the conditions are kept."
+    },
+    {
+      "id": "q13", "type": "factual_lookup",
+      "question": "When can a data subject object to processing of their personal data?",
+      "answer": "At any time, on grounds relating to their particular situation, where processing is based on public interest or legitimate interests (Art. 21(1)); the controller must then stop unless it demonstrates compelling legitimate grounds. For direct marketing the right to object is absolute and once exercised the data may no longer be processed for that purpose (Art. 21(2)).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win. Art. 21 parts 1 to 3 occupy the top ranks."
+    },
+    {
+      "id": "q14", "type": "factual_with_number",
+      "question": "Can a data subject get a copy of their personal data, and is there a fee?",
+      "answer": "Yes. The controller must provide a copy of the personal data undergoing processing; for any further copies it may charge a reasonable fee based on administrative costs (Art. 15(3)).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win. The fee rule is in the rank 1 chunk. The explicit words 'free of charge' for the first copy are in Recital 63 (not retrieved), but Art. 15(3) supports the substance."
+    },
+    {
+      "id": "q15", "type": "conditional",
+      "question": "When must an organization appoint a Data Protection Officer?",
+      "answer": "A DPO must be designated where processing is carried out by a public authority or body (except courts acting in a judicial capacity), or where the core activities require regular and systematic monitoring of data subjects on a large scale, or where the core activities consist of large scale processing of special category or criminal conviction data (Art. 37(1)).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win. All three trigger conditions are in the retrieved Art. 37 part 1 chunk."
+    },
+    {
+      "id": "q16", "type": "conditional",
+      "question": "What are the conditions for consent to be valid under the GDPR?",
+      "answer": "The controller must be able to demonstrate that consent was given; where consent is bundled into a written declaration about other matters, the request must be clearly distinguishable, intelligible and in plain language; the data subject must be informed before consenting; and it must be as easy to withdraw consent as to give it (Art. 7). Recital 43 adds that consent is not freely given where there is a clear imbalance between the subject and the controller, such as a public authority.",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win on Art. 7 conditions. The core adjectives 'freely given, specific, informed and unambiguous' come from the Art. 4(11) definition, which was only partly present via recitals, so that phrasing is softened."
+    },
+    {
+      "id": "q17", "type": "negative_control",
+      "question": "Does the GDPR require companies to store personal data only on servers physically located inside the EU?",
+      "answer": "No. Nothing in the provided context imposes an EU only data storage requirement. The retrieved passages concern identification of data subjects (Art. 11), the Commission committee procedure (Art. 93) and cooperation between authorities, none of which establish a data localisation rule.",
+      "retrieval": null, "correctness": 2, "faithfulness": "pass",
+      "note": "Control passed. The premise is a common misconception with no basis in the text, and the system declined to invent a rule. This is the hallucination resistance the negative control is designed to test."
+    },
+    {
+      "id": "q18", "type": "out_of_corpus",
+      "question": "How does the CCPA define a sale of personal information?",
+      "answer": "The provided context is GDPR material only and does not contain the CCPA or its definition of a sale of personal information, so this cannot be answered from the context.",
+      "retrieval": null, "correctness": 2, "faithfulness": "pass",
+      "note": "Control passed. Retrieval still returns the nearest GDPR passages (it always returns something), but the generator recognised none of them answer a CCPA question and refused."
+    }
+  ]
+}
