@@ -97,11 +97,13 @@ class BM25:
         return [(self.chunks[i], scores[i]) for i in order]
 
     def matched_terms(self, query, chunk_idx):
-        """Which query terms actually fired in this chunk, ranked by contribution."""
+        """Which query terms actually fired in this chunk, ranked by
+        contribution. Ties break alphabetically so the output is stable
+        across processes (set iteration order is not)."""
         q = set(tokenize(query, stem=self.stem))
         tf = self.tf[chunk_idx]
         hits = [(t, self.idf.get(t, 0.0)) for t in q if t in tf]
-        return sorted(hits, key=lambda x: x[1], reverse=True)
+        return sorted(hits, key=lambda x: (-x[1], x[0]))
 
 
 class DenseEmbed:
