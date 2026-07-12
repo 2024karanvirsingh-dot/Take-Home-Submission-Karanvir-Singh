@@ -6,9 +6,11 @@
     "k": 5,
     "stem": false,
     "policy": "grounded",
+    "answerer": "extractive",
+    "gen_model": null,
     "tag": "bm25_baseline",
     "answer_builder_version": "local-v1",
-    "python_version": "3.9.6"
+    "python_version": "3.12.13"
   },
   "aggregate": {
     "n_retrieval_scored": 16,

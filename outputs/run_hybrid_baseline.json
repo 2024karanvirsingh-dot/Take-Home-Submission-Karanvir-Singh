@@ -6,9 +6,11 @@
     "k": 5,
     "stem": false,
     "policy": "grounded",
+    "answerer": "extractive",
+    "gen_model": null,
     "tag": "hybrid_baseline",
     "answer_builder_version": "local-v1",
-    "python_version": "3.9.6"
+    "python_version": "3.12.13"
   },
   "aggregate": {
     "n_retrieval_scored": 16,
@@ -210,20 +212,20 @@
       "answerable_from_corpus": true,
       "retrieved": [
         {
-          "citation": "Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 2)",
-          "article": "85",
-          "type": "punitive",
-          "title": "Desertion",
-          "score": 0.0325,
-          "id": "sec_885.txt::1"
-        },
-        {
           "citation": "Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 1)",
           "article": "85",
           "type": "punitive",
           "title": "Desertion",
           "score": 0.0325,
           "id": "sec_885.txt::0"
+        },
+        {
+          "citation": "Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 2)",
+          "article": "85",
+          "type": "punitive",
+          "title": "Desertion",
+          "score": 0.0325,
+          "id": "sec_885.txt::1"
         },
         {
           "citation": "Art. 86, UCMJ (10 U.S.C. \u00a7 886)",
@@ -260,7 +262,7 @@
         "all_gold_retrieved": true
       },
       "answer": {
-        "text": "Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion. (2) quits his unit, organization, or place of duty with intent to avoid hazardous duty or to shirk important service; or (3) without being regularly separated from one of the armed forces enlists or accepts an appointment in the same or another one of the armed forces without fully disclosing the fact that he has not been regularly separated, or enters any foreign armed service except when authorized by the United States; is guilty of desertion. (Art. 85, UCMJ)\n\nAny member of the armed forces who, without authority\u2014 (1) fails to go to his appointed place of duty at the time prescribed; (2) goes from that place; or (3) absents himself or remains absent from his unit, organization, or place of duty at which he is required to be at the time prescribed; shall be punished as a court-martial may direct. (Art. 86, UCMJ)",
+        "text": "(2) quits his unit, organization, or place of duty with intent to avoid hazardous duty or to shirk important service; or (3) without being regularly separated from one of the armed forces enlists or accepts an appointment in the same or another one of the armed forces without fully disclosing the fact that he has not been regularly separated, or enters any foreign armed service except when authorized by the United States; is guilty of desertion. (b) Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion. (c) (Art. 85, UCMJ)\n\nAny member of the armed forces who, without authority\u2014 (1) fails to go to his appointed place of duty at the time prescribed; (2) goes from that place; or (3) absents himself or remains absent from his unit, organization, or place of duty at which he is required to be at the time prescribed; shall be punished as a court-martial may direct. (Art. 86, UCMJ)",
         "refused": false,
         "boundary": false,
         "cited_articles": [
@@ -281,9 +283,9 @@
             "score": 6.1752
           },
           {
-            "text": "Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion.",
+            "text": "(b) Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave and with intent to remain away therefrom permanently is guilty of desertion. (c)",
             "article": "85",
-            "chunk_id": "sec_885.txt::1",
+            "chunk_id": "sec_885.txt::0",
             "score": 5.4356
           },
           {
@@ -929,20 +931,20 @@
           "id": "sec_815.txt::1"
         },
         {
-          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 3)",
-          "article": "15",
-          "type": "procedural",
-          "title": "Commanding officer\u2019s non-judicial punishment",
-          "score": 0.0318,
-          "id": "sec_815.txt::2"
-        },
-        {
           "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 1)",
           "article": "15",
           "type": "procedural",
           "title": "Commanding officer\u2019s non-judicial punishment",
           "score": 0.0318,
           "id": "sec_815.txt::0"
+        },
+        {
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 3)",
+          "article": "15",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 0.0318,
+          "id": "sec_815.txt::2"
         },
         {
           "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 8)",
