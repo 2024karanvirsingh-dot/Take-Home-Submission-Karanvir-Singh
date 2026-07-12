@@ -2,11 +2,11 @@
 End to end pipeline: chunk -> index -> retrieve -> generate.
 
 The RagPipeline object builds the index once and answers many questions. The
-retriever is swappable ("bm25" or "tfidf") and chunking params are exposed so
+retriever is swappable ("bm25", "tfidf", "dense", "hybrid") and chunking params are exposed so
 the ablation can rebuild with a different chunk size and compare.
 """
 from .chunk import build_chunks
-from .index import BM25, TfidfCosine
+from .index import BM25, TfidfCosine, DenseEmbed, HybridRRF
 from .generate import generate, build_prompt
 
 
@@ -19,6 +19,10 @@ class RagPipeline:
             self.index = BM25(self.chunks, stem=stem)
         elif retriever == "tfidf":
             self.index = TfidfCosine(self.chunks, stem=stem)
+        elif retriever == "dense":
+            self.index = DenseEmbed(self.chunks, stem=stem)
+        elif retriever == "hybrid":
+            self.index = HybridRRF(self.chunks, stem=stem)
         else:
             raise ValueError(retriever)
         self.retriever = retriever
@@ -43,7 +47,7 @@ class RagPipeline:
 if __name__ == "__main__":
     import sys
     p = RagPipeline()
-    q = " ".join(sys.argv[1:]) or "What is the right to be forgotten?"
+    q = " ".join(sys.argv[1:]) or "What is the maximum punishment for desertion?"
     out = p.answer(q)
     print("Q:", out["question"])
     print("\nRetrieved:")

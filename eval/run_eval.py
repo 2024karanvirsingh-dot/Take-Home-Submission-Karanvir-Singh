@@ -9,6 +9,7 @@ rubric is done by hand in the README, this script produces the evidence.
 Usage:
     python -m eval.run_eval                      # bm25, default chunking
     python -m eval.run_eval --retriever tfidf    # swap retriever
+    python -m eval.run_eval --retriever dense    # needs sentence-transformers
     python -m eval.run_eval --chunk-words 300    # ablation
 """
 import os, json, argparse, re

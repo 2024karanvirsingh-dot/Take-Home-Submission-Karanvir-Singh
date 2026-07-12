@@ -10,3 +10,8 @@ beautifulsoup4>=4.11
 # optional: generation backend. only needed if you set ANTHROPIC_API_KEY to get
 # real generated answers instead of the extractive fallback.
 anthropic>=0.39
+
+# optional and deliberately NOT installed by default: the dense and hybrid
+# retrievers (--retriever dense / hybrid) need sentence-transformers, which
+# pulls in torch. everything else in the repo runs without it.
+#   pip install sentence-transformers
