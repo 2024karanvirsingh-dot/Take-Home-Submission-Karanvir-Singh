@@ -4,940 +4,923 @@
     "chunk_words": 120,
     "overlap_words": 40,
     "k": 5,
+    "stem": false,
     "tag": "bm25_cw120"
   },
   "records": [
     {
       "id": "q01",
-      "type": "factual_lookup",
-      "question": "What is the maximum administrative fine for the most serious GDPR infringements?",
-      "gold_citation": "Art. 83(5) GDPR",
-      "gold_answer": "Up to 20,000,000 EUR, or in the case of an undertaking up to 4% of total worldwide annual turnover of the preceding financial year, whichever is higher.",
+      "type": "numeric",
+      "question": "What punishment does the UCMJ authorize for premeditated murder?",
+      "gold_citation": "Art. 118, UCMJ",
+      "gold_answer": "A person found guilty of premeditated murder (or felony murder) shall suffer death or imprisonment for life as a court-martial may direct. This is one of the few offenses where the statute itself fixes the punishment.",
       "retrieved": [
         {
-          "citation": "Art. 83 GDPR (part 1)",
-          "type": "article",
-          "title": "General conditions for imposing administrative fines",
-          "score": 15.6557,
-          "id": "article_083.txt::0"
+          "citation": "Art. 118, UCMJ (10 U.S.C. \u00a7 918) (part 1)",
+          "type": "punitive",
+          "title": "Murder",
+          "score": 12.5564,
+          "id": "sec_918.txt::0"
         },
         {
-          "citation": "Recital 152 GDPR",
-          "type": "recital",
-          "title": "Power of Sanction of the Member States*",
-          "score": 13.7214,
-          "id": "recital_152.txt::0"
+          "citation": "Art. 118, UCMJ (10 U.S.C. \u00a7 918) (part 2)",
+          "type": "punitive",
+          "title": "Murder",
+          "score": 9.3306,
+          "id": "sec_918.txt::1"
         },
         {
-          "citation": "Art. 83 GDPR (part 15)",
-          "type": "article",
-          "title": "General conditions for imposing administrative fines",
-          "score": 12.2204,
-          "id": "article_083.txt::14"
+          "citation": "Art. 118, UCMJ (10 U.S.C. \u00a7 918) (part 3)",
+          "type": "punitive",
+          "title": "Murder",
+          "score": 9.0882,
+          "id": "sec_918.txt::2"
         },
         {
-          "citation": "Recital 151 GDPR (part 1)",
-          "type": "recital",
-          "title": "Administrative Fines in Denmark and Estonia*",
-          "score": 12.0966,
-          "id": "recital_151.txt::0"
+          "citation": "Art. 9, UCMJ (10 U.S.C. \u00a7 809) (part 1)",
+          "type": "procedural",
+          "title": "Imposition of restraint",
+          "score": 8.0911,
+          "id": "sec_809.txt::0"
         },
         {
-          "citation": "Art. 84 GDPR (part 2)",
-          "type": "article",
-          "title": "Penalties",
-          "score": 12.0587,
-          "id": "article_084.txt::1"
+          "citation": "Art. 81, UCMJ (10 U.S.C. \u00a7 881) (part 2)",
+          "type": "punitive",
+          "title": "Conspiracy",
+          "score": 6.994,
+          "id": "sec_881.txt::1"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 83 GDPR (part 1):\nEach supervisory authority shall ensure that the imposition of administrative fines pursuant to this Article in respect of infringements of this Regulation referred to in paragraphs 4, 5 and 6 shall in each individual case be effective, proportionate and dissuasive. 1 Administrative fines shall, depending on the circumstances of each individual case, be imposed in addition to, or instead of, measures referred to in points (a) to (h) and (j) of Article 58 (2). 2 When deciding whether to ...",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 118, UCMJ (10 U.S.C. \u00a7 918) (part 1):\nAny person subject to this chapter who, without justification or excuse, unlawfully kills a human being, when such person\u2014 (1) has a premeditated design to kill; (2) intends to kill or inflict great bodily harm; (3) is engaged in an act which is inherently dangerous to another and evinces a wanton disregard of human life; or (4) is engaged in the perpetration or attempted perpetration of burglary, rape, rape of a child, sexual assault, sexual assault of a child, aggravated sexual contact, ...",
       "gold_rank": 1,
       "top_matched_terms": [
-        "fine",
-        "infringements",
-        "administrative"
+        "premeditated",
+        "murder"
       ]
     },
     {
       "id": "q02",
-      "type": "deadline",
-      "question": "Within what time must a controller notify the supervisory authority of a personal data breach?",
-      "gold_citation": "Art. 33(1) GDPR",
-      "gold_answer": "Without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach.",
+      "type": "limitations",
+      "question": "What is the statute of limitations for most offenses under the UCMJ?",
+      "gold_citation": "Art. 43, UCMJ",
+      "gold_answer": "Five years from the date of the offense for most offenses. Murder, rape, rape of a child, sexual assault, sexual assault of a child, and absence without leave or missing movement in time of war may be tried and punished at any time without limitation.",
       "retrieved": [
         {
-          "citation": "Art. 33 GDPR (part 1)",
-          "type": "article",
-          "title": "Notification of a personal data breach to the supervisory authority",
-          "score": 18.8561,
-          "id": "article_033.txt::0"
+          "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 9)",
+          "type": "procedural",
+          "title": "Statute of limitations",
+          "score": 13.8589,
+          "id": "sec_843.txt::8"
         },
         {
-          "citation": "Art. 33 GDPR (part 2)",
-          "type": "article",
-          "title": "Notification of a personal data breach to the supervisory authority",
-          "score": 16.2231,
-          "id": "article_033.txt::1"
+          "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 10)",
+          "type": "procedural",
+          "title": "Statute of limitations",
+          "score": 12.3506,
+          "id": "sec_843.txt::9"
         },
         {
-          "citation": "Recital 85 GDPR (part 3)",
-          "type": "recital",
-          "title": "Notification Obligation of Breaches to the Supervisory Authority*",
-          "score": 15.5546,
-          "id": "recital_085.txt::2"
+          "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 13)",
+          "type": "procedural",
+          "title": "Statute of limitations",
+          "score": 10.7143,
+          "id": "sec_843.txt::12"
         },
         {
-          "citation": "Art. 33 GDPR (part 4)",
-          "type": "article",
-          "title": "Notification of a personal data breach to the supervisory authority",
-          "score": 14.2527,
-          "id": "article_033.txt::3"
+          "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 4)",
+          "type": "procedural",
+          "title": "Statute of limitations",
+          "score": 10.7018,
+          "id": "sec_843.txt::3"
         },
         {
-          "citation": "Recital 85 GDPR (part 2)",
-          "type": "recital",
-          "title": "Notification Obligation of Breaches to the Supervisory Authority*",
-          "score": 13.5016,
-          "id": "recital_085.txt::1"
+          "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 8)",
+          "type": "procedural",
+          "title": "Statute of limitations",
+          "score": 10.4767,
+          "id": "sec_843.txt::7"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 33 GDPR (part 1):\n1 In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55 , unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons. 2 Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for ...",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 9):\nExtension for Offenses in Time of War Detrimental to Prosecution of War.\u2014 For an offense the trial of which in time of war is certified to the President by the Secretary concerned to be detrimental to the prosecution of the war or inimical to the national security , the period of limitation prescribed in this article is extended to six months after the termination of hostilities as proclaimed by the President or by a joint resolution of Congress . (f) Extension for Other Offenses in Time of ...",
       "gold_rank": 1,
       "top_matched_terms": [
-        "breach",
-        "notify",
-        "within",
-        "authority",
-        "supervisory",
-        "controller"
+        "statute",
+        "limitations",
+        "offenses"
       ]
     },
     {
       "id": "q03",
-      "type": "factual_lookup",
-      "question": "What is the right to be forgotten?",
-      "gold_citation": "Art. 17 GDPR",
-      "gold_answer": "The right to erasure: the data subject can obtain erasure of personal data without undue delay where one of the listed grounds applies, for example the data are no longer necessary or consent is withdrawn.",
+      "type": "comparative_near_duplicate",
+      "question": "What is the difference between desertion and absence without leave under the UCMJ?",
+      "gold_citation": "Art. 85 vs Art. 86, UCMJ",
+      "gold_answer": "Desertion (Art. 85) requires absence without authority plus intent to remain away permanently, or quitting a unit to avoid hazardous duty or shirk important service. AWOL (Art. 86) is simply failing to be at the appointed place of duty or absenting oneself without authority, no intent to stay away permanently required.",
       "retrieved": [
         {
-          "citation": "Art. 17 GDPR (part 8)",
-          "type": "article",
-          "title": "Right to erasure (\u2018right to be forgotten\u2019)",
-          "score": 9.739,
-          "id": "article_017.txt::7"
+          "citation": "Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 2)",
+          "type": "punitive",
+          "title": "Desertion",
+          "score": 17.7443,
+          "id": "sec_885.txt::1"
         },
         {
-          "citation": "Recital 65 GDPR (part 1)",
-          "type": "recital",
-          "title": "Right of Rectification and Erasure*",
-          "score": 9.6062,
-          "id": "recital_065.txt::0"
+          "citation": "Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 3)",
+          "type": "punitive",
+          "title": "Desertion",
+          "score": 16.8705,
+          "id": "sec_885.txt::2"
         },
         {
-          "citation": "Recital 66 GDPR",
-          "type": "recital",
-          "title": "Right to be Forgotten*",
-          "score": 9.1605,
-          "id": "recital_066.txt::0"
+          "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 7)",
+          "type": "procedural",
+          "title": "Statute of limitations",
+          "score": 15.9463,
+          "id": "sec_843.txt::6"
         },
         {
-          "citation": "Art. 17 GDPR (part 3)",
-          "type": "article",
-          "title": "Right to erasure (\u2018right to be forgotten\u2019)",
-          "score": 7.8185,
-          "id": "article_017.txt::2"
+          "citation": "Art. 86, UCMJ (10 U.S.C. \u00a7 886)",
+          "type": "punitive",
+          "title": "Absence without leave",
+          "score": 15.2787,
+          "id": "sec_886.txt::0"
         },
         {
-          "citation": "Art. 17 GDPR (part 5)",
-          "type": "article",
-          "title": "Right to erasure (\u2018right to be forgotten\u2019)",
-          "score": 7.8037,
-          "id": "article_017.txt::4"
+          "citation": "Art. 43, UCMJ (10 U.S.C. \u00a7 843) (part 6)",
+          "type": "procedural",
+          "title": "Statute of limitations",
+          "score": 14.6587,
+          "id": "sec_843.txt::5"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 17 GDPR (part 8):\nfor reasons of public interest in the area of public health in accordance with points (h) and (i) of Article 9 (2) as well as Article 9 (3); for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89 (1) in so far as the right referred to in paragraph 1 is likely to render impossible or seriously impair the achievement of the objectives of that processing; or for the establishment, exercise or defence of ...",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 85, UCMJ (10 U.S.C. \u00a7 885) (part 2):\nwithout being regularly separated from one of the armed forces enlists or accepts an appointment in the same or another one of the armed forces without fully disclosing the fact that he has not been regularly separated, or enters any foreign armed service except when authorized by the United States; is guilty of desertion. (b) Any commissioned officer of the armed forces who, after tender of his resignation and before notice of its acceptance, quits his post or proper duties without leave ...",
       "gold_rank": 1,
       "top_matched_terms": [
-        "forgotten",
-        "right"
+        "desertion",
+        "leave",
+        "without"
       ]
     },
     {
       "id": "q04",
-      "type": "numeric_threshold",
-      "question": "At what age can a child give their own consent for information society services under the GDPR default?",
-      "gold_citation": "Art. 8(1) GDPR",
-      "gold_answer": "16 years old by default; Member States may lower this by law but not below 13.",
+      "type": "factual_lookup",
+      "question": "Can a deserter be sentenced to death under the UCMJ?",
+      "gold_citation": "Art. 85, UCMJ",
+      "gold_answer": "Yes, but only if the desertion or attempted desertion occurs in time of war. At any other time the maximum is such punishment other than death as a court-martial may direct.",
       "retrieved": [
         {
-          "citation": "Art. 8 GDPR (part 1)",
-          "type": "article",
-          "title": "Conditions applicable to child's consent in relation to information society services",
-          "score": 31.9221,
-          "id": "article_008.txt::0"
+          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 7)",
+          "type": "procedural",
+          "title": "Who may serve on courts-martial",
+          "score": 13.9405,
+          "id": "sec_825.txt::6"
         },
         {
-          "citation": "Art. 8 GDPR (part 2)",
-          "type": "article",
-          "title": "Conditions applicable to child's consent in relation to information society services",
-          "score": 28.8425,
-          "id": "article_008.txt::1"
+          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 6)",
+          "type": "procedural",
+          "title": "Who may serve on courts-martial",
+          "score": 10.3436,
+          "id": "sec_825.txt::5"
         },
         {
-          "citation": "Art. 8 GDPR (part 3)",
-          "type": "article",
-          "title": "Conditions applicable to child's consent in relation to information society services",
-          "score": 28.2002,
-          "id": "article_008.txt::2"
+          "citation": "Art. 25a, UCMJ (10 U.S.C. \u00a7 825a) (part 1)",
+          "type": "procedural",
+          "title": "Number of court-martial members in capital cases",
+          "score": 10.3084,
+          "id": "sec_825a.txt::0"
         },
         {
-          "citation": "Recital 58 GDPR (part 2)",
-          "type": "recital",
-          "title": "The Principle of Transparency*",
-          "score": 15.8518,
-          "id": "recital_058.txt::1"
+          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 8)",
+          "type": "procedural",
+          "title": "Who may serve on courts-martial",
+          "score": 8.1489,
+          "id": "sec_825.txt::7"
         },
         {
-          "citation": "Recital 38 GDPR (part 2)",
-          "type": "recital",
-          "title": "Special Protection of Children's Personal Data*",
-          "score": 13.1796,
-          "id": "recital_038.txt::1"
+          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 5)",
+          "type": "procedural",
+          "title": "Who may serve on courts-martial",
+          "score": 8.0932,
+          "id": "sec_825.txt::4"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 8 GDPR (part 1):\n1 Where point (a) of Article 6( 1) applies, in relation to the offer of information society services directly to a child, the processing of the personal data of a child shall be lawful where the child is at least 16 years old. 2 Where the child is below the age of 16 years, such processing shall be lawful only if and to the extent that consent is given or authorised by the holder of parental responsibility over the child. 3 Member States may provide by law for a lower age for those purposes ...",
-      "gold_rank": 1,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 7):\nIn a capital case, if the accused is convicted of a non-capital offense, the accused shall be sentenced for such non-capital offense in accordance with section 853(b) of this title (article 53(b)), regardless of whether the accused is convicted of an offense for which the court-martial may sentence the accused to death. (e) (1) When it can be avoided, no member of an armed force may be tried by a court-martial any member of which is junior to the member being tried in rank or grade. (2)",
+      "gold_rank": 0,
       "top_matched_terms": [
-        "age",
-        "child",
-        "society",
-        "services",
-        "consent",
-        "information"
+        "can",
+        "sentenced",
+        "death"
       ]
     },
     {
       "id": "q05",
       "type": "definition",
-      "question": "How does the GDPR define personal data?",
-      "gold_citation": "Art. 4(1) GDPR",
-      "gold_answer": "Any information relating to an identified or identifiable natural person, who can be identified directly or indirectly by reference to an identifier such as a name, ID number, location data, or factors specific to their identity.",
+      "question": "How does the UCMJ define a commanding officer?",
+      "gold_citation": "Art. 1, UCMJ",
+      "gold_answer": "Art. 1 (Definitions) provides that 'commanding officer' includes only commissioned officers. The definitions article also defines officer in charge, superior commissioned officer, accuser, military judge and other recurring terms.",
       "retrieved": [
         {
-          "citation": "Art. 55 GDPR (part 2)",
-          "type": "article",
-          "title": "Competence",
-          "score": 7.5368,
-          "id": "article_055.txt::1"
+          "citation": "Art. 22, UCMJ (10 U.S.C. \u00a7 822) (part 2)",
+          "type": "procedural",
+          "title": "Who may convene general courts-martial",
+          "score": 8.6114,
+          "id": "sec_822.txt::1"
         },
         {
-          "citation": "Art. 78 GDPR (part 2)",
-          "type": "article",
-          "title": "Right to an effective judicial remedy against a supervisory authority",
-          "score": 7.2031,
-          "id": "article_078.txt::1"
+          "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823) (part 2)",
+          "type": "procedural",
+          "title": "Who may convene special courts-martial",
+          "score": 8.5503,
+          "id": "sec_823.txt::1"
         },
         {
-          "citation": "Art. 11 GDPR (part 2)",
-          "type": "article",
-          "title": "Processing which does not require identification",
-          "score": 6.8994,
-          "id": "article_011.txt::1"
+          "citation": "Art. 22, UCMJ (10 U.S.C. \u00a7 822) (part 1)",
+          "type": "procedural",
+          "title": "Who may convene general courts-martial",
+          "score": 8.2218,
+          "id": "sec_822.txt::0"
         },
         {
-          "citation": "Art. 32 GDPR (part 5)",
-          "type": "article",
-          "title": "Security of processing",
-          "score": 6.8912,
-          "id": "article_032.txt::4"
+          "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823) (part 1)",
+          "type": "procedural",
+          "title": "Who may convene special courts-martial",
+          "score": 8.1348,
+          "id": "sec_823.txt::0"
         },
         {
-          "citation": "Art. 64 GDPR (part 12)",
-          "type": "article",
-          "title": "Opinion of the Board",
-          "score": 6.884,
-          "id": "article_064.txt::11"
+          "citation": "Art. 24, UCMJ (10 U.S.C. \u00a7 824) (part 1)",
+          "type": "procedural",
+          "title": "Who may convene summary courts-martial",
+          "score": 8.1213,
+          "id": "sec_824.txt::0"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 55 GDPR (part 2):\ndoes not apply. Supervisory authorities shall not be competent to supervise processing operations of courts acting in their judicial capacity. Suitable Recitals ( 122 ) Responsibility of the Supervisory Authorities \u2190 Art. 54 GDPR Art. 56 GDPR \u2192 GDPR Table of contents Report error",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 22, UCMJ (10 U.S.C. \u00a7 822) (part 2):\nof a naval station or larger shore activity of the Navy beyond the United States; (7) the commanding officer of an air command, an air force, an air division, or a separate wing of the Air Force or Marine Corps, or the commanding officer of a corresponding unit of the Space Force; (8) any other commanding officer designated by the Secretary concerned; or (9) any other commanding officer in any of the armed forces when empowered by the President. (b) (1) If any such commanding officer is an ...",
       "gold_rank": 0,
       "top_matched_terms": [
-        "does",
-        "gdpr"
+        "commanding",
+        "officer"
       ]
     },
     {
       "id": "q06",
       "type": "definition",
-      "question": "What does processing mean under the GDPR?",
-      "gold_citation": "Art. 4(2) GDPR",
-      "gold_answer": "Any operation performed on personal data, whether or not by automated means, such as collection, recording, storage, use, disclosure, or erasure.",
+      "question": "Who counts as an accuser under the UCMJ?",
+      "gold_citation": "Art. 1, UCMJ",
+      "gold_answer": "An accuser is a person who signs and swears to charges, any person who directs that charges nominally be signed and sworn to by another, and any other person who has an interest other than an official interest in the prosecution of the accused (Art. 1).",
       "retrieved": [
         {
-          "citation": "Recital 170 GDPR (part 3)",
-          "type": "recital",
-          "title": "Principle of Subsidiarity and Principle of Proportionality*",
-          "score": 8.3851,
-          "id": "recital_170.txt::2"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9)",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.6688,
+          "id": "sec_946.txt::8"
         },
         {
-          "citation": "Art. 55 GDPR (part 2)",
-          "type": "article",
-          "title": "Competence",
-          "score": 8.2835,
-          "id": "article_055.txt::1"
+          "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823) (part 3)",
+          "type": "procedural",
+          "title": "Who may convene special courts-martial",
+          "score": 6.4053,
+          "id": "sec_823.txt::2"
         },
         {
-          "citation": "Recital 118 GDPR",
-          "type": "recital",
-          "title": "Monitoring of the Supervisory Authorities*",
-          "score": 7.4451,
-          "id": "recital_118.txt::0"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 10)",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.3283,
+          "id": "sec_946.txt::9"
         },
         {
-          "citation": "Art. 55 GDPR (part 1)",
-          "type": "article",
-          "title": "Competence",
-          "score": 7.0703,
-          "id": "article_055.txt::0"
+          "citation": "Art. 22, UCMJ (10 U.S.C. \u00a7 822) (part 3)",
+          "type": "procedural",
+          "title": "Who may convene general courts-martial",
+          "score": 6.0983,
+          "id": "sec_822.txt::2"
         },
         {
-          "citation": "Art. 11 GDPR (part 2)",
-          "type": "article",
-          "title": "Processing which does not require identification",
-          "score": 6.9693,
-          "id": "article_011.txt::1"
+          "citation": "Art. 23, UCMJ (10 U.S.C. \u00a7 823) (part 4)",
+          "type": "procedural",
+          "title": "Who may convene special courts-martial",
+          "score": 6.0119,
+          "id": "sec_823.txt::3"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Recital 170 GDPR (part 3):\nIn accordance with the principle of proportionality as set out in that Article, this Regulation does not go beyond what is necessary in order to achieve that objective. * This title is an unofficial description. \u2190 Recital 169 Recital 171 \u2192 All recitals Report error",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9):\nNotwithstanding paragraph (1), a member of the Panel may be appointed to a single additional term if\u2014 (A) the appointment of the member is to fill a vacancy described in subsection (b)(4); or (B) the member was initially appointed\u2014 (i) to a term of four years or less in accordance with subsection (b)(4); or (ii) to fill a vacancy that occurs before the expiration of the term of the predecessor of such member and for which the remainder of the term of such predecessor is four years or less. ...",
       "gold_rank": 0,
       "top_matched_terms": [
-        "what",
-        "does"
+        "ucmj"
       ]
     },
     {
       "id": "q07",
-      "type": "comparative",
-      "question": "What is the difference between a controller and a processor?",
-      "gold_citation": "Art. 4(7) and Art. 4(8) GDPR",
-      "gold_answer": "A controller determines the purposes and means of processing; a processor processes personal data on behalf of the controller.",
+      "type": "enumeration",
+      "question": "Who is subject to the UCMJ?",
+      "gold_citation": "Art. 2, UCMJ",
+      "gold_answer": "Art. 2 lists the categories: active duty members of the armed forces, cadets and midshipmen, certain reserve and National Guard members, retired members entitled to pay, prisoners of war in custody of the armed forces, persons serving with or accompanying an armed force in the field in time of declared war or contingency operation, and several other enumerated categories.",
       "retrieved": [
         {
-          "citation": "Art. 83 GDPR (part 4)",
-          "type": "article",
-          "title": "General conditions for imposing administrative fines",
-          "score": 8.1292,
-          "id": "article_083.txt::3"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9)",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.6688,
+          "id": "sec_946.txt::8"
         },
         {
-          "citation": "Art. 46 GDPR (part 4)",
-          "type": "article",
-          "title": "Transfers subject to appropriate safeguards",
-          "score": 7.5513,
-          "id": "article_046.txt::3"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 10)",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.3283,
+          "id": "sec_946.txt::9"
         },
         {
-          "citation": "Art. 28 GDPR (part 10)",
-          "type": "article",
-          "title": "Processor",
-          "score": 7.2781,
-          "id": "article_028.txt::9"
+          "citation": "Art. 135, UCMJ (10 U.S.C. \u00a7 935) (part 2)",
+          "type": "procedural",
+          "title": "Courts of inquiry",
+          "score": 2.6166,
+          "id": "sec_935.txt::1"
         },
         {
-          "citation": "Art. 28 GDPR (part 11)",
-          "type": "article",
-          "title": "Processor",
-          "score": 7.2713,
-          "id": "article_028.txt::10"
+          "citation": "Art. 3, UCMJ (10 U.S.C. \u00a7 803) (part 2)",
+          "type": "procedural",
+          "title": "Jurisdiction to try certain personnel",
+          "score": 2.5858,
+          "id": "sec_803.txt::1"
         },
         {
-          "citation": "Art. 28 GDPR (part 12)",
-          "type": "article",
-          "title": "Processor",
-          "score": 7.1689,
-          "id": "article_028.txt::11"
+          "citation": "Art. 3, UCMJ (10 U.S.C. \u00a7 803) (part 1)",
+          "type": "procedural",
+          "title": "Jurisdiction to try certain personnel",
+          "score": 2.5215,
+          "id": "sec_803.txt::0"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 83 GDPR (part 4):\nthe degree of responsibility of the controller or processor taking into account technical and organisational measures implemented by them pursuant to Articles 25 and 32 ; any relevant previous infringements by the controller or processor; the degree of cooperation with the supervisory authority, in order to remedy the infringement and mitigate the possible adverse effects of the infringement; the categories of personal data affected by the infringement; the manner in which the infringement ...",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9):\nNotwithstanding paragraph (1), a member of the Panel may be appointed to a single additional term if\u2014 (A) the appointment of the member is to fill a vacancy described in subsection (b)(4); or (B) the member was initially appointed\u2014 (i) to a term of four years or less in accordance with subsection (b)(4); or (ii) to fill a vacancy that occurs before the expiration of the term of the predecessor of such member and for which the remainder of the term of such predecessor is four years or less. ...",
       "gold_rank": 0,
       "top_matched_terms": [
-        "what",
-        "processor",
-        "controller"
+        "ucmj"
       ]
     },
     {
       "id": "q08",
-      "type": "deadline",
-      "question": "How long does a controller have to respond to a data subject access request?",
-      "gold_citation": "Art. 12(3) GDPR",
-      "gold_answer": "Without undue delay and in any event within one month of receipt, extendable by two further months where necessary given complexity and number of requests.",
+      "type": "factual_lookup",
+      "question": "What rights does Article 31 give a servicemember suspected of an offense?",
+      "gold_citation": "Art. 31, UCMJ",
+      "gold_answer": "No person may be compelled to incriminate himself. Before interrogation a suspect must be informed of the nature of the accusation, advised that he does not have to make any statement, and warned that any statement may be used as evidence against him at court-martial. Statements obtained in violation, or by coercion or unlawful inducement, may not be received in evidence.",
       "retrieved": [
         {
-          "citation": "Recital 59 GDPR (part 1)",
-          "type": "recital",
-          "title": "Procedures for the Exercise of the Rights of the Data Subjects*",
-          "score": 14.7386,
-          "id": "recital_059.txt::0"
+          "citation": "Art. 31, UCMJ (10 U.S.C. \u00a7 831) (part 1)",
+          "type": "procedural",
+          "title": "Compulsory self-incrimination prohibited",
+          "score": 13.8386,
+          "id": "sec_831.txt::0"
         },
         {
-          "citation": "Recital 59 GDPR (part 2)",
-          "type": "recital",
-          "title": "Procedures for the Exercise of the Rights of the Data Subjects*",
-          "score": 11.7005,
-          "id": "recital_059.txt::1"
+          "citation": "Art. 31, UCMJ (10 U.S.C. \u00a7 831) (part 2)",
+          "type": "procedural",
+          "title": "Compulsory self-incrimination prohibited",
+          "score": 13.2498,
+          "id": "sec_831.txt::1"
         },
         {
-          "citation": "Recital 68 GDPR (part 8)",
-          "type": "recital",
-          "title": "Right of Data Portability*",
-          "score": 11.5638,
-          "id": "recital_068.txt::7"
+          "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 1)",
+          "type": "procedural",
+          "title": "Rights of the victim of an offense under this chapter",
+          "score": 10.0606,
+          "id": "sec_806b.txt::0"
         },
         {
-          "citation": "Recital 63 GDPR (part 5)",
-          "type": "recital",
-          "title": "Right of Access*",
-          "score": 11.2855,
-          "id": "recital_063.txt::4"
+          "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 12)",
+          "type": "procedural",
+          "title": "Rights of the victim of an offense under this chapter",
+          "score": 9.1186,
+          "id": "sec_806b.txt::11"
         },
         {
-          "citation": "Art. 61 GDPR (part 3)",
-          "type": "article",
-          "title": "Mutual assistance",
-          "score": 11.2742,
-          "id": "article_061.txt::2"
+          "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 11)",
+          "type": "procedural",
+          "title": "Rights of the victim of an offense under this chapter",
+          "score": 8.9975,
+          "id": "sec_806b.txt::10"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Recital 59 GDPR (part 1):\n1 Modalities should be provided for facilitating the exercise of the data subject\u2019s rights under this Regulation, including mechanisms to request and, if applicable, obtain, free of charge, in particular, access to and rectification or erasure of personal data and the exercise of the right to object. 2 The controller should also provide means for requests to be made electronically, especially where personal data are processed by electronic means. 3 The controller should be obliged to respond ...",
-      "gold_rank": 0,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 31, UCMJ (10 U.S.C. \u00a7 831) (part 1):\n(a) No person subject to this chapter may compel any person to incriminate himself or to answer any question the answer to which may tend to incriminate him. (b) No person subject to this chapter may interrogate, or request any statement from, an accused or a person suspected of an offense without first informing him of the nature of the accusation and advising him that he does not have to make any statement regarding the offense of which he is accused or suspected and that any statement ...",
+      "gold_rank": 1,
       "top_matched_terms": [
-        "respond",
-        "access",
-        "request",
+        "suspected",
         "does",
-        "controller",
-        "subject"
+        "offense"
       ]
     },
     {
       "id": "q09",
       "type": "enumeration",
-      "question": "What are the lawful bases for processing personal data?",
-      "gold_citation": "Art. 6(1) GDPR",
-      "gold_answer": "Consent; performance of a contract; compliance with a legal obligation; protection of vital interests; performance of a task in the public interest or official authority; and legitimate interests.",
+      "question": "What are the three types of courts-martial?",
+      "gold_citation": "Art. 16, UCMJ",
+      "gold_answer": "General courts-martial, special courts-martial, and summary courts-martial (Art. 16). A general court-martial consists of a military judge and eight members (or a military judge alone), a special court-martial has a military judge and four members (or judge alone), and a summary court-martial consists of one commissioned officer.",
       "retrieved": [
         {
-          "citation": "Recital 39 GDPR (part 1)",
-          "type": "recital",
-          "title": "Principles of Data Processing*",
-          "score": 11.2683,
-          "id": "recital_039.txt::0"
+          "citation": "Art. 16, UCMJ (10 U.S.C. \u00a7 816) (part 1)",
+          "type": "procedural",
+          "title": "Courts-martial classified",
+          "score": 14.8467,
+          "id": "sec_816.txt::0"
         },
         {
-          "citation": "Recital 50 GDPR (part 2)",
-          "type": "recital",
-          "title": "Further Processing of Personal Data*",
-          "score": 7.4345,
-          "id": "recital_050.txt::1"
+          "citation": "Art. 16, UCMJ (10 U.S.C. \u00a7 816) (part 3)",
+          "type": "procedural",
+          "title": "Courts-martial classified",
+          "score": 9.0763,
+          "id": "sec_816.txt::2"
         },
         {
-          "citation": "Recital 45 GDPR (part 4)",
-          "type": "recital",
-          "title": "Fulfillment of Legal Obligations*",
-          "score": 6.9667,
-          "id": "recital_045.txt::3"
+          "citation": "Art. 16, UCMJ (10 U.S.C. \u00a7 816) (part 2)",
+          "type": "procedural",
+          "title": "Courts-martial classified",
+          "score": 8.7717,
+          "id": "sec_816.txt::1"
         },
         {
-          "citation": "Art. 8 GDPR (part 1)",
-          "type": "article",
-          "title": "Conditions applicable to child's consent in relation to information society services",
-          "score": 6.8754,
-          "id": "article_008.txt::0"
+          "citation": "Art. 66, UCMJ (10 U.S.C. \u00a7 866) (part 1)",
+          "type": "procedural",
+          "title": "Courts of Criminal Appeals",
+          "score": 7.6304,
+          "id": "sec_866.txt::0"
         },
         {
-          "citation": "Recital 39 GDPR (part 4)",
-          "type": "recital",
-          "title": "Principles of Data Processing*",
-          "score": 6.8559,
-          "id": "recital_039.txt::3"
+          "citation": "Art. 19, UCMJ (10 U.S.C. \u00a7 819) (part 1)",
+          "type": "procedural",
+          "title": "Jurisdiction of special courts-martial",
+          "score": 7.4429,
+          "id": "sec_819.txt::0"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Recital 39 GDPR (part 1):\n1 Any processing of personal data should be lawful and fair. 2 It should be transparent to natural persons that personal data concerning them are collected, used, consulted or otherwise processed and to what extent the personal data are or will be processed. 3 The principle of transparency requires that any information and communication relating to the processing of those personal data be easily accessible and easy to understand, and that clear and plain language be used. 4",
-      "gold_rank": 0,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 16, UCMJ (10 U.S.C. \u00a7 816) (part 1):\n(a) In General.\u2014 The three kinds of courts-martial in each of the armed forces are the following: (1) General courts-martial, as described in subsection (b). (2) Special courts -martial, as described in subsection (c). (3) Summary courts-martial, as described in subsection (d). (b) General Courts-martial.\u2014 General courts-martial are of the following three types: (1) A general court-martial consisting of a military judge and eight members, subject to sections 825(e)(3) and 829 of this title ...",
+      "gold_rank": 1,
       "top_matched_terms": [
-        "what",
-        "lawful",
-        "personal",
-        "processing",
-        "data"
+        "types",
+        "three",
+        "courts",
+        "martial"
       ]
     },
     {
       "id": "q10",
-      "type": "conditional",
-      "question": "Under what conditions may special categories of sensitive data be processed?",
-      "gold_citation": "Art. 9(2) GDPR",
-      "gold_answer": "Processing of special category data is prohibited unless an exception applies, such as explicit consent, employment or social security law, vital interests, data made public by the subject, legal claims, substantial public interest, health or research purposes.",
+      "type": "numeric",
+      "question": "How many members sit on a court-martial panel in a capital case?",
+      "gold_citation": "Art. 25a, UCMJ",
+      "gold_answer": "Twelve. In a case in which the accused may be sentenced to death, the number of members shall be 12 (Art. 25a).",
       "retrieved": [
         {
-          "citation": "Art. 9 GDPR (part 13)",
-          "type": "article",
-          "title": "Processing of special categories of personal data",
-          "score": 15.2846,
-          "id": "article_009.txt::12"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 17)",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 16.2293,
+          "id": "sec_946.txt::16"
         },
         {
-          "citation": "Art. 9 GDPR (part 12)",
-          "type": "article",
-          "title": "Processing of special categories of personal data",
-          "score": 14.0024,
-          "id": "article_009.txt::11"
+          "citation": "Art. 25a, UCMJ (10 U.S.C. \u00a7 825a) (part 1)",
+          "type": "procedural",
+          "title": "Number of court-martial members in capital cases",
+          "score": 14.7506,
+          "id": "sec_825a.txt::0"
         },
         {
-          "citation": "Recital 51 GDPR (part 2)",
-          "type": "recital",
-          "title": "Protecting Sensitive Personal Data*",
-          "score": 12.0731,
-          "id": "recital_051.txt::1"
+          "citation": "Art. 66, UCMJ (10 U.S.C. \u00a7 866) (part 1)",
+          "type": "procedural",
+          "title": "Courts of Criminal Appeals",
+          "score": 13.3695,
+          "id": "sec_866.txt::0"
         },
         {
-          "citation": "Recital 53 GDPR (part 5)",
-          "type": "recital",
-          "title": "Processing of Sensitive Data in Health and Social Sector*",
-          "score": 12.0396,
-          "id": "recital_053.txt::4"
+          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 6)",
+          "type": "procedural",
+          "title": "Who may serve on courts-martial",
+          "score": 13.018,
+          "id": "sec_825.txt::5"
         },
         {
-          "citation": "Recital 51 GDPR (part 3)",
-          "type": "recital",
-          "title": "Protecting Sensitive Personal Data*",
-          "score": 11.9794,
-          "id": "recital_051.txt::2"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 16)",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 12.8738,
+          "id": "sec_946.txt::15"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 9 GDPR (part 13):\nMember States may maintain or introduce further conditions, including limitations, with regard to the processing of genetic data, biometric data or data concerning health. Suitable Recitals ( 46 ) Vital Interests of the Data Subject ( 51 ) Protecting Sensitive Personal Data ( 52 ) Exceptions to the Prohibition on Processing Special Categories of Personal Data ( 53 ) Processing of Sensitive Data in Health and Social Sector ( 54 ) Processing of Sensitive Data in Public Health Sector ( 55 ) ...",
-      "gold_rank": 1,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 17):\nHearings.\u2014 The Panel may hold such hearings, sit and act at such times and places, take such testimony, and receive such evidence as the Panel considers appropriate to carry out its duties under this section. (h) Information From Federal Agencies.\u2014 Upon request of the chair of the Panel, a department or agency of the Federal Government shall provide information that the Panel considers necessary to carry out its duties under this section. (i) Administrative Matters.\u2014 (1) Members to serve ...",
+      "gold_rank": 2,
       "top_matched_terms": [
-        "sensitive",
-        "special",
-        "categories",
-        "conditions",
-        "data"
+        "sit",
+        "panel",
+        "members"
       ]
     },
     {
       "id": "q11",
-      "type": "comparative_near_duplicate",
-      "question": "What is the difference between the right to erasure and the right to restriction of processing?",
-      "gold_citation": "Art. 17 vs Art. 18 GDPR",
-      "gold_answer": "Erasure (Art. 17) deletes the data; restriction (Art. 18) keeps the data but limits what can be done with it in specific situations, for example while accuracy is contested.",
+      "type": "conditional",
+      "question": "What punishments can a commanding officer impose under Article 15 without a court-martial?",
+      "gold_citation": "Art. 15, UCMJ",
+      "gold_answer": "Non-judicial punishments under Art. 15 include admonition or reprimand, and depending on the grade of the officer and of the offender, correctional custody (limited consecutive days), forfeiture of pay, reduction in grade, extra duties, restriction to limits, and withholding of privileges, subject to the limits enumerated in the article. The member may demand trial by court-martial instead, except aboard a vessel.",
       "retrieved": [
         {
-          "citation": "Art. 13 GDPR (part 6)",
-          "type": "article",
-          "title": "Information to be provided where personal data are collected from the data subject",
-          "score": 15.9386,
-          "id": "article_013.txt::5"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 8)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 20.0063,
+          "id": "sec_815.txt::7"
         },
         {
-          "citation": "Art. 18 GDPR (part 1)",
-          "type": "article",
-          "title": "Right to restriction of processing",
-          "score": 15.8783,
-          "id": "article_018.txt::0"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 9)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 19.9707,
+          "id": "sec_815.txt::8"
         },
         {
-          "citation": "Art. 15 GDPR (part 3)",
-          "type": "article",
-          "title": "Right of access by the data subject",
-          "score": 14.6323,
-          "id": "article_015.txt::2"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 18)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 15.4087,
+          "id": "sec_815.txt::17"
         },
         {
-          "citation": "Art. 19 GDPR",
-          "type": "article",
-          "title": "Notification obligation regarding rectification or erasure of personal data or restriction of processing",
-          "score": 14.4109,
-          "id": "article_019.txt::0"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 7)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 14.0051,
+          "id": "sec_815.txt::6"
         },
         {
-          "citation": "Art. 14 GDPR (part 6)",
-          "type": "article",
-          "title": "Information to be provided where personal data have not been obtained from the data subject",
-          "score": 14.2049,
-          "id": "article_014.txt::5"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 3)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 13.3928,
+          "id": "sec_815.txt::2"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 13 GDPR (part 6):\nthe existence of the right to request from the controller access to and rectification or erasure of personal data or restriction of processing concerning the data subject or to object to processing as well as the right to data portability; where the processing is based on point (a) of Article 6 (1) or point (a) of Article 9( 2), the existence of the right to withdraw consent at any time, without affecting the lawfulness of processing based on consent before its withdrawal; the right to lodge ...",
-      "gold_rank": 2,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 8):\nand warrant officers exercising command authorized to exercise those powers, the applicability of this article to an accused who demands trial by court-martial, and the kinds of courts-martial to which the case may be referred upon such a demand. However, except in the case of a member attached to or embarked in a vessel, punishment may not be imposed upon any member of the armed forces under this article if the member has, before the imposition of such punishment, demanded trial by court- ...",
+      "gold_rank": 1,
       "top_matched_terms": [
-        "restriction",
-        "erasure",
-        "right",
-        "processing"
+        "impose",
+        "punishments",
+        "commanding",
+        "without",
+        "officer",
+        "article"
       ]
     },
     {
       "id": "q12",
-      "type": "factual_lookup",
-      "question": "What is the right to data portability?",
-      "gold_citation": "Art. 20 GDPR",
-      "gold_answer": "The data subject can receive their personal data in a structured, commonly used, machine readable format and transmit it to another controller where processing is based on consent or contract and is automated.",
+      "type": "conditional",
+      "question": "What has to happen before charges can be referred to a general court-martial?",
+      "gold_citation": "Art. 32, UCMJ",
+      "gold_answer": "A preliminary hearing must be held (unless waived), conducted by an impartial hearing officer, to determine whether there is probable cause to believe an offense was committed and the accused committed it, and to recommend disposition (Art. 32).",
       "retrieved": [
         {
-          "citation": "Art. 20 GDPR (part 3)",
-          "type": "article",
-          "title": "Right to data portability",
-          "score": 10.6351,
-          "id": "article_020.txt::2"
+          "citation": "Art. 30, UCMJ (10 U.S.C. \u00a7 830) (part 2)",
+          "type": "procedural",
+          "title": "Charges and specifications",
+          "score": 11.7673,
+          "id": "sec_830.txt::1"
         },
         {
-          "citation": "Art. 20 GDPR (part 4)",
-          "type": "article",
-          "title": "Right to data portability",
-          "score": 10.0436,
-          "id": "article_020.txt::3"
+          "citation": "Art. 34, UCMJ (10 U.S.C. \u00a7 834) (part 6)",
+          "type": "procedural",
+          "title": "Advice to convening authority before referral for trial",
+          "score": 11.0315,
+          "id": "sec_834.txt::5"
         },
         {
-          "citation": "Art. 20 GDPR (part 2)",
-          "type": "article",
-          "title": "Right to data portability",
-          "score": 9.9604,
-          "id": "article_020.txt::1"
+          "citation": "Art. 30, UCMJ (10 U.S.C. \u00a7 830) (part 1)",
+          "type": "procedural",
+          "title": "Charges and specifications",
+          "score": 10.5957,
+          "id": "sec_830.txt::0"
         },
         {
-          "citation": "Recital 68 GDPR (part 2)",
-          "type": "recital",
-          "title": "Right of Data Portability*",
-          "score": 9.6483,
-          "id": "recital_068.txt::1"
+          "citation": "Art. 35, UCMJ (10 U.S.C. \u00a7 835) (part 1)",
+          "type": "procedural",
+          "title": "Service of charges; commencement of trial",
+          "score": 10.4879,
+          "id": "sec_835.txt::0"
         },
         {
-          "citation": "Recital 68 GDPR (part 6)",
-          "type": "recital",
-          "title": "Right of Data Portability*",
-          "score": 9.0773,
-          "id": "recital_068.txt::5"
+          "citation": "Art. 30a, UCMJ (10 U.S.C. \u00a7 830a) (part 3)",
+          "type": "procedural",
+          "title": "Proceedings conducted before referral",
+          "score": 10.3216,
+          "id": "sec_830a.txt::2"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 20 GDPR (part 3):\nIn exercising his or her right to data portability pursuant to paragraph 1, the data subject shall have the right to have the personal data transmitted directly from one controller to another, where technically feasible. 1 The exercise of the right referred to in paragraph 1 of this Article shall be without prejudice to Article 17 . 2 That right shall not apply to processing necessary for the performance of a task carried out in the public interest or in the exercise of official authority ...",
-      "gold_rank": 1,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 30, UCMJ (10 U.S.C. \u00a7 830) (part 2):\nthe matters set forth in the charges and specifications are true, to the best of the knowledge and belief of the signer. (c) Duty of Proper Authority.\u2014 When charges and specifications are preferred under subsection (a), the proper authority shall, as soon as practicable\u2014 (1) inform the person accused of the charges and specifications; and (2) determine what disposition should be made of the charges and specifications in the interest of justice and discipline. (Aug. 10, 1956, ch. 1041, 70A ...",
+      "gold_rank": 0,
       "top_matched_terms": [
-        "portability",
-        "right",
-        "data"
+        "what",
+        "charges"
       ]
     },
     {
       "id": "q13",
       "type": "factual_lookup",
-      "question": "When can a data subject object to processing of their personal data?",
-      "gold_citation": "Art. 21 GDPR",
-      "gold_answer": "At any time on grounds relating to their situation where processing is based on public interest or legitimate interests, and absolutely where data is processed for direct marketing.",
+      "question": "Can a military officer be punished for insulting the President?",
+      "gold_citation": "Art. 88, UCMJ",
+      "gold_answer": "Yes. Any commissioned officer who uses contemptuous words against the President, Vice President, Congress, the Secretary of Defense, a military department Secretary, the Secretary of Homeland Security, or the Governor or legislature of a State where the officer is on duty or present, shall be punished as a court-martial may direct (Art. 88).",
       "retrieved": [
         {
-          "citation": "Art. 21 GDPR (part 5)",
-          "type": "article",
-          "title": "Right to object",
-          "score": 10.3688,
-          "id": "article_021.txt::4"
+          "citation": "Art. 93a, UCMJ (10 U.S.C. \u00a7 893a) (part 1)",
+          "type": "punitive",
+          "title": "Prohibited activities with military recruit or trainee by person in position of special trust",
+          "score": 7.2031,
+          "id": "sec_893a.txt::0"
         },
         {
-          "citation": "Art. 21 GDPR (part 6)",
-          "type": "article",
-          "title": "Right to object",
-          "score": 10.2284,
-          "id": "article_021.txt::5"
+          "citation": "Art. 88, UCMJ (10 U.S.C. \u00a7 888)",
+          "type": "punitive",
+          "title": "Contempt toward officials",
+          "score": 7.1287,
+          "id": "sec_888.txt::0"
         },
         {
-          "citation": "Art. 21 GDPR (part 3)",
-          "type": "article",
-          "title": "Right to object",
-          "score": 9.8609,
-          "id": "article_021.txt::2"
+          "citation": "Art. 26, UCMJ (10 U.S.C. \u00a7 826) (part 6)",
+          "type": "procedural",
+          "title": "Military judge of a general or special court-martial",
+          "score": 7.0778,
+          "id": "sec_826.txt::5"
         },
         {
-          "citation": "Art. 21 GDPR (part 2)",
-          "type": "article",
-          "title": "Right to object",
-          "score": 9.707,
-          "id": "article_021.txt::1"
+          "citation": "Art. 25, UCMJ (10 U.S.C. \u00a7 825) (part 7)",
+          "type": "procedural",
+          "title": "Who may serve on courts-martial",
+          "score": 6.8262,
+          "id": "sec_825.txt::6"
         },
         {
-          "citation": "Art. 21 GDPR (part 1)",
-          "type": "article",
-          "title": "Right to object",
-          "score": 9.6618,
-          "id": "article_021.txt::0"
+          "citation": "Art. 4, UCMJ (10 U.S.C. \u00a7 804) (part 8)",
+          "type": "procedural",
+          "title": "Dismissed officer\u2019s right to trial by court-martial",
+          "score": 6.3235,
+          "id": "sec_804.txt::7"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 21 GDPR (part 5):\nIn the context of the use of information society services, and notwithstanding Directive 2002/58/EC , the data subject may exercise his or her right to object by automated means using technical specifications. Where personal data are processed for scientific or historical research purposes or statistical purposes pursuant to Article 89( 1), the data subject, on grounds relating to his or her particular situation, shall have the right to object to processing of personal data concerning him or ...",
-      "gold_rank": 1,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 93a, UCMJ (10 U.S.C. \u00a7 893a) (part 1):\n(a) Abuse of Training Leadership Position.\u2014 Any person subject to this chapter\u2014 (1) who is an officer, a noncommissioned officer, or a petty officer; (2) who is in a training leadership position with respect to a specially protected junior member of the armed forces ; and (3) who engages in prohibited sexual activity with such specially protected junior member of the armed forces ; shall be punished as a court-martial may direct. (b) Abuse of Position as Military Recruiter.\u2014 Any person ...",
+      "gold_rank": 2,
       "top_matched_terms": [
-        "object",
-        "subject",
-        "personal",
-        "processing",
-        "data"
+        "punished",
+        "officer",
+        "military"
       ]
     },
     {
       "id": "q14",
-      "type": "factual_with_number",
-      "question": "Can a data subject get a copy of their personal data, and is there a fee?",
-      "gold_citation": "Art. 15(3) GDPR",
-      "gold_answer": "Yes, the controller provides one copy free of charge; for further copies the controller may charge a reasonable fee based on administrative costs.",
+      "type": "comparative",
+      "question": "What is the difference between conduct unbecoming an officer and the general article?",
+      "gold_citation": "Art. 133 vs Art. 134, UCMJ",
+      "gold_answer": "Art. 133 applies only to commissioned officers, cadets and midshipmen and punishes conduct unbecoming an officer. Art. 134, the general article, applies to all persons subject to the code and reaches disorders and neglects prejudicial to good order and discipline, service discrediting conduct, and non-capital federal crimes not specifically listed elsewhere.",
       "retrieved": [
         {
-          "citation": "Art. 15 GDPR (part 5)",
-          "type": "article",
-          "title": "Right of access by the data subject",
-          "score": 14.1448,
-          "id": "article_015.txt::4"
+          "citation": "Art. 133, UCMJ (10 U.S.C. \u00a7 933)",
+          "type": "punitive",
+          "title": "Conduct unbecoming an officer",
+          "score": 17.8708,
+          "id": "sec_933.txt::0"
         },
         {
-          "citation": "Art. 15 GDPR (part 4)",
-          "type": "article",
-          "title": "Right of access by the data subject",
-          "score": 13.0225,
-          "id": "article_015.txt::3"
+          "citation": "Art. 142, UCMJ (10 U.S.C. \u00a7 942) (part 13)",
+          "type": "procedural",
+          "title": "Judges",
+          "score": 12.3861,
+          "id": "sec_942.txt::12"
         },
         {
-          "citation": "Art. 57 GDPR (part 9)",
-          "type": "article",
-          "title": "Tasks",
-          "score": 11.3102,
-          "id": "article_057.txt::8"
+          "citation": "Art. 142, UCMJ (10 U.S.C. \u00a7 942) (part 11)",
+          "type": "procedural",
+          "title": "Judges",
+          "score": 9.7507,
+          "id": "sec_942.txt::10"
         },
         {
-          "citation": "Recital 47 GDPR (part 2)",
-          "type": "recital",
-          "title": "Overriding Legitimate Interest*",
-          "score": 10.1356,
-          "id": "recital_047.txt::1"
+          "citation": "Art. 142, UCMJ (10 U.S.C. \u00a7 942) (part 12)",
+          "type": "procedural",
+          "title": "Judges",
+          "score": 9.2131,
+          "id": "sec_942.txt::11"
         },
         {
-          "citation": "Art. 13 GDPR (part 4)",
-          "type": "article",
-          "title": "Information to be provided where personal data are collected from the data subject",
-          "score": 8.5832,
-          "id": "article_013.txt::3"
+          "citation": "Art. 130, UCMJ (10 U.S.C. \u00a7 930) (part 6)",
+          "type": "punitive",
+          "title": "Stalking",
+          "score": 8.8664,
+          "id": "sec_930.txt::5"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 15 GDPR (part 5):\nArticle 46 relating to the transfer. 1 The controller shall provide a copy of the personal data undergoing processing. 2 For any further copies requested by the data subject, the controller may charge a reasonable fee based on administrative costs. 3 Where the data subject makes the request by electronic means, and unless otherwise requested by the data subject, the information shall be provided in a commonly used electronic form. The right to obtain a copy referred to in paragraph 3 shall ...",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 133, UCMJ (10 U.S.C. \u00a7 933):\nAny commissioned officer, cadet , or midshipman who is convicted of conduct unbecoming an officer shall be punished as a court-martial may direct. (Aug. 10, 1956, ch. 1041, 70A Stat. 76 ; Pub. L. 117\u201381, div. A, title V, \u00a7 542(a) , Dec. 27, 2021 , 135 Stat. 1709 .)",
       "gold_rank": 1,
       "top_matched_terms": [
-        "fee",
-        "copy",
-        "subject",
-        "personal",
-        "data"
+        "unbecoming",
+        "conduct",
+        "officer"
       ]
     },
     {
       "id": "q15",
-      "type": "conditional",
-      "question": "When must an organization appoint a Data Protection Officer?",
-      "gold_citation": "Art. 37(1) GDPR",
-      "gold_answer": "When processing is carried out by a public authority, or the core activities require regular and systematic monitoring of data subjects on a large scale, or core activities consist of large scale processing of special category or criminal data.",
+      "type": "factual_lookup",
+      "question": "Does the UCMJ prohibit cruel and unusual punishment?",
+      "gold_citation": "Art. 55, UCMJ",
+      "gold_answer": "Yes. Punishment by flogging, branding, marking or tattooing the body, or any other cruel or unusual punishment, may not be adjudged or inflicted, and the use of irons except for safe custody is prohibited (Art. 55).",
       "retrieved": [
         {
-          "citation": "Art. 37 GDPR (part 3)",
-          "type": "article",
-          "title": "Designation of the data protection officer",
-          "score": 15.4817,
-          "id": "article_037.txt::2"
+          "citation": "Art. 55, UCMJ (10 U.S.C. \u00a7 855)",
+          "type": "procedural",
+          "title": "Cruel and unusual punishments prohibited",
+          "score": 25.2521,
+          "id": "sec_855.txt::0"
         },
         {
-          "citation": "Art. 37 GDPR (part 2)",
-          "type": "article",
-          "title": "Designation of the data protection officer",
-          "score": 15.2879,
-          "id": "article_037.txt::1"
+          "citation": "Art. 81, UCMJ (10 U.S.C. \u00a7 881) (part 2)",
+          "type": "punitive",
+          "title": "Conspiracy",
+          "score": 6.994,
+          "id": "sec_881.txt::1"
         },
         {
-          "citation": "Art. 37 GDPR (part 5)",
-          "type": "article",
-          "title": "Designation of the data protection officer",
-          "score": 9.3281,
-          "id": "article_037.txt::4"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 9)",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.6688,
+          "id": "sec_946.txt::8"
         },
         {
-          "citation": "Art. 37 GDPR (part 4)",
-          "type": "article",
-          "title": "Designation of the data protection officer",
-          "score": 9.2803,
-          "id": "article_037.txt::3"
+          "citation": "Art. 81, UCMJ (10 U.S.C. \u00a7 881) (part 1)",
+          "type": "punitive",
+          "title": "Conspiracy",
+          "score": 6.4851,
+          "id": "sec_881.txt::0"
         },
         {
-          "citation": "Art. 38 GDPR (part 2)",
-          "type": "article",
-          "title": "Position of the data protection officer",
-          "score": 9.2334,
-          "id": "article_038.txt::1"
+          "citation": "Art. 146, UCMJ (10 U.S.C. \u00a7 946) (part 10)",
+          "type": "procedural",
+          "title": "Military Justice Review Panel",
+          "score": 6.3283,
+          "id": "sec_946.txt::9"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 37 GDPR (part 3):\nA group of undertakings may appoint a single data protection officer provided that a data protection officer is easily accessible from each establishment. Where the controller or the processor is a public authority or body, a single data protection officer may be designated for several such authorities or bodies, taking account of their organisational structure and size. 1 In cases other than those referred to in paragraph 1, the controller or processor or associations and other bodies ...",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 55, UCMJ (10 U.S.C. \u00a7 855):\nPunishment by flogging, or by branding, marking, or tattooing on the body, or any other cruel or unusual punishment, may not be adjudged by any court-martial or inflicted upon any person subject to this chapter. The use of irons, single or double, except for the purpose of safe custody, is prohibited. (Aug. 10, 1956, ch. 1041, 70A Stat. 56 .)",
       "gold_rank": 1,
       "top_matched_terms": [
-        "appoint",
-        "officer",
-        "protection",
-        "data"
+        "cruel",
+        "unusual",
+        "punishment"
       ]
     },
     {
       "id": "q16",
       "type": "conditional",
-      "question": "What are the conditions for consent to be valid under the GDPR?",
-      "gold_citation": "Art. 7 GDPR (with Art. 4(11))",
-      "gold_answer": "Consent must be freely given, specific, informed and unambiguous; the controller must be able to demonstrate it; requests must be clearly distinguishable and in plain language; and it must be as easy to withdraw as to give.",
+      "question": "What does the UCMJ say about disobeying an order or regulation?",
+      "gold_citation": "Art. 92, UCMJ",
+      "gold_answer": "Art. 92 punishes anyone who violates or fails to obey a lawful general order or regulation, fails to obey any other lawful order he has a duty to obey and knows of, or is derelict in the performance of duties, as a court-martial may direct.",
       "retrieved": [
         {
-          "citation": "Art. 7 GDPR (part 4)",
-          "type": "article",
-          "title": "Conditions for consent",
-          "score": 12.843,
-          "id": "article_007.txt::3"
+          "citation": "Art. 103, UCMJ (10 U.S.C. \u00a7 903) (part 1)",
+          "type": "punitive",
+          "title": "Spies",
+          "score": 10.2159,
+          "id": "sec_903.txt::0"
         },
         {
-          "citation": "Recital 43 GDPR (part 1)",
-          "type": "recital",
-          "title": "Freely Given Consent*",
-          "score": 11.5283,
-          "id": "recital_043.txt::0"
+          "citation": "Art. 103, UCMJ (10 U.S.C. \u00a7 903) (part 2)",
+          "type": "punitive",
+          "title": "Spies",
+          "score": 10.2159,
+          "id": "sec_903.txt::1"
         },
         {
-          "citation": "Recital 43 GDPR (part 2)",
-          "type": "recital",
-          "title": "Freely Given Consent*",
-          "score": 10.2247,
-          "id": "recital_043.txt::1"
+          "citation": "Art. 92, UCMJ (10 U.S.C. \u00a7 892)",
+          "type": "punitive",
+          "title": "Failure to obey order or regulation",
+          "score": 9.3952,
+          "id": "sec_892.txt::0"
         },
         {
-          "citation": "Art. 8 GDPR (part 3)",
-          "type": "article",
-          "title": "Conditions applicable to child's consent in relation to information society services",
-          "score": 9.1851,
-          "id": "article_008.txt::2"
+          "citation": "Art. 63, UCMJ (10 U.S.C. \u00a7 863) (part 4)",
+          "type": "procedural",
+          "title": "Rehearings",
+          "score": 8.241,
+          "id": "sec_863.txt::3"
         },
         {
-          "citation": "Art. 46 GDPR (part 6)",
-          "type": "article",
-          "title": "Transfers subject to appropriate safeguards",
-          "score": 8.9103,
-          "id": "article_046.txt::5"
+          "citation": "Art. 114, UCMJ (10 U.S.C. \u00a7 914) (part 2)",
+          "type": "punitive",
+          "title": "Endangerment offenses",
+          "score": 7.102,
+          "id": "sec_914.txt::1"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 7 GDPR (part 4):\n, the performance of a contract, including the provision of a service, is conditional on consent to the processing of personal data that is not necessary for the performance of that contract. Suitable Recitals ( 32 ) Conditions for Consent ( 33 ) Consent to Certain Areas of Scientific Research ( 42 ) Burden of Proof and Requirements for Consent ( 43 ) Freely Given Consent \u2190 Art. 6 GDPR Art. 8 GDPR \u2192 GDPR Table of contents Report error",
-      "gold_rank": 1,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 103, UCMJ (10 U.S.C. \u00a7 903) (part 1):\nAny person who in time of war is found lurking as a spy or acting as a spy in or about any place, vessel, or aircraft, within the control or jurisdiction of any of the armed forces, or in or about any shipyard, any manufacturing or industrial plant, or any other place or institution engaged in work in aid of the prosecution of the war by the United States, or elsewhere, shall be tried by a general court-martial or by a military commission and on conviction shall be punished by death or such ...",
+      "gold_rank": 3,
       "top_matched_terms": [
-        "consent",
-        "gdpr",
-        "conditions"
+        "about",
+        "does"
       ]
     },
     {
       "id": "q17",
-      "type": "negative_control",
-      "question": "Does the GDPR require companies to store personal data only on servers physically located inside the EU?",
-      "gold_citation": "none (not stated; Chapter V governs transfers with safeguards)",
-      "gold_answer": "No. The GDPR does not impose EU-only data localization. It regulates transfers to third countries through adequacy decisions and safeguards (Chapter V), but does not require storage inside the EU. A good system should decline to invent a localization rule.",
+      "type": "statute_boundary",
+      "question": "What is the maximum confinement for being AWOL for more than 30 days?",
+      "gold_citation": "none in this corpus (Art. 86 sets the offense; the confinement table is in the Manual for Courts-Martial)",
+      "gold_answer": "The statute does not say. Art. 86 defines the offense and provides punishment 'as a court-martial may direct'; the specific maximum confinement periods by duration of absence are set in the Manual for Courts-Martial punishment tables, which are not part of the statutory text. A good system must say the number is not in this corpus rather than invent one.",
       "retrieved": [
         {
-          "citation": "Art. 93 GDPR",
-          "type": "article",
-          "title": "Committee procedure",
-          "score": 10.8168,
-          "id": "article_093.txt::0"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 10)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 18.5652,
+          "id": "sec_815.txt::9"
         },
         {
-          "citation": "Art. 11 GDPR (part 2)",
-          "type": "article",
-          "title": "Processing which does not require identification",
-          "score": 10.6342,
-          "id": "article_011.txt::1"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 12)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 17.8883,
+          "id": "sec_815.txt::11"
         },
         {
-          "citation": "Art. 62 GDPR (part 11)",
-          "type": "article",
-          "title": "Joint operations of supervisory authorities",
-          "score": 9.6015,
-          "id": "article_062.txt::10"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 9)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 16.4084,
+          "id": "sec_815.txt::8"
         },
         {
-          "citation": "Art. 11 GDPR (part 1)",
-          "type": "article",
-          "title": "Processing which does not require identification",
-          "score": 9.0353,
-          "id": "article_011.txt::0"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 11)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 16.3735,
+          "id": "sec_815.txt::10"
         },
         {
-          "citation": "Art. 34 GDPR (part 5)",
-          "type": "article",
-          "title": "Communication of a personal data breach to the data subject",
-          "score": 9.0093,
-          "id": "article_034.txt::4"
+          "citation": "Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 13)",
+          "type": "procedural",
+          "title": "Commanding officer\u2019s non-judicial punishment",
+          "score": 15.8804,
+          "id": "sec_815.txt::12"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Art. 93 GDPR:\n1 The Commission shall be assisted by a committee. 2 That committee shall be a committee within the meaning of Regulation ( EU) No 182/2011 . Where reference is made to this paragraph, Article 5 of Regulation ( EU) No 182/2011 shall apply. Where reference is made to this paragraph, Article 8 of Regulation ( (EU) No 182/2011 , in conjunction with Article 5 thereof, shall apply. \u2190 Art. 92 GDPR Art. 94 GDPR \u2192 GDPR Table of contents Report error",
-      "gold_rank": null,
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 15, UCMJ (10 U.S.C. \u00a7 815) (part 10):\nrestriction to certain specified limits, with or without suspension from duty, for not more than 30 consecutive days; (B) if imposed by an officer exercising general court-martial jurisdiction or an officer of general or flag rank in command\u2014 (i) arrest in quarters for not more than 30 consecutive days; (ii) forfeiture of not more than one-half of one month\u2019s pay per month for two months; (iii) restriction to certain specified limits, with or without suspension from duty, for not more than ...",
+      "gold_rank": 0,
       "top_matched_terms": [
-        "eu",
-        "gdpr"
+        "30",
+        "days",
+        "more",
+        "than"
       ]
     },
     {
       "id": "q18",
       "type": "out_of_corpus",
-      "question": "How does the CCPA define a sale of personal information?",
-      "gold_citation": "none (CCPA is not in this corpus)",
-      "gold_answer": "The CCPA is not part of this corpus, which is GDPR only. The system should say the context does not answer this rather than fabricate a CCPA definition.",
+      "question": "What does Rule for Courts-Martial 707 require for a speedy trial?",
+      "gold_citation": "none (the Rules for Courts-Martial are in the MCM, not in this corpus)",
+      "gold_answer": "The Rules for Courts-Martial are part of the Manual for Courts-Martial, not the UCMJ statute, and are not in this corpus. The system should say the context cannot answer this rather than fabricate the 120 day rule.",
       "retrieved": [
         {
-          "citation": "Recital 39 GDPR (part 3)",
-          "type": "recital",
-          "title": "Principles of Data Processing*",
-          "score": 7.9982,
-          "id": "recital_039.txt::2"
+          "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 12)",
+          "type": "procedural",
+          "title": "Rights of the victim of an offense under this chapter",
+          "score": 11.5908,
+          "id": "sec_806b.txt::11"
         },
         {
-          "citation": "Recital 26 GDPR (part 4)",
-          "type": "recital",
-          "title": "Not Applicable to Anonymous Data*",
-          "score": 6.9366,
-          "id": "recital_026.txt::3"
+          "citation": "Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 11)",
+          "type": "procedural",
+          "title": "Rights of the victim of an offense under this chapter",
+          "score": 11.2391,
+          "id": "sec_806b.txt::10"
         },
         {
-          "citation": "Art. 47 GDPR (part 8)",
-          "type": "article",
-          "title": "Binding corporate rules",
-          "score": 6.9229,
-          "id": "article_047.txt::7"
+          "citation": "Art. 58, UCMJ (10 U.S.C. \u00a7 858) (part 6)",
+          "type": "procedural",
+          "title": "Execution of confinement",
+          "score": 9.1937,
+          "id": "sec_858.txt::5"
         },
         {
-          "citation": "Art. 47 GDPR (part 7)",
-          "type": "article",
-          "title": "Binding corporate rules",
-          "score": 6.477,
-          "id": "article_047.txt::6"
+          "citation": "Art. 39, UCMJ (10 U.S.C. \u00a7 839) (part 3)",
+          "type": "procedural",
+          "title": "Sessions",
+          "score": 8.9547,
+          "id": "sec_839.txt::2"
         },
         {
-          "citation": "Recital 26 GDPR (part 3)",
-          "type": "recital",
-          "title": "Not Applicable to Anonymous Data*",
-          "score": 6.3961,
-          "id": "recital_026.txt::2"
+          "citation": "Art. 58, UCMJ (10 U.S.C. \u00a7 858) (part 4)",
+          "type": "procedural",
+          "title": "Execution of confinement",
+          "score": 8.5482,
+          "id": "sec_858.txt::3"
         }
       ],
-      "answer": "(extractive fallback, no LLM key set) Best passage Recital 39 GDPR (part 3):\nThat principle concerns, in particular, information to the data subjects on the identity of the controller and the purposes of the processing and further information to ensure fair and transparent processing in respect of the natural persons concerned and their right to obtain confirmation and communication of personal data concerning them which are being processed. 5 Natural persons should be made aware of risks, rules, safeguards and rights in relation to the processing of personal data ...",
+      "answer": "(extractive fallback, no LLM key set) Best passage Art. 6b, UCMJ (10 U.S.C. \u00a7 806b) (part 12):\n(article 32) or a court-martial ruling violates the rights of the victim afforded by a section (article) or rule specified in paragraph (4), the victim may petition the Court of Criminal Appeals for a writ of mandamus to require the preliminary hearing officer or the court-martial to comply with the section (article) or rule. (2) If the victim of an offense under this chapter is subject to an order to submit to a deposition, notwithstanding the availability of the victim to testify at the ...",
       "gold_rank": null,
       "top_matched_terms": [
-        "how",
-        "information",
-        "personal"
+        "require",
+        "rule",
+        "martial"
       ]
     }
   ]

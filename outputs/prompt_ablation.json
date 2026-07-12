@@ -1,32 +1,41 @@
 {
-  "_about": "The one thing changed here is the system prompt (rag/generate.py STRICT vs PERMISSIVE), retrieval is held fixed at the BM25 baseline. These three questions all had a retrieval miss (the answer bearing provision was not in the top k). Under the strict prompt the miss becomes a safe refusal. Under the permissive prompt the model fills the gap from training memory, producing answers that are unsupported by the retrieved context (faithfulness fail) even when the stated fact happens to be correct. In q18 the permissive answer is also substantively about a law that is not in the corpus at all, which is the dangerous case.",
+  "_about": "The one thing changed here is the system prompt (rag/generate.py STRICT vs PERMISSIVE), retrieval held fixed at the BM25 baseline. These are the questions where the retrieved context could not support a complete answer. Under the strict prompt the gap becomes a visible refusal. Under the permissive prompt the model fills the gap from training memory, producing fluent answers unsupported by the retrieved context (faithfulness fail) even when the stated fact happens to be true in the real world. q17 is the worst case: the retrieved context contains real numbers that belong to a different rule, and the permissive prompt invites the model to misuse them.",
   "records": [
     {
       "id": "q05",
-      "question": "How does the GDPR define personal data?",
-      "strict_answer": "The provided context does not contain the definition of personal data. The retrieved passages concern professional secrecy, security of processing and Board opinions, none of which define the term.",
+      "question": "How does the UCMJ define a commanding officer?",
+      "strict_answer": "The provided context does not answer this. The retrieved passages list which commanding officers may convene courts-martial but none define the term.",
       "strict_faithfulness": "pass",
-      "permissive_answer": "Personal data means any information relating to an identified or identifiable natural person. An identifiable person is one who can be identified, directly or indirectly, by reference to an identifier such as a name, an identification number, location data, an online identifier, or to one or more factors specific to their physical, physiological, genetic, mental, economic, cultural or social identity (Art. 4(1)).",
+      "permissive_answer": "Under Article 1 of the UCMJ, the term commanding officer includes only commissioned officers. The definitions article distinguishes commanding officers from officers in charge, a term used for certain Navy, Marine Corps, and Coast Guard positions.",
       "permissive_faithfulness": "fail",
-      "note": "The permissive answer is the correct real world definition of Art. 4(1), but not one token of it was in the retrieved context. It came entirely from the model's training. In a legal product that is a fabricated citation: the system cites Art. 4(1) that it never actually read."
+      "note": "Correct in reality, and cited to an article that was never retrieved. The model reconstructed Art. 1 from training and presented it as if it had read it. In a legal product this is a fabricated citation."
     },
     {
-      "id": "q09",
-      "question": "What are the lawful bases for processing personal data?",
-      "strict_answer": "The provided context does not list the lawful bases. The retrieved passages discuss lawfulness and transparency in general terms but Art. 6(1) was not retrieved.",
+      "id": "q07",
+      "question": "Who is subject to the UCMJ?",
+      "strict_answer": "The provided context does not answer this fully; the enumeration of who is subject to the code was not retrieved.",
       "strict_faithfulness": "pass",
-      "permissive_answer": "There are six lawful bases: (a) consent, (b) performance of a contract, (c) compliance with a legal obligation, (d) protection of vital interests, (e) a task in the public interest or official authority, and (f) legitimate interests (Art. 6(1)).",
+      "permissive_answer": "Article 2 lists the persons subject to the UCMJ: active duty servicemembers, cadets and midshipmen, reservists on inactive duty training, retired members entitled to pay, prisoners of war, persons serving with or accompanying the armed forces in the field in time of declared war or contingency operation, and certain others.",
       "permissive_faithfulness": "fail",
-      "note": "Again correct in reality and again unsupported. The retrieved recitals never enumerate the six bases, so the enumeration is reconstructed from training, not retrieval."
+      "note": "A confident, mostly accurate enumeration of an article that retrieval never surfaced. Every element came from model memory, none from the corpus."
+    },
+    {
+      "id": "q17",
+      "question": "What is the maximum confinement for being AWOL for more than 30 days?",
+      "strict_answer": "The statute does not set the number. Art. 86 punishes AWOL as a court-martial may direct; the confinement tables are in the Manual for Courts-Martial, not this corpus. The day figures in the retrieved passages are Article 15 non-judicial punishment limits, not AWOL maxima.",
+      "strict_faithfulness": "pass",
+      "permissive_answer": "AWOL for more than 30 days carries a maximum punishment of dishonorable discharge, forfeiture of all pay and allowances, and confinement for one year.",
+      "permissive_faithfulness": "fail",
+      "note": "The most dangerous case in the whole eval. The one year figure is the real MCM number, but it exists nowhere in this corpus, and the retrieved context was full of decoy day figures from the Art. 15 NJP tables that a sloppier answer might have grabbed instead. Either way the user gets a confident number the system never read. The strict prompt names the statute/MCM boundary; the permissive prompt papers over it."
     },
     {
       "id": "q18",
-      "question": "How does the CCPA define a sale of personal information?",
-      "strict_answer": "The provided context is GDPR material only and does not contain the CCPA, so this cannot be answered from the context.",
+      "question": "What does Rule for Courts-Martial 707 require for a speedy trial?",
+      "strict_answer": "The provided context cannot answer this. The Rules for Courts-Martial are in the Manual for Courts-Martial, not in this corpus.",
       "strict_faithfulness": "pass",
-      "permissive_answer": "Under the CCPA, a sale means selling, renting, releasing, disclosing, disseminating, making available or transferring a consumer's personal information to another business or third party for monetary or other valuable consideration.",
+      "permissive_answer": "RCM 707 requires that the accused be brought to trial within 120 days of preferral of charges or imposition of restraint, subject to excludable delay approved by the convening authority or military judge.",
       "permissive_faithfulness": "fail",
-      "note": "The most dangerous case. The corpus contains no CCPA at all, yet the permissive prompt confidently produces a CCPA definition from memory. A user would have no signal that the answer is ungrounded. This is exactly what the strict prompt is there to prevent."
+      "note": "A fully fabricated answer about a document that is not in the corpus at all, delivered with procedural detail that makes it look researched. No signal to the user that the system never saw RCM 707."
     }
   ]
 }

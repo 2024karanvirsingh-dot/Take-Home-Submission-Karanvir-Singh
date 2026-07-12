@@ -1,131 +1,131 @@
 {
-  "_about": "Answers generated over the BM25 baseline retrieved contexts (chunk_words=180, k=5) using the strict grounding prompt in rag/generate.py. No ANTHROPIC_API_KEY was set in this environment, so the recorded answers were produced with Claude acting as the generation backend over the exact retrieved passages the pipeline returned. Running eval/run_eval.py with a key reproduces the same setup automatically. Scores are hand applied from eval/rubric.md: retrieval 0-2, correctness 0-2, faithfulness pass/fail. For controls q17 and q18 correctness is inverted (2 = correctly refused).",
+  "_about": "Answers generated over the BM25 baseline retrieved contexts (chunk_words=180, k=5) using the strict grounding prompt in rag/generate.py. No ANTHROPIC_API_KEY was set in this environment, so the recorded answers were produced with Claude acting as the generation backend over the exact retrieved passages the pipeline returned. Running eval/run_eval.py with a key reproduces the same setup automatically. Scores are hand applied from eval/rubric.md: retrieval 0-2, correctness 0-2, faithfulness pass/fail. For controls q17 and q18 correctness is inverted (2 = correctly recognised the boundary).",
   "records": [
     {
-      "id": "q01", "type": "factual_lookup",
-      "question": "What is the maximum administrative fine for the most serious GDPR infringements?",
-      "answer": "The context describes how a supervisory authority sets a fine (nature, gravity and duration of the infringement, intentional or negligent character, mitigation, prior infringements, and so on) and says penalties must be effective, proportionate and dissuasive (Art. 83, Recital 152). The specific ceiling of 20,000,000 EUR or 4% of total worldwide annual turnover sits in Art. 83(5), which was not among the retrieved passages, so the exact maximum is not in the provided context.",
-      "retrieval": 1, "correctness": 1, "faithfulness": "pass",
-      "note": "Right article family, wrong paragraph. BM25 pulled Art. 83 parts 1 to 3 (the criteria) and three fine related recitals, but not part 4/5 where the number lives. A faithful model therefore cannot state the figure even though it is in the corpus. A model answering from memory would emit 20M/4% unsupported. This is the most important single example in the set."
+      "id": "q01", "type": "numeric",
+      "question": "What punishment does the UCMJ authorize for premeditated murder?",
+      "answer": "A person guilty of murder with a premeditated design to kill (or felony murder under clause (4)) shall suffer death or imprisonment for life as a court-martial may direct. Other murder is punished as a court-martial may direct (Art. 118, UCMJ).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Clean win. 'Premeditated' is a rare term concentrated in Art. 118; both parts of the article take the top two ranks and the punishment clause is in the rank 2 chunk."
     },
     {
-      "id": "q02", "type": "deadline",
-      "question": "Within what time must a controller notify the supervisory authority of a personal data breach?",
-      "answer": "Without undue delay and, where feasible, not later than 72 hours after becoming aware of it. If notification is later than 72 hours it must be accompanied by reasons for the delay (Art. 33(1)).",
-      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
-      "note": "Clean win. The answer bearing chunk (Art. 33 part 1) is rank 1 and contains the exact figure."
+      "id": "q02", "type": "limitations",
+      "question": "What is the statute of limitations for most offenses under the UCMJ?",
+      "answer": "Five years from the date of the offense for most offenses; murder, rape, rape or sexual assault of a child, and certain other listed offenses, plus absence without leave or missing movement in time of war, may be tried at any time without limitation (Art. 43, UCMJ). Wartime tolling and other exclusions also apply (Art. 43).",
+      "retrieval": 1, "correctness": 2, "faithfulness": "pass",
+      "note": "The gold article dominates all five slots, but the answer bearing chunk (part 1, with the five year rule) ranks 5th. The top ranks are the tolling and wartime suspension paragraphs, which share more vocabulary with the query ('statute of limitations' appears in the heading of every part). Right article, nearly the wrong paragraph. The answer survives because part 1 just made it into the k."
     },
     {
-      "id": "q03", "type": "factual_lookup",
-      "question": "What is the right to be forgotten?",
-      "answer": "It is the right to erasure: the data subject can obtain erasure of personal data without undue delay where a listed ground applies, for example the data are no longer necessary, consent is withdrawn, the data subject objects, or the data were unlawfully processed (Art. 17(1)). Where the controller has made the data public it must take reasonable steps to inform other controllers to erase links to or copies of the data (Art. 17(2), Recital 66).",
+      "id": "q03", "type": "comparative_near_duplicate",
+      "question": "What is the difference between desertion and absence without leave under the UCMJ?",
+      "answer": "Desertion requires absence without authority with intent to remain away permanently, or quitting a unit to avoid hazardous duty or shirk important service (Art. 85). AWOL requires no such intent: failing to go to an appointed place of duty, leaving it, or absenting oneself from a unit without authority is enough (Art. 86). Intent to stay away permanently is the dividing line.",
       "retrieval": 2, "correctness": 2, "faithfulness": "pass",
-      "note": "Win, but note the top result is Recital 66, a non binding recital, ranked above the binding Art. 17. The strict prompt still cited the Article because it was present at lower rank."
+      "note": "The near duplicate pair the corpus was chosen to stress, and this one works: Art. 85 takes ranks 1 and 2, Art. 86 rank 3, so both sides of the contrast are grounded. Contrast with q14 where the pairing fails."
     },
     {
-      "id": "q04", "type": "numeric_threshold",
-      "question": "At what age can a child give their own consent for information society services under the GDPR default?",
-      "answer": "16 years old by default. Below 16 the processing is lawful only with consent from the holder of parental responsibility. Member States may set a lower age by law but not below 13 (Art. 8(1)).",
-      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
-      "note": "Win. Both numbers (16 and 13) are in the rank 1 chunk and both are kept."
+      "id": "q04", "type": "factual_lookup",
+      "question": "Can a deserter be sentenced to death under the UCMJ?",
+      "answer": "The provided context does not answer this. The retrieved passages concern capital court-martial procedure (who sits, the 12 member requirement) rather than the punishment for desertion.",
+      "retrieval": 0, "correctness": 0, "faithfulness": "pass",
+      "note": "The morphology failure. The query says 'deserter'; the statute says 'desertion' and 'desert'. With no stemming these are different tokens, so Art. 85 gets zero credit for the query's key word and the retriever chases 'sentenced to death' into the capital procedure articles instead. The stemming ablation fixes exactly this: with the light stemmer both sides map to 'desert' and Art. 85 jumps to rank 1."
     },
     {
       "id": "q05", "type": "definition",
-      "question": "How does the GDPR define personal data?",
-      "answer": "The provided context does not contain the definition of personal data. The retrieved passages concern professional secrecy of supervisory authority staff (Art. 54), security of processing (Art. 32), Board opinions (Art. 64) and a transparency recital (Recital 39), none of which define the term.",
+      "question": "How does the UCMJ define a commanding officer?",
+      "answer": "The provided context does not answer this. The retrieved passages list which commanding officers may convene general and special courts-martial (Arts. 22, 23), but none of them define the term.",
       "retrieval": 0, "correctness": 0, "faithfulness": "pass",
-      "note": "Retrieval miss. Art. 4(1) is never retrieved because the phrase 'personal data' is the single most frequent term in the whole corpus, so its IDF is near zero and the definitional chunk has no distinguishing signal. The strict prompt converts the miss into a safe refusal instead of a hallucination."
+      "note": "The low IDF failure. 'Commanding officer' appears in dozens of provisions, so the words carry almost no signal and the definition in Art. 1 never surfaces; the retriever returns the provisions that use the term most often instead of the one that defines it. Unchanged at every chunk size and under both retrievers, which is the fingerprint of a term statistics problem rather than a chunking problem."
     },
     {
       "id": "q06", "type": "definition",
-      "question": "What does processing mean under the GDPR?",
-      "answer": "The provided context does not define processing. The retrieved passages are about supervisory authority independence and competence (Recitals 118 and 170, Art. 55) and security of processing (Art. 32), not the Art. 4(2) definition.",
+      "question": "Who counts as an accuser under the UCMJ?",
+      "answer": "The provided context does not answer this. The retrieved passages concern the Military Justice Review Panel and court-martial convening authority, not the definition of an accuser.",
       "retrieval": 0, "correctness": 0, "faithfulness": "pass",
-      "note": "Same failure mode as q05. 'Processing' is ubiquitous, so Art. 4(2) has no term frequency edge and never surfaces."
+      "note": "Two failures stacked. 'Accuser' is spread across several procedural articles so its IDF is modest, and the phrase 'under the UCMJ' is actively poisonous: the statute calls itself 'this chapter', and the token 'UCMJ' appears in exactly two provisions in the whole corpus, one of which is Art. 146 (Military Justice Review Panel). So the corpus-rare word 'UCMJ' has huge IDF and drags Art. 146 to the top for any question phrased the way a normal person would phrase it. The words users add for clarity are the words that mislead the retriever."
     },
     {
-      "id": "q07", "type": "comparative",
-      "question": "What is the difference between a controller and a processor?",
-      "answer": "The context shows that a processor acts on behalf of and on the documented instructions of the controller and can engage sub processors only under the same obligations (Art. 28), but it does not contain the Art. 4(7) and 4(8) definitions themselves, so a precise definitional contrast cannot be drawn from the retrieved passages.",
-      "retrieval": 0, "correctness": 1, "faithfulness": "pass",
-      "note": "Partial. The relationship is inferable from Art. 28, but the clean definitions are missing for the same low IDF reason (both terms appear in almost every provision). Two of the top results are Art. 83 fine chunks, dragged in by the shared word 'processor'."
+      "id": "q07", "type": "enumeration",
+      "question": "Who is subject to the UCMJ?",
+      "answer": "The provided context does not answer this fully. The retrieved passages address continuing jurisdiction over certain personnel (Art. 3) and the Review Panel (Art. 146), but the enumeration of who is subject to the code was not retrieved.",
+      "retrieval": 0, "correctness": 0, "faithfulness": "pass",
+      "note": "Same two mechanisms as q06. 'Subject to this chapter' is boilerplate that appears in 97 of the 198 provisions (every punitive article opens with 'Any person subject to this chapter'), so the query's key phrase has near zero IDF, and 'UCMJ' again pulls Art. 146. The provision that answers the question, Art. 2, is invisible because its content words are the most common words in the corpus."
     },
     {
-      "id": "q08", "type": "deadline",
-      "question": "How long does a controller have to respond to a data subject access request?",
-      "answer": "The controller should respond without undue delay and at the latest within one month (Recital 59). Note this figure comes from a recital in the retrieved context; the binding one month deadline and its extension by two further months are set in Art. 12(3), which was not retrieved, so the extension is not reflected here.",
-      "retrieval": 0, "correctness": 1, "faithfulness": "pass",
-      "note": "The binding Art. 12(3) is missed, but the one month number is recoverable from Recital 59, so the answer is partly right from non binding text and drops the two month extension. Good illustration that recitals can rescue a number the article miss lost."
+      "id": "q08", "type": "factual_lookup",
+      "question": "What rights does Article 31 give a servicemember suspected of an offense?",
+      "answer": "No person may be compelled to incriminate himself or answer incriminating questions. Before interrogation, a suspect must be informed of the nature of the accusation, advised that he need not make any statement, and warned that any statement may be used as evidence against him at court-martial. Statements taken in violation of this, or obtained by coercion or unlawful influence, may not be received in evidence (Art. 31, UCMJ).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win. The question names the article, and Art. 31's distinctive vocabulary (incriminate, accusation) is concentrated in one short provision."
     },
     {
       "id": "q09", "type": "enumeration",
-      "question": "What are the lawful bases for processing personal data?",
-      "answer": "The provided context does not list the lawful bases. The retrieved passages discuss the lawfulness and transparency principles in general terms (Recital 39), further processing for compatible purposes (Recital 50) and the legal basis for public interest tasks (Recital 45), but Art. 6(1), which enumerates the six bases, was not retrieved.",
-      "retrieval": 0, "correctness": 0, "faithfulness": "pass",
-      "note": "Article versus recital plus enumeration miss. Recital 39 paraphrases lawfulness in richer prose than the terse Art. 6(1) list, so the recitals dominate the top k and the operative article is pushed out."
-    },
-    {
-      "id": "q10", "type": "conditional",
-      "question": "Under what conditions may special categories of sensitive data be processed?",
-      "answer": "Processing of special category data is generally prohibited and allowed only under the exceptions in Art. 9(2). The retrieved chunks reference some of those purposes (for example point (h), health purposes, and processing by a professional bound by secrecy) and add that Member States may keep further conditions on genetic, biometric and health data (Art. 9), but the full list of Art. 9(2) exceptions is not all present in the retrieved passages.",
-      "retrieval": 1, "correctness": 1, "faithfulness": "pass",
-      "note": "Right article, wrong paragraphs again. BM25 returned the tail of Art. 9 (parts 8 and 9) rather than the enumerated 9(2) list, so the answer can gesture at the exceptions but cannot enumerate them."
-    },
-    {
-      "id": "q11", "type": "comparative_near_duplicate",
-      "question": "What is the difference between the right to erasure and the right to restriction of processing?",
-      "answer": "The context sets out the right to restriction: the data subject can require the controller to restrict processing in specific situations such as contested accuracy, unlawful processing where erasure is opposed, the controller no longer needing the data but the subject needing it for legal claims, or a pending objection (Art. 18). The right to erasure under Art. 17 was not retrieved in the top results, so only the restriction side of the contrast is grounded in the context.",
-      "retrieval": 1, "correctness": 1, "faithfulness": "pass",
-      "note": "The classic near duplicate outcome. The query names both rights but BM25 commits to Art. 18 and its neighbours (Art. 19, 13, 14, 15) and never surfaces Art. 17, so a two sided comparison is impossible. Correctness capped at 1 by the rubric."
-    },
-    {
-      "id": "q12", "type": "factual_lookup",
-      "question": "What is the right to data portability?",
-      "answer": "It lets the data subject receive the personal data they provided to a controller in a structured, commonly used and machine readable format and transmit it to another controller without hindrance, where processing is based on consent or on a contract and is carried out by automated means. Where technically feasible the data can be transmitted directly from one controller to another (Art. 20).",
+      "question": "What are the three types of courts-martial?",
+      "answer": "General, special, and summary courts-martial (Art. 16, UCMJ). A general court-martial is a military judge and eight members (or, on request, military judge alone; capital cases differ), a special court-martial is a military judge and four members or judge alone, and a summary court-martial is one commissioned officer.",
       "retrieval": 2, "correctness": 2, "faithfulness": "pass",
-      "note": "Win. Both parts of Art. 20 are retrieved at ranks 1 and 2 and the conditions are kept."
+      "note": "Win. Art. 16 part 1 is rank 1 and contains both the enumeration and the composition numbers."
+    },
+    {
+      "id": "q10", "type": "numeric",
+      "question": "How many members sit on a court-martial panel in a capital case?",
+      "answer": "Twelve. In a case in which the accused may be sentenced to death, the number of members shall be 12 (Art. 25a, UCMJ).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Correct, but look at rank 1: the Military Justice Review Panel, again. The colloquial word 'panel' never appears in the statute's description of court-martial members; the only 'Panel' in the corpus is the review body in Art. 146. Colloquial versus statutory vocabulary in one example. Art. 25a still lands at rank 2 on 'members' and 'case', so the answer survives."
+    },
+    {
+      "id": "q11", "type": "conditional",
+      "question": "What punishments can a commanding officer impose under Article 15 without a court-martial?",
+      "answer": "Under Art. 15 a commanding officer may impose non-judicial punishments including admonition or reprimand, correctional custody (with day limits), forfeiture or detention of pay, reduction in grade, extra duties, and restriction to limits, with the ceilings depending on the grade of the imposing officer and whether the member is attached to a vessel; the member may demand trial by court-martial instead except in the vessel case (Art. 15, UCMJ).",
+      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
+      "note": "Win, and the interesting part is why: the colloquial 'Article 15' works because the statute text of section 815 refers to 'this article' and neighbouring provisions cite 'article 15' in cross references, so the token '15' actually appears in the right chunks. All five retrieved chunks are Art. 15 parts. The famous nickname happens to be retrievable; contrast q07 where the nickname 'UCMJ' is not."
+    },
+    {
+      "id": "q12", "type": "conditional",
+      "question": "What has to happen before charges can be referred to a general court-martial?",
+      "answer": "From the retrieved context: charges must be preferred in writing, signed under oath (Art. 30), the convening authority must receive advice before referral (Art. 34), and referred charges must be served on the accused (Art. 35). The retrieved passages do not include the Art. 32 preliminary hearing requirement, which is the usual centrepiece of pre-referral procedure, so this answer is incomplete.",
+      "retrieval": 0, "correctness": 1, "faithfulness": "pass",
+      "note": "Topical drift within a dense procedural neighbourhood. The query's words (charges, referred, general court-martial) are shared by Arts. 30, 34 and 35, which surround Art. 32 and use the vocabulary more often than Art. 32 itself does. The retrieved articles are genuinely relevant pre-referral steps, so the answer earns partial credit, but the single most important requirement is the one that got crowded out."
     },
     {
       "id": "q13", "type": "factual_lookup",
-      "question": "When can a data subject object to processing of their personal data?",
-      "answer": "At any time, on grounds relating to their particular situation, where processing is based on public interest or legitimate interests (Art. 21(1)); the controller must then stop unless it demonstrates compelling legitimate grounds. For direct marketing the right to object is absolute and once exercised the data may no longer be processed for that purpose (Art. 21(2)).",
+      "question": "Can a military officer be punished for insulting the President?",
+      "answer": "Yes. Any commissioned officer who uses contemptuous words against the President, the Vice President, Congress, the Secretary of Defense, the Secretary of a military department, the Secretary of Homeland Security, or the Governor or legislature of a State where the officer is on duty or present shall be punished as a court-martial may direct (Art. 88, UCMJ).",
       "retrieval": 2, "correctness": 2, "faithfulness": "pass",
-      "note": "Win. Art. 21 parts 1 to 3 occupy the top ranks."
+      "note": "Win. 'President' is rare and concentrated, and Art. 88 is short, so it takes rank 1 despite the colloquial phrasing ('insulting' never appears in the statute)."
     },
     {
-      "id": "q14", "type": "factual_with_number",
-      "question": "Can a data subject get a copy of their personal data, and is there a fee?",
-      "answer": "Yes. The controller must provide a copy of the personal data undergoing processing; for any further copies it may charge a reasonable fee based on administrative costs (Art. 15(3)).",
-      "retrieval": 2, "correctness": 2, "faithfulness": "pass",
-      "note": "Win. The fee rule is in the rank 1 chunk. The explicit words 'free of charge' for the first copy are in Recital 63 (not retrieved), but Art. 15(3) supports the substance."
+      "id": "q14", "type": "comparative",
+      "question": "What is the difference between conduct unbecoming an officer and the general article?",
+      "answer": "Art. 133 punishes any commissioned officer, cadet or midshipman convicted of conduct unbecoming an officer. The general article, Art. 134, was not among the retrieved passages, so the contrast cannot be completed from the context; only the Art. 133 side is grounded.",
+      "retrieval": 1, "correctness": 1, "faithfulness": "pass",
+      "note": "The mirror image of q03. Art. 133 retrieves perfectly on 'conduct unbecoming', but Art. 134 is unfindable by name because its name is made of the two most generic words in the corpus: 'general' and 'article'. A provision whose distinguishing vocabulary is generic is structurally invisible to sparse retrieval. The comparative question type exposes it: one side grounded, one side missing, correctness capped at 1."
     },
     {
-      "id": "q15", "type": "conditional",
-      "question": "When must an organization appoint a Data Protection Officer?",
-      "answer": "A DPO must be designated where processing is carried out by a public authority or body (except courts acting in a judicial capacity), or where the core activities require regular and systematic monitoring of data subjects on a large scale, or where the core activities consist of large scale processing of special category or criminal conviction data (Art. 37(1)).",
+      "id": "q15", "type": "factual_lookup",
+      "question": "Does the UCMJ prohibit cruel and unusual punishment?",
+      "answer": "Yes. Punishment by flogging, or by branding, marking, or tattooing the body, or any other cruel or unusual punishment, may not be adjudged or inflicted, and the use of irons except for safe custody is prohibited (Art. 55, UCMJ).",
       "retrieval": 2, "correctness": 2, "faithfulness": "pass",
-      "note": "Win. All three trigger conditions are in the retrieved Art. 37 part 1 chunk."
+      "note": "Win. Vivid, rare vocabulary (flogging, branding) concentrated in one short article. Note 'UCMJ' in the query did not derail this one because the on topic terms were strong enough to outscore the Art. 146 pull."
     },
     {
       "id": "q16", "type": "conditional",
-      "question": "What are the conditions for consent to be valid under the GDPR?",
-      "answer": "The controller must be able to demonstrate that consent was given; where consent is bundled into a written declaration about other matters, the request must be clearly distinguishable, intelligible and in plain language; the data subject must be informed before consenting; and it must be as easy to withdraw consent as to give it (Art. 7). Recital 43 adds that consent is not freely given where there is a clear imbalance between the subject and the controller, such as a public authority.",
+      "question": "What does the UCMJ say about disobeying an order or regulation?",
+      "answer": "Any person who violates or fails to obey a lawful general order or regulation, fails to obey another lawful order they know of and have a duty to obey, or is derelict in the performance of duties, shall be punished as a court-martial may direct (Art. 92, UCMJ).",
       "retrieval": 2, "correctness": 2, "faithfulness": "pass",
-      "note": "Win on Art. 7 conditions. The core adjectives 'freely given, specific, informed and unambiguous' come from the Art. 4(11) definition, which was only partly present via recitals, so that phrasing is softened."
+      "note": "Correct answer from rank 2, but rank 1 is Art. 103, Spies. The only query terms that matched it were 'about' and 'does', two words my deliberately small stopword list does not remove. 'Disobeying' matches nothing because the statute says 'disobeys' and 'fails to obey' (morphology again). The top slot was decided by function words, which is a tokenisation bug worth owning: the stopword list was tuned by intuition, not measured."
     },
     {
-      "id": "q17", "type": "negative_control",
-      "question": "Does the GDPR require companies to store personal data only on servers physically located inside the EU?",
-      "answer": "No. Nothing in the provided context imposes an EU only data storage requirement. The retrieved passages concern identification of data subjects (Art. 11), the Commission committee procedure (Art. 93) and cooperation between authorities, none of which establish a data localisation rule.",
+      "id": "q17", "type": "statute_boundary",
+      "question": "What is the maximum confinement for being AWOL for more than 30 days?",
+      "answer": "The provided context does not answer this. Art. 86 makes AWOL punishable 'as a court-martial may direct'; the specific maximum confinement by length of absence is set in the Manual for Courts-Martial punishment tables, which are not part of this corpus. Note the retrieved passages do contain day figures (14 days, 60 days), but those are Article 15 non-judicial punishment limits, not court-martial confinement maxima for AWOL, and it would be wrong to present them as the answer.",
       "retrieval": null, "correctness": 2, "faithfulness": "pass",
-      "note": "Control passed. The premise is a common misconception with no basis in the text, and the system declined to invent a rule. This is the hallucination resistance the negative control is designed to test."
+      "note": "The boundary control, and retrieval made it genuinely dangerous: the query's '30 days' matched the NJP day limit tables in Art. 15, so the context is full of plausible looking but wrong numbers. A permissive generator would grab one. The strict prompt names the boundary instead. This is the exact failure a legal RAG product must not make."
     },
     {
       "id": "q18", "type": "out_of_corpus",
-      "question": "How does the CCPA define a sale of personal information?",
-      "answer": "The provided context is GDPR material only and does not contain the CCPA or its definition of a sale of personal information, so this cannot be answered from the context.",
+      "question": "What does Rule for Courts-Martial 707 require for a speedy trial?",
+      "answer": "The provided context cannot answer this. The Rules for Courts-Martial are part of the Manual for Courts-Martial, not the UCMJ statute, and are not in this corpus.",
       "retrieval": null, "correctness": 2, "faithfulness": "pass",
-      "note": "Control passed. Retrieval still returns the nearest GDPR passages (it always returns something), but the generator recognised none of them answer a CCPA question and refused."
+      "note": "Control passed. Retrieval returns the nearest statutory neighbours (victim rights petitions, execution of confinement) and the generator correctly declines to synthesise an RCM 707 rule from them."
     }
   ]
 }
