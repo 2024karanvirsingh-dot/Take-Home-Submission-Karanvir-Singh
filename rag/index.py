@@ -1,12 +1,17 @@
 """
 Indexing and retrieval scoring.
 
-The default retrievers are sparse and fully inspectable. That is a deliberate
-choice for this project: with sparse retrieval you can print the exact terms
-that made a chunk win, which is what the evaluation is about. The dense and
-hybrid retrievers are optional (they need sentence-transformers, which pulls
-in torch) and exist to test whether the vocabulary gap failures the sparse
-analysis predicts are dense-fixable actually are.
+BM25 is the diagnostic baseline: fully inspectable, you can print the exact
+terms that made a chunk win, which is what the failure analysis is built on.
+The dense retriever embeds every chunk with a pretrained sentence encoder
+and searches by cosine similarity; it exists to test whether the vocabulary
+gap failures the sparse analysis predicts are dense fixable, and it is. The
+hybrid retriever fuses both rankings and is the strongest retrieval
+configuration measured here. Dense and hybrid are optional (they need
+sentence-transformers, which pulls in torch; `pip install -r
+requirements-dense.txt`); the sparse pair runs on the default install
+alone, and TF-IDF is the default install's vector embedding
+representation.
 
   BM25    : the standard bag of words ranking function. Implemented here from
             scratch (about 40 lines) rather than pulled from a library so the
@@ -14,8 +19,10 @@ analysis predicts are dense-fixable actually are.
             This is the default.
   TF-IDF  : scikit-learn TfidfVectorizer + cosine. Used as the alternative
             sparse retriever in the ablation.
-  Dense   : all-MiniLM-L6-v2 sentence embeddings + cosine. Optional.
-  Hybrid  : reciprocal rank fusion of BM25 and dense. Optional.
+  Dense   : all-MiniLM-L6-v2 sentence embeddings + cosine over the full
+            chunk embedding matrix. Optional.
+  Hybrid  : reciprocal rank fusion of BM25 and dense. Optional; the best
+            measured retrieval configuration.
 
 Tokenisation is shared between the sparse pair so they are compared on equal
 footing.
@@ -114,8 +121,12 @@ class DenseEmbed:
     that the vocabulary gap misses (UCMJ, panel, general article) need a
     representation that knows synonymy, which no term statistic can supply.
 
-    Kept out of requirements.txt on purpose; it pulls in torch. Install with
-    `pip install sentence-transformers` to run the dense ablation."""
+    Optional (pip install -r requirements-dense.txt); kept out of the
+    default install because it pulls in torch. Chunk embeddings are L2
+    normalised and stacked into a matrix, the query is embedded the same
+    way, and search is an exact cosine scan (a matrix vector product over
+    572 vectors; approximate nearest neighbour structures would be
+    overhead at this corpus size)."""
 
     MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
@@ -124,8 +135,11 @@ class DenseEmbed:
             from sentence_transformers import SentenceTransformer
         except ImportError:
             raise SystemExit(
-                "dense retrieval needs sentence-transformers. "
-                "pip install sentence-transformers (about 90 MB model on first run)")
+                "dense retrieval needs sentence-transformers. Install the "
+                "optional dense extra with `pip install -r "
+                "requirements-dense.txt` (downloads a ~90 MB model on "
+                "first run). The default install runs the sparse "
+                "retrievers only.")
         # stem is accepted for interface parity but ignored: the encoder has
         # its own subword tokenizer and stemming would only hurt it.
         self.chunks = chunks
@@ -141,11 +155,25 @@ class DenseEmbed:
         return [(self.chunks[i], float(sims[i])) for i in order]
 
 
+def rrf_fuse(rankings, k=5, c=60):
+    """Reciprocal rank fusion: each ranking contributes 1/(c+rank) per id,
+    summed, ties broken by id so the order is stable. `rankings` is a list
+    of ordered id lists. Standalone so it is unit testable without loading
+    the dense encoder."""
+    fused = defaultdict(float)
+    for ranked in rankings:
+        for rank, cid in enumerate(ranked):
+            fused[cid] += 1.0 / (c + rank + 1)
+    return sorted(fused, key=lambda cid: (-fused[cid], cid))[:k], fused
+
+
 class HybridRRF:
-    """Reciprocal rank fusion of BM25 and dense. No score normalisation
-    gymnastics, just 1/(60+rank) summed over both lists, which is the boring
-    standard because it works. Tests whether fusing the two recovers the
-    dense wins without giving back the sparse ones."""
+    """Reciprocal rank fusion of BM25 and dense: 1/(60+rank) summed over
+    both lists, no score normalisation. A standard fusion approach chosen
+    for its empirical robustness across collections rather than tuned for
+    this one. Tests whether fusing the two recovers the dense wins without
+    giving back the sparse ones; it is the best measured retrieval
+    configuration in the ablation."""
 
     def __init__(self, chunks, stem=False, pool=50):
         self.chunks = chunks
@@ -154,13 +182,10 @@ class HybridRRF:
         self.dense = DenseEmbed(chunks)
 
     def search(self, query, k=5):
-        fused = defaultdict(float)
-        for ranked in (self.bm25.search(query, k=self.pool),
-                       self.dense.search(query, k=self.pool)):
-            for rank, (chunk, _) in enumerate(ranked):
-                fused[chunk["id"]] += 1.0 / (60 + rank + 1)
+        rankings = [[chunk["id"] for chunk, _ in idx.search(query, k=self.pool)]
+                    for idx in (self.bm25, self.dense)]
+        order, fused = rrf_fuse(rankings, k=k)
         by_id = {c["id"]: c for c in self.chunks}
-        order = sorted(fused, key=fused.get, reverse=True)[:k]
         return [(by_id[cid], fused[cid]) for cid in order]
 
 
