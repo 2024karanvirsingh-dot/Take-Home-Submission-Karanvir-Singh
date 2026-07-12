@@ -1,0 +1,10 @@
+# optional: the local generative answerer experiment (`--answerer
+# generative`, google/flan-t5-small). Pulls in torch; first use downloads
+# the model (about 300 MB) from the Hugging Face hub, cached afterwards.
+# Completely isolated from the default workflow: nothing in the baseline,
+# the tests or the core evaluation needs this, and the committed generative
+# run in outputs/ was produced with it. Tested with transformers 5.13.1,
+# torch 2.13.0.
+-r requirements.txt
+transformers>=4.44
+torch>=2.2

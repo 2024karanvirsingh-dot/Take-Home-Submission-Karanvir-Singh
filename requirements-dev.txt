@@ -1,3 +1,4 @@
-# test dependencies. tested with pytest 8.4.2
--r requirements.txt
+# test dependencies. Install alongside requirements-core.txt (sparse tests
+# only; dense and generative tests skip themselves) or requirements.txt
+# (full suite). Tested with pytest 9.1.1.
 pytest>=8

@@ -1,5 +1,8 @@
-# optional: the dense and hybrid retrievers (--retriever dense / hybrid).
-# pulls in torch, which is why it is not part of the default install.
-# tested with sentence-transformers 5.1.2
+# optional: the dense (MiniLM) and hybrid retrievers, used by the
+# `--retriever dense` and `--retriever hybrid` ablations. Pulls in torch;
+# first use downloads sentence-transformers/all-MiniLM-L6-v2 (about 90 MB)
+# from the Hugging Face hub, cached afterwards. The committed outputs for
+# these runs are in outputs/, so reviewing the results does not require
+# this install. Tested with sentence-transformers 5.6.0.
 -r requirements.txt
-sentence-transformers>=5.1
+sentence-transformers>=5.1,<6
