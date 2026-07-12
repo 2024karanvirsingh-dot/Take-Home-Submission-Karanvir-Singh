@@ -20,7 +20,9 @@ this file produces. See the README for how that run was done.
 """
 import os, textwrap
 
-SYSTEM = (
+# Strict prompt: the guardrailed default. "Not in the context" is an allowed,
+# even encouraged, answer. This is what makes a retrieval miss fail safe.
+STRICT = (
     "You are a careful legal research assistant answering questions about the "
     "GDPR. Answer using only the provided context passages. Cite the provision "
     "you rely on by its label, for example (Art. 17 GDPR) or (Recital 39 GDPR). "
@@ -30,6 +32,21 @@ SYSTEM = (
     "outside knowledge."
 )
 
+# Permissive prompt: same task, guardrail removed. Used only for the prompt
+# ablation, to show that when the context is missing the model falls back to its
+# training memory and produces confident but unsupported answers.
+PERMISSIVE = (
+    "You are a helpful legal assistant answering questions about the GDPR. Use "
+    "the provided context passages to help you and answer the question as fully "
+    "and helpfully as you can."
+)
+
+SYSTEM = STRICT  # backwards compatible default
+
+
+def _system():
+    return PERMISSIVE if os.environ.get("RAG_PROMPT") == "permissive" else STRICT
+
 
 def build_prompt(question, retrieved):
     blocks = []
@@ -37,7 +54,7 @@ def build_prompt(question, retrieved):
         blocks.append(f"[{c['citation']} | {c['type']} | {c['title']}]\n{c['text']}")
     context = "\n\n".join(blocks)
     user = f"Context passages:\n\n{context}\n\nQuestion: {question}\n\nAnswer:"
-    return SYSTEM, user
+    return _system(), user
 
 
 def generate(question, retrieved):
